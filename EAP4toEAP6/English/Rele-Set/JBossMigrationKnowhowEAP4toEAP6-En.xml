@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame.org/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
-    <PortabilityKnowhowTitle>MigrationGuide from JBossEAP5  to JBossEAP6</PortabilityKnowhowTitle>
+<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
+    <PortabilityKnowhowTitle>MigrationGuide from JBossEAP4  to JBossEAP6</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
             <EntryCategoryRefKey>category_1</EntryCategoryRefKey>

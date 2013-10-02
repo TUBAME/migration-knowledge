@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame.org/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
+<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
     <PortabilityKnowhowTitle>JBossEAP4からJBossEAP6へのマイグレーションガイド</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
