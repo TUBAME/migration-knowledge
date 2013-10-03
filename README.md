@@ -9,3 +9,7 @@ Please check [Knowledge-Base search's manual](http://tubame.github.io/migration-
 How do I make this?
 ==============
 Please check [Knowledge Manager's manual](http://tubame.github.io/migration-tool/knowhow.html).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/TUBAME/migration-knowledge/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
