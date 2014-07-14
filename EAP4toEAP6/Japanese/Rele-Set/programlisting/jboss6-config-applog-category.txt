@@ -1,0 +1,6 @@
+
+...
+<logger category="jp.co.ntt.ossc.webg.as7.migration">
+  <level name="TRACE"/>
+</logger>
+

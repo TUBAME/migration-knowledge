@@ -1,0 +1,10 @@
+
+<app-deployment>
+    <name>sample</name>
+    <target>targetServer</target>
+    <module-type>war</module-type>
+    <source-path>/opt/sample/sample.war</source-path>
+    <security-dd-model>DDOnly</security-dd-model>
+    <staging-mode>nostage</staging-mode>
+</app-deployment>
+

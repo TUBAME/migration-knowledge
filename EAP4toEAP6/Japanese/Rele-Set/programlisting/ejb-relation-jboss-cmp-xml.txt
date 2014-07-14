@@ -1,0 +1,20 @@
+
+<relationships>
+  <ejb-relation>
+    <ejb-relation-name>›››</ejb-relation-name>
+    <ejb-relationship-role>
+      <ejb-relationship-role-name>¢¢¢</ejb-relationship-role-name>
+      <key-fields>
+        <key-field>
+          <column-name>   </column-name>
+          <field-name>œœœ</field-name>
+        </key-field>
+      </key-fields>
+    </ejb-relationship-role>
+    <ejb-relationship-role>
+      <ejb-relationship-role-name>¡¡¡</ejb-relationship-role-name>
+      <key-fields/>
+    </ejb-relationship-role>
+  </ejb-relation>
+</relationships>
+

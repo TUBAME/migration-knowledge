@@ -1,0 +1,32 @@
+
+<jboss:ejb-jar xmlns:jboss="http://www.jboss.com/xml/ns/javaee"
+   xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:tx="urn:trans-timeout"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee/schema/jboss-ejb3-2_0.xsd
+         http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd
+         urn:trans-timeout http://www.jboss.org/j2ee/schema/trans-timeout-1_0.xsd"
+   version="3.1"
+   impl-version="2.0">
+    <enterprise-beans>
+        <session>
+            <ejb-name>TestBean</ejb-name>
+            <ejb-class>org...TestBean</ejb-class>
+            <session-type>Stateless</session-type>
+        </session>
+    </enterprise-beans>
+    <assembly-descriptor>
+        <container-transaction>
+            <!-- Note: care must be taken to properly override the right annotation -->
+            <method>
+                <ejb-name>TestBean</ejb-name>
+                <method-name>*</method-name>
+            </method>
+            <tx:trans-timeout>
+                <tx:timeout>60</tx:timeout>
+                <tx:unit>Seconds</tx:unit>
+            </tx:trans-timeout>
+        </container-transaction>
+    </assembly-descriptor>
+</jboss:ejb-jar>
+

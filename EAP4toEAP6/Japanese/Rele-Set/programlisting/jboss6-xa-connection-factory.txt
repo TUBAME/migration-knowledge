@@ -1,0 +1,13 @@
+
+  // Defines the JMS connection factory.
+  public final static String JMS_FACTORY="java:/JmsXA";
+  ...
+  
+  public void sendTopicMessage()
+       throws NamingException, JMSException
+  {
+     Context ctx = new InitialContext();
+     tconFactory = (TopicConnectionFactory) ctx.lookup(JMS_FACTORY);
+     ctx.lookup(JMS_FACTORY);
+  }
+  ...

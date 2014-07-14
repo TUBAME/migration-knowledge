@@ -1,0 +1,9 @@
+ 
+ |-- resources(src/main/resources)
+          |-- META-INF
+                |-- wsdl
+                     |-- *.wsdl
+                |--jaxrpc-mapping.xml
+                |--ejb-jar.xml
+                |--webservices.xml
+

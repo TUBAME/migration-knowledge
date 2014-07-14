@@ -1,0 +1,20 @@
+<enterprise-beans>
+  ...
+  <entity>
+    <ejb-name>BandEJB</ejb-name>
+    ...
+    <query>
+      <query-method>
+        <method-name>findByNameWithMaxRow</method-name>
+        <method-params>
+          <method-param>java.lang.String</method-param>
+        </method-params>
+      </query-method>
+      <ejb-ql>
+        <![CDATA[SELECT OBJECT(a) FROM BandEJB AS a WHERE a.name = ?1]]>
+      </ejb-ql>
+    </query>
+  </entity>
+  ...
+<enterprise-beans>
+

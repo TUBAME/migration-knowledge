@@ -1,0 +1,24 @@
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+
+// Import the WebLogic-specific JWS annotation interfaces
+
+import weblogic.jws.WLHttpTransport;
+
+// Standard JWS annotation that specifies that the name of the Web Service is
+// "Example" and the targetNamespace used in the generated WSDL is
+// "http://example.org"
+@WebService(name="Example", targetNamespace="http://example.org")
+
+// Standard JWS annotation that specifies the mapping of the service onto the
+// SOAP message protocol.
+@SOAPBinding(style=SOAPBinding.Style.DOCUMENT,
+             use=SOAPBinding.Use.LITERAL,
+             parameterStyle=SOAPBinding.ParameterStyle.WRAPPED)
+
+// WebLogic-specific JWS annotation that specifies the context path and
+// service URI used to build the URI of the Web Service is "jws_basic_Example/ExampleService"
+@WLHttpTransport(contextPath="jws_basic_example", serviceUri="ExampleService")
+

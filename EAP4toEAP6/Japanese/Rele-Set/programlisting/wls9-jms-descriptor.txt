@@ -1,0 +1,27 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-jms xmlns="http://www.bea.com/ns/weblogic/90">
+ <connection-factory name="weblogic.examples.jms.QueueConnectionFactory">
+  <sub-deployment-name>exampleQueue</sub-deployment-name>
+  <jndi-name>weblogic.examples.jms.QueueConnectionFactory</jndi-name>
+  <transaction-params>
+   <xa-connection-factory-enabled>false</xa-connection-factory-enabled>
+  </transaction-params>
+ </connection-factory>
+ <connection-factory name="exampleTopic">
+  <sub-deployment-name>exampleTopic</sub-deployment-name>
+  <jndi-name>weblogic.examples.jms.TopicConnectionFactory</jndi-name>
+  <transaction-params>
+   <xa-connection-factory-enabled>true</xa-connection-factory-enabled>
+  </transaction-params>
+ </connection-factory>
+ <queue name="exampleQueue">
+  <sub-deployment-name>examplesJMSServer</sub-deployment-name>
+  <local-jndi-name>weblogic.examples.jms.exampleQueue</local-jndi-name>
+ </queue>
+ <topic name="exampleTopic">
+  <sub-deployment-name>examplesJMSServer</sub-deployment-name>
+  <local-jndi-name>weblogic.examples.jms.exampleTopic</local-jndi-name>
+ </topic>
+</weblogic-jms>
+

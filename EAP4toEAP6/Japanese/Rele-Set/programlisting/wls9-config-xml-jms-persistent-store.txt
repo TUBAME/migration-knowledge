@@ -1,0 +1,27 @@
+
+<jms-server>
+ <name>examplesJMSServer</name>
+ <target>examplesServer</target>
+
+ <persistent-store>exampleJDBCStore</persistent-store>
+
+ <temporary-template-resource xsi:nil="true"></temporary-template-resource>
+ <temporary-template-name xsi:nil="true"></temporary-template-name>
+ <jms-message-log-file>
+  <name>examplesJMSServer</name>
+ </jms-message-log-file>
+ </jms-server>
+
+<file-store>
+ <name>WseeFileStore</name>
+ <directory>WseeFileStore</directory>
+ <target>examplesServer</target>
+ </file-store>
+
+<jdbc-store>
+ <name>exampleJDBCStore</name>
+ <prefix-name>examples</prefix-name>
+ <data-source>examples-demo</data-source>
+ <target>examplesServer</target>
+</jdbc-store>
+

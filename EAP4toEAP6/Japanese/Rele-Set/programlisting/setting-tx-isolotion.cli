@@ -1,0 +1,4 @@
+
+#xa-data-sourceコマンドを利用して、トランザクション アイソレーションレベルにTRANSACTION_READ_UNCOMMITTEDを設定する
+[standalone@localhost:9999 /] xa-data-source --name=postgresDS --transaction-islation=TRANSACTION_READ_UNCOMMITTED
+

@@ -1,0 +1,28 @@
+
+// MessageDrivenBeanインタフェース追加
+public class MsgListener implements MessageListener, MessageDrivenBean {
+・・・
+  //メソッド追加
+/**
+   * @see MessageDrivenBean#setMessageDrivenContext(MessageDrivenContext)
+   */
+  public void setMessageDrivenContext(MessageDrivenContext arg0) {
+　  ・・・
+  }
+ 
+//メソッド追加
+/**
+   * @see MessageDrivenBean#ejbRemove()
+   */
+  public void ejbRemove() {
+　  ・・・
+  }
+  
+/**
+   * @see MessageListener#onMessage(Message)
+   */
+  public void onMessage(Message message) {
+　  ・・・
+  }
+}
+
