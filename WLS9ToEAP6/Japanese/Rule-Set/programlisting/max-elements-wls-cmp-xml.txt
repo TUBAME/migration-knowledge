@@ -1,0 +1,21 @@
+<weblogic-rdbms-bean>
+  <ejb-name>›››</ejb-name>
+  <data-source-name>¢¢¢</data-source-name>
+  <table-map>
+    <table-name>   </table-name>
+    <field-map>
+      <cmp-field>œœœ</cmp-field>
+      <dbms-column>£££</dbms-column>
+    </field-map>
+  </table-map>
+  <weblogic-query>
+    <query-method>
+      <method-name>¡¡¡</method-name>
+      <method-params>
+        <method-param>java.lang.String</method-param>
+      </method-params>
+    </query-method>
+    <max-elements>100</max-elements>
+  </weblogic-query>
+</weblogic-rdbms-bean>
+

@@ -1,0 +1,4 @@
+
+java -cp picketbox-4.0.17.Final-redhat-1.jar org.picketbox.datasource.security.SecureIdentityLoginModule xxx <- パスワード指定する
+Encoded password: xxxxxxxxxxxxxxx
+

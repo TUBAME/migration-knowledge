@@ -1,0 +1,7 @@
+wsprovide  --classpath=./target/classes -o build/gen -w examples.webservices.jws_basic.complex.ExampleBean
+(build/gen配下に以下のファイルが作成される)
+ |-- gen
+          |-- *.wsdl
+          |-- *.xsd
+          |-- **/jaxws/*.java or class
+

@@ -1,0 +1,17 @@
+
+qcon = qcf.createQueueConnection();
+qsession = qcon.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
+//weblogic.jms.extensions.WLSession‚ğ—˜—p‚µ‚Ä‚¢‚é
+if (qsession instanceof WLSession) {
+	WLSession session = (WLSession)qsession
+    session.setExceptionListener(new ExceptionListener() {
+
+        public void onException(JMSException e) {
+            //—áŠO‚Ìˆ—‚ğ‹LÚ
+            ...
+        }
+
+    });
+}
+
+

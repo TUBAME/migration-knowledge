@@ -1,0 +1,3 @@
+
+/subsystem=web/connector=ajp/:write-attribute(name=max-connections,value=100)
+

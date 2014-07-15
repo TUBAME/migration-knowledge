@@ -1,0 +1,18 @@
+
+<weblogic-rdbms-bean>
+  <ejb-name>›››</ejb-name>
+  <data-source-name>¢¢¢</data-source-name>
+  <table-map>
+    <table-name>   </table-name>
+    <field-map>
+      <cmp-field>œœœ</cmp-field>
+      <dbms-column>£££</dbms-column>
+    </field-map>
+  </table-map>
+  <automatic-key-generation>
+    <generator-type>NAMED_SEQUENCE_TABLE</generator-type>
+    <generator-name></generator-name>
+    <key-cache-size>1000</key-cache-size>
+  </automatic-key-generation>
+</weblogic-rdbms-bean>
+

@@ -1,0 +1,6 @@
+
+ <input-charset>
+     <resource-path>/*</resource-path>
+     <java-charset-name>Windows-31J</java-charset-name>
+ </input-charset>
+

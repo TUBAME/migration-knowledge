@@ -1,0 +1,15 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.jboss.org/jbossws-tools">
+<java-wsdl>
+    <service name="HelloWorldService"
+   style="rpc"
+     endpoint="examples.webservices.basic.javaclass.HelloWorld"/>
+ <namespaces
+      target-namespace="http://examples.com/webservices/basic/javaclass/"
+      typeamespace="http://examples.com/webservices/basic/javaclass/types"/>
+    <mapping file="jaxrpc-mapping.xml"/>
+    <webservices servlet-link="HelloWorldServletLink"/>
+  </java-wsdl>
+</configuration>
+

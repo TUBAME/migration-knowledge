@@ -1,0 +1,9 @@
+
+<web-app>
+・・・
+<listener>
+<listener-class>sample.SampleAppListener</listener-class>
+</listener>
+  ・・・
+</web-app>
+

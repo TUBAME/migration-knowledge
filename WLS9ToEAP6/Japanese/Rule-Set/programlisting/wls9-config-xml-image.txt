@@ -1,0 +1,19 @@
+
+-security-configuration(セキュリティ設定)
+
+-server(サーバログ設定)
+  log
+  web-server-log
+
+-embedded-ldap(組み込みLDAP設定)
+
+-jdbc-system-resource(JDBCリソース設定)
+
+-jms-server(JMSサーバ）
+
+-app-deployment(デプロイメント設定)
+
+-self-tuning(チューニング設定)
+  max-threads-constraint
+  work-manager
+

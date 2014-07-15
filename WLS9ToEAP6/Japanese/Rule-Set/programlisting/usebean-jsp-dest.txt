@@ -1,0 +1,6 @@
+
+<body>
+<jsp:useBean id="foo" class="orz.FooBean" scope="page"></jsp:useBean>
+<jsp:getProperty name="foo" property="URL" />
+</body>
+

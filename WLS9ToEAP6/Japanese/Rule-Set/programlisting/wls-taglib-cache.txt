@@ -1,0 +1,10 @@
+
+<wl:cache>
+<!--the content between these tags will only be refreshed
+on server  restart-->
+</wl:cache>
+<wl:cache timeout="15m">
+<!--get the new headlines from the database every 15 minutes
+and display them-->
+</wl:cache>
+

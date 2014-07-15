@@ -1,0 +1,15 @@
+
+<weblogic-ejb-jar>
+...
+  <transaction-isolation>
+	<isolation-level>¢¢¢</isolation-level>
+	<method>
+	  <description>œœœ</description>
+	  <ejb-name>›››</ejb-name>
+	  <method-intf>¡¡¡</method-intf>
+	  <method-name>   </method-name>
+	</method>
+   </transaction-isolation>
+...
+</weblogic-ejb-jar>
+

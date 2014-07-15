@@ -1,0 +1,10 @@
+
+<weblogic-ejb-jar>                                                        
+  <weblogic-enterprise-bean>                                             
+    <ejb-name>›››</ejb-name>
+    <jndi-name>...</jndi-name>
+    <message-driven-descriptor>
+      <destination-jndi-name>œœœ</destination-jndi-name>
+    </message-driven-descriptor>
+EEE
+

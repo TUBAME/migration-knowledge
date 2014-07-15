@@ -1,0 +1,8 @@
+
+wsconsume -k  -o build/gen/classes -s build/gen/src -b ./build/input/SimpleService_schema1.xsd -b  ./build/input/SimpleService_schema2.xsd ./build/input/SimpleService.wsdl
+
+wsconsumeを実行すると以下のような構成でファイルが作成される。
+[カレントディレクトリ]
+          |--  build/gen/classes/**.class
+          |--  build/gen/src/**.java
+

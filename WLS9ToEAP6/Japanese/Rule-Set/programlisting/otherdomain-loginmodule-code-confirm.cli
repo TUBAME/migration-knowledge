@@ -1,0 +1,3 @@
+
+/subsystem=security/security-domain=other/authentication=classic/login-module=RealmDirect:read-resource(recursive=true)
+

@@ -1,0 +1,15 @@
+
+<weblogic-ejb-jar
+  xmlns="http://www.bea.com/ns/weblogic/90" xmlns:j2ee="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bea.com/ns/weblogic/90 http://www.bea.com/ns/weblogic/90/weblogic-ejb-jar.xsd">
+    <weblogic-enterprise-bean>
+    <ejb-name>ÅõÅõÅõ</ejb-name>
+    <stateless-session-descriptor></stateless-session-descriptor>
+    <reference-descriptor>
+      <ejb-reference-description>
+        <ejb-ref-name>Å†Å†Å†</ejb-ref-name>
+        <jndi-name>Å°Å°Å°</jndi-name>
+      </ejb-reference-description>
+    <jndi-name>Å~Å~Å~</jndi-name>
+    <local-jndi-name>Å~Å~Å~</local-jndi-name> 
+    ...
+
