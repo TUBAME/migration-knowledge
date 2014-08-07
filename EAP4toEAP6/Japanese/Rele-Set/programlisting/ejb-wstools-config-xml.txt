@@ -8,7 +8,7 @@
     <namespaces
       target-namespace=
 "http://examples.com/webservices/basic/statelessSession/"
-      typeamespace=
+      type-namespace=
         "http://examples.com/webservices/basic/statelessSession/types"/>
     <mapping file="jaxrpc-mapping.xml"/>
     <webservices ejb-link="Example"/>
