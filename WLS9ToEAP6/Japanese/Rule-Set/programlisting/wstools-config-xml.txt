@@ -7,7 +7,7 @@
      endpoint="examples.webservices.basic.javaclass.HelloWorld"/>
  <namespaces
       target-namespace="http://examples.com/webservices/basic/javaclass/"
-      typeamespace="http://examples.com/webservices/basic/javaclass/types"/>
+      type-namespace="http://examples.com/webservices/basic/javaclass/types"/>
     <mapping file="jaxrpc-mapping.xml"/>
     <webservices servlet-link="HelloWorldServletLink"/>
   </java-wsdl>
