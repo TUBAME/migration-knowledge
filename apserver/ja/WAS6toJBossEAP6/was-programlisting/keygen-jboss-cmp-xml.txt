@@ -1,0 +1,19 @@
+
+<enterprise-beans>
+  <entity>
+    <ejb-name>›››</ejb-name>
+    <table-name>   </table-name>
+    <cmp-field>
+      <field-name>
+        œœœ
+      </field-name>
+      <column-name>£££</column-name>
+    </cmp-field>
+    <entity-command name="key-generator">
+     <attribute name="key-generator-factory">
+HiLoKeyGeneratorFactory
+</attribute>
+    </entity-command>
+  </entity>
+</enterprise-beans>
+

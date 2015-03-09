@@ -1,0 +1,14 @@
+
+<weblogic-rdbms-relation>
+  <relation-name>›››</relation-name>
+  <weblogic-relationship-role>
+    <relationship-role-name>¢¢¢</relationship-role-name>
+    <relationship-role-map>
+      <column-map>
+        <foreign-key-column>   </foreign-key-column>
+        <key-column>œœœ</key-column>
+      </column-map>
+    </relationship-role-map>
+  </weblogic-relationship-role>
+</weblogic-rdbms-relation>
+

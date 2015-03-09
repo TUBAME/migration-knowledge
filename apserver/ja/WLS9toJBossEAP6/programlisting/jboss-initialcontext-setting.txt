@@ -1,0 +1,9 @@
+
+props = new Properties();
+props.put(InitialContext.INITIAL_CONTEXT_FACTORY,"org.jboss.naming.remote.client.InitialContextFactory");
+props.put(InitialContext.PROVIDER_URL, "remote://localhost:4447");
+props.put(InitialContext.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+props.put(InitialContext.SECURITY_PRINCIPAL, "username");
+props.put(InitialContext.SECURITY_CREDENTIALS, "userpass");
+InitialContext initialContext = new InitialContext(props)
+

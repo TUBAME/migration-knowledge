@@ -1,0 +1,6 @@
+
+<taglib>
+<taglib-uri>xxxx-taglib</taglib-uri>
+<taglib-location>/WEB-INF/xxxx-taglib.tld</taglib-location>
+</taglib>
+

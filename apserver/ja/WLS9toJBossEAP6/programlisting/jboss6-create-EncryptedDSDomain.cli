@@ -1,0 +1,5 @@
+
+/subsystem=security/security-domain=EncryptedDSDomain:add(cache-type=default)
+/subsystem=security/security-domain=EncryptedDSDomain/authentication=classic:add(login-modules=[{"code"=>"SecureIdentity", "flag"=>"required", "module-options"=>[("username"=>"someuserid"),("password"=>"1d5bcec446b79907df8592078de921bc")]}])
+/:reload
+

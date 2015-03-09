@@ -1,0 +1,42 @@
+
+import javax.ejb.Timeout;
+import javax.ejb.Timer;
+import javax.ejb.TimerConfig;
+import javax.ejb.TimerService;
+
+@Singleton
+@Startup
+public class HelloSingleton {
+	
+	private static Logger logger = Logger.getLogger(HelloSingleton.class);
+	
+	@Resource
+    TimerService timerService;
+	
+	@PostConstruct
+	protected void startup() {
+		logger.info("HelloSingleton will be initialized!");
+		
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.HOUR,1);
+		Date time = calendar.getTime();
+		timerService.createSingleActionTimer(time,new TimerConfig("test",true));
+	}
+	
+	
+	
+	@PreDestroy
+	protected void destroy() {
+		logger.info("HelloSingleton will be removed!");
+	}
+	
+	 @Timeout
+	 public void timeout(Timer timer) {
+		    logger.info("timer executed");
+		    String test = (String) timer.getInfo();
+		    ...
+		    
+	    }
+
+}
+

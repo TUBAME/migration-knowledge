@@ -1,0 +1,14 @@
+
+public class HelloWorldJSE implements HelloWorld {
+ 
+    ...
+	public String sayHello(int num, String s) {
+		System.out.println("sayHello in the HelloWorldJSE has "
+				+ "been invoked with arguments " + s + " and " + num);
+
+		String returnValue = "This message brought to you by the " + "letter "
+				+ s + " and the number " + num;
+
+		return returnValue;
+	}
+

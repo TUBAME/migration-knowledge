@@ -1,0 +1,29 @@
+
+<relationships>                                                                    
+  <ejb-relation>                                                                    
+    <ejb-relation-name>›››</ejb-relation-name>
+    <relation-table-mapping>
+      <table-name>band_artist</table-name>
+    </relation-table-mapping>
+    <ejb-relationship-role>
+      <ejb-relationship-role-name>¢¢¢</ejb-relationship-role-name>
+      <key-fields>
+        <key-field>
+          <column-name>   </column-name>
+          <field-name>œœœ</field-name>
+        </key-field>
+      </key-fields>
+    </ejb-relationship-role>
+ 
+    <ejb-relationship-role>
+      <ejb-relationship-role-name>¡¡¡</ejb-relationship-role-name>
+      <key-fields>
+        <key-field>
+          <column-name>ŸŸŸ</column-name>
+          <field-name>žžž</field-name>
+        </key-field>
+      </key-fields>
+    </ejb-relationship-role>
+  </ejb-relation>
+</relationships>
+

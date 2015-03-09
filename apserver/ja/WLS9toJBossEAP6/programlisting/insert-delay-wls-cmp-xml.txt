@@ -1,0 +1,4 @@
+
+...
+<delay-database-insert-until>ejbPostCreate</delay-database-insert-until>
+

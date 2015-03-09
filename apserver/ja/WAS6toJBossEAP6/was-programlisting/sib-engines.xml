@@ -1,0 +1,16 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sibresources="http://www.ibm.com/websphere/appserver/schemas/6.0/sibresources.xmi">
+  <sibresources:SIBMessagingEngine xmi:id="SIBMessagingEngine_1385362172645" name="kwatanabe-PCNode01.server1-WS_test_Bus" uuid="F275FD4A29E4F748" busName="WS_test_Bus" busUuid="4F7DDD18766AE7E7" highMessageThreshold="50000" messageStoreType="FILESTORE">
+    <localizationPoints xmi:type="sibresources:SIBQueueLocalizationPoint" xmi:id="SIBQueueLocalizationPoint_1385362172667" identifier="_SYSTEM.Exception.Destination.kwatanabe-PCNode01.server1-WS_test_Bus@kwatanabe-PCNode01.server1-WS_test_Bus" uuid="96CB0289403D5DF5" targetUuid="5029A42238AC47016B30C21A"/>
+    <localizationPoints xmi:type="sibresources:SIBTopicSpaceLocalizationPoint" xmi:id="SIBTopicSpaceLocalizationPoint_1385362172683" identifier="Default.Topic.Space@kwatanabe-PCNode01.server1-WS_test_Bus" uuid="CE7486789BEE941C" targetUuid="11F22877E3E9C639B242307F" highMessageThreshold="50000"/>
+    <localizationPoints xmi:type="sibresources:SIBQueueLocalizationPoint" xmi:id="SIBQueueLocalizationPoint_1385362544596" identifier="ws_test_queueJms@kwatanabe-PCNode01.server1-WS_test_Bus" uuid="3134F7455848E16C" targetUuid="BF07538AEE2AE81E4470CE31" highMessageThreshold="50000"/>
+    <fileStore xmi:id="SIBFilestore_1385362172652" uuid="3D9F0A456CD9EDAE" logSize="100" minPermanentStoreSize="200" maxPermanentStoreSize="500" unlimitedPermanentStoreSize="false" minTemporaryStoreSize="200" maxTemporaryStoreSize="500" unlimitedTemporaryStoreSize="false" logDirectory="${USER_INSTALL_ROOT}/filestores/com.ibm.ws.sib/kwatanabe-PCNode01.server1-WS_test_Bus-F275FD4A29E4F748/log" permanentStoreDirectory="${USER_INSTALL_ROOT}/filestores/com.ibm.ws.sib/kwatanabe-PCNode01.server1-WS_test_Bus-F275FD4A29E4F748/store" temporaryStoreDirectory="${USER_INSTALL_ROOT}/filestores/com.ibm.ws.sib/kwatanabe-PCNode01.server1-WS_test_Bus-F275FD4A29E4F748/store"/>
+  </sibresources:SIBMessagingEngine>
+  <sibresources:SIBMessagingEngine xmi:id="SIBMessagingEngine_1385370896551" name="kwatanabe-PCNode01.server1-WS_test_persistBus" uuid="68E6E3CB1C6FBF9A" busName="WS_test_persistBus" busUuid="32B89DCF67FE01D3" highMessageThreshold="50000">
+    <dataStore xmi:id="SIBDatastore_1385370896558" uuid="78379ABD438046B4" dataSourceName="jdbc/com.ibm.ws.sib/kwatanabe-PCNode01.server1-WS_test_persistBus"/>
+    <localizationPoints xmi:type="sibresources:SIBQueueLocalizationPoint" xmi:id="SIBQueueLocalizationPoint_1385370896860" identifier="_SYSTEM.Exception.Destination.kwatanabe-PCNode01.server1-WS_test_persistBus@kwatanabe-PCNode01.server1-WS_test_persistBus" uuid="91D6EFD60DA2F403" targetUuid="9339F2B805A020445FDAA58D"/>
+    <localizationPoints xmi:type="sibresources:SIBTopicSpaceLocalizationPoint" xmi:id="SIBTopicSpaceLocalizationPoint_1385370896872" identifier="Default.Topic.Space@kwatanabe-PCNode01.server1-WS_test_persistBus" uuid="972CE85FA69B2D5F" targetUuid="B6C676084446884C8B37E36E" highMessageThreshold="50000"/>
+  </sibresources:SIBMessagingEngine>
+</xmi:XMI>
+

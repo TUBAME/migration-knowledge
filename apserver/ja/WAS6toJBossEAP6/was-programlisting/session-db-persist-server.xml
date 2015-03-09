@@ -1,0 +1,12 @@
+
+<components xmi:type="applicationserver.webcontainer:WebContainer" xmi:id="WebContainer_1385359009220" enableServletCaching="false" disablePooling="false">
+      <stateManagement xmi:id="StateManageable_1385359009222" initialState="START"/>
+      <services xmi:type="applicationserver.webcontainer:SessionManager" xmi:id="SessionManager_1385359009220" enable="true" enableUrlRewriting="false" enableCookies="true" enableSSLTracking="false" enableProtocolSwitchRewriting="false" sessionPersistenceMode="NONE" enableSecurityIntegration="false" allowSerializedSessionAccess="false" maxWaitTime="5" accessSessionOnTimeout="true">
+        <defaultCookieSettings xmi:id="Cookie_1385359009220" domain="" maximumAge="-1" secure="false"/>
+        <sessionDatabasePersistence xmi:id="SessionDatabasePersistence_1385359009220" datasourceJNDIName="jdbc/Sessions" userId="db2admin" password="{xor}Oz1tPjsyNjE=" db2RowSize="ROW_SIZE_4KB" tableSpaceName=""/>
+        <tuningParams xmi:id="TuningParams_1385359009220" usingMultiRowSchema="false" maxInMemorySessionCount="1000" allowOverflow="true" scheduleInvalidation="false" writeFrequency="TIME_BASED_WRITE" writeInterval="10" writeContents="ONLY_UPDATED_ATTRIBUTES" invalidationTimeout="30">
+          <invalidationSchedule xmi:id="InvalidationSchedule_1385359009220" firstHour="14" secondHour="2"/>
+        </tuningParams>
+      </services>
+    </components>
+ 

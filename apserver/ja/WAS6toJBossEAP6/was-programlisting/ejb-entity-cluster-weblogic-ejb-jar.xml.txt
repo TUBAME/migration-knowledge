@@ -1,0 +1,11 @@
+
+<weblogic-ejb-jar  xmlns="http://www.bea.com/ns/weblogic/90" ...>
+  <weblogic-enterprise-bean>
+    <ejb-name>›››</ejb-name>
+    <entity-descriptor>
+      <entity-clustering>
+       ...
+      </entity-clustering>
+    <entity-descriptor>
+   ...
+

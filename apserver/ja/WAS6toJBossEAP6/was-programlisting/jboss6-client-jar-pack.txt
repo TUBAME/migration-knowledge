@@ -1,0 +1,13 @@
+
+  [xxx].jar(EJB)
+
+|-- META-INF/
+
+|   |-- MANIFEST.MF
+
+|   |-- application-client.xml
+
+|   |-- ibm-application-client-bnd.xmi JBossのデプロイメントディスクリプタに移植する
+
+|   |-- ibm-application-client-ext.xmi　JBossのデプロイメントディスクリプタに移植する
+

@@ -1,0 +1,17 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<%@ page session="false"%>
+<%@ page language="java" contentType="text/html; charset=Windows-31J" pageEncoding="Windows-31J" %>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<title>Header Include Test</title>
+</head>
+<body>
+
+	<jsp:include page="header.jsp" flush="true"/>
+
+	<div>Main Content</div>
+</body>
+</html>
+

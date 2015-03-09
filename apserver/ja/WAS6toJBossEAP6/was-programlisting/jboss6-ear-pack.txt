@@ -1,0 +1,11 @@
+
+  [xxx].ear
+
+|-- META-INF/
+
+|   |-- MANIFEST.MF
+|   |-- ibm-application-ext.xmi  JavaEE標準のapplication.xmlかJBoss固有のjboss-app.xmlに移植する
+|   |-- ibm-application-bnd.xmi JavaEE標準のapplication.xmlかJBoss固有のjboss-app.xmlに移植する
+
+
+

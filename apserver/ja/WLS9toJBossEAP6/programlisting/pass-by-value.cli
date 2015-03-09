@@ -1,0 +1,3 @@
+
+[standalone@localhost:9999/] /subsystem=ejb3:write-attribute(name=in-vm-remote-iterface-invocation-pass-by-value,value=false)
+

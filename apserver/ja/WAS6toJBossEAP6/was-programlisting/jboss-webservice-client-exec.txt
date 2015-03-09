@@ -1,0 +1,3 @@
+
+java -jar $JBOSS_HOME/jboss-modules.jar -mp $JBOSS_HOME/boss-eap-6.1/modules -dep org.jboss.ws.cxf.jbossws-cxf-client -cp classes org.example.Client
+

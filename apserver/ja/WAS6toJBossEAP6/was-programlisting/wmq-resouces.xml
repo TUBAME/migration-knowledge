@@ -1,0 +1,22 @@
+
+  <resources.jms:JMSProvider xmi:id="builtin_mqprovider" name="WebSphere MQ JMS Provider" description="WebSphere MQ Messaging Provider" externalInitialContextFactory="" externalProviderURL="">
+    <factories xmi:type="resources.jms.mqseries:MQConnectionFactory" xmi:id="MQConnectionFactory_1385367620599" name="wmq-ConFactory" jndiName="jms/wmq-ConFactory" authMechanismPreference="BASIC_PASSWORD" XAEnabled="true" port="0" transportType="BINDINGS" brokerVersion="MQSI" pubSubCleanup="SAFE" pubSubCleanupInterval="3600000" msgSelection="BROKER" publishAckInterval="25" sparseSubscriptions="false" statRefreshInterval="60000" substore="MIGRATE" multicast="DISABLED" msgRetention="true" cloneSupport="false" directAuth="BASIC" failIfQuiesce="true" pollingInterval="5000" rescanInterval="5000" useConnectionPooling="true">
+      <connectionPool xmi:id="ConnectionPool_1385367620599"/>
+      <mapping xmi:id="MappingModule_1385367620599" mappingConfigAlias="DefaultPrincipalMapping" authDataAlias=""/>
+      <sessionPool xmi:id="ConnectionPool_1385367620600"/>
+    </factories>
+    <factories xmi:type="resources.jms.mqseries:MQQueueConnectionFactory" xmi:id="MQQueueConnectionFactory_1385367707946" name="wmq-QueueConFactory" jndiName="jms/wmq-QueueConFactory" authMechanismPreference="BASIC_PASSWORD" XAEnabled="true" port="0" transportType="BINDINGS" msgRetention="true" failIfQuiesce="true" pollingInterval="5000" rescanInterval="5000" useConnectionPooling="true">
+      <connectionPool xmi:id="ConnectionPool_1385367707946"/>
+      <mapping xmi:id="MappingModule_1385367707946" mappingConfigAlias="DefaultPrincipalMapping" authDataAlias=""/>
+      <sessionPool xmi:id="ConnectionPool_1385367707947"/>
+    </factories>
+    <factories xmi:type="resources.jms.mqseries:MQTopicConnectionFactory" xmi:id="MQTopicConnectionFactory_1385367758000" name="wmq-TopicConFactory" jndiName="jms/wmq-TopicConFactory" authMechanismPreference="BASIC_PASSWORD" XAEnabled="true" port="0" transportType="BINDINGS" brokerVersion="MQSI" cloneSupport="false" pubSubCleanup="SAFE" pubSubCleanupInterval="3600000" msgSelection="BROKER" publishAckInterval="25" sparseSubscriptions="false" statRefreshInterval="60000" substore="MIGRATE" multicast="DISABLED" directAuth="BASIC" failIfQuiesce="true" pollingInterval="5000" rescanInterval="5000" useConnectionPooling="true">
+      <connectionPool xmi:id="ConnectionPool_1385367758000"/>
+      <mapping xmi:id="MappingModule_1385367758000" mappingConfigAlias="DefaultPrincipalMapping" authDataAlias=""/>
+      <sessionPool xmi:id="ConnectionPool_1385367758001"/>
+    </factories>
+    <factories xmi:type="resources.jms.mqseries:MQQueue" xmi:id="MQQueue_1385370014306" name="ws_test_wmqjms" jndiName="jms/ws_test_wmqjms" persistence="APPLICATION_DEFINED" priority="APPLICATION_DEFINED" specifiedPriority="0" expiry="APPLICATION_DEFINED" specifiedExpiry="0" baseQueueName="abc" useNativeEncoding="false" integerEncoding="Normal" decimalEncoding="Normal" floatingPointEncoding="IEEENormal" targetClient="JMS" queueManagerPort="0"/>
+    <factories xmi:type="resources.jms.mqseries:MQTopic" xmi:id="MQTopic_1385370051237" name="ws_test_wmqjmstopic" jndiName="jms/ws_test_wmqjmstopic" persistence="APPLICATION_DEFINED" priority="APPLICATION_DEFINED" specifiedPriority="0" expiry="APPLICATION_DEFINED" specifiedExpiry="0" baseTopicName="abc" useNativeEncoding="false" integerEncoding="Normal" decimalEncoding="Normal" floatingPointEncoding="IEEENormal" targetClient="JMS"/>
+  </resources.jms:JMSProvider>
+
+  

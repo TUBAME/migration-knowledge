@@ -1,0 +1,4 @@
+
+/subsystem=datasources/xa-data-source=postgresDS/xa-datasource-properties=User:remove()
+/subsystem=datasources/xa-data-source=postgresDS/xa-datasource-properties=Password:remove()
+

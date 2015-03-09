@@ -1,0 +1,17 @@
+  
+  <resources.jms:JMSProvider xmi:id="builtin_jmsprovider" name="WebSphere JMS Provider" description="V5 Default Messaging Provider" externalInitialContextFactory="" externalProviderURL="">
+    <factories xmi:type="resources.jms.internalmessaging:WASQueueConnectionFactory" xmi:id="WASQueueConnectionFactory_1385368885318" name="v5QueueConFactory" jndiName="jms/v5QueueConFactory" authMechanismPreference="BASIC_PASSWORD" XAEnabled="true" node="kwatanabe-PCNode01">
+      <connectionPool xmi:id="ConnectionPool_1385368885318"/>
+      <mapping xmi:id="MappingModule_1385368885318" mappingConfigAlias="DefaultPrincipalMapping" authDataAlias=""/>
+      <sessionPool xmi:id="ConnectionPool_1385368885319"/>
+    </factories>
+    <factories xmi:type="resources.jms.internalmessaging:WASTopicConnectionFactory" xmi:id="WASTopicConnectionFactory_1385368911511" name="v5TopicConFactory" jndiName="jms/v5TopicConFactory" authMechanismPreference="BASIC_PASSWORD" XAEnabled="true" node="kwatanabe-PCNode01" port="DIRECT" cloneSupport="false">
+      <connectionPool xmi:id="ConnectionPool_1385368911511"/>
+      <mapping xmi:id="MappingModule_1385368911511" mappingConfigAlias="DefaultPrincipalMapping" authDataAlias=""/>
+      <sessionPool xmi:id="ConnectionPool_1385368911512"/>
+    </factories>
+    <factories xmi:type="resources.jms.internalmessaging:WASQueue" xmi:id="WASQueue_1385369119990" name="ws_test_v5queueJms" jndiName="jms/ws_test_v5queueJms" persistence="APPLICATION_DEFINED" priority="APPLICATION_DEFINED" specifiedPriority="0"/>
+    <factories xmi:type="resources.jms.internalmessaging:WASTopic" xmi:id="WASTopic_1385369410704" name="ws_test_v5topicJms" jndiName="jms/ws_test_v5topicJms" topic="abc" persistence="APPLICATION_DEFINED" priority="APPLICATION_DEFINED" specifiedPriority="0" expiry="APPLICATION_DEFINED" specifiedExpiry="0"/>
+  </resources.jms:JMSProvider>
+
+  

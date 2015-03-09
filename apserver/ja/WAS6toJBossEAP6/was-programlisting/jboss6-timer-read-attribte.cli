@@ -1,0 +1,10 @@
+
+/subsystem=ejb3/service=timer-service:read-resource
+{
+    "outcome" => "success",
+    "result" => {
+        "path" => "timer-service-data",
+        "relative-to" => "jboss.server.data.dir",
+        "thread-pool-name" => "default"
+    }
+}

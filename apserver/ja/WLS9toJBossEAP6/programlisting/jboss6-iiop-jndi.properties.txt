@@ -1,0 +1,5 @@
+
+java.naming.factory.initial=com.sun.jndi.cosnaming.CNCtxFactory
+java.naming.provider.url=corbaloc:iiop:localhost:3528/JBoss/Naming/root
+java.naming.factory.url.pkgs=com.sun.jndi.cosnaming
+

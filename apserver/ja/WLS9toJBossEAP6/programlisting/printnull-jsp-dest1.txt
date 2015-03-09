@@ -1,0 +1,6 @@
+
+<%
+  String xxx = null;
+%>
+value=<%= xxx == null ? "" : xxx %>
+

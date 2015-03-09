@@ -1,0 +1,62 @@
+
+package org.jboss.as.quickstarts.ejb.remote.client;
+
+import java.rmi.RMISecurityManager;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.rmi.PortableRemoteObject;
+
+import example.Hello;
+import example.HelloHome;
+
+
+public class RemoteEJBClient {
+
+    private static final String homeJNDIName = "Hello";
+    
+    public static void main(String[] args) throws Exception {
+    	
+    	if ( System.getSecurityManager() == null ){
+    		System.setSecurityManager(new RMISecurityManager());
+    	}
+    	// system property must be used by remote clients to dynamically generate the stubs
+        System.setProperty("com.sun.CORBA.ORBUseDynamicStub", "true");
+        System.setProperty("org.omg.CORBA.ORBClass", "org.jacorb.orb.ORB");
+        System.setProperty("org.omg.CORBA.ORBSingletonClass", "org.jacorb.orb.ORBSingleton");
+        HelloHome helloHome = lookupHelloHome();
+    	System.out.println("HelloHome:"+helloHome);
+		Hello hello = helloHome.create();
+		String message = hello.sayHello();
+		System.out.println("message  return = "+message); 
+    	
+    }
+
+   
+	private static HelloHome lookupHelloHome() throws NamingException {
+		Context ctx = getInitialContext();
+		try {
+			Object home =  ctx.lookup(homeJNDIName);
+			return (HelloHome) PortableRemoteObject.narrow(home,
+					HelloHome.class);
+		} catch (NamingException ne) {
+			throw ne;
+		}
+		
+	}
+
+    private static InitialContext getInitialContext()
+    	      throws NamingException
+    	    {
+    	    	InitialContext context = null;
+    			try {
+    	  			context = new InitialContext();
+    	  		} catch (NamingException e) {
+    	  			throw e;
+    	  		}
+    	  		return context;
+    	    }
+ 
+}
+

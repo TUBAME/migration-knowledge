@@ -1,6 +1,6 @@
 What's this
 ==============
-These Rule-Set and Guideline migrating to JBoss can be used in Knowledge-Base Search of TUBAME.
+These Migration Knowledge(xml) can be used in Knowledge-Base Search of TUBAME.
 
 How do I use this?
 ==============

@@ -1,0 +1,23 @@
+
+@Singleton
+@Startup
+public class HelloSingleton {
+
+	private static Logger logger = Logger.getLogger(HelloSingleton.class);
+
+    @PostConstruct
+	protected void startup() {
+		logger.info("HelloSingleton will be initialized!");
+	}
+
+	@Schedule(second="0,10,20,30,40,50",minute="*",hour="*")
+	public void mySchedule(){
+		logger.info("mySchedule called!");
+	}
+	
+	@PreDestroy
+	protected void destroy() {
+		logger.info("HelloSingleton will be removed!");
+	}
+}
+

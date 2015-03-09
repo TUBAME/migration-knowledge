@@ -1,0 +1,9 @@
+
+<weblogic-application xmlns="http://www.bea.com/ns/weblogic/90">
+
+   <container-descriptor>
+    <session-monitoring-enabled>true</session-monitoring-enabled>
+   </container-descriptor>
+
+</weblogic-application>
+

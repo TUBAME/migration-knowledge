@@ -1,0 +1,5 @@
+
+</weblogic-rdbms-jar>
+  ...
+  <create-default-dbms-tables>DropAndCreateAlways</create-default-dbms-tables>
+

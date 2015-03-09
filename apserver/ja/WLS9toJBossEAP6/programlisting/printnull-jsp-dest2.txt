@@ -1,0 +1,12 @@
+
+<%
+  String xxx = null;
+%>
+<!-- ’Ç‰Á-->
+<%
+if(xxx==null){
+xxx="";
+}
+%>
+value=<%= xxx %>
+

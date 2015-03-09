@@ -1,0 +1,10 @@
+
+deploy wmq.jmsra.rar
+/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/:add(archive=deploy wmq.jmsra.rar,transaction-support=XATransaction)
+/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/config-properties=maxConnections/:add(value=15)
+/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/config-properties=connectionConcurrency/:add(value=5)
+/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/connection-definitions=TestConnectionFactory:add(class-name=com.ibm.mq.connector.outbound.ManagedConnectionFactoryImpl, jndi-name=java:jboss/TestConnectionFactory)
+/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/admin-objects=TestQueue:add(class-name=com.ibm.mq.connector.outbound.MQQueueProxy, jndi-name=java:jboss/jms/TestQueue)
+/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/admin-objects=TestQueue/config-properties=baseQueueName/:add(value=TestQueue)
+/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar:activate
+

@@ -1,0 +1,17 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://www.jboss.org/jbossws-tools">
+<java-wsdl>
+  <service name="ExampleService"
+      style="rpc"
+      endpoint="examples.webservices.basic.statelessSession.ExampleEndPoint"/>
+    <namespaces
+      target-namespace=
+"http://examples.com/webservices/basic/statelessSession/"
+      typeamespace=
+        "http://examples.com/webservices/basic/statelessSession/types"/>
+    <mapping file="jaxrpc-mapping.xml"/>
+    <webservices ejb-link="Example"/>
+  </java-wsdl>
+</configuration>
+

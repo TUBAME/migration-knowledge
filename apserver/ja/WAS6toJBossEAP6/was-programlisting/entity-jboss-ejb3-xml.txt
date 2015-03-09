@@ -1,0 +1,17 @@
+
+<jboss:ejb-jar xmlns:jboss="http://www.jboss.com/xml/ns/javaee"
+ xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee/schema/jboss-ejb3-2_0.xsd
+ http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
+ version="3.1" impl-version="2.0">
+  <enterprise-beans>
+    <entity>
+      <ejb-name>›››</ejb-name>
+      <ejb-ref>
+        <ejb-ref-name>   </ejb-ref-name>
+	    <jndi-name>¦¡¡¡</jndi-name>
+      </ejb-ref>
+    </entity>
+</jboss:ejb-jar>
+
