@@ -1,0 +1,27 @@
+
+<jdbc-data-source xmlns="http://www.bea.com/ns/weblogic/90" xmlns:sec="http://www.bea.com/ns/weblogic/90/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wls="http://www.bea.com/ns/weblogic/90/security/wls" xsi:schemaLocation="http://www.bea.com/ns/weblogic/920 http://www.bea.com/ns/weblogic/920.xsd">
+  <name>ExampleDataSource</name>
+  <jdbc-driver-params>
+    <url>jdbc:oracle:thin:@xxx.xxx.xxx.xxx:1521:dbname</url>
+    <driver-name>oracle.jdbc.OracleDriver</driver-name>
+    <properties>
+      <property>
+        <name>user</name>
+        <value>userid</value>
+      </property>
+    </properties>
+    <password-encrypted>xxx</password-encrypted>
+  </jdbc-driver-params>
+  <jdbc-connection-pool-params>
+    <initial-capacity>20</initial-capacity>
+    <max-capacity>256</max-capacity>
+    <connection-creation-retry-frequency-seconds>30</connection-creation-retry-frequency-seconds>
+    <test-connections-on-reserve>true</test-connections-on-reserve>
+    <test-table-name>dual</test-table-name>
+  </jdbc-connection-pool-params>
+  <jdbc-data-source-params>
+    <jndi-name>ExampleDataSource</jndi-name>
+    <global-transactions-protocol>OnePhaseCommit</global-transactions-protocol>
+  </jdbc-data-source-params>
+</jdbc-data-source>
+

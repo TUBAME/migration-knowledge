@@ -1,0 +1,11 @@
+
+#XAデータソースの作成
+xa-data-source add --name=sample-xa-ds --jndi-name=java:jboss/resources/jdbc/SampleXADS --driver-name=sample-driver --xa-datasource-class=org.postgresql.xa.PGXADataSource
+
+#通常のオペレーションでxa-datasource-propertiesにServerName、PortNumber、DatabaseName、User、Passwordを追加する
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=ServerName:add(value="localhost")
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=PortNumber:add(value="5432")
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=DatabaseName:add(value="testdb")
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=User:add(value="postgres")
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=Password:add(value="postgres")
+

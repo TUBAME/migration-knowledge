@@ -1,0 +1,13 @@
+
+<weblogic-ejb-jar  xmlns="http://www.bea.com/ns/weblogic/90" ...>
+  <weblogic-enterprise-bean>
+    <ejb-name>›››</ejb-name>
+    <entity-descriptor></entity-descriptor>
+    <reference-descriptor>
+      <ejb-reference-description>
+        <ejb-ref-name>   </ejb-ref-name>
+        <jndi-name>¡¡¡</jndi-name>
+    </ejb-reference-description>
+    <jndi-name>~~~<jndi-name>
+    <local-jndi-name>~~~</local-jndi-name>
+

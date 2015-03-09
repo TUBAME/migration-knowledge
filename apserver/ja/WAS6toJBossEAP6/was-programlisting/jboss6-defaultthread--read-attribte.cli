@@ -1,0 +1,16 @@
+
+/subsystem=ejb3/thread-pool=default/:read-resource
+{
+    "outcome" => "success",
+    "result" => {
+        "keepalive-time" => {
+            "time" => 100L,
+            "unit" => "MILLISECONDS"
+        },
+        "max-threads" => 10,
+        "name" => "default",
+        "thread-factory" => undefined
+    }
+}
+
+

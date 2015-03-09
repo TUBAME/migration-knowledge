@@ -1,0 +1,12 @@
+
+   private void lookupBean() throws NamingException {
+      ...
+      Hashtable<String,String> h = new Hashtable<String,String>();
+      h.put(Context.INITIAL_CONTEXT_FACTORY, "weblogic.jndi.WLInitialContextFactory");
+      h.put(Context.PROVIDER_URL, url);
+      h.put(Context.SECURITY_PRINCIPAL, user);
+      h.put(Context.SECURITY_CREDENTIALS, password);
+      new InitialContext(h);
+      ...
+  }
+

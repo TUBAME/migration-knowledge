@@ -1,0 +1,13 @@
+
+	private static HelloHome lookupHelloHome() throws NamingException {
+		Context ctx = getInitialContext();
+		try {
+			Object home =  ctx.lookup("Hello");
+			return (HelloHome) PortableRemoteObject.narrow(home,
+					HelloHome.class);
+		} catch (NamingException ne) {
+			throw ne;
+		}
+		
+	}
+

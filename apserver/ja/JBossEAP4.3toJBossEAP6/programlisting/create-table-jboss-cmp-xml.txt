@@ -1,0 +1,9 @@
+
+<jbosscmp-jdbc>
+  <defaults>
+    ...
+    <remove-table>true</remove-table>
+    <create-table>true</create-table>
+  </defaults>
+  ...
+

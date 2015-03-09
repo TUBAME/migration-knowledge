@@ -1,0 +1,39 @@
+
+<!DOCTYPE jbosscmp-jdbc PUBLIC "-//JBoss//DTD JBOSSCMP-JDBC 4.2//EN"
+"http://www.jboss.org/j2ee/dtd/jbosscmp-jdbc_4_2.dtd">
+<jbosscmp-jdbc>
+  <defaults>
+    <datasource>△△△</datasource>
+    <datasource-mapping>[対象のデータベース名]</datasource-mapping>
+  </defaults>
+  <enterprise-beans>
+    <entity>
+      <ejb-name>○○○</ejb-name>
+      <create-table>true</create-table>
+      <table-name>□□□</table-name>
+      <cmp-field>
+        <field-name>●●●</field-name>
+        <column-name>▲▲▲</column-name>
+      </cmp-field>
+    </entity>
+  </enterprise-beans>
+  <relationships>
+    <ejb-relation>
+        <ejb-relation-name>■■■</ejb-relation-name>
+        <ejb-relationship-role>
+          <ejb-relationship-role-name>◎◎◎</ejb-relationship-role-name>
+          <key-fields>
+            <key-field>
+              <column-name>▽▽▽</column-name>
+              <field-name>▼▼▼</field-name>
+            </key-field>
+          </key-fields>
+        </ejb-relationship-role>
+    </ejb-relation>
+    <ejb-relationship-role>                                      
+      <ejb-relationship-role-name>◇◇◇</ejb-relationship-role-name>
+      <key-fields />
+    </ejb-relationship-role>
+  </relationships>
+</jbosscmp-jdbc>
+

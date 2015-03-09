@@ -1,0 +1,6 @@
+
+<factories xmi:type="resources.jdbc:DataSource" xmi:id="DataSource_1186161738750" name="WebSphere Commerce Oracle DataSource demo" jndiName="jdbc/WebSphere Commerce Oracle DataSource demo" description="WebSphere Commerce Oracle DataSource demo" authMechanismPreference="BASIC_PASSWORD" authDataAlias="WC_demo - authDataAlias" relationalResourceAdapter="builtin_rra" statementCacheSize="50" datasourceHelperClassname="com.ibm.websphere.rsadapter.Oracle10gDataStoreHelper"> 
+ ... 
+  <connectionPool xmi:id="ConnectionPool_1186161741031" connectionTimeout="180" maxConnections="65" minConnections="5" reapTime="180" unusedTimeout="1800" agedTimeout="1800" purgePolicy="EntirePool"/>
+   ... 
+</factories>

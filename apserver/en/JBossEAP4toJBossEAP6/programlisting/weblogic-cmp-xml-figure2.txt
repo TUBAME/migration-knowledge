@@ -1,0 +1,12 @@
+
+<weblogic-rdbms-bean>
+...
+  <table-map>
+  ...
+    <field-map>
+      <cmp-field>œœœ</cmp-field>
+      <dbms-column>£££</dbms-column>
+    </field-map>
+  </table-map>
+</weblogic-rdbms-bean>
+

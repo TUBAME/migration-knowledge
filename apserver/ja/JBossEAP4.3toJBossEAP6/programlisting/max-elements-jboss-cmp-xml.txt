@@ -1,0 +1,23 @@
+
+<enterprise-beans>
+  <entity>
+    <ejb-name>›››</ejb-name>
+    <table-name>   </table-name>
+    <cmp-field>
+      <field-name>œœœ</field-name>
+      <column-name>£££</column-name>
+    </cmp-field>
+    <query>
+      <query-method>
+        <method-name>¡¡¡</method-name>
+        <method-params>
+          <method-param>java.lang.String</method-param>
+        </method-params>
+      </query-method>
+      <jboss-ql>
+        <![CDATA[SELECT OBJECT(a) FROM BandEJB AS a WHERE a.name = ?1 OFFSET 0 LIMIT 100 ]]>
+      </jboss-ql>
+    </query>
+  </entity>
+</enterprise-beans>
+

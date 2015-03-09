@@ -1,0 +1,10 @@
+
+public static void main(String[] args) throws Exception {
+
+    URL url = new URL("context-name/SimpleService?wsdl");
+    SimpleService simpleService = new SimpleService(url);
+    SimplePortType port = simpleService.getSimplePortTypePort();
+    System.out.println(echoStruct);
+    port.sayHello("Hi there!");
+}
+

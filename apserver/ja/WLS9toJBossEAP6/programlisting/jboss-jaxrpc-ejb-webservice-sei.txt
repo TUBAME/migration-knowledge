@@ -1,0 +1,5 @@
+
+public interface ExampleEndPoint extends Remote{
+   String sayHello(String message)  throws RemoteException;
+}
+

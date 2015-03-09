@@ -1,0 +1,10 @@
+
+ |-- webapp(src/main/webapp)
+          |-- META-INF
+                | -- 
+          |-- WEB-INF
+                |-- *.wsdl 
+                |-- *.xsd
+                |--web.xml
+                |--webservices.xml
+

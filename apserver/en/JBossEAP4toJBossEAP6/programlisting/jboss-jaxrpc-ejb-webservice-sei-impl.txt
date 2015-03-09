@@ -1,0 +1,10 @@
+
+public class ExampleBean implements SessionBean {
+    ...
+	public String sayHello(String message) {
+	
+	    String returnValue = "Chao: "+message;
+
+	    return returnValue;
+	 }
+

@@ -1,0 +1,14 @@
+
+※$JBOSS_HOMEは、JBossEAP6でなくJBossEAP5のホームパスです
+# cd $SRC_DIR
+# javac  d $BUILD_DIR  -cp $JBOSS_HOME/lib/jboss-j2ee.jar \
+ examples/webservices/basic/javaclass/HelloWorldJSE.java
+# cd $BUILD_DIR
+# $JBOSS_HOME/bin/wstools  -cp HelloWorldJSE  -config wstools-config.xml -dest generated
+genereted配下に以下のファイルが作成される
+ |-- genereted
+          |-- wsdl/*.wsdl
+          |-- jaxrpc-mapping.xml
+          |-- webservices.xml
+...
+

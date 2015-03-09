@@ -1,0 +1,29 @@
+	
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="execute_wstools" default="execute_wstools_jboss51" basedir=".">
+...
+<path id="wstools.classpath.jboss51">
+	<fileset dir="${jboss.home}/client" />
+	<fileset dir="${jboss.home}/common/lib" />
+	<fileset dir="${jboss.home}/lib" />
+</path>
+ 
+<target name="execute_wstools_jboss51" depends="compile">
+	<taskdef name="wstools" classname="org.jboss.ws.tools.ant.wstools">
+	    <classpath refid="wstools.classpath.jboss51" />
+	    <classpath>
+	         <pathelement location="${basedir}/target/classes" />
+	    </classpath>
+	</taskdef>
+ 
+	<wstools dest="${basedir}/src/main/resources/META-INF"
+	    config="${basedir}/wstools-config.xml" />
+</target>
+ 
+<target name="compile" >
+	<javac srcdir="${basedir}/src/main/java"
+	   destdir="${basedir}/target/classes" debug="on">
+	        <classpath refid="wstools.classpath.jboss51" />
+	</javac>
+</target>
+

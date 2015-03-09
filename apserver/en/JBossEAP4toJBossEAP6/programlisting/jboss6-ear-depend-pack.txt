@@ -1,0 +1,13 @@
+
+hoge-ear.ear
+     |-- hoge-web.war
+     |-- hoge-ejb.jar
+     |-- lib
+         |-- util.jar
+         |-- log4.j.jar
+      |--logging/log4j.xml
+     |-- META-INF
+         |-- application.xml
+         |-- jboss-deployment-structure.xml
+         
+

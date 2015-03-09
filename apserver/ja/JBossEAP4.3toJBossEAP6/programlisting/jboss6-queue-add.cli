@@ -1,0 +1,4 @@
+
+/subsystem=messaging/hornetq-server=default/jms-queue=exampleQueue:add(entries=["java:jboss/exported/exampleGlobalQueue"])
+
+

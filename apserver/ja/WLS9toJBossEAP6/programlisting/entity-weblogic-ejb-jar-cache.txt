@@ -1,0 +1,13 @@
+
+<weblogic-enterprise-bean>
+  <ejb-name>›››</ejb-name>
+   <entity-descriptor>
+    <entity-cache>
+      <max-beans-in-cache>   </max-beans-in-cache>
+      <idle-timeout-seconds>¡¡¡</idle-timeout-seconds>
+      <read-timeout-seconds>žžž</read-timeout-seconds>
+      <concurrency-strategy>Exclusive</concurrency-strategy>
+    </entity-cache>
+   </entity-descriptor>
+   ...
+

@@ -1,0 +1,15 @@
+
+<weblogic-ejb-jar  xmlns="http://www.bea.com/ns/weblogic/90" ...>
+  <weblogic-enterprise-bean>
+    <ejb-name>ÅõÅõÅõ</ejb-name>
+    <stateful-session-descriptor></stateful-session-descriptor>
+    <reference-descriptor>
+      <ejb-reference-description>
+        <ejb-ref-name>Å†Å†Å†</ejb-ref-name>
+        <jndi-name>Å°Å°Å°</jndi-name>
+      </ejb-reference-description>
+    </reference-descriptor>
+    <jndi-name>Å~Å~Å~</jndi-name>
+    <local-jndi-name>Å~Å~Å~</local-jndi-name> 
+    ...
+

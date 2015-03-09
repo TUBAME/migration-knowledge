@@ -1,0 +1,12 @@
+
+<enterprise-beans>
+<entity>
+    ...
+    <cmp-field>
+      <field-name>œœœ</field-name>
+      <column-name>£££</column-name>
+    </cmp-field>
+    ...
+  </entity>
+</enterprise-beans>
+

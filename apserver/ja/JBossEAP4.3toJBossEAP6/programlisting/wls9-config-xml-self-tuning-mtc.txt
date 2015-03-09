@@ -1,0 +1,17 @@
+
+<self-tuning>
+    <max-threads-constraint>
+      <name>USRPool_MaxThreadsConstraint</name>
+      <target>target1</target>
+      <count>-1</count>
+      <connection-pool-name>TestDataSource</connection-pool-name>
+    </max-threads-constraint>
+
+    <work-manager>
+      <name>default</name>
+      <target>target1</target>
+      <max-threads-constraint>USRPool_MaxThreadsConstraint</max-threads-constraint>
+      <ignore-stuck-threads>false</ignore-stuck-threads>
+    </work-manager>
+  </self-tuning>
+

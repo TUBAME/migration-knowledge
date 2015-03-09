@@ -1,0 +1,8 @@
+
+<jsp-config>
+<jsp-property-group>
+    <url-pattern>*</url-pattern>
+    <page-encoding>EUC-JP</page-encoding>
+  </jsp-property-group>
+</jsp-config>
+

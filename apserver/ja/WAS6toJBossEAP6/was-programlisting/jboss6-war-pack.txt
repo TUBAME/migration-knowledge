@@ -1,0 +1,19 @@
+
+[xxx].war
+
+|-- META-INF/
+
+|   |-- MANIFEST.MF
+
+|-- WEB-INF/
+
+|   |-- ibm-web-bnd.xmi   JavaEE標準のweb.xml及びJBoss固有のjboss-web.xmlに移植する
+|   |-- ibm-web-ext.xmi   JavaEE標準のweb.xml及びJBoss固有のjboss-web.xmlに移植する
+|   |-- ibm-web-ext-pme.xmi   JavaEE標準のweb.xml及びJBoss固有のjboss-web.xmlに移植する
+|   |-- web.xml
+
+|   |-- classes/
+
+|   |-- lib/
+
+

@@ -1,0 +1,50 @@
+
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+    <deployment>
+        <!-- log4j 除外設定-->
+		<exclusions>
+			<module name="org.apache.log4j" />
+		</exclusions>
+	</deployment>
+
+	<module name="deployment.hoge-ear.ear.util">
+		<resources>
+			<resource-root path="libs/util.jar"/>
+		</resources>
+	</module>
+
+	<!--  ear/libsにあるlog4jをモジュールとして定義 -->
+	<module name="deployment.hoge-ear.ear.log4j">
+		<resources>
+			<resource-root path="libs/log4j-1.2.16.jar"/>
+			<resource-root path="logging"/>
+		</resources>
+	</module>
+
+	<sub-deployment name="hoge-web.war">
+        <exclusions>
+			<module name="org.apache.log4j" />
+		</exclusions>
+		<dependencies>
+			<module
+				name="deployment.hoge-ear.ear.util" />
+			<!-- warが参照するlog4jの依存性設定-->
+			<module
+			　　name="deployment.hoge-ear.ear.log4j" />
+		</dependencies>
+	</sub-deployment>
+
+	<sub-deployment name="hoge-ejb.jar">
+	    <!-- log4j 除外設定-->
+		<exclusions>
+			<module name="org.apache.log4j" />
+		</exclusions>
+		<dependencies>
+		    <!-- ejbが参照するlog4jの依存性設定-->
+			<module name="deployment.hoge-ear.ear.log4j" />
+		</dependencies>
+	</sub-deployment>
+
+</jboss-deployment-structure>
+
+

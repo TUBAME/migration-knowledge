@@ -1,0 +1,7 @@
+
+<components xmi:type="applicationserver:ApplicationServer" xmi:id="ApplicationServer_1385359009220" applicationClassLoaderPolicy="MULTIPLE">
+  ...
+    <components xmi:type="applicationserver.sipcontainer:SIPContainer" xmi:id="SIPContainer_1385359009220" name="" maxAppSessions="120000" maxMessageRate="5000" maxDispatchQueueSize="3200" maxResponseTime="0" statAveragePeriod="1000" statUpdateRange="10000"/>
+ </components>
+
+

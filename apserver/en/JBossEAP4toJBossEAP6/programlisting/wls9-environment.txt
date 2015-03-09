@@ -1,0 +1,7 @@
+
+Environment env = new Environment();
+env.setProviderUrl("t3://weblogicServer:7001");
+env.setSecurityPrincipal("fred");
+env.setSecurityCredentials("seafood");
+Context ctx = env.getInitialContext();
+

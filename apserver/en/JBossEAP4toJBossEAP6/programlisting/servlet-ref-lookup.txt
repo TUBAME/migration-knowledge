@@ -1,0 +1,5 @@
+
+	Context ic = new InitialContext();
+	Context env = (Context) ic.lookup("java:comp/env");
+	DataSource lookup = (DataSource) env.lookup("jdbc/ExampleDS");
+

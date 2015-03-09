@@ -1,0 +1,4 @@
+ |-- webapp(src\main\resources)
+          |-- META-INF
+                | -- *.xsd
+                | -- *.wsdl

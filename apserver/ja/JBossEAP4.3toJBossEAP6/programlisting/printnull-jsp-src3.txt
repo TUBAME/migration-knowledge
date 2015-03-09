@@ -1,0 +1,3 @@
+
+<%= ((UserBean) request.getAttribute("user")).getName() %>
+

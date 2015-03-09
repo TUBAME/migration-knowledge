@@ -1,0 +1,33 @@
+
+  <resources.jdbc:JDBCProvider xmi:id="JDBCProvider_1385359050500" name="Derby JDBC Provider" description="Derby embedded non-XA  JDBC Provider" providerType="Derby JDBC Provider" implementationClassName="org.apache.derby.jdbc.EmbeddedConnectionPoolDataSource" xa="false">
+    <classpath>${DERBY_JDBC_DRIVER_PATH}/derby.jar</classpath>
+    <factories xmi:type="resources.jdbc:DataSource" xmi:id="DataSource_1385359050880" name="Default Datasource" jndiName="DefaultDatasource" description="Datasource for the WebSphere Default Application" providerType="Derby JDBC Provider" authMechanismPreference="BASIC_PASSWORD" relationalResourceAdapter="builtin_rra" statementCacheSize="10" datasourceHelperClassname="com.ibm.websphere.rsadapter.DerbyDataStoreHelper">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385359050883">
+        <resourceProperties xmi:id="J2EEResourceProperty_1385359050883" name="databaseName" type="java.lang.String" value="${APP_INSTALL_ROOT}/${CELL}/DefaultApplication.ear/DefaultDB"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385359050884" name="shutdownDatabase" type="java.lang.String" value=""/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385359050885" name="dataSourceName" type="java.lang.String" value=""/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385359050886" name="description" type="java.lang.String" value=""/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385359050887" name="connectionAttributes" type="java.lang.String" value="upgrade=true"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385359050888" name="createDatabase" type="java.lang.String" value=""/>
+      </propertySet>
+      <connectionPool xmi:id="ConnectionPool_1385359050883" connectionTimeout="180" maxConnections="10" minConnections="1" reapTime="180" unusedTimeout="1800" agedTimeout="0" purgePolicy="EntirePool"/>
+    </factories>
+    <factories xmi:type="resources.jdbc:DataSource" xmi:id="DataSource_1385370896744" name="_kwatanabe-PCNode01.server1-WS_test_persistBus" jndiName="jdbc/com.ibm.ws.sib/kwatanabe-PCNode01.server1-WS_test_persistBus" description="Default Datasource for SIB" authMechanismPreference="BASIC_PASSWORD" relationalResourceAdapter="builtin_rra" statementCacheSize="40" datasourceHelperClassname="com.ibm.websphere.rsadapter.DerbyDataStoreHelper">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385370896767">
+         ...
+      </propertySet>
+      <connectionPool xmi:id="ConnectionPool_1385370896746" connectionTimeout="180" maxConnections="50" minConnections="1" reapTime="180" unusedTimeout="1800" agedTimeout="0" purgePolicy="EntirePool" numberOfSharedPoolPartitions="0" numberOfUnsharedPoolPartitions="0" numberOfFreePoolPartitions="0" freePoolDistributionTableSize="0" surgeThreshold="-1" surgeCreationInterval="0" testConnection="false" testConnectionInterval="0" stuckTimerTime="0" stuckTime="0" stuckThreshold="0"/>
+    </factories>
+  </resources.jdbc:JDBCProvider>
+  <resources.jdbc:JDBCProvider xmi:id="JDBCProvider_1385359064427" name="Samples Derby JDBC Provider (XA)" description="Built-in Derby JDBC Provider (XA)" providerType="Derby JDBC Provider (XA)" implementationClassName="org.apache.derby.jdbc.EmbeddedXADataSource" xa="true">
+    <classpath>${DERBY_JDBC_DRIVER_PATH}/derby.jar</classpath>
+    <factories xmi:type="resources.jdbc:DataSource" xmi:id="DataSource_1385359064554" name="PLANTSDB" jndiName="jdbc/PlantsByWebSphereDataSource" description="Data source for the Plants by WebSphere entity beans" providerType="Derby JDBC Provider (XA)" authMechanismPreference="BASIC_PASSWORD" relationalResourceAdapter="builtin_rra" statementCacheSize="10" datasourceHelperClassname="com.ibm.websphere.rsadapter.DerbyDataStoreHelper">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385359064556">
+        <resourceProperties xmi:id="J2EEResourceProperty_1385359064556" name="databaseName" type="java.lang.String" value="${APP_INSTALL_ROOT}/${CELL}/PlantsByWebSphere.ear/Database/PLANTSDB"/>
+           ...
+      </propertySet>
+      <connectionPool xmi:id="ConnectionPool_1385359064556" connectionTimeout="180" maxConnections="10" minConnections="1" reapTime="180" unusedTimeout="1800" agedTimeout="0" purgePolicy="EntirePool"/>
+    </factories>
+  </resources.jdbc:JDBCProvider>
+
+  

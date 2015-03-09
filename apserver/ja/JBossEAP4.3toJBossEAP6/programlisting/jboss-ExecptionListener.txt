@@ -1,0 +1,12 @@
+
+qcon = qcf.createQueueConnection();
+// javax.jms.Connection#setExecptionListener‚ğ—˜—p.
+qcon.setExceptionListener(new ExceptionListener() {
+    public void onException(JMSException e) {
+         //—áŠO‚Ìˆ—‚ğ‹LÚ
+         ...
+        }
+     });
+  }
+qsession = qcon.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
+

@@ -1,0 +1,3 @@
+
+/subsystem=logging/logger=jp.co.ntt.ossc.webg.as7.migration:add(level=TRACE)
+

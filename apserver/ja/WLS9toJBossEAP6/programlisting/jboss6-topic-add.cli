@@ -1,0 +1,3 @@
+
+/subsystem=messaging/hornetq-server=default/jms-topic=exampleTopic:add(entries=["java:jboss/exported/exampleGlobalTopic"])
+

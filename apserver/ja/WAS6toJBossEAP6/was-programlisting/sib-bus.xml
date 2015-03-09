@@ -1,0 +1,8 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<sibresources:SIBus xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:sibresources="http://www.ibm.com/websphere/appserver/schemas/6.0/sibresources.xmi" xmi:id="SIBus_1385361988108" name="WS_test_Bus" uuid="4F7DDD18766AE7E7" secure="true" usePermittedChains="SSL_ENABLED" discardMsgsAfterQueueDeletion="false">
+  <busMembers xmi:id="SIBusMember_1385362172630" server="server1" node="kwatanabe-PCNode01">
+    <target xmi:id="SIBusMemberTarget_1385362172657" engineUuid="F275FD4A29E4F748"/>
+  </busMembers>
+</sibresources:SIBus>
+

@@ -1,0 +1,86 @@
+
+import javax.management.MBeanServerConnection;
+import javax.management.ObjectName;
+import javax.management.openmbean.CompositeData;
+import javax.management.remote.JMXConnector;
+import javax.management.remote.JMXConnectorFactory;
+import javax.management.remote.JMXServiceURL;
+
+public class JmxUtil {
+	
+	public enum JMXPROPS {
+
+	
+		EAP6("eap600","service:jmx:remoting-jmx://localhost:9900","jboss.as:management-root=server", "productVersion");
+
+		private final String value;
+		private String jmxServerUrl;
+		private String serverObjectName;
+		private String versionAttribute;
+
+		JMXPROPS(String value, String jmxServerUrl, String serverObjectName,
+				String versionAttribute) {
+			this.value = value;
+			this.jmxServerUrl = jmxServerUrl;
+			this.serverObjectName = serverObjectName;
+			this.versionAttribute = versionAttribute;
+		}
+
+		public String getValue() {
+			return value;
+		}
+
+		public String getJmxServerUrl() {
+			return jmxServerUrl;
+		}
+
+		public String getServerObjectName() {
+			return serverObjectName;
+		}
+
+		public String getVersionAttribute() {
+			return versionAttribute;
+		}
+
+		public String toString() {
+			return value;
+		}
+
+	}
+	
+
+	private static void invoke(JMXPROPS jmxProps) throws Exception {
+		JMXServiceURL address = new JMXServiceURL(jmxProps.getJmxServerUrl());
+
+		JMXConnector connector = JMXConnectorFactory.connect(address, null);
+		MBeanServerConnection connection = connector.getMBeanServerConnection();
+
+
+		String verison = (String) connection
+				.getAttribute(new ObjectName(jmxProps.getServerObjectName()),
+						jmxProps.getVersionAttribute());
+		System.out.println("jboss version:" + verison);
+
+		ObjectName memoryMXBean = new ObjectName("java.lang:type=Memory");
+		connection.invoke(memoryMXBean, "gc", null, null);
+		System.out.println("Garbage Collection Done Successfully");
+		System.out.println("Sleep 5 seconds...");
+		Thread.sleep(5000);
+
+		CompositeData compositeData = (CompositeData) connection.getAttribute(
+				memoryMXBean, "HeapMemoryUsage");
+		Long max = (Long) compositeData.get("max");
+		System.out.println("mem usage, max=" + max);
+		Long used = (Long) compositeData.get("used");
+		System.out.println("mem usage, used=" + used);
+		connector.close();
+
+	}
+	
+	public static void main(String[] args) throws Exception {
+        invoke(JMXPROPS.EAP6);
+
+	}
+
+}
+

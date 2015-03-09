@@ -1,0 +1,5 @@
+
+InitialContext ic = new InitialContext();
+DataSource ds = (DataSource)ic.lookup("java:jboss/datasources/ExampleDS");
+Connection con = ds.getConnection();
+

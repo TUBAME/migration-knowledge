@@ -1,0 +1,21 @@
+
+package sample;
+ 
+import javax.servlet.ServletContextListener;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContext;
+ 
+public class SampleAppListener implements ServletContextListener {
+private ServletContext context = null;
+ 
+public void contextInitialized(ServletContextEvent event) {
+context = event.getServletContext();
+System.out.println("Webアプリケーション起動時に呼び出し");
+}
+ 
+public void contextDestroyed(ServletContextEvent event) {
+context = event.getServletContext();
+System.out.println("Webアプリケーション停止時に呼び出し");
+}
+}
+

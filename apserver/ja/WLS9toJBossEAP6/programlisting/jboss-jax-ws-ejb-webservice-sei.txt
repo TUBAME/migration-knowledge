@@ -1,0 +1,21 @@
+import javax.ejb.SessionBean;
+import javax.ejb.SessionContext;
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+//import weblogic.jws.WLHttpTransport;
+//import weblogic.jws.Transactional;
+import weblogic.ejbgen.Session;
+@Session(ejbName="ExampleEJB")
+@WebService(name="ExamplePortType", serviceName="ExampleService",
+            targetNamespace="http://example.org")
+
+//@WLHttpTransport(contextPath="Examples", serviceUri="ExampleService",
+                 portName="ExamplePort")
+
+public class ExampleBean implements SessionBean {
+  @WebMethod()
+  @Transactional(value=true)
+  public String sayHello(String message) {
+    System.out.println("sayChao:" + message);
+    return "Here is the chao message: '" + message + "'";
+

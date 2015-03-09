@@ -1,0 +1,18 @@
+
+	//private static final String homeJNDIName = "MusicLibraryEJB.MusicLibraryHome";
+	private static final String homeJNDIName = "ejb:/bands-ejb21-module/MusicLibraryEJB!examples.ejb20.relationships.bands.MusicLibraryHome";
+	
+	...
+
+	/**
+	 * JNDI を使って、MusicLibrary Bean のホーム インタフェースをルックアップします。
+	 */
+	private MusicLibraryHome lookupMusicLibraryHome() throws NamingException {
+	...
+		Context ctx = getInitialContext();
+		Object home = (MusicLibraryHome) ctx.lookup(homeJNDIName);
+	...
+	
+	}
+
+	

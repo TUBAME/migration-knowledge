@@ -1,0 +1,9 @@
+
+<weblogic-ejb-jar  xmlns="http://www.bea.com/ns/weblogic/90" ...>
+...
+  <stateful-session-clustering>
+ 
+    ...
+  </stateful-session-clustering>
+  
+  

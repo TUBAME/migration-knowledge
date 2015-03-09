@@ -1,0 +1,19 @@
+
+#EJBインスタンスプール「TestBeanPool」の登録
+[standalone@localhost:9999/] /subsystem=ejb3/strict-max-bean-instance-pool=TestBeanPool:add (max-pool-size=25)
+{"outcome" => "success"}
+
+#結果確認
+[standalone@localhost:9999/]
+ /subsystem=ejb3/strict-max-bean-instance-pool=TestBeanPool:read-resource()
+--(CLIで上記をオペレーション実行し、成功すると以下のように表示される)---
+{
+    "outcome" => "success",
+    "result" => {
+        "max-pool-size" => 25,
+        "name" => "TestBeanPool",
+        "timeout" => 5L,
+        "timeout-unit" => "MINUTES"
+    }
+}
+

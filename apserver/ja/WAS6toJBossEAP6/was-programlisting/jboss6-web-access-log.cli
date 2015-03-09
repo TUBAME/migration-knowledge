@@ -1,0 +1,4 @@
+
+/subsystem=web/virtual-server=default-host/access-log=configuration/:add(pattern="%t,%a,%U,%s,%D",resolve-hosts=false, prefix="localhost_access_log.", rotate=true) 
+/subsystem=web/virtual-server=default-host/access-log=configuration/directory=configuration/:add(relative-to="jboss.server.log.dir",path=".")
+

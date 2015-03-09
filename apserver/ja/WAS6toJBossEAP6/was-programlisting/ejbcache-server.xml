@@ -1,0 +1,10 @@
+
+<components xmi:type="applicationserver:ApplicationServer" xmi:id="ApplicationServer_1385359009220" applicationClassLoaderPolicy="MULTIPLE">
+  ...
+	 <components xmi:type="applicationserver.ejbcontainer:EJBContainer" xmi:id="EJBContainer_1385359009220" passivationDirectory="${USER_INSTALL_ROOT}/temp" inactivePoolCleanupInterval="30000">
+	      ...
+	      <cacheSettings xmi:id="EJBCache_1385359009220" cleanupInterval="3000" cacheSize="2053"/>
+	      ...
+	   </components>
+</components>
+    

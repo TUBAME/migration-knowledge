@@ -1,0 +1,3 @@
+
+/subsystem=ejb3/cluster-passivation-store=infinispan:write-attribute(name=idle-timeout,value=300L)
+

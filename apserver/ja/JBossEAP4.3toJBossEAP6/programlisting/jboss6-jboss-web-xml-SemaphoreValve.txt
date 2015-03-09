@@ -1,0 +1,19 @@
+
+<jboss-web>
+   <valve>
+      <class-name>org.apache.catalina.valves.SemaphoreValve</class-name>
+      <param>
+         <param-name>block</param-name>
+         <param-value>false</param-value>
+      </param>
+      <param>
+         <param-name>concurrency</param-name>
+         <param-value>10</param-value>
+      </param>
+      <param>
+         <param-name>fairness</param-name>
+         <param-value>true</param-value>
+      </param>
+   </valve>
+</jboss-web>
+

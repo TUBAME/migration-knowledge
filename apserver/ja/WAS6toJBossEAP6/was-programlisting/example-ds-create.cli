@@ -1,0 +1,3 @@
+
+data-source add --name=sample-ds --jndi-name=java:jboss/resources/jdbc/SampleDS --driver-name=sample-driver --driver-class=org.postgresql.Driver --connection-url=jdbc:postgresql://localhost:5432/testdb --user-name=postgres --password=postgres
+

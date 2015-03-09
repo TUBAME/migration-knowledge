@@ -1,0 +1,26 @@
+
+...
+import javax.ejb.ActivationConfigProperty;
+import javax.ejb.EJB;
+import javax.ejb.MessageDriven;
+import javax.jms.Message;
+import javax.jms.MessageListener;
+...
+
+@MessageDriven(name = "QueueReciverBean", 
+activationConfig = {
+@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
+@ActivationConfigProperty(propertyName = "destination", propertyValue = "queue/test"),
+
+@ActivationConfigProperty(propertyName = "maxSession", propertyValue = "20") })
+
+public class QueueReciverBean implements MessageListener{
+
+	@Override
+	public void onMessage(Message rcvMessage) {
+	
+	...
+		
+	}
+	
+}

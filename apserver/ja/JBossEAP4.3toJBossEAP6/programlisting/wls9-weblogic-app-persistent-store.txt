@@ -1,0 +1,10 @@
+
+<weblogic-application xmlns="http://www.bea.com/ns/weblogic/90">
+   
+ <session-descriptor>	
+     <persistent-store-type>memory</persistent-store-type>
+     <sharing-enabled>true</sharing-enabled>
+   
+ </session-descriptor>
+
+</weblogic-application>

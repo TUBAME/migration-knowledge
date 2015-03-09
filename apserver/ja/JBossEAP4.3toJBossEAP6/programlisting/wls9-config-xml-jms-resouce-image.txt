@@ -1,0 +1,15 @@
+
+<jms-system-resource>
+ <name>examples-jms</name>
+ <target>examplesServer</target>
+ <sub-deployment>
+  <name>exampleQueue</name>
+  <target>examplesServer</target>
+ </sub-deployment>
+ <sub-deployment>
+  <name>exampleTopic</name>
+  <target>examplesServer</target>
+ </sub-deployment>
+ <descriptor-file-name>jms/examples-jms.xml</descriptor-file-name>
+</jms-system-resource>
+

@@ -1,0 +1,18 @@
+
+[xxx].war
+
+|-- META-INF/
+
+|   |-- MANIFEST.MF
+
+|-- WEB-INF/
+
+|   |-- weblogic.xml   š JavaEE•W€‚Ìweb.xml‹y‚ÑJBossŒÅ—L‚Ìjboss-web.xml‚ÉˆÚA‚·‚é
+
+|   |-- web.xml
+
+|   |-- classes/
+
+|   |-- lib/
+
+

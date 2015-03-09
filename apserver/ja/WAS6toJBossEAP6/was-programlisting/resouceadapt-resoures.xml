@@ -1,0 +1,46 @@
+
+<resources.j2c:J2CResourceAdapter xmi:id="builtin_rra" name="WebSphere Relational Resource Adapter" description="Built-in Relational Resource Adapter for WebSphere Persistence" archivePath="${WAS_LIBS_DIR}/rsadapter.rar">
+    <classpath>${WAS_LIBS_DIR}/rsadapter.rar</classpath>
+    <factories xmi:type="resources.jdbc:CMPConnectorFactory" xmi:id="CMPConnectorFactory_1385359050913" name="Default_CF" authMechanismPreference="BASIC_PASSWORD" connectionDefinition="ConnectionDefinition_1054132487569" cmpDatasource="DataSource_1385359050880">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385359050913"/>
+    </factories>
+    <factories xmi:type="resources.jdbc:CMPConnectorFactory" xmi:id="CMPConnectorFactory_1385359064582" name="PLANTSDB_CF" authMechanismPreference="BASIC_PASSWORD" connectionDefinition="ConnectionDefinition_1054132487569" cmpDatasource="DataSource_1385359064554">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385359064582"/>
+    </factories>
+    <propertySet xmi:id="J2EEResourcePropertySet_8"/>
+    <deploymentDescriptor xmi:id="Connector_1054132487569" displayName="WS_RdbResourceAdapter" vendorName="IBM" specVersion="1.5" eisType="RRA" version="6.0">
+      <icons xmi:id="IconType_1054132487569" smallIcon="rdb_small_icon.jpg" largeIcon="rdb_large_icon.jpg"/>
+      <displayNames xmi:id="DisplayName_1385370896745" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385370014306" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385369410704" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385369119990" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385368885319" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385367620599" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385366029925" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385364899741" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385363016745" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385359064429" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1385359050500" value="WS_RdbResourceAdapter"/>
+      <displayNames xmi:id="DisplayName_1054132487569" value="WS_RdbResourceAdapter"/>
+      <descriptions xmi:id="Description_1054132487569" value="IBM Relational ResourceAdapter"/>
+      <license xmi:id="License_1054132487569" required="false">
+        <descriptions xmi:id="Description_1054132487570" value="IBM Relational ResourceAdapter"/>
+      </license>
+      <resourceAdapter xmi:id="ResourceAdapter_1054132487569" transactionSupport="NoTransaction" reauthenticationSupport="false" resourceAdapterClass="com.ibm.ws.rsadapter.spi.WSResourceAdapterImpl">
+        <outboundResourceAdapter xmi:id="OutboundResourceAdapter_1054132487569" reauthenticationSupport="false" transactionSupport="XATransaction">
+          <connectionDefinitions xmi:id="ConnectionDefinition_1054132487569" managedConnectionFactoryClass="com.ibm.ws.rsadapter.spi.WSManagedConnectionFactoryImpl" connectionFactoryInterface="javax.resource.cci.ConnectionFactory" connectionFactoryImplClass="com.ibm.ws.rsadapter.cci.WSRdbConnectionFactoryImpl" connectionInterface="javax.resource.cci.Connection" connectionImplClass="com.ibm.ws.rsadapter.cci.WSRdbConnectionImpl">
+            <configProperties xmi:id="ConfigProperty_1054132487569" name="ConnectionFactoryType" type="java.lang.Integer" value="2">
+              <descriptions xmi:id="Description_1054132487571" value="A constant indicating the type of connection factory: WSJdbcDataSource (1) or WSRdbConnectionFactory (2)"/>
+            </configProperties>
+          </connectionDefinitions>
+          <authenticationMechanisms xmi:id="AuthenticationMechanism_1054132487589" authenticationMechanismType="BasicPassword" credentialInterface="javax.resource.spi.security.PasswordCredential">
+            <descriptions xmi:id="Description_1054132487590" value="BasicPassword authentication"/>
+          </authenticationMechanisms>
+          <authenticationMechanisms xmi:id="AuthenticationMechanism_1054132487590" authenticationMechanismType="Kerbv5" credentialInterface="javax.resource.spi.security.GenericCredential">
+            <descriptions xmi:id="Description_1054132487591" value="Kerbv5 Authentication"/>
+          </authenticationMechanisms>
+        </outboundResourceAdapter>
+      </resourceAdapter>
+    </deploymentDescriptor>
+    <connectionDefTemplateProps xmi:id="ConnectionDefTemplateProps_1054132487589" ConnectionDefinition="ConnectionDefinition_1054132487569"/>
+  </resources.j2c:J2CResourceAdapter>

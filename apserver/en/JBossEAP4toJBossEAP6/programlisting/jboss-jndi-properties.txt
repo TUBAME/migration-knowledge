@@ -1,0 +1,7 @@
+
+java.naming.factory.initial=org.jboss.naming.remote.client.InitialContextFactory
+java.naming.provider.url=remote://localhost:4447
+java.naming.factory.url.pkgs=org.jboss.ejb.client.naming
+java.naming.security.principal=username
+java.naming.security.credentials=userpass
+

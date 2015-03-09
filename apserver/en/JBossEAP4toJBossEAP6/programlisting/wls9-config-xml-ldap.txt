@@ -1,0 +1,6 @@
+
+  <embedded-ldap>
+    <name>wl_server</name>
+    <credential-encrypted>{3DES}HpRRsmGrKbmGEayjHAiY5ahUNW4cidxeuvn14Ot2gl8=</credential-encrypted>
+  </embedded-ldap>
+  

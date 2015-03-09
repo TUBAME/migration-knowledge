@@ -1,0 +1,21 @@
+
+import javax.inject.Inject;
+
+import org.jboss.logging.Logger;
+
+...
+public class HelloService {
+
+
+	private static Logger logger = Logger.getLogger(HelloService.class);
+
+	@Inject
+	HelloSession helloSession;
+
+	String createHelloMessage(String name) throws Exception {
+		logger.debug("debug");
+		return helloSession.say(name);
+	}
+
+}
+

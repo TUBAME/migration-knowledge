@@ -1,0 +1,3 @@
+
+/system-property=org.apache.catalina.connector.URI_ENCODING:add(value="UTF-8")
+

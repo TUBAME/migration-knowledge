@@ -1,0 +1,14 @@
+
+  [xxx].jar(EJB)
+
+|-- META-INF/
+
+|   |-- MANIFEST.MF
+
+|   |-- ejb-jar.xml
+
+|   |-- ibm-ejb-jar-bnd.xmi JBossŒÅ—L‚Ìjboss-ejb3.xml‚ÉˆÚA‚·‚é
+
+|   |-- ibm-ejb-jar-ext.xmi JBossŒÅ—L‚Ìjboss-ejb3.xml‚ÉˆÚA‚·‚é
+
+|   |-- ibm-ejb-jar-ext-pme.xmi JBossŒÅ—L‚Ìjboss-ejb3.xml‚ÉˆÚA‚·‚é

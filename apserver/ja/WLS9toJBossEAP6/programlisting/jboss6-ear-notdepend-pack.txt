@@ -1,0 +1,11 @@
+
+hoge-ear.ear
+     |-- hoge-web.war
+     |-- hoge-ejb.jar
+     |-- lib
+         |-- util.jar
+
+     |-- META-INF
+         |-- application.xml
+
+         

@@ -1,0 +1,8 @@
+
+<components xmi:type="applicationserver:ApplicationServer" xmi:id="ApplicationServer_1385359009220" applicationClassLoaderPolicy="MULTIPLE">
+  ...
+  <components xmi:type="portletcontainer:PortletContainer" xmi:id="PortletContainer_1385359009220"/>
+ </components>
+ 
+
+

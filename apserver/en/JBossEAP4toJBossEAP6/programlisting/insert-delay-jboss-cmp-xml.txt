@@ -1,0 +1,6 @@
+
+<jbosscmp-jdbc>
+  <defaults>
+    ...
+    <insert-after-ejb-post-create>true</insert-after-ejb-post-create>
+

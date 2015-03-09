@@ -1,0 +1,31 @@
+
+<weblogic-rdbms-jar
+  xmlns="http://www.bea.com/ns/weblogic/90"
+  xmlns:j2ee="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.bea.com/ns/weblogic/90 http://www.bea.com/ns/weblogic/90/weblogic-rdbms20-persistence.xsd">
+  <weblogic-rdbms-bean>
+    <ejb-name>›››</ejb-name>
+    <data-source-name>¢¢¢</data-source-name>
+    <table-map>
+      <table-name>   </table-name>
+      <field-map>
+        <cmp-field>œœœ</cmp-field>
+        <dbms-column>£££</dbms-column>
+      </field-map>
+    </table-map>
+  </weblogic-rdbms-bean>
+<weblogic-rdbms-relation>
+    <relation-name>¡¡¡</relation-name>
+    <weblogic-relationship-role>
+      <relationship-role-name></relationship-role-name>
+      <relationship-role-map>
+        <column-map>
+          <foreign-key-column>¤¤¤</foreign-key-column>
+          <key-column>¥¥¥</key-column>
+        </column-map>
+      </relationship-role-map>
+    </weblogic-relationship-role>
+</weblogic-rdbms-relation>
+</weblogic-rdbms-jar>
+

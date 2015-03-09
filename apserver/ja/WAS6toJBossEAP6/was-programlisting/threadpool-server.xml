@@ -1,0 +1,12 @@
+
+  <services xmi:type="threadpoolmanager:ThreadPoolManager" xmi:id="ThreadPoolManager_1385359009220" enable="true">
+    <threadPools xmi:id="ThreadPool_1385359009224" minimumSize="10" maximumSize="50" inactivityTimeout="3500" isGrowable="false" name="ORB.thread.pool"/>
+    <threadPools xmi:id="ThreadPool_1385359009225" minimumSize="1" maximumSize="3" inactivityTimeout="30000" isGrowable="false" name="server.startup" description="This pool is used by WebSphere during server startup."/>
+    <threadPools xmi:id="ThreadPool_1385359009226" minimumSize="5" maximumSize="20" name="Default"/>
+    <threadPools xmi:id="ThreadPool_1385359009220" minimumSize="10" maximumSize="50" inactivityTimeout="3500" isGrowable="false" name="WebContainer"/>
+    <threadPools xmi:id="ThreadPool_1385359009221" minimumSize="5" maximumSize="20" name="TCPChannel.DCS"/>
+    <threadPools xmi:id="ThreadPool_1385359009222" minimumSize="4" maximumSize="50" name="SIBFAPInboundThreadPool" description="Service integration bus FAP inbound channel thread pool"/>
+    <threadPools xmi:id="ThreadPool_1385359009223" minimumSize="4" maximumSize="50" name="SIBFAPThreadPool" description="Service integration bus FAP outbound channel thread pool"/>
+  </services>
+  
+  

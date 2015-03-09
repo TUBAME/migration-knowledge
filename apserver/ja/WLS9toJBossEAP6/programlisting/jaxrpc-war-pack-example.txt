@@ -1,0 +1,11 @@
+
+ |-- webapp(src/main/webapp)
+          |-- META-INF
+                | -- context.xml
+          |-- WEB-INF
+                |-- wsdl
+                     |-- jaxrpc-mapping.xml
+                |--jaxrpc-mapping.xml
+                |--web.xml
+                |--webservices.xml
+

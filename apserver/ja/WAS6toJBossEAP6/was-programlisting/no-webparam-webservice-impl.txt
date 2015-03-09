@@ -1,0 +1,9 @@
+
+...
+  // Standard JWS annotation to expose method as an operation named "sayHello"
+  @WebMethod()
+  public String sayHello(String MyHelloMessage) throws RemoteException {
+    System.out.println("sayHello '" + MyHelloMessage + "' to you too!");
+    return "'" + MyHelloMessage + "' to you too!";
+  }
+

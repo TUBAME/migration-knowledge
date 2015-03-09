@@ -1,0 +1,4 @@
+
+/subsystem=logging/periodic-rotating-file-handler=FILE:remove
+/subsystem=logging/size-rotating-file-handler=FILE:add(file={"path"=>"server.log", "relative-to"=>"jboss.server.log.dir}, rotate-size="100m", max-backup-index=10)
+

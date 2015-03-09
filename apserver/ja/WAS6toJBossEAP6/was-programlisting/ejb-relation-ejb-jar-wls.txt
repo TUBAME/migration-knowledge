@@ -1,0 +1,29 @@
+
+<relationships>
+  ...
+  <ejb-relation>
+    <ejb-relation-name>ÅõÅõÅõ</ejb-relation-name>
+    <ejb-relationship-role>
+      <ejb-relationship-role-name>Å¢Å¢Å¢</ejb-relationship-role-name>
+      <multiplicity>many</multiplicity>
+      <relationship-role-source>
+        <ejb-name>aaaEJB</ejb-name>
+      </relationship-role-source>
+      <cmr-field>
+        ...
+      </cmr-field>
+    </ejb-relationship-role>
+    <ejb-relationship-role>
+      <ejb-relationship-role-name>Å°Å°Å°</ejb-relationship-role-name>
+      <multiplicity>one</multiplicity>
+      <relationship-role-source>
+        <ejb-name>bbbEJB</ejb-name>
+      </relationship-role-source>
+     <cmr-field>
+       ...
+     </cmr-field>
+   </ejb-relationship-role>
+  </ejb-relation>
+  ...
+</relationships>
+

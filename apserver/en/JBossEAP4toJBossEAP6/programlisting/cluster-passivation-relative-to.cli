@@ -1,0 +1,3 @@
+
+/subsystem=infinispan/cache-container=ejb/replicated-cache=repl/file-store=FILE_STORE:write-attribute(name=relative-to,value=path)
+

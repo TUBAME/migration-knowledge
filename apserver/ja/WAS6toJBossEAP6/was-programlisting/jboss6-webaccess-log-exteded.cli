@@ -1,0 +1,4 @@
+
+/subsystem=web/virtual-server=default-host/access-log=configuration:write-attribute(name=extended,value=true)
+/:reload
+

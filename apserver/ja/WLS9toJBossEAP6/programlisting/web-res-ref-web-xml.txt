@@ -1,0 +1,10 @@
+
+<web-app xmlns:j2ee="http://java.sun.com/xml/ns/j2ee">
+     <resource-ref>
+		<res-ref-name>jdbc/ExampleDS</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<lookup-name>java:jboss/datasources/ExampleDS</lookup-name>
+	</resource-ref>                                
+</web-app>
+

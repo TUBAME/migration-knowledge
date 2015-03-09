@@ -1,0 +1,6 @@
+
+  <jta>
+    <name>hoge</name>
+    <timeout-seconds>500</timeout-seconds>
+  </jta>
+

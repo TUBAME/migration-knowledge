@@ -1,0 +1,40 @@
+
+import weblogic.jms.ServerSessionPoolFactory;
+ 
+public class PoolReceive
+  implements T3StartupDef
+{
+   ～
+  /**
+   * コンシューマを作成します。
+   * @param name 名前
+   * @param args ハッシュテーブル
+   * @exception Exception 問題が発生した場合
+   */
+  public String startup(String name, Hashtable args)
+      throws Exception
+  {
+    String connectionFactory = (String)args.get("connectionFactory");
+    String topicName = (String)args.get("topic");
+ 
+    if (connectionFactory == null || topicName == null) {
+        throw new IllegalArgumentException("connectionFactory="
++connectionFactory+", topicName="+topicName);
+    }
+ 
+    Context ctx = new InitialContext();
+    tconFactory = (TopicConnectionFactory) ctx.lookup(connectionFactory);
+    tcon = tconFactory.createTopicConnection();
+    tsession = tcon.createTopicSession(false, Session.AUTO_ACKNOWLEDGE);
+    topic = (Topic) ctx.lookup(topicName);
+    tcon.start();
+    sessionPoolFactory = (ServerSessionPoolFactory)
+      ctx.lookup(SESSION_POOL_FACTORY);
+    sessionPool = sessionPoolFactory.
+        getServerSessionPool(tcon, 5, false,Session.AUTO_ACKNOWLEDGE,
+            ★"examples.jms.startup.MsgListener");
+    consumer = tcon.createConnectionConsumer(topic, "TRUE", sessionPool, 10);
+ 
+    return "Ready To Receive Messages";
+  }
+

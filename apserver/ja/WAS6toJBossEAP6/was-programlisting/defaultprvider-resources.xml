@@ -1,0 +1,48 @@
+
+  <resources.j2c:J2CResourceAdapter xmi:id="J2CResourceAdapter_1385359001534" name="SIB JMS Resource Adapter" description="Default messaging provider" archivePath="${WAS_INSTALL_ROOT}/installedConnectors/sib.api.jmsra.rar">
+    <classpath>${WAS_INSTALL_ROOT}/installedConnectors/sib.api.jmsra.rar</classpath>
+    <factories xmi:type="resources.j2c:J2CConnectionFactory" xmi:id="J2CConnectionFactory_1385363129378" name="WebServicesInput_QCF" jndiName="jms/ws_test_qcf" description="" category="" authDataAlias="" manageCachedHandles="false" logMissingTransactionContext="false" xaRecoveryAuthAlias="" connectionDefinition="ConnectionDefinition_1385359001535">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385363129472">
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129472" name="BusName" type="java.lang.String" value="WS_test_Bus" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129473" name="ClientID" type="java.lang.String" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129474" name="ConnectionProximity" type="java.lang.String" value="Bus" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129475" name="durableSubscriptionHome" type="java.lang.String" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129476" name="NonPersistentMapping" type="java.lang.String" value="ExpressNonPersistent" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129477" name="Password" type="java.lang.String" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129478" name="PersistentMapping" type="java.lang.String" value="ReliablePersistent" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129479" name="ProviderEndpoints" type="java.lang.String" value="" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129480" name="ReadAhead" type="java.lang.String" value="Default" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129481" name="RemoteProtocol" type="java.lang.String" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129482" name="TargetTransportChain" type="java.lang.String" value="" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129483" name="ShareDataSourceWithCMP" type="java.lang.Boolean" value="false" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129484" name="shareDurableSubscriptions" type="java.lang.String" value="InCluster" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129485" name="Target" type="java.lang.String" value="" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129486" name="TargetSignificance" type="java.lang.String" value="Preferred" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129487" name="TargetType" type="java.lang.String" value="BusMember" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129488" name="TemporaryQueueNamePrefix" type="java.lang.String" value="" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129489" name="temporaryTopicNamePrefix" type="java.lang.String" required="false"/>
+        <resourceProperties xmi:id="J2EEResourceProperty_1385363129490" name="UserName" type="java.lang.String" required="false"/>
+      </propertySet>
+      <connectionPool xmi:id="ConnectionPool_1385363129378" connectionTimeout="180" maxConnections="10" minConnections="1" reapTime="180" unusedTimeout="1800" agedTimeout="0" purgePolicy="EntirePool" numberOfSharedPoolPartitions="0" numberOfUnsharedPoolPartitions="0" numberOfFreePoolPartitions="0" freePoolDistributionTableSize="0" surgeThreshold="-1" surgeCreationInterval="0" testConnection="false" testConnectionInterval="0" stuckTimerTime="0" stuckTime="0" stuckThreshold="0"/>
+    </factories>
+    <factories xmi:type="resources.j2c:J2CConnectionFactory" xmi:id="J2CConnectionFactory_1385363201883" name="WebServicesReply_QCF" jndiName="jms/WebServicesReplyQCF" description="" category="" authDataAlias="" manageCachedHandles="false" logMissingTransactionContext="false" xaRecoveryAuthAlias="" connectionDefinition="ConnectionDefinition_1385359001535">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385363201921">
+       ...
+      </propertySet>
+      <connectionPool xmi:id="ConnectionPool_1385363201883" connectionTimeout="180" maxConnections="10" minConnections="1" reapTime="180" unusedTimeout="1800" agedTimeout="0" purgePolicy="EntirePool" numberOfSharedPoolPartitions="0" numberOfUnsharedPoolPartitions="0" numberOfFreePoolPartitions="0" freePoolDistributionTableSize="0" surgeThreshold="-1" surgeCreationInterval="0" testConnection="false" testConnectionInterval="0" stuckTimerTime="0" stuckTime="0" stuckThreshold="0"/>
+    </factories>
+    <factories xmi:type="resources.j2c:J2CConnectionFactory" xmi:id="J2CConnectionFactory_1385364899743" name="orzQFactory" jndiName="jms/orzQFactory" description="" category="" authDataAlias="" manageCachedHandles="false" logMissingTransactionContext="false" xaRecoveryAuthAlias="" connectionDefinition="ConnectionDefinition_1385359001535">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385364899815">
+       ...
+      </propertySet>
+      <connectionPool xmi:id="ConnectionPool_1385364899743" connectionTimeout="180" maxConnections="10" minConnections="1" reapTime="180" unusedTimeout="1800" agedTimeout="0" purgePolicy="EntirePool" numberOfSharedPoolPartitions="0" numberOfUnsharedPoolPartitions="0" numberOfFreePoolPartitions="0" freePoolDistributionTableSize="0" surgeThreshold="-1" surgeCreationInterval="0" testConnection="false" testConnectionInterval="0" stuckTimerTime="0" stuckTime="0" stuckThreshold="0"/>
+    </factories>
+    <factories xmi:type="resources.j2c:J2CConnectionFactory" xmi:id="J2CConnectionFactory_1385366029926" name="hogeConFactory" jndiName="jms/hogeConFactory" description="" category="" authDataAlias="" manageCachedHandles="false" logMissingTransactionContext="false" xaRecoveryAuthAlias="" connectionDefinition="ConnectionDefinition_1385359001537">
+      <propertySet xmi:id="J2EEResourcePropertySet_1385366029986">
+      ...
+      </propertySet>
+      <connectionPool xmi:id="ConnectionPool_1385366029926" connectionTimeout="180" maxConnections="10" minConnections="1" reapTime="180" unusedTimeout="1800" agedTimeout="0" purgePolicy="EntirePool" numberOfSharedPoolPartitions="0" numberOfUnsharedPoolPartitions="0" numberOfFreePoolPartitions="0" freePoolDistributionTableSize="0" surgeThreshold="-1" surgeCreationInterval="0" testConnection="false" testConnectionInterval="0" stuckTimerTime="0" stuckTime="0" stuckThreshold="0"/>
+    </factories>
+    
+    
+    

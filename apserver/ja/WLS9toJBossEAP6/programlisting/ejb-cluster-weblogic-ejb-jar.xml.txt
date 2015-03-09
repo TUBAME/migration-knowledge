@@ -1,0 +1,11 @@
+
+<weblogic-ejb-jar  xmlns="http://www.bea.com/ns/weblogic/90" ...>
+...
+  <stateless-clustering>
+    <use-serverside-stubs>false</use-serverside-stubs>
+    <stateless-bean-is-clusterable>true</stateless-bean-is-clusterable>
+    <stateless-bean-load-algorithm>random</stateless-bean-load-algorithm>
+    <stateless-bean-call-router-class-name>beanRouter</stateless-bean-call-router-class-name>
+    <stateless-bean-methods-are-idempotent>true</stateless-bean-methods-are-idempotent>
+  </stateless-clustering>
+

@@ -1,0 +1,20 @@
+
+@Singleton
+@Startup
+public class HelloSingleton {
+
+	private static Logger logger = Logger.getLogger(HelloSingleton.class);
+
+	@PostConstruct
+	protected void startup() {
+		logger.info("HelloSingleton will be initialized!");
+	}
+
+
+	@PreDestroy
+	protected void destroy() {
+		logger.info("HelloSingleton will be removed!");
+	}
+
+}
+

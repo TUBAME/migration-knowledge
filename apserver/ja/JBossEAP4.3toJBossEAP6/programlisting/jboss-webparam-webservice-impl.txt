@@ -1,0 +1,7 @@
+ 
+  @WebMethod()
+  public String sayHello(@WebParam(name="MyHelloMessage") String MyHelloMessage) throws RemoteException {
+    System.out.println("sayHello '" + MyHelloMessage + "' to you too!");
+    return "'" + MyHelloMessage + "' to you too!";
+  }
+

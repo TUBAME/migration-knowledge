@@ -1,0 +1,8 @@
+
+<weblogic-web-app>
+<jsp-param>
+    <param-name>printNulls</param-name>
+    <param-value>false</param-value>
+  </jsp-param>
+</weblogic-web-app>
+

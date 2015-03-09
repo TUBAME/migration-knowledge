@@ -1,0 +1,10 @@
+
+/subsystem=infinispan/cache-container=ejb/replicated-cache=repl/eviction=EVICTION:write-attribute(name=max-entries,value=10000)
+{
+    "outcome" => "success",
+    "response-headers" => {
+        "operation-requires-reload" => true,
+        "process-state" => "reload-required"
+    }
+}
+

@@ -1,0 +1,19 @@
+
+<server>
+ <name>testserver</name>
+ <log>
+  <file-name>logs/server.log</file-name>
+  <rotation-type>byTime</rotation-type>
+  <number-of-files-limited>true</number-of-files-limited>
+  <log-file-severity>Debug</log-file-severity>
+  <domain-log-broadcast-severity>Off</domain-log-broadcast-severity>
+ </log>
+ <web-server>
+  <web-server-log>
+   <rotation-type>byTime</rotation-type>
+   <number-of-files-limited>true</number-of-files-limited>
+   <elf-fields>date time c-ip cs-method sc-status time-taken cs-uri</elf-fields>
+   <log-file-format>extended</log-file-format>
+  </web-server-log>
+ </web-server>
+

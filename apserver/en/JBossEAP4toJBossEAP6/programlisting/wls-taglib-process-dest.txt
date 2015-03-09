@@ -1,0 +1,25 @@
+
+<% if( null == request.getParameter(gupdateh) ) { %>
+<% if( null == request.getParameter(gdeleteh) ) { %>
+<!--Only show this if there is no update or delete parameter-->
+<form action="<%= request.getRequestURI() %>">
+  <input type="text" name="name"/>
+  <input type="submit" name="update" value="Update"/>
+  <input type="submit" name="delete" value="Delete"/>
+</form>
+<% } %>
+<% } %>
+ 
+<% if( null != request.getParameter(gupdateh) ) { %>
+<!-- do the update -->
+<% } %>
+ 
+<% if( null != request.getParameter(gdeleteh) ) { %>
+<!--do the delete-->
+<% } %>
+ 
+<% if( true==hA Man in Fullh.equals(request.getParameter(glastBookReadh))) %>
+<!--this section of code will be executed if lastBookRead exists
+ and the value of lastBookRead is "A Man in Full"-->
+<% } %>
+

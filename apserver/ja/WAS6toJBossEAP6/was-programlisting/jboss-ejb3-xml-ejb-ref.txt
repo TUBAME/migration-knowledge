@@ -1,0 +1,9 @@
+
+<enterprise-beans>
+	<session>
+		<ejb-name>MusicLibraryEJB</ejb-name>
+		<ejb-ref>
+			<ejb-ref-name>ejb/BandHome</ejb-ref-name>
+			<jndi-name>java:app/bands-ejb21-module/BandEJB!examples.ejb20.relationships.bands.BandHome</jndi-name>
+		</ejb-ref>
+

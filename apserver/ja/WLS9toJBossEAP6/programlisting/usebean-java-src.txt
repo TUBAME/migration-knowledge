@@ -1,0 +1,20 @@
+
+public class FooBean {
+ 
+private int count;
+private String URL = "http://hoge.com" ;
+ 
+public FooBean() {
+super();
+  }
+ 
+public String getURL() {
+return URL;
+  }
+ 
+public void setURL(String url) {
+URL = url;
+  }
+  ÅEÅEÅE
+}
+
