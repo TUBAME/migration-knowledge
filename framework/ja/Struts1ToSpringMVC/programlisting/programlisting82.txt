@@ -1,0 +1,37 @@
+<!-- struts1のhtml:optionsタグを利用したjspで生成されるhtml-->
+<form name="HtmlForm" method="post" action="/ExtraTest/result.do">
+	<select name="stringData">
+		<!-- P1 -->
+		<option value="00">地球</option>
+		<!-- P2 -->
+		<option value="01">北海道</option>
+		<option value="02">東北</option>
+		<option value="03">関東</option>
+		<!-- P3 -->
+		<option value="04">甲信越</option>
+		<option value="05">中部</option>
+		<option value="06">東海</option>
+		<!-- P4 -->
+		<option value="07">近畿</option>
+		<option value="08">中国</option>
+		<option value="09">四国</option>
+		<!-- P5 -->		
+		<option value="10">九州</option>
+		<option value="11">沖縄</option>
+		<option value="12" selected="selected">北陸</option>
+		<!-- P6 -->		
+		<option value="13">米国</option>
+		<option value="14">英国</option>
+		<option value="15">中国</option>
+		<!-- P7 -->
+		<option value="16">仏国</option>
+		<!-- P8 -->
+		<option value="17">伊国</option>
+		<!-- P9 -->
+		<option value="18">独国</option>
+		<!-- P10 -->
+		<option value="19">西国</option>
+		
+	</select>
+	<input type="submit" value="Submit">
+</form>

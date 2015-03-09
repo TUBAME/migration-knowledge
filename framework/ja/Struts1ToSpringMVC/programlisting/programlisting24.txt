@@ -1,0 +1,5 @@
+<action path="/test2" forward="/WEB-INF/dispatchaction.jsp"/>
+<action path="/test2-dispatch" type="org.sample.struts1.mapping.MappingTest2" name="test" parameter="execute">
+    <forward name="dispatch1" path="/WEB-INF/dispatch1.jsp" />
+    <forward name="dispatch2" path="/WEB-INF/dispatch2.jsp" />
+</action>

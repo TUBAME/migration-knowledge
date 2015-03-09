@@ -1,0 +1,15 @@
+
+public class SessionAction extends Action {
+ 
+  @Override
+  public ActionForward execute(ActionMapping mapping, ActionForm form,
+                               HttpServletRequest request, HttpServletResponse response) {
+ 
+    HttpSession session = request.getSession(false);
+    String sessionId = session.getId();
+    request.setAttribute("sessionId", sessionId);
+    System.out.println(sessionId);
+ 
+    return mapping.findForward("session");
+  }
+}

@@ -1,0 +1,4 @@
+ActionMessages messages1 = new ActionMessages();
+ActionMessage message1 = new ActionMessage("メッセージ1", false);
+messages1.add("key1", message1);
+super.saveMessages(request, messages1);

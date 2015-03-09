@@ -1,0 +1,1 @@
+<action path="/France" name="France" type="org.apache.struts.actions.LocaleAction" roles="french"/>

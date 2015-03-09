@@ -1,0 +1,2 @@
+<bean:define id="uid" name="tbean" type="java.lang.String" property="username"/>
+<bean:write name="uid"/>

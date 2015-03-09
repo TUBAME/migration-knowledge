@@ -1,0 +1,11 @@
+<struts-config>
+    <form-beans>
+        <form-bean name="mapbacked" type="org.sample.struts1.extra.MapBackedForm"/>
+    </form-beans>
+    <action-mappings>
+        <action path="/test3" forward="/WEB-INF/test3.jsp"/>
+        <action path="/test3-input" name="mapbacked" type="org.sample.struts1.extra.ExtraTest3">
+            <forward name="success" path="/WEB-INF/test3-result.jsp"/>
+        </action>
+    </action-mappings>
+</struts-config>

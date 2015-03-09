@@ -1,0 +1,13 @@
+<bean id="messageSource"
+ class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+    <property name="basenames">
+        <list>
+            <value>classpath:i18n/validation/ValidationMessages</value>
+        </list>
+    </property>
+    <property name="fallbackToSystemLocale" value="false"/>
+</bean>
+<bean id="validator"
+ class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+    <property name="validationMessageSource"><ref bean="messageSource" /></property>
+</bean>

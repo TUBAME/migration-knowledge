@@ -1,0 +1,18 @@
+@Controller
+public class ExtraTest3 {
+    @RequestMapping(value="/test3", method = RequestMethod.GET)
+    public String setup(Model model) {
+        if(!model.containsAttribute("value")) {
+            model.addAttribute("value", new MapBackedForm());
+        }
+        return "test3";
+    }
+    
+    @RequestMapping(value="/test3-input", method=RequestMethod.POST)
+    public ModelAndView execute(@ModelAttribute(value="value") MapBackedForm mbForm) {
+        ModelAndView mav = new ModelAndView("test3-result");
+        mav.addObject("result", mbForm.getValue());
+        
+        return mav;
+    }
+}

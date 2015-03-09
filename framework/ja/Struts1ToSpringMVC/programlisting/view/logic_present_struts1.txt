@@ -1,0 +1,1 @@
+<logic:present name="foo1">Present</logic:present>

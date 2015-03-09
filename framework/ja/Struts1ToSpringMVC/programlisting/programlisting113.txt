@@ -1,0 +1,4 @@
+<logic:iterate id="mapValue" name="MapValue">
+	<html:radio idName="mapValue" value="key" property="stringData"/>
+	<bean:write name="mapValue" property="value"/><br>
+</logic:iterate>

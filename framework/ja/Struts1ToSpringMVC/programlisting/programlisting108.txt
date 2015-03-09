@@ -1,0 +1,2 @@
+<html:radio property="stringData" value="aaa"/>Check1<br>
+<html:radio property="stringData" value="bbb"/>Check2<br>

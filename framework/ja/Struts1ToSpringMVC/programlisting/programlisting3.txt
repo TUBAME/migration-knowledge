@@ -1,0 +1,17 @@
+public class ExtraTest1 extends DownloadAction {
+    @Override
+    protected int getBufferSize() {
+        return 1024;
+    }
+    
+    @Override
+    protected StreamInfo getStreamInfo(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws Exception {
+        String path = servlet.getServletContext().getRealPath("/WEB-INF/download.txt");
+        StreamInfo streamInfo = new FileStreamInfo("application/octet-stream", Paths.get(path).toFile());
+        response.setHeader("Content-disposition", "attachment; filename="
+                + "fileABC.txt");
+        return streamInfo;
+    }
+}

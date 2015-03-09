@@ -1,0 +1,18 @@
+    ActionMessages messages2 = new ActionMessages();
+    // ActionMessageに直接メッセージを格納する場合は、コンストラクタの第二引数にfalseを設定する
+    ActionMessage message2 = new ActionMessage("メッセージ2", false);
+    messages2.add("key2", message2);
+    saveMessages(request, messages2);
+
+@Override
+protected void saveMessages(HttpServletRequest request, ActionMessages messages) {
+    // Remove any messages attribute if none are required
+    if ((messages == null) || messages.isEmpty()) {
+        request.removeAttribute("local.key");
+
+        return;
+    }
+
+    // Save the messages we need
+    request.setAttribute("local.key", messages);
+}

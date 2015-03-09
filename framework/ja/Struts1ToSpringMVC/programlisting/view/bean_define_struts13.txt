@@ -1,0 +1,2 @@
+<bean:define id="testBeanSession" name="tbean_session" type="org.sample.struts1.extra.TestBean"/>
+<bean:write name="testBeanSession" property="username"/>

@@ -1,0 +1,5 @@
+<fmt:bundle basename="global">
+<fmt:message key="global.test7">
+<fmt:param value="jstl"/>
+</fmt:message>
+</fmt:bundle>

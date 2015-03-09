@@ -1,0 +1,7 @@
+<form:form modelAttribute="multiBoxTest" action="${appUrl}/result14">
+	<spring:message code='global.check1' var="message1"/>
+	<spring:message code='global.check2' var="message2"/>
+	<form:checkbox path="checkedList" label="${message1}" value="on"/><br>
+	<form:checkbox path="checkedList" label="${message2}" value="on"/><br>
+	<input type="submit">
+</form:form>

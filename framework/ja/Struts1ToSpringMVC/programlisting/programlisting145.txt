@@ -1,0 +1,6 @@
+<html:messages id="msg3" message="false" property="key3">
+  <bean:write name="msg3"/><br>
+</html:messages>
+
+※<html:errors>を使用する場合は、以下のように記述する
+<html:errors property="key3"/><br>

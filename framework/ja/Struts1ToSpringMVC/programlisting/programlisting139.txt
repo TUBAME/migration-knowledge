@@ -1,0 +1,5 @@
+<spring:url value="bar">
+  <spring:param name="arg0">
+    foo
+  </spring:param>
+</spring:url>

@@ -1,0 +1,1 @@
+<c:if test="${foo1 != null}">Present</c:if><p>

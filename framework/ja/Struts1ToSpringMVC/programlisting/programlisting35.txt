@@ -1,0 +1,14 @@
+public class MappingTest5 extends EventDispatchAction {
+    public ActionForward dispatch1(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+        return mapping.findForward("dispatch1");
+    }
+
+    public ActionForward dispatch2(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+        return mapping.findForward("dispatch2");
+    }
+}
+

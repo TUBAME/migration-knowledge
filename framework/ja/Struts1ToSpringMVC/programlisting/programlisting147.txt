@@ -1,0 +1,3 @@
+<html:messages id="msg5" message="true" property="key5">
+  <bean:write name="msg5"/><br>
+</html:messages>

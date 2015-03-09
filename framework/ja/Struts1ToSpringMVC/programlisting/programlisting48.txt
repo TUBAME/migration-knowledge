@@ -1,0 +1,18 @@
+@Controller
+@RequestMapping("/test9")
+public class MappingTest9Nest {
+    @RequestMapping(method = RequestMethod.GET)
+    public String execute(Model model) {
+        model.addAttribute("message", new TestFormBean());
+        return "mappingdispatchaction2";
+    }
+
+    @RequestMapping(value = "/Nest/dispatch1", method = RequestMethod.POST)
+    public String dispatch1(@ModelAttribute("message") TestFormBean message) {
+        return "dispatch1";
+    }
+    @RequestMapping(value = "/Nest/dispatch2", method = RequestMethod.POST)
+    public String dispatch2(@ModelAttribute("message") TestFormBean message) {
+        return "dispatch2";
+    }
+}

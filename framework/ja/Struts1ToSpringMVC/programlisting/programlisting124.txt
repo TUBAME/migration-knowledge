@@ -1,0 +1,2 @@
+<span><input id="stringData7" name="stringData" type="radio" value="eee"/><label for="stringData7">CheckY</label></span>
+<span><br><input id="stringData8" name="stringData" type="radio" value="fff"/><label for="stringData8">CheckZ</label></span>

@@ -1,0 +1,3 @@
+<logic:match name="foo" location="start" value="ABC">
+Match!
+</logic:match><p>

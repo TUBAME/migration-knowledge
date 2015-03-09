@@ -1,0 +1,7 @@
+<head>
+<html:javascript formName="userinfo "/>
+</head>
+<body>
+<h1>Struts 1 localization example</h1>
+<html:form action="/validateUser.do" onsubmit="return validateUserinfo(this)">
+    <html:errors property="username"/><p>

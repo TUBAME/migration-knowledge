@@ -1,0 +1,11 @@
+<html:form action="/test14-action">
+<c:forEach var="i" begin="0" end="1" step="1">
+  <html:checkbox property="listData[${i}]" value="${i+1}"/><bean:message key="global.check${i+1}"/><br>
+</c:forEach>
+<html:submit/>
+</html:form>
+
+JSP(チェックされた値を表示）
+<c:forEach var="i" begin="0" end="1" step="1">
+  <bean:write name="mbt" property="listData[${i}]"/>
+</c:forEach>

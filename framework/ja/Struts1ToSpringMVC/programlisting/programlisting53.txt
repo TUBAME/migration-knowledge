@@ -1,0 +1,5 @@
+<global-exceptions>
+    <exception key="global.exception2"
+        type="org.sample.struts1.exception.TestException" 
+        path="/WEB-INF/error2.jsp"/>
+</global-exceptions>

@@ -1,0 +1,12 @@
+<form-bean
+    name="UserForm"
+    type="org.apache.struts.action.DynaActionForm">
+    <form-property
+        name="givenName"
+        type="java.lang.String"
+        initial="John"/>
+    <form-property
+        name="familyName"
+        type="java.lang.String"
+        initial="Smith"/>
+</form-bean>

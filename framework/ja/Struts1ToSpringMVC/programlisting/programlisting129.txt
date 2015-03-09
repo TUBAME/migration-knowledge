@@ -1,0 +1,2 @@
+SingleParameter sp = new SingleParameter("single2");
+request.setAttribute("singleValue2", sp);

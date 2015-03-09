@@ -1,0 +1,31 @@
+public class CustomMappingExceptionResolver extends
+        AbstractHandlerExceptionResolver {
+    @Resource
+    private MessageSource messageSource;
+    
+    private Map<String, List<String>> exceptionMappings;
+
+    public void setExceptionMappings(Map<String, List<String>> exceptionMappings) {
+        this.exceptionMappings = exceptionMappings;
+    }
+
+    @Override
+    protected ModelAndView doResolveException(HttpServletRequest request,
+            HttpServletResponse response, Object handler, Exception ex) {
+        MessageSourceAccessor messageAccessor = new MessageSourceAccessor(
+                messageSource);
+        List<String> list = exceptionMappings.get(ex.getClass().getName());
+        if(list == null) {
+            return null;
+        }
+        String view = list.get(0);
+        String key = list.get(1);
+        
+        String message = messageAccessor.getMessage(key);
+        
+        ModelAndView mav = new ModelAndView(view);
+        mav.addObject("message", message);
+        
+        return mav;
+    }
+}

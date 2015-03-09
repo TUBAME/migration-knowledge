@@ -1,0 +1,7 @@
+
+<global-exceptions>
+    <exception
+      key=""
+      type=" org.apache.struts.util.ModuleException"
+      path="/error.jsp"/>
+</global-exceptions>

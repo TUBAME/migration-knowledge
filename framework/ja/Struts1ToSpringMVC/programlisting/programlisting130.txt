@@ -1,0 +1,1 @@
+<html:link action="/test19-action" paramId="singleValue2" paramName="singleValue2" paramProperty="singleParameter"> Query String(#2) </html:link><br>

@@ -1,0 +1,24 @@
+<beans ...>
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="location">
+            <value>/WEB-INF/spring-views.xml</value>
+        </property>
+        <property name="order" value="0" />
+    </bean>
+ 
+    <bean class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+        <property name="basename" value="spring-views" />
+        <property name="order" value="1" />
+    </bean>
+ 
+    <bean id="viewResolver"
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="prefix">
+            <value>/WEB-INF/pages/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+	<property name="order" value="2" />
+    </bean>
+</beans>

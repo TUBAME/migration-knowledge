@@ -1,0 +1,4 @@
+<c:choose>
+<c:when test="${age >= 30}">Over 30</c:when>
+<c:otherwise>Less than 30</c:otherwise>
+</c:choose>

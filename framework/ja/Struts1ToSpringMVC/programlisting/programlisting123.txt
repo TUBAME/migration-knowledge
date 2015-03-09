@@ -1,0 +1,6 @@
+<form:radiobuttons path="stringData" items="${MapValue}" delimiter="<br>"/><br>
+
+注） <form:radiobutton>で同様の事を実現する場合は、以下のように記述する。
+<c:forEach var="entry" items="${MapValue}">
+<form:radiobutton path="stringData" value="${entry.key}" label="${entry.value}"/><br>
+</c:forEach>

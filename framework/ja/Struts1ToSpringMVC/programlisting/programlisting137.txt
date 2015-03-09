@@ -1,0 +1,5 @@
+<html:rewrite action="/foo">
+	<html:param name="a" value="b"/>
+	<html:param name="c"/>
+	<html:param name="d">e</html:param>
+</html:rewrite>

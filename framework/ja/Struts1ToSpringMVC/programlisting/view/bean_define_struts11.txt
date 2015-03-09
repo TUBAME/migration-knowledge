@@ -1,0 +1,2 @@
+<bean:define id="sMsg" value="Hello Struts1"/>
+<bean:write name="sMsg"/>

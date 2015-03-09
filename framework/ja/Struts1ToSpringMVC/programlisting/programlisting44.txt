@@ -1,0 +1,15 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ page session="false" %>
+
+<html>
+    <body>
+        <form:form modelAttribute="message" action="${appUrl}/test3-dispatch1" method="post">
+            <form:input path="message"/>
+            <input type="submit">
+        </form:form>
+        <form:form modelAttribute="message" action="${appUrl}/test3-dispatch2" method="post">
+            <form:input path="message"/>
+            <input type="submit">
+        </form:form>
+    </body>
+</html>

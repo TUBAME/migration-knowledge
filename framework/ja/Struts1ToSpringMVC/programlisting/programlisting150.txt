@@ -1,0 +1,5 @@
+ActionMessages messages7 = new ActionMessages();
+String[] args = {"World", "!"};
+ActionMessage message7 = new ActionMessage("global.message.with.args", args);
+messages7.add("key7", message7);
+super.addMessages(request, messages7);

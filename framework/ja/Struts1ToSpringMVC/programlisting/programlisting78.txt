@@ -1,0 +1,12 @@
+@Override
+public ActionErrors validate(ActionMapping mapping,
+        javax.servlet.http.HttpServletRequest request) {
+    ActionErrors errors = new ActionErrors();
+    if("".equals(getUsername())) {
+        errors.add("username", new ActionMessage("username.required"));
+    }
+    if("".equals(getPassword())) {
+        errors.add("password", new ActionMessage("password.required"));           
+    }
+    return errors;
+}

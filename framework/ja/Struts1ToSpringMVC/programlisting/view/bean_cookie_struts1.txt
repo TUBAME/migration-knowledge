@@ -1,0 +1,2 @@
+<bean:cookie id="cookie" name="JSESSIONID"/>
+<bean:write name="cookie" property="value"/>

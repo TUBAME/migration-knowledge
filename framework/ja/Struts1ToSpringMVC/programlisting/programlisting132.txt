@@ -1,0 +1,5 @@
+Map<String, String> map = new HashMap<String, String>();
+map.put("map1", "data1");
+map.put("map2", "data2");
+map.put("map3", "data3");
+request.setAttribute("mapValue1", map);

@@ -1,0 +1,6 @@
+<action ...>
+    <exception
+      key="some.key"
+      type="java.io.IOException"
+      path="/error.jsp"/>
+</action>

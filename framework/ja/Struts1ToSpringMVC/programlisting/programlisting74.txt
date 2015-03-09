@@ -1,0 +1,4 @@
+<action path="/validateUser" name="userinfo" type="org.sample.struts1.extra.ExtraTest2" input="input">
+    <forward name="input" path="/login.do"/>
+    <forward name="success" module="/" path="/WEB-INF/welcome.jsp"/>
+</action>

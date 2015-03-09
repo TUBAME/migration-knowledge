@@ -1,0 +1,2 @@
+<c:set var="sMsg" value="Hello JSTL"/>
+<c:out value="${sMsg}"/>

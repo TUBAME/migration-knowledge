@@ -1,0 +1,4 @@
+<html:form action="/test14-action">
+	<html:checkbox property="checked"/><bean:message key="global.check1"/><br>
+	<html:submit/>
+</html:form>

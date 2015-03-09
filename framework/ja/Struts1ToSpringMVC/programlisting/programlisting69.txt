@@ -1,0 +1,3 @@
+<html:messages id="msg2" property="password">
+    <bean:write name="msg2"/><p>
+</html:messages>

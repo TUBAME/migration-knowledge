@@ -1,0 +1,3 @@
+<bean:define id="testBean" name="tbean" type="org.sample.struts1.extra.TestBean"/>
+<bean:size id="size" name="testBean" property="testMap"/>
+<bean:write name="size"/>

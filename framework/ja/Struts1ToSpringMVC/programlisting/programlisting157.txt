@@ -1,0 +1,2 @@
+ModelAndView mav = new ModelAndView("test15");
+mav.addObject("key2", "メッセージ2");

@@ -1,0 +1,1 @@
+request.setAttribute("singleValue1", "single1");

@@ -1,0 +1,6 @@
+<html:messages id="msg2" name="local.key" message="false" property="key2">
+  <bean:write name="msg2"/>
+</html:messages>
+
+※<html:messages>のmessage属性にtrue以外の値を設定（もしくはmessage属性を指定しない）し、name属性にリクエスト属性に登録する際に設定したキーを指定する必要がある
+⇒ message="false" && name == null の場合は、Globals.ERROR_KEYをキーとしてActionMessagesを取得する（下記(3)を参照）

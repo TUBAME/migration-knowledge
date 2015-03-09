@@ -1,0 +1,3 @@
+ActionRedirect redirect = new ActionRedirect(mapping.findForward("test3-dispatch2"));
+redirect.addParameter("message", ((TestFormBean)form).getMessage());
+return redirect;

@@ -1,0 +1,2 @@
+<c:set var="foo_jstl" value="${param.foo}"/>
+<c:out value="${foo_jstl}"/>

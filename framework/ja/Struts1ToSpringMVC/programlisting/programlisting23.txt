@@ -1,0 +1,1 @@
+<action path="/test1" forward="/WEB-INF/forward.jsp" />

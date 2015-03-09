@@ -1,0 +1,4 @@
+Map<String, String> valueMap = new HashMap<String, String>();
+valueMap.put("eee", "CheckY");
+valueMap.put("fff", "CheckZ");
+request.setAttribute("MapValue", valueMap);
