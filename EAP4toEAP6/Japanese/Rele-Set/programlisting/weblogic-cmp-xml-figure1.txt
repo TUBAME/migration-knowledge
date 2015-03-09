@@ -1,9 +1,0 @@
-
-...
-<weblogic-rdbms-bean>
-  <ejb-name>›››</ejb-name>
-  ...
-  <table-map>
-    <table-name>¢¢¢</table-name>
-    ...
-

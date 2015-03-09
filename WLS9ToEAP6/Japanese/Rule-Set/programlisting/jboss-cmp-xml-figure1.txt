@@ -1,9 +1,0 @@
-
-...
-<enterprise-beans>
-  <entity>
-    <ejb-name>›››</ejb-name>
-    <create-table>true</create-table>
-    <table-name>¢¢¢</table-name>
-    ...
-

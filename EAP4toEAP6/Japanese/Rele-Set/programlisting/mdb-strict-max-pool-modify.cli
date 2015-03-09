@@ -1,3 +1,0 @@
-
-/subsystem=ejb3/strict-max-bean-instance-pool=mdb-strict-max-pool:write-attribute(name=max-pool-size,value=25)
-

@@ -1,5 +1,0 @@
-
-<wl:repeat id="name" set="<%= new String[] { "sam", "fred", "ed" } %>">
-<%= name %><BR>
-</wl:repeat>
-

@@ -1,5 +1,0 @@
-
-<% for(String name : new String[] { "sam", "fred", "ed" }) { %>
-<%= name %><BR>
-<% } %>
-

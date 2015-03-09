@@ -1,7 +1,0 @@
-
-public interface HelloWorld extends Remote{
- 
-String sayHello(int num, String s)
-    throws RemoteException;
-}
-

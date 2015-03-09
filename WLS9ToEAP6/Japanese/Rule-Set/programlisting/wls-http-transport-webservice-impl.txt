@@ -1,7 +1,0 @@
-
-//import weblogic.jws.WLHttpTransport;
-
-//WebLogic-specific JWS annotation that specifies the context path and
-//service URI used to build the URI of the Web Service is "jws_basic_simple/SimpleService"
-//@WLHttpTransport(contextPath="jws_basic_simple", serviceUri="SimpleService")
-

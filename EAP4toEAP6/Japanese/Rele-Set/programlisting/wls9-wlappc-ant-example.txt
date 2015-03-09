@@ -1,5 +1,0 @@
-
-<target name="appc">
-   <wlappc iiop="true" source = "iiopejb.jar" />
-</target>
-

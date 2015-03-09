@@ -1,7 +1,0 @@
-
-<xs:complexType name="sayHello">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="MyHelloMessage" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-

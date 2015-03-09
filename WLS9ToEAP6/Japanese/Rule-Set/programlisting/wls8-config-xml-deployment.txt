@@ -1,9 +1,0 @@
-
-<Application Name="meister"
-        Path="/opt/sample/sample.ear"
-        StagingMode="nostage" TwoPhase="true">
-        <EJBComponent Name="sampleA.jar" Targets="targetServer" URI="sampleA.jar"/>
-        <EJBComponent Name="sampleB.jar" Targets="targetServer" URI="sampleB.jar"/>
-        <WebAppComponent Name="sample.war" Targets="targetServer" URI="sample.war"/>
-</Application>
-

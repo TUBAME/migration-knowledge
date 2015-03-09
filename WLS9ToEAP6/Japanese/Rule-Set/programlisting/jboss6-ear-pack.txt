@@ -1,9 +1,0 @@
-
-  [xxx].ear
-
-|-- META-INF/
-
-|   |-- MANIFEST.MF
-|   |-- weblogic-application.xml š JavaEE•W€‚Ìapplication.xml‚©JBossŒÅ—L‚Ìjboss-app.xml‚ÉˆÚA‚·‚é
-
-
