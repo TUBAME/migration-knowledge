@@ -1,0 +1,9 @@
+<html:form action="/validateUser.do">
+    <html:errors property="username" bundle="validate"/><p>
+    <bean:message key="global.username"/>
+    <html:text property="username"/><p>
+    <html:errors property=" password" bundle="validate"/><p>
+    <bean:message key="global.password"/>
+    <html:password property="password"/><p>
+    <html:submit><bean:message key="global.submit"/></html:submit>
+</html:form>

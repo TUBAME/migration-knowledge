@@ -1,0 +1,6 @@
+<spring:bind path="username">
+${status.error ? "Error!" : ""}<p>
+</spring:bind>
+<spring:bind path="*">
+${status.error ? "Error!!" : ""}<p>
+</spring:bind>

@@ -1,0 +1,13 @@
+@RequestMapping(method = RequestMethod.POST)
+public ResponseEntity<String> download() throws IOException {
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(new MediaType("application", "octet-stream"));
+    headers.set("Content-Disposition", "attachment; filename=fileABC.txt");
+    String path = context.getRealPath("/WEB-INF/download.txt");
+    Path src = Paths.get(path);
+    String data;
+    try (Stream<String> stream = Files.lines(src)) {
+        data = stream.collect(Collectors.joining("\n"));
+    }
+    return new ResponseEntity<String>(data, headers, HttpStatus.OK);
+}

@@ -1,0 +1,1 @@
+<c:if test="${fn:contains(foo,'ABC')}">Match!</c:if><p>

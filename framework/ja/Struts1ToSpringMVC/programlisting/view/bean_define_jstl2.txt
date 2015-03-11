@@ -1,0 +1,2 @@
+<c:set var="username" value="${tbean}"/>
+<c:out value="${username.username}"/>

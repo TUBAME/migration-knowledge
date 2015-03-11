@@ -1,0 +1,1 @@
+${fn:contains(foo,"ABC") ? "Match!" : ""}<p>

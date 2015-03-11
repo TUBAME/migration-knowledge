@@ -1,0 +1,2 @@
+<c:set var="username_s" value="${tbean_session}"/>
+<c:out value="${username_s.username}"/>

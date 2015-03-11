@@ -1,0 +1,1 @@
+<mvc:view-controller view-name="forward" path="test1"/>

@@ -1,0 +1,4 @@
+
+<action path="/test1" type="org.sample.struts1.mapping.MappingTest1">
+    <forward name="success" path="/WEB-INF/forward.jsp" />
+</action>

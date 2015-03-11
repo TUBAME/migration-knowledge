@@ -1,0 +1,5 @@
+@RequestMapping(value = "/test3-dispatch1", method = RequestMethod.POST)
+public String dispatch1(@ModelAttribute("message") TestFormBean message, final RedirectAttributes redirectAttributes) {
+    redirectAttributes.addFlashAttribute("message", message);
+    return "redirect:test3-dispatch2";
+}

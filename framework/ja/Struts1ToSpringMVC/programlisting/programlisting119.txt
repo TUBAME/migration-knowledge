@@ -1,0 +1,19 @@
+<c:forEach var="radioValue" items="${RadioValue}">
+	<form:radiobutton path="stringData" value="${radioValue.idValue}"/>CheckX<br>
+</c:forEach>
+
+注）この例のようにBeanでRadioボタンのvalueしか保持していない場合、
+<form:radiobuttons>を使用すると、LabelにBeanのクラス名が表示されてしまう。
+JSP例
+<form:radiobuttons path="stringData" items="${RadioValue}" itemValue="idValue" /><br>
+
+生成されたHTML
+<span>
+	<input id="stringData5" name="stringData" type="radio" value="ccc"/>
+	<label for="stringData5">org.sample.springmvc.extra.RadioValue@1addee2</label>
+</span>
+<span>
+	<input id="stringData6" name="stringData" type="radio" value="ddd"/>
+	<label for="stringData6">org.sample.springmvc.extra.RadioValue@1ae101a</label>
+</span>
+<br>

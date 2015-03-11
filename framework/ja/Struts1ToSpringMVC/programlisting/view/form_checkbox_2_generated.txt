@@ -1,0 +1,2 @@
+<input id="checked1" name="checked" type="checkbox" value="true"/><label for="checked1">check1</label>
+<input type="hidden" name="_checked" value="on"/>

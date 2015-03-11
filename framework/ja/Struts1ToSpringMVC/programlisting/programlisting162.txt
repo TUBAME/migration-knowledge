@@ -1,0 +1,3 @@
+request.setAttribute("key6", "global.message.with.args", WebRequest.SCOPE_REQUEST);
+String[] args = {"World", "!"};
+request.setAttribute("args", Arrays.stream(args).collect(Collectors.joining(",")), WebRequest.SCOPE_REQUEST);

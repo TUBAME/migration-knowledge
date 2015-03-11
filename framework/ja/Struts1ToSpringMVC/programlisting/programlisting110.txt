@@ -1,0 +1,3 @@
+<logic:iterate id="radioValue" name="RadioValue">
+	<html:radio idName="radioValue" value="idValue" property="stringData"/>CheckX<br>
+</logic:iterate>

@@ -1,0 +1,22 @@
+<c:if test="${key1 != null}">
+  <div>${key1}</div>
+</c:if>
+
+・Validationエラーメッセージの存在有無チェック
+Struts1において、Validationエラーメッセージの存在有無チェックの結果、表示形式を変えている場合、例えば、
+	<logic:messagesPresent> 
+	    <div class="warning">
+	        <html:messages id="error">
+	            <c:out value="${error}" escapeXml="false"/><br/>
+	        </html:messages>
+	    </div>
+	</logic:messagesPresent>
+のような場合は、
+	<form:errors cssClass="warning" path="*" htmlEscape="false" element="div"/><br>
+とすることで、同等の効果を得ることができる。
+
+メッセージの有無により処理を振り分けるなどを行いたい場合は、
+	<spring:bind path="*">
+	    ${status.error ? "Error!!" : ""}<p>
+	</spring:bind>
+のように、<spring:bind>を用いてstatusにエラー情報をバインドする。

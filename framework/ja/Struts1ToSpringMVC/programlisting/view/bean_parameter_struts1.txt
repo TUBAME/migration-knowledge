@@ -1,0 +1,2 @@
+<bean:parameter id="foo_s1" name="foo"/>
+<bean:write name="foo_s1"/>

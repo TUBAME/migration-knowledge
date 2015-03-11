@@ -1,0 +1,14 @@
+<html:form action="/validateUser.do">
+    <html:errors property="username"/><p>
+    <bean:message key="global.username"/>
+    <html:text property="username"/><p>
+    <html:errors property="password"/><p>
+    <bean:message key="global.password"/>
+    <html:password property="password"/><p>
+    <html:submit><bean:message key="global.submit"/></html:submit>
+</html:form>
+
+※ValidatoForm#validation
+ValidateActionForm#executeの実行時に呼び出され、ActionErrorsが存在する場合はActionContext#saveErrorsでメッセージが保存される
+この場合のActionContextはServletActionContextが利用され、RequestスコープにGlobals.ERROR_KEYをキーとして保存される
+これにより、<html:errors>でエラーメッセージが表示される

@@ -1,0 +1,2 @@
+<input id="data1" name="data" type="checkbox" value="a"/><label for="data1">check1</label>
+<input type="hidden" name="_data" value="on"/>

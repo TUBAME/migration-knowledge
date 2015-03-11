@@ -1,0 +1,9 @@
+<form:form modelAttribute="multiBoxTest" action="${appUrl}/result14">
+	<spring:message code='global.check1' var="message1"/>
+	<spring:message code='global.check2' var="message2"/>
+	<form:checkbox path="checkedArray" label="${message1}" value="on"/><br>
+	<form:checkbox path="checkedArray" label="${message2}" value="on"/><br>
+	<input type="submit">
+</form:form>
+
+豕ｨ�ｼ隠oolean縺ｮ驟榊�励〒蜿励￠繧句�ｴ蜷医�ヾtruts1縺ｮ繧医≧縺ｫvalue辟｡縺励↓縺吶ｋ縺薙→縺ｯ縺ｧ縺阪↑縺�

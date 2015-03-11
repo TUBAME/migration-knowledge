@@ -1,0 +1,46 @@
+public class MultiBoxTest extends ActionForm {
+    private static final long serialVersionUID = 1L;
+    private String[] data;
+    private Boolean checked;
+    private Boolean[] checkedArray;
+    private List<String> dataList;
+
+    public String[] getData() {
+        return data;
+    }
+
+    public void setData(String[] data) {
+        this.data = data;
+    }
+    
+    public Boolean getChecked() {
+        return checked;
+    }
+
+    public void setChecked(Boolean checked) {
+        this.checked = checked;
+    }
+    
+    public Boolean[] getCheckedArray() {
+        return checkedArray;
+    }
+
+    public void setCheckedArray(Boolean[] checkedArray) {
+        this.checkedArray = checkedArray;
+    }
+
+    public String getListData(int idx) {
+        return dataList.get(idx);
+    }
+
+    public void setListData(int idx, String listData) {
+        this.dataList.set(idx, listData);
+    }
+
+    public void reset(ActionMapping mapping, HttpServletRequest request) {
+        data = null;
+        checked = false;
+        checkedArray = null;
+        dataList = Arrays.asList("", "");
+    }
+}

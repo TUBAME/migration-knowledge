@@ -1,0 +1,2 @@
+public ModelAndView  setup(WebRequest request) {
+    request.setAttribute("key1", "メッセージ1", WebRequest.SCOPE_REQUEST);

@@ -1,0 +1,6 @@
+<logic:messagesPresent property="username">
+Error!
+</logic:messagesPresent>
+<logic:messagesPresent>
+Error!!
+</logic:messagesPresent>

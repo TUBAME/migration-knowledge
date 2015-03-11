@@ -1,0 +1,3 @@
+
+        List<RadioValue> radioValues = Arrays.asList(new RadioValue("ccc"), new RadioValue("ddd"));
+        mav.addObject("RadioValue", radioValues);

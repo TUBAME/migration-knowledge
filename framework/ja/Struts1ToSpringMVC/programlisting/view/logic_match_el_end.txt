@@ -1,0 +1,1 @@
+${fn:endsWith(foo,"ABC") ? "Match!" : ""}<p>

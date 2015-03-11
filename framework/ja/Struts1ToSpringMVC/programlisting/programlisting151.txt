@@ -1,0 +1,11 @@
+<logic:messagesPresent>を使用する。
+属性値であるmessage, name, propertyは<html:messages>に指定するものと同じものを指定すると、メッセージを特定する事ができる。
+
+	・<logic:messagesPresent/>
+	　Globals.ERROR_KEYをキーとして格納されたActionMessagesにメッセージが格納されている場合にtrueとなる
+	・<logic:messagesPresent message="true"/>
+	　Globals.MESSAGE_KEYをキーとして格納されたActionMessagesにメッセージが格納されている場合にtrueとなる
+	・<logic:messagesPresent name="local.key"/>
+	　"local.key"をキーとして格納されたActionMessagesにメッセージが格納されている場合にtrueとなる
+	・<logic:messagesPresent property="key3"/>
+	　Globals.ERROR_KEYをキーとして格納されたActionMessagesに、key3をキーとしたメッセージが格納されている場合にtrueとなる

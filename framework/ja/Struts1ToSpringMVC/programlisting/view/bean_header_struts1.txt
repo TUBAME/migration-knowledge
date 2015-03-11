@@ -1,0 +1,2 @@
+<bean:header id="hdata" name="User-Agent"/>
+<bean:write name="hdata"/>

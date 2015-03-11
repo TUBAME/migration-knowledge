@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html;charset=utf-8" %>
+<%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean" %>
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
+<%@ taglib uri="http://struts.apache.org/tags-logic" prefix="logic" %>
+<html>
+    <body>
+        <h1>Struts 1 download file example</h1>
+        <h4>Download file - <html:link action="/download">fileABC.txt</html:link></h4>
+    </body>
+</html>

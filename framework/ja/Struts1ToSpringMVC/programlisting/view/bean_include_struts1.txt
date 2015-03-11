@@ -1,0 +1,2 @@
+<bean:include id="s1_child" page="/include/s1_child.jsp"/>
+<bean:write name="s1_child"/>

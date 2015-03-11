@@ -1,0 +1,15 @@
+@Controller
+@RequestMapping("/user")
+public class ExtraTest2 {
+    @Resource
+    UserInfoValidator validate;
+    // 中略
+    @RequestMapping(value = "/validateUser", method = RequestMethod.POST)
+    public ModelAndView validate(@ModelAttribute("userinfo") UserInfo userinfo,
+            BindingResult bindingResult) {
+        validate.validate(userinfo, bindingResult);
+        if (bindingResult.hasErrors()) {
+            ModelAndView mav = new ModelAndView("login");
+        // 中略
+    }
+}

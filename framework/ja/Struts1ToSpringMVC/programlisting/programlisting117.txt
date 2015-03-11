@@ -1,0 +1,2 @@
+<form:radiobutton path="stringData" value="aaa"/>Check1<br>
+<form:radiobutton path="stringData" value="bbb"/>Check2<br>

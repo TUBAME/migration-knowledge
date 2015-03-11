@@ -1,0 +1,2 @@
+<c:set var="userAgent" value="${header['User-Agent']}"/>
+<c:out value="${userAgent}"/>

@@ -1,0 +1,8 @@
+public class MappingTest1 extends Action {
+    @Override
+    public ActionForward execute(ActionMapping mapping, ActionForm form,
+            HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+        return mapping.findForward("success");
+    }
+}

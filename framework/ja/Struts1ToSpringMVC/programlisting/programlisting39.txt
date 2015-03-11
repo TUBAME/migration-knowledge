@@ -1,0 +1,7 @@
+@Controller
+public class MappingTest1 {
+    @RequestMapping("/test1")
+    public String execute() {
+        return "forward";
+    }
+}

@@ -1,0 +1,12 @@
+<bean class="org.sample.springmvc.exception.CustomMappingExceptionResolver">
+    <property name="exceptionMappings">
+        <map>
+            <entry key="org.sample.springmvc.exception.TestException">
+                <list>
+                    <value>error1</value>
+                	    <value>global.exception6</value>
+                </list>
+            </entry>
+        </map>
+    </property>
+</bean>

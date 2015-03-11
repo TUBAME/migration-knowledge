@@ -1,0 +1,2 @@
+<input id="stringData3" name="stringData" type="radio" value="ccc"/>CheckX<br>
+<input id="stringData4" name="stringData" type="radio" value="ddd"/>CheckX<br>

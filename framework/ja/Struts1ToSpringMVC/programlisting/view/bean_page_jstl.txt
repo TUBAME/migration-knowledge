@@ -1,0 +1,3 @@
+<c:set var="data_jstl" value="Hello JSTL" scope="session"/>
+<c:set var="jstl_session" value="${sessionScope}"/>
+<c:out value="${jstl_session.data_jstl}"/>

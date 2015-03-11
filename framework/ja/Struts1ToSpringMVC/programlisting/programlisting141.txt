@@ -1,0 +1,6 @@
+<html:messages id="msg1" message="true" property="key1">
+  <bean:write name="msg1"/>
+</html:messages>
+
+※<html:messages>のmessage属性にtrueを設定する必要がある
+⇒message="true"の場合、Globals.MESSAGE_KEYをキーとしてActionMessagesを取得する

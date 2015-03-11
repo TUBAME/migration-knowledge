@@ -1,0 +1,19 @@
+public ActionForward execute(ActionMapping mapping, ActionForm form,
+    HttpServletRequest request, HttpServletResponse response)
+    throws Exception {
+    StreamInfo info = getStreamInfo(mapping, form, request, response);
+    String contentType = info.getContentType();
+    InputStream stream = info.getInputStream();
+
+    try {
+        response.setContentType(contentType);
+        copy(stream, response.getOutputStream());
+    } finally {
+        if (stream != null) {
+            stream.close();
+        }
+    }
+
+    // Tell Struts that we are done with the response.
+    return null;
+}

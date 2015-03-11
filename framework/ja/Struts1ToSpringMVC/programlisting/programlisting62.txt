@@ -1,0 +1,1 @@
+NotEmpty.username = Username is required

@@ -1,0 +1,28 @@
+@Controller
+public class ExtraTest14 {
+    @RequestMapping("/result14")
+    public String result(@ModelAttribute("multiBoxTest") MultiBoxTest multiBoxTest) {
+        return "result14";
+    }
+    
+    @RequestMapping("/test14")
+    public ModelAndView execute14() {
+        ModelAndView mav = new ModelAndView("test14");
+        mav.addObject("multiBoxTest", new MultiBoxTest());
+        return mav;
+    }
+
+    @RequestMapping("/test14-2")
+    public ModelAndView execute14_2() {
+        ModelAndView mav = new ModelAndView("test14-2");
+        mav.addObject("multiBoxTest", new MultiBoxTest());
+        return mav;
+    }
+
+    @RequestMapping("/test14-3")
+    public ModelAndView execute14_3() {
+        ModelAndView mav = new ModelAndView("test14-3");
+        mav.addObject("multiBoxTest", new MultiBoxTest());
+        return mav;
+    }
+}

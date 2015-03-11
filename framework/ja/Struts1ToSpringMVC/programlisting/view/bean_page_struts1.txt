@@ -1,0 +1,3 @@
+<bean:define id="data_s1" value="Hello Struts1" toScope="session"/>
+<bean:page id="s1_session" property="session"/>
+${s1_session.getAttribute("data_s1")}

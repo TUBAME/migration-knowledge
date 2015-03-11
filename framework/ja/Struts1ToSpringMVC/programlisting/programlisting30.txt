@@ -1,0 +1,7 @@
+<action-mappings>
+    <action path="/test4" forward="/WEB-INF/lookupdispatchaction.jsp"/>
+    <action path="/test4-dispatch" 
+        type="org.sample.struts1.mapping.MappingTest4" name="test" 
+        parameter="execute"/>
+</action-mappings>
+<message-resources parameter="test4"/>

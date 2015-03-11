@@ -1,0 +1,6 @@
+<logic:greaterEqual name="age" value="30">
+Over 30
+</logic:greaterEqual>
+<logic:lessThan name="age" value="30">
+Less than 30
+</logic:lessThan>

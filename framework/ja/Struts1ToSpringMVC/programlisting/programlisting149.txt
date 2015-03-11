@@ -1,0 +1,4 @@
+ActionMessages messages5 = new ActionMessages();
+ActionMessage message5 = new ActionMessage("global.test15");
+messages5.add("key5", message5);
+super.addMessages(request, messages5);

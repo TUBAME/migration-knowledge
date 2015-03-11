@@ -1,0 +1,2 @@
+<c:set var="jsessionid" value="${cookie["JSESSIONID"]}"/>
+<c:out value="${jsessionid.value}"/>

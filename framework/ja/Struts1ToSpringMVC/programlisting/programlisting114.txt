@@ -1,0 +1,2 @@
+List<RadioValue> radioValues = Arrays.asList(new RadioValue("ccc"), new RadioValue("ddd"));
+request.setAttribute("RadioValue", radioValues);

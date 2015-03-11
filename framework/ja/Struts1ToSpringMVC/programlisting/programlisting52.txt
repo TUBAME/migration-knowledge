@@ -1,0 +1,12 @@
+@Resource
+private MessageSource messageSource;
+
+@ExceptionHandler(IOException.class)
+public ModelAndView handler(Exception exception) {
+    ModelAndView mav = new ModelAndView("error1");
+    MessageSourceAccessor messageAccessor = new MessageSourceAccessor(
+            messageSource);
+    
+    mav.addObject("message", messageAccessor.getMessage("global.exception1"));
+    return mav;
+}

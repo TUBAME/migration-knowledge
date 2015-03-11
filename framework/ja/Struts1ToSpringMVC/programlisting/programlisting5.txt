@@ -1,0 +1,8 @@
+<struts-config>
+    <action-mappings>
+        <action path="/test1" forward="/WEB-INF/test1.jsp"/>
+        <action path="/download" type="org.sample.struts1.extra.ExtraTest1"/>
+    </action-mappings>
+	
+    <message-resources parameter="global"/>
+</struts-config>

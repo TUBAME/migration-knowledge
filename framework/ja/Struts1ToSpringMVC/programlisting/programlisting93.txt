@@ -1,0 +1,4 @@
+<form name="mbt" method="post" action="/ExtraTest/test14-action.do">
+	<input type="checkbox" name="checked" value="on">check1<br>
+	<input type="submit" value="Submit">
+</form>

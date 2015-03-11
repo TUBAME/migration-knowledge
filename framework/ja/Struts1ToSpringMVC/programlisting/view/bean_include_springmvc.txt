@@ -1,0 +1,1 @@
+<s:include value="/WEB-INF/include/s2_child.jsp"/>

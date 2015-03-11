@@ -1,0 +1,3 @@
+<form-beans>
+    <form-bean name="userinfo" type="org.sample.struts1.extra.UserInfo"/>
+</form-beans>

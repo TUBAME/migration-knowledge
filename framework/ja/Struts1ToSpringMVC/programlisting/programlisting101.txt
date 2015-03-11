@@ -1,0 +1,5 @@
+<form id="multiBoxTest" action="/ExtraTest3/result14" method="post">
+	<input id="data1" name="data" type="checkbox" value="a"/><label for="data1">check1</label><input type="hidden" name="_data" value="on"/><br>
+	<input id="data2" name="data" type="checkbox" value="b"/><label for="data2">check2</label><input type="hidden" name="_data" value="on"/><br>
+	<input type="submit">
+</form>

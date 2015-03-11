@@ -1,0 +1,2 @@
+<bean:define id="data_s1" value="Hello Struts1" toScope="session"/>\
+<bean:write name="data_s1"/>

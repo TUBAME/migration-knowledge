@@ -1,0 +1,10 @@
+<formset>
+    <form name="userinfo">
+        <field property="username" depends="required">
+            <msg name="required" key="username.required" bundle="validate"/>
+        </field>
+        <field property="password" depends="required">
+            <msg name="required" key="password.required" bundle="validate"/>
+        </field>
+    </form>
+</formset>

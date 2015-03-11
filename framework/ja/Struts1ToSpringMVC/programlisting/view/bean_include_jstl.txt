@@ -1,0 +1,2 @@
+<c:import var="jstl_child" url="/WEB-INF/include/jstl_child.jsp"/>
+<c:out value="${jstl_child}"/>

@@ -1,0 +1,2 @@
+submit.dispatch1=dispatch1
+submit.dispatch2=dispatch2

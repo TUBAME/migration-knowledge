@@ -1,0 +1,1 @@
+${fn:length(tbean.testMap)}

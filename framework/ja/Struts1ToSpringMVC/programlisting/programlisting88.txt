@@ -1,0 +1,5 @@
+<html:form action="/test14-action">
+	<html:multibox property="data" value="a"/><bean:message key="global.check1"/><br>
+	<html:multibox property="data"><bean:message key="global.check2"/></html:multibox><bean:message key="global.check2"/><br>
+	<html:submit/>
+</html:form>

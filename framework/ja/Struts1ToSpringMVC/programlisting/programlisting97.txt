@@ -1,0 +1,5 @@
+<form name="mbt" method="post" action="/ExtraTest/test14-action.do">
+  <input type="checkbox" name="org.apache.struts.taglib.html.BEAN[0].listData[0]" value="1">check1<br>
+  <input type="checkbox" name="org.apache.struts.taglib.html.BEAN[1].listData[1]" value="2">check2<br>
+<input type="submit" value="Submit">
+</form>

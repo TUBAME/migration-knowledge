@@ -1,0 +1,4 @@
+<init-param>
+	<param-name>chainConfig</param-name>
+	<param-value>/WEB-INF/config/struts/chain-config.xml</param-value>
+</init-param>

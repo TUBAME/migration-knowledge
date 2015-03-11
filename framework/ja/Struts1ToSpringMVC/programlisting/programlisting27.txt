@@ -1,0 +1,2 @@
+<action path="/test8" forward="/WEB-INF/mappingdispatchaction8.jsp"/>
+<action path="/test8-*" type="org.sample.struts1.mapping.MappingTest8" name="test" parameter="{1}"/>

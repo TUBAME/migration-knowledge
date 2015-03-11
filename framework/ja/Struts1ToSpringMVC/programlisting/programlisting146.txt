@@ -1,0 +1,17 @@
+    ActionMessages messages4 = new ActionMessages();
+    ActionMessage message4 = new ActionMessage("メッセージ4", false);
+    messages4.add("key4", message4);
+    saveErrors(request, messages4);
+
+@Override
+protected void saveErrors(HttpServletRequest request, ActionMessages errors) {
+    // Remove any error messages attribute if none are required
+    if ((errors == null) || errors.isEmpty()) {
+        request.removeAttribute("local.error.key");
+
+        return;
+    }
+
+    // Save the error messages we need
+    request.setAttribute("local.error.key", errors);
+}

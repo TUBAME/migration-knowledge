@@ -1,0 +1,13 @@
+public class MapBackedForm extends ActionForm implements Serializable {
+    private Map<String, Object> values = new HashMap<String, Object>();
+    public Map<String, Object> getMap() {
+        return this.values;
+    }
+    public void setValue(String key, Object value) {
+        this.values.put(key, value);
+    }
+    
+    public Object getValue(String key) {
+        return this.values.get(key);
+    }
+}
