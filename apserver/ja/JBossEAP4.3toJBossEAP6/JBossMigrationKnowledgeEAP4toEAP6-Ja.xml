@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook" xmlns:ns3="http://www.w3.org/1999/xlink">
+<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
     <PortabilityKnowhowTitle>JBossEAP4からJBossEAP6へのマイグレーションガイド</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
@@ -2929,7 +2929,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_55">
             <FileType>server.xml</FileType>
-            <SearchKey1>//Connector[@secure="true"]</SearchKey1>
+            <SearchKey1>//Connector[@secure=&quot;true&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -2971,7 +2971,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_43">
             <FileType>jboss.xml</FileType>
-            <SearchKey1>//container-configuration[@extends="Standard Stateless SessionBean"]</SearchKey1>
+            <SearchKey1>//container-configuration[@extends=&quot;Standard Stateless SessionBean&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -2985,7 +2985,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_44">
             <FileType>jboss.xml</FileType>
-            <SearchKey1>//container-configuration[@extends="Clustered Stateless SessionBean"]</SearchKey1>
+            <SearchKey1>//container-configuration[@extends=&quot;Clustered Stateless SessionBean&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -3013,7 +3013,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_48">
             <FileType>jboss.xml</FileType>
-            <SearchKey1>//container-configuration[@extends="Standard Message Driven Bean"]</SearchKey1>
+            <SearchKey1>//container-configuration[@extends=&quot;Standard Message Driven Bean&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -3027,7 +3027,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_49">
             <FileType>jboss.xml</FileType>
-            <SearchKey1>//container-configuration[@extends="Singleton Message Driven Bean"]</SearchKey1>
+            <SearchKey1>//container-configuration[@extends=&quot;Singleton Message Driven Bean&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -3041,7 +3041,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_50">
             <FileType>jboss.xml</FileType>
-            <SearchKey1>//container-configuration[@extends="Standard Message Inflow Driven Bean"]</SearchKey1>
+            <SearchKey1>//container-configuration[@extends=&quot;Standard Message Inflow Driven Bean&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -3363,7 +3363,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_85">
             <FileType>jboss-service.xml</FileType>
-            <SearchKey1>buddyReplicationEnabled[text()="false"]</SearchKey1>
+            <SearchKey1>buddyReplicationEnabled[text()=&quot;false&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -3377,7 +3377,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_86">
             <FileType>jboss-service.xml</FileType>
-            <SearchKey1>buddyReplicationEnabled[text()="true"]</SearchKey1>
+            <SearchKey1>buddyReplicationEnabled[text()=&quot;true&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -3391,7 +3391,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_87">
             <FileType>jboss-service.xml</FileType>
-            <SearchKey1>attribute[text()="REPL_ASYNC"]</SearchKey1>
+            <SearchKey1>attribute[text()=&quot;REPL_ASYNC&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
@@ -3405,7 +3405,7 @@ APサーバコンテナ内の呼び出しの場合も移植が必要であるが
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_88">
             <FileType>jboss-service.xml</FileType>
-            <SearchKey1>attribute[text()="REPL_SYNC"]</SearchKey1>
+            <SearchKey1>attribute[text()=&quot;REPL_SYNC&quot;]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
