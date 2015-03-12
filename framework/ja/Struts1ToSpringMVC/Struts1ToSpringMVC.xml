@@ -836,10 +836,10 @@
                 <EntryCategoryRefKey>category_660</EntryCategoryRefKey>
             </ChildEntry>
             <ChildEntry>
-                <EntryCategoryRefKey>category_671</EntryCategoryRefKey>
+                <EntryCategoryRefKey>category_676</EntryCategoryRefKey>
             </ChildEntry>
             <ChildEntry>
-                <EntryCategoryRefKey>category_676</EntryCategoryRefKey>
+                <EntryCategoryRefKey>category_671</EntryCategoryRefKey>
             </ChildEntry>
         </EntryCategory>
     </EntryViewList>
@@ -3061,13 +3061,13 @@
             <CategoryName>Struts1のDownloadAction</CategoryName>
             <KnowhowRefKey>knowhow_622</KnowhowRefKey>
         </Category>
-        <Category categoryId="category_671" appropriate="true">
-            <CategoryName>フレームワーク比較【参考】</CategoryName>
-            <KnowhowRefKey>knowhow_629</KnowhowRefKey>
-        </Category>
         <Category categoryId="category_676" appropriate="true">
             <CategoryName>Struts1のセッション IDの払い出し</CategoryName>
             <KnowhowRefKey>knowhow_636</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_671" appropriate="true">
+            <CategoryName>フレームワーク比較【参考】</CategoryName>
+            <KnowhowRefKey>knowhow_629</KnowhowRefKey>
         </Category>
     </CategoryList>
     <KnowhowList>
@@ -5882,11 +5882,21 @@
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>body</KnowhowName>
         </KnowhowInfomation>
-        <KnowhowInfomation knowhowId="knowhow_629" knowhowDetailRefKey="knowhowDetail_629">
+        <KnowhowInfomation knowhowId="knowhow_636" knowhowDetailRefKey="knowhowDetail_636">
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_463" searchRefKey="searchInfo_463" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>HttpServletRequest#getSession(false)を呼び出している箇所を検索する</CheckItemName>
+                <SearchProcess>HttpServletRequest#getSession(false)を呼び出している箇所を検索する</SearchProcess>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換あり)</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm>SpringMVCではnullを返すことがあるため、業務要件に応じて修正可否を決定する必要がある。Struts1と同じ実装にする場合は、getSession(true)に変更する必要がある。strtus2でも同様にsessionidがstrutsによって払い出しを行う</HearingConfirm>
+            </CheckItem>
         </KnowhowInfomation>
-        <KnowhowInfomation knowhowId="knowhow_636" knowhowDetailRefKey="knowhowDetail_636">
+        <KnowhowInfomation knowhowId="knowhow_629" knowhowDetailRefKey="knowhowDetail_629">
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>body</KnowhowName>
         </KnowhowInfomation>
@@ -15623,6 +15633,12 @@ lang=&gt;ロケール名&lt;
 			通常はログインが成功したタイミングでセッションIDを払い出すが、Strutsでは最初にアクセスした場合に、セッションIDが払い出されるため、
 			現行アプリケーションが意図しないセッションのライフサイクルになっている場合、セッションのライフサイクルが正しくなるように
 			修正を行う必要がある。
+			
+			<ns2:note>
+                            <ns2:para>移行後の環境でHttpServletRequest#getSession(false)でnullを返すことが許容できない場合は、HttpServletRequest#getSession(true)で、セッションIDが払い出されていない場合でもSessionを取得することは可能である
+			
+			</ns2:para>
+                        </ns2:note>
 
 		</ns2:para>
                 </ns2:section>
@@ -18079,6 +18095,20 @@ lang=&gt;ロケール名&lt;
             </LineNumberInfomation>
             <Appropriate lineNumberAppropriate="false">
                 <AppropriateContents>移行対象のプラグイン毎に移行に必要な規模が変わるため</AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_463">
+            <FileType>*.java</FileType>
+            <SearchKey1>import[\s]+javax\.servlet\.http\.HttpServletRequest;</SearchKey1>
+            <SearchKey2>getSession\(false</SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
     </SearchInfomationList>
