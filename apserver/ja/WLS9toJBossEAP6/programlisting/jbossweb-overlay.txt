@@ -1,0 +1,4 @@
+
+<jboss-web>
+    <overlay>/home/test/data</overlay>
+</jboss-web>
