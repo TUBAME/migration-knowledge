@@ -1,0 +1,7 @@
+
+<weblogic-web-app>
+    <virtual-directory-mapping>
+        <local-path>/home/test/data</local-path>
+        <url-pattern>/files/*</url-pattern>
+    </virtual-directory-mapping>
+</weblogic-web-app>

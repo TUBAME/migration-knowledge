@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
+<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook" xmlns:ns3="http://www.w3.org/1999/xlink">
     <PortabilityKnowhowTitle>Weblogic9からJBossEAP6へのマイグレーションガイド</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
@@ -384,6 +384,9 @@
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_233</EntryCategoryRefKey>
+            </ChildEntry>
+            <ChildEntry>
+                <EntryCategoryRefKey>category_276</EntryCategoryRefKey>
             </ChildEntry>
         </EntryCategory>
         <EntryCategory>
@@ -1041,6 +1044,10 @@
                 </ChildChapter>
                 <ChildChapter>
                     <ChildCapterNo>2.4.6.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_276</ChapterCategoryRefKey>
+                </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>2.4.7.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_233</ChapterCategoryRefKey>
                 </ChildChapter>
             </ChildChapter>
@@ -1572,6 +1579,10 @@
         <Category categoryId="category_233" appropriate="true">
             <CategoryName>起動時終了時のリスナ設定の移行</CategoryName>
             <KnowhowRefKey>knowhow_214</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_276" appropriate="true">
+            <CategoryName>静的コンテンツを任意ディレクトリに配置する設定</CategoryName>
+            <KnowhowRefKey>knowhow_248</KnowhowRefKey>
         </Category>
         <Category categoryId="category_236" appropriate="true">
             <CategoryName>日本語文字化け対応</CategoryName>
@@ -4043,6 +4054,32 @@ APサーバコンテナ外の呼び出しの場合は、本項目では検知す
                 <PortabilityDegree>Low</PortabilityDegree>
                 <DegreeDetail>低2</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_248" knowhowDetailRefKey="knowhowDetail_248">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1045" searchRefKey="searchInfo_1045" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>check virtual-directory-mapping</CheckItemName>
+                <SearchProcess>check virtual-directory-mapping</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1046" searchRefKey="searchInfo_1046" searchExistance="true">
+                <CheckItemNo>2</CheckItemNo>
+                <CheckItemName>check virtual-directory-mapping</CheckItemName>
+                <SearchProcess>check virtual-directory-mapping</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
+                <VisualConfirm>url-pattern機能がjboss-web.xmlのoverlay機能で&#xD;
+は存在しないがコンテンツのディレクトリパスだけの指定だけで問題ないか確認する。&#xD;
+とくに問題なければ移植項目にしない</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
@@ -6875,7 +6912,7 @@ APサーバコンテナ外の呼び出しの場合は、本項目では検知す
 									</ns2:para>
             </ns2:listitem>
             <ns2:listitem>
-                <ns2:para>XAの場合は/subsystem=datasources/xa-data-source={リソース名}/xa-datasource-properties=propertyName:add(value=&quot;propertyValue&quot;)
+                <ns2:para>XAの場合は/subsystem=datasources/xa-data-source={リソース名}/xa-datasource-properties=propertyName:add(value="propertyValue")
 									</ns2:para>
             </ns2:listitem>
         </ns2:itemizedlist>
@@ -6957,7 +6994,7 @@ APサーバコンテナ外の呼び出しの場合は、本項目では検知す
 <ns2:row>
     <ns2:entry>init-sql</ns2:entry>
     <ns2:entry>物理的なデータベース接続を開始 (準備) するために実行する SQL 文。InitSQL	が「SQL」で始まる場合、「SQL」より後の文字列は、接続を開始するリテラルの SQL
-							文として扱われる。それ以外の場合、InitSQL はテーブルの名前として扱われ、その後に続く SQL文は接続を開始するために使用される。select count(*) from InitSQL&quot;テーブル InitSQL が存在し、接続を使用するデータベース ユーザからアクセスできる必要がある。ほとんどのデータベース
+							文として扱われる。それ以外の場合、InitSQL はテーブルの名前として扱われ、その後に続く SQL文は接続を開始するために使用される。select count(*) from InitSQL"テーブル InitSQL が存在し、接続を使用するデータベース ユーザからアクセスできる必要がある。ほとんどのデータベース
 							サーバでは、この SQL を最適化してテーブル スキャンを回避する。それでも、InitSQL を、行が少ない (または、全くない)テーブルの名前に設定することは有益である。
 						</ns2:entry>
     <ns2:entry>new-connection-sql</ns2:entry>
@@ -7057,7 +7094,7 @@ APサーバコンテナ外の呼び出しの場合は、本項目では検知す
     <ns2:entry>test-table-name</ns2:entry>
     <ns2:entry>物理データベース接続のテスト時に使われるテーブルの名前を返す。
 							接続をテストする際に使用されるデフォルト SQL コードは、次の通り。
-							&quot;select count(*) from TestTableName&quot;
+							"select count(*) from TestTableName"
 							TestTableName が存在し、接続を使用するデータベース ユーザがアクセスできる必要がある。
 							ほとんどのデータベースサーバはこの SQL を最適化して、テーブルスキャンを回避する。
 							それでも、TestTableName を、行が少ない (または全くない) テーブルの名前に設定することは有益である。
@@ -7557,9 +7594,9 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 			で変数xxxの値がnullの場合、画面には「null」という文字が表示される。
 		</ns2:para>
                     <ns2:para>WebLogic Server 6.1 からは、weblogic.xml に printNulls
-			という新しいパラメータが導入された。このprintNulls設定はデフォルトでtrueであり、JSP仕様通り「null」が表示される。ここで、printNulls設定がfalseに設定されている場合は、空文字列（&quot;&quot;）が表示される。
+			という新しいパラメータが導入された。このprintNulls設定はデフォルトでtrueであり、JSP仕様通り「null」が表示される。ここで、printNulls設定がfalseに設定されている場合は、空文字列（""）が表示される。
 			JBossには、printNullsと同等な設定がない。例えばWebLogic Serverでweblogic.xml に
-			printNullsがfalseで設定されている場合は、変数の値がnullである場合に空文字列（&quot;&quot;）を表示するよう修正する必要がある。
+			printNullsがfalseで設定されている場合は、変数の値がnullである場合に空文字列（""）を表示するよう修正する必要がある。
 		</ns2:para>
                     <ns2:itemizedlist>
                         <ns2:listitem>
@@ -7571,7 +7608,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 			以下の条件に該当する場合はJBoss側でjspファイルの修正が必要である。
 			<ns2:itemizedlist>
                             <ns2:listitem>
-<ns2:para>WebLogic6.1以降の場合でweblogic.xmlのprintNulls設定がfalseの場合（空文字列（&quot;&quot;）を返す）
+<ns2:para>WebLogic6.1以降の場合でweblogic.xmlのprintNulls設定がfalseの場合（空文字列（""）を返す）
 						<ns2:figure>
         <ns2:title>weblogic.xmlのprintNulls設定例
 							</ns2:title>
@@ -7599,7 +7636,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 			<ns2:orderedlist>
                             <ns2:listitem>
 <ns2:para>
-						三項演算子を用いた修正後のJSPの例(nullチェックを行い、空文字列（&quot;&quot;）を設定する例)
+						三項演算子を用いた修正後のJSPの例(nullチェックを行い、空文字列（""）を設定する例)
 						<ns2:figure>
         <ns2:title>三項演算子を用いた変更後のjspの例
 							</ns2:title>
@@ -7613,7 +7650,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
                             </ns2:listitem>
                             <ns2:listitem>
 <ns2:para>
-						IF文を用いた修正後のJSPの例(nullチェックを行い、空文字列（&quot;&quot;）を設定する例)
+						IF文を用いた修正後のJSPの例(nullチェックを行い、空文字列（""）を設定する例)
 						<ns2:figure>
         <ns2:title>IF文を用いた変更後のjspの例	
 							</ns2:title>
@@ -7628,7 +7665,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
                             <ns2:listitem>
 <ns2:para>EL文を用いた修正後のJSPの例(EL式が適用できる場合に限る</ns2:para>
 <ns2:para>
-						EL式を適用した場合および出力がnullの場合、”null”と表示されるのでなく、空文字列（&quot;&quot;）が出力される。
+						EL式を適用した場合および出力がnullの場合、”null”と表示されるのでなく、空文字列（""）が出力される。
 						<ns2:figure>
         <ns2:title>変更前のjspの例
 							</ns2:title>
@@ -7661,7 +7698,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
                 </ns2:info>
                 <ns2:section>
                     <ns2:para>該当JSPにて「&lt;%@
-			page session=&quot;false&quot; %&gt;」 のようにセッションを明示的に無効化させている場合で、かつ
+			page session="false" %&gt;」 のようにセッションを明示的に無効化させている場合で、かつ
 			該当JSP内にjspインクルードを行い、他のjspページをインクルードさせるような場合、JBoss
 			EAP6で以下のような事象になる場合がある。
 			<ns2:itemizedlist>
@@ -7672,7 +7709,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 <ns2:para>意図せずSessionが払い出される
 					</ns2:para>
 <ns2:para>具体的なケースとしては、jspのtopページにアクセス時にSessionを払いださないようにするために、
-						topページのjspにて、page session=&quot;false&quot;を宣言している場合である。
+						topページのjspにて、page session="false"を宣言している場合である。
 						この場合に該当JSP内でheaderページ等をインクルードしている場合、
 						JBossでは、headページの出力はされず、Sessionが払い出せる事象が発生する。
 						なお、WebLogicでは、想定どおり、headerページ出力も行われ、Sessionは払い出される。
@@ -7719,8 +7756,8 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
                     <ns2:title>JSPファイルヘッダのtaglibの宣言について</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>WebLogicでは「&lt;%@ taglib uri=&quot;xxxx-taglib.tld&quot;
-			prefix=&quot;xxxx&quot;
+                    <ns2:para>WebLogicでは「&lt;%@ taglib uri="xxxx-taglib.tld"
+			prefix="xxxx"
 			%&gt;」と宣言している場合、WEB-INFディレクトリに「xxxx-taglib.tld」ファイルがあれば、このファイルを認識して正常に動作する。
 			JBossでは上記宣言の場合、宣言を行っているJSPファイルと同一のディレクトリに存在している必要がある。
 		</ns2:para>
@@ -7753,12 +7790,12 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 									ファイル名で指定した箇所をエイリアス名の指定に変更する。
 									<ns2:itemizedlist>
                     <ns2:listitem>
-                        <ns2:para>変更前：&lt;%@ taglib uri=&quot;xxxx-taglib.tld&quot;
-												prefix=&quot;xxxx&quot; %&gt;</ns2:para>
+                        <ns2:para>変更前：&lt;%@ taglib uri="xxxx-taglib.tld"
+												prefix="xxxx" %&gt;</ns2:para>
                     </ns2:listitem>
                     <ns2:listitem>
-                        <ns2:para>変更後：&lt;%@ taglib uri=&quot;xxxx-taglib&quot;
-												prefix=&quot;xxxx&quot; %&gt;</ns2:para>
+                        <ns2:para>変更後：&lt;%@ taglib uri="xxxx-taglib"
+												prefix="xxxx" %&gt;</ns2:para>
                     </ns2:listitem>
                 </ns2:itemizedlist>
 								</ns2:para>
@@ -7772,12 +7809,12 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 						uri属性にtldファイルへのパスを記載する
 						<ns2:itemizedlist>
         <ns2:listitem>
-            <ns2:para>変更前：&lt;%@ taglib uri=&quot;xxxx-taglib.tld&quot;
-									prefix=&quot;xxxx&quot; %&gt;</ns2:para>
+            <ns2:para>変更前：&lt;%@ taglib uri="xxxx-taglib.tld"
+									prefix="xxxx" %&gt;</ns2:para>
         </ns2:listitem>
         <ns2:listitem>
-            <ns2:para>変更後：&lt;%@ taglib uri=&quot;/WEB-INF/xxxx-taglib.tld&quot;
-									prefix=&quot;xxxx&quot; %&gt;</ns2:para>
+            <ns2:para>変更後：&lt;%@ taglib uri="/WEB-INF/xxxx-taglib.tld"
+									prefix="xxxx" %&gt;</ns2:para>
         </ns2:listitem>
     </ns2:itemizedlist>
 					</ns2:para>
@@ -13107,6 +13144,9 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
                             <ns2:listitem>
 <ns2:para>charset設定</ns2:para>
                             </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>静的コンテンツを任意のディレクトリに配置する設定</ns2:para>
+                            </ns2:listitem>
                         </ns2:itemizedlist>
 
 			WebLogicではweblogic-application.xmlを利用してWebアプリケーションごとに以下の設定が可能である。
@@ -13210,7 +13250,7 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
     <ns2:row>
         <ns2:entry>3</ns2:entry>
         <ns2:entry>print-nulls</ns2:entry>
-        <ns2:entry>false に設定すると、&quot;null&quot; を含む式は &quot; &quot;
+        <ns2:entry>false に設定すると、"null" を含む式は " "
 								として出力される。
 							</ns2:entry>
         <ns2:entry>詳細は「JSPの移行を参照」</ns2:entry>
@@ -13836,7 +13876,7 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
                             </ns2:listitem>
                             <ns2:listitem>
 <ns2:para>Postリクエスト</ns2:para>
-<ns2:para>Postリクエストのエンコーディングを設定する場合、ServletRequest#setCharacterEncoding()メソッドを利用することで、設定することができます。web.xmlで以下のように、filter-class タグに&quot;org.apache.catalina.filters.SetCharacterEncodingFilter&quot; を設定し、encodingに文字コードを設定する。</ns2:para>
+<ns2:para>Postリクエストのエンコーディングを設定する場合、ServletRequest#setCharacterEncoding()メソッドを利用することで、設定することができます。web.xmlで以下のように、filter-class タグに"org.apache.catalina.filters.SetCharacterEncodingFilter" を設定し、encodingに文字コードを設定する。</ns2:para>
 <ns2:figure>
     <ns2:title>web.xml
 						</ns2:title>
@@ -14670,6 +14710,62 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
                 <ns2:section>
                     <ns2:para>WebLogicは、JOLT接続プールを利用してTuxedo のATMI サービスを呼び出す。
 以下のようにconfig.xmlにJOLT接続プール（jolt-connection-pool）が設定され、サーブレットなどのアプリケーションからJOLT接続プールが利用されている場合は、WebLogicからJOLTを利用して、TuxedoのATMIサービスと接続している。</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_248">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			Webアプリケーションの静的コンテンツをWebアプリケーションに同梱せず、任意のディレクトリに配置してWebアプリケーションから参照する設定(warや.earに含まれない静的コンテンツを利用する設定）について
+			示す。
+			WebLogicでは、weblogic.xmlのvirtual-directory-mappingタグを利用して設定する。
+
+			<ns2:figure>
+                            <ns2:title>weblogic.xml</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/wls9-virtual-directory-mapping.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+		</ns2:para>
+                    <ns2:para>
+			JBossの場合は、jboss-web.xmlにoverlay機能を利用することで対応が可能となる。
+			overlayタグの値として、静的ファイルのドキュメントルートディレクトリのパスを設定する。
+			ただし、この機能ではWebLogicでは対応可能なurl-patternを利用することはできない。
+
+			<ns2:programlisting language="txt">
+				<ns2:textobject>
+<ns2:textdata fileref="programlisting/jbossweb-overlay.txt"/>
+                            </ns2:textobject>
+			</ns2:programlisting>
+
+			上記のweblogic.xmlのurl-patternとおなじurlにしたい場合は以下のように設定することで可能となる。
+
+			<ns2:programlisting language="txt">
+				<ns2:textobject>
+<ns2:textdata fileref="programlisting/jbossweb-overlay-dir-struct.txt"/>
+                            </ns2:textobject>
+			</ns2:programlisting>
+
+			http://hostname/webapp-context/files/file1.html
+			でアクセスすると、file1.htmlが返される。
+		</ns2:para>
+                    <ns2:warning>
+                        <ns2:para>
+				overlayではデプロイメント内に存在するファイルを置き換えるといった用途には利用できないので注意すること。
+				<ns2:itemizedlist>
+<ns2:listitem>
+    <ns2:para>https://issues.jboss.org/browse/JBWEB-279</ns2:para>
+</ns2:listitem>
+                            </ns2:itemizedlist>
+				デプロイメント内に存在するファイルを置き換えるといった用途の場合は、JBossEAP6.3より制御可能となったdeployment-overlay機能で対応する</ns2:para>
+                    </ns2:warning>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -15727,7 +15823,7 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_115">
             <FileType>*.jsp</FileType>
-            <SearchKey1>session=\&quot;false\&quot;</SearchKey1>
+            <SearchKey1>session=\"false\"</SearchKey1>
             <SearchKey2>&lt;jsp:include</SearchKey2>
             <PythonModule></PythonModule>
             <LineNumberInfomation>
@@ -17272,6 +17368,34 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
                 <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1045">
+            <FileType>weblogic.xml</FileType>
+            <SearchKey1>//*[local-name()='virtual-directory-mapping']/*[local-name()='local-path']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1046">
+            <FileType>weblogic.xml</FileType>
+            <SearchKey1>//*[local-name()='virtual-directory-mapping']/*[local-name()='url-pattern']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>TODO:SE 手動算出</LineNumber>
                 <LineNumberContents></LineNumberContents>
                 <Investigation></Investigation>
             </LineNumberInfomation>
