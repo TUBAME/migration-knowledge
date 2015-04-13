@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
-    <PortabilityKnowhowTitle>WebSphere6からJBossEAP6へのマイグレーションガイド</PortabilityKnowhowTitle>
+    <PortabilityKnowhowTitle>JBossMigration_WebSphere6_To_JBossEAP6</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
             <EntryCategoryRefKey>category_6</EntryCategoryRefKey>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
-    <PortabilityKnowhowTitle>Tomcat5.5.xから6.0.xへのマイグレーションガイド</PortabilityKnowhowTitle>
+    <PortabilityKnowhowTitle>TomcatMigration_Tomcat5.5_To_Tomcat6.0</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
             <EntryCategoryRefKey>category_7</EntryCategoryRefKey>
