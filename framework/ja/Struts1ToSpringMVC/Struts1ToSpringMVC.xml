@@ -135,6 +135,9 @@
                 <ChildEntry>
                     <EntryCategoryRefKey>category_459</EntryCategoryRefKey>
                     <ChildEntry>
+                        <EntryCategoryRefKey>category_682</EntryCategoryRefKey>
+                    </ChildEntry>
+                    <ChildEntry>
                         <EntryCategoryRefKey>category_462</EntryCategoryRefKey>
                     </ChildEntry>
                     <ChildEntry>
@@ -1022,38 +1025,42 @@
                 <ChapterCategoryRefKey>category_459</ChapterCategoryRefKey>
                 <ChildChapter>
                     <ChildCapterNo>5.7.1.</ChildCapterNo>
-                    <ChapterCategoryRefKey>category_462</ChapterCategoryRefKey>
+                    <ChapterCategoryRefKey>category_682</ChapterCategoryRefKey>
                 </ChildChapter>
                 <ChildChapter>
                     <ChildCapterNo>5.7.2.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_462</ChapterCategoryRefKey>
+                </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>5.7.3.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_463</ChapterCategoryRefKey>
                     <ChildChapter>
-                        <ChildCapterNo>5.7.2.1.</ChildCapterNo>
+                        <ChildCapterNo>5.7.3.1.</ChildCapterNo>
                         <ChapterCategoryRefKey>category_464</ChapterCategoryRefKey>
                     </ChildChapter>
                     <ChildChapter>
-                        <ChildCapterNo>5.7.2.2.</ChildCapterNo>
+                        <ChildCapterNo>5.7.3.2.</ChildCapterNo>
                         <ChapterCategoryRefKey>category_465</ChapterCategoryRefKey>
                     </ChildChapter>
                     <ChildChapter>
-                        <ChildCapterNo>5.7.2.3.</ChildCapterNo>
+                        <ChildCapterNo>5.7.3.3.</ChildCapterNo>
                         <ChapterCategoryRefKey>category_466</ChapterCategoryRefKey>
                     </ChildChapter>
                     <ChildChapter>
-                        <ChildCapterNo>5.7.2.4.</ChildCapterNo>
+                        <ChildCapterNo>5.7.3.4.</ChildCapterNo>
                         <ChapterCategoryRefKey>category_467</ChapterCategoryRefKey>
                     </ChildChapter>
                     <ChildChapter>
-                        <ChildCapterNo>5.7.2.5.</ChildCapterNo>
+                        <ChildCapterNo>5.7.3.5.</ChildCapterNo>
                         <ChapterCategoryRefKey>category_468</ChapterCategoryRefKey>
                     </ChildChapter>
                     <ChildChapter>
-                        <ChildCapterNo>5.7.2.6.</ChildCapterNo>
+                        <ChildCapterNo>5.7.3.6.</ChildCapterNo>
                         <ChapterCategoryRefKey>category_469</ChapterCategoryRefKey>
                     </ChildChapter>
                 </ChildChapter>
                 <ChildChapter>
-                    <ChildCapterNo>5.7.3.</ChildCapterNo>
+                    <ChildCapterNo>5.7.4.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_470</ChapterCategoryRefKey>
                 </ChildChapter>
             </ChildChapter>
@@ -2150,6 +2157,10 @@
         <Category categoryId="category_459" appropriate="true">
             <CategoryName>ActionForm Beanの移行</CategoryName>
             <KnowhowRefKey>knowhow_447</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_682" appropriate="true">
+            <CategoryName>ActionForm Beanの設定移行</CategoryName>
+            <KnowhowRefKey>knowhow_642</KnowhowRefKey>
         </Category>
         <Category categoryId="category_462" appropriate="true">
             <CategoryName>XDocletによるActionForm定義</CategoryName>
@@ -3291,10 +3302,14 @@
                 <VisualConfirm>該当クラスを拡張したクラスが無いか目視確認する</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
-            <CheckItem checkItemId="checkItem_450" searchRefKey="searchInfo_450" searchExistance="true">
-                <CheckItemNo>2</CheckItemNo>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_642" knowhowDetailRefKey="knowhowDetail_642">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>ActionForm Beanの設定移行</KnowhowName>
+            <CheckItem checkItemId="checkItem_468" searchRefKey="searchInfo_468" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check ActionForm</CheckItemName>
-                <SearchProcess>struts-config.xmlファイルでのActionForm利用をチェック</SearchProcess>
+                <SearchProcess>struts-config.xmlファイルでのform-beanの利用をチェック</SearchProcess>
                 <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
@@ -10798,7 +10813,7 @@ JSPファイルの置き場所は、Struts1で「Webアプリケーションの�
                     <ns2:title>ActionFormクラスの移行</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>
+                    <ns2:para xml:id="actionFormPorting">
 Struts1のActionFormに相当するSpringMVCのクラスは、@RequestMappingを付与したメソッドの引数に@ModelAttributeを付与したクラスとなる。このクラスは、単なるPOJOとして作成可能である。Struts1では、ActionFormクラスがユーティリティメソッドを提供している。これらをSpringMVCに移行した際に、どのように移行するかについては、下記の表を参照。
 
 <ns2:table frame="all">
@@ -15669,6 +15684,18 @@ lang=&gt;ロケール名&lt;
                 </ns2:section>
             </ns2:article>
         </DocBook>
+        <DocBook articleId="knowhowDetail_642">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>ActionForm Beanの設定移行</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+            SpringMVCではBeanの設定は必要ない。詳細は<ns2:command ns3:href="#actionFormPorting">ActionFormクラスの移行</ns2:command>を参考
+        </ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
     </DocBookList>
     <SearchInfomationList>
         <SearchInfomation searchInfoId="searchInfo_392">
@@ -15727,9 +15754,9 @@ lang=&gt;ロケール名&lt;
                 <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_450">
+        <SearchInfomation searchInfoId="searchInfo_468">
             <FileType>*.xml</FileType>
-            <SearchKey1>//action[@name]</SearchKey1>
+            <SearchKey1>//form-beans/form-bean</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
