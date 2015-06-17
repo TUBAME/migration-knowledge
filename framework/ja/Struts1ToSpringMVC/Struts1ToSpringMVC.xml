@@ -214,6 +214,9 @@
                         <ChildEntry>
                             <EntryCategoryRefKey>category_537</EntryCategoryRefKey>
                         </ChildEntry>
+                        <ChildEntry>
+                            <EntryCategoryRefKey>category_683</EntryCategoryRefKey>
+                        </ChildEntry>
                     </ChildEntry>
                     <ChildEntry>
                         <EntryCategoryRefKey>category_482</EntryCategoryRefKey>
@@ -1129,6 +1132,10 @@
                     <ChildChapter>
                         <ChildCapterNo>5.9.6.1.</ChildCapterNo>
                         <ChapterCategoryRefKey>category_537</ChapterCategoryRefKey>
+                    </ChildChapter>
+                    <ChildChapter>
+                        <ChildCapterNo>5.9.6.2.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_683</ChapterCategoryRefKey>
                     </ChildChapter>
                 </ChildChapter>
                 <ChildChapter>
@@ -2264,6 +2271,10 @@
         <Category categoryId="category_537" appropriate="true">
             <CategoryName>リクエストのフォワード/リダイレクト移行</CategoryName>
             <KnowhowRefKey>knowhow_517</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_683" appropriate="true">
+            <CategoryName>グローバルFowardの移行</CategoryName>
+            <KnowhowRefKey>knowhow_643</KnowhowRefKey>
         </Category>
         <Category categoryId="category_482" appropriate="true">
             <CategoryName>モジュールの移行</CategoryName>
@@ -3542,8 +3553,16 @@
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
-            <CheckItem checkItemId="checkItem_409" searchRefKey="searchInfo_409" searchExistance="true">
-                <CheckItemNo>2</CheckItemNo>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_517" knowhowDetailRefKey="knowhowDetail_517">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_643" knowhowDetailRefKey="knowhowDetail_643">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_469" searchRefKey="searchInfo_469" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Action</CheckItemName>
                 <SearchProcess>struts-config.xmlファイルでのグローバルForward設定をチェック</SearchProcess>
                 <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
@@ -3552,10 +3571,6 @@
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
-        </KnowhowInfomation>
-        <KnowhowInfomation knowhowId="knowhow_517" knowhowDetailRefKey="knowhowDetail_517">
-            <KnowhowNo>1</KnowhowNo>
-            <KnowhowName>body</KnowhowName>
         </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_468" knowhowDetailRefKey="knowhowDetail_468">
             <KnowhowNo>1</KnowhowNo>
@@ -11083,7 +11098,8 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
                     <ns2:title>Forward設定</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>struts1のフォワードについては、<ns2:command ns3:href="#fowardRedirect">「リクエストのフォワード/リダイレクト」</ns2:command>を参照</ns2:para>
+                    <ns2:para>struts1のフォワードについては、<ns2:command ns3:href="#fowardRedirect">「リクエストのフォワード/リダイレクト」</ns2:command>を参照。</ns2:para>
+                    <ns2:para>SpringMVCへの移植方法については<ns2:command ns3:href="#redirectAndForwardPorting">「リクエストのフォワード/リダイレクト移行」</ns2:command>を参照。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -12647,7 +12663,7 @@ EventDispatchActionでは、actionタグのparameter属性に指定したメソ�
                     <ns2:title>body</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>リクエストのフォワード/リダイレクトは、SpringMVCでは戻り値に指定した遷移先のURLに接頭辞「forward:」、もしくは、接頭辞「redirect:」を指定する。</ns2:para>
+                    <ns2:para xml:id="redirectAndForwardPorting">リクエストのフォワード/リダイレクトは、SpringMVCでは戻り値に指定した遷移先のURLに接頭辞「forward:」、もしくは、接頭辞「redirect:」を指定する。</ns2:para>
                     <ns2:para>Struts1のActionForwardに指定するフォワード先は、forwardタグで設定されたものであればJSPでもActionでも可能であったが、SpringMVCで他のControllerに処理を移す場合は「forward:」もしくは「redirect:」をつけてURLを記述する必要がある。なお、「redirect:」を使用する場合は、自動的にパラメータを引き継がないので、必要に応じてパラメータの再設定を行う。なお、SpringMVC 3.1以上では、リダイレクトに際して一度だけ値を保持するフラッシュスコープと呼ばれるスコープを利用したパラメータの転送も可能となっている。</ns2:para>
                     <ns2:para>
 
@@ -15696,6 +15712,16 @@ lang=&gt;ロケール名&lt;
                 </ns2:section>
             </ns2:article>
         </DocBook>
+        <DocBook articleId="knowhowDetail_643">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>詳細は、<ns2:command ns3:href="#redirectAndForwardPorting">「リクエストのフォワード/リダイレクト移行」</ns2:command>を参照。</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
     </DocBookList>
     <SearchInfomationList>
         <SearchInfomation searchInfoId="searchInfo_392">
@@ -15950,7 +15976,7 @@ lang=&gt;ロケール名&lt;
                 <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_409">
+        <SearchInfomation searchInfoId="searchInfo_469">
             <FileType>*.xml</FileType>
             <SearchKey1>//global-forwards/forward</SearchKey1>
             <SearchKey2></SearchKey2>
