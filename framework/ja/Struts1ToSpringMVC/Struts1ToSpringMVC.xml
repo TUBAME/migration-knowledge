@@ -312,6 +312,9 @@
                         <EntryCategoryRefKey>category_497</EntryCategoryRefKey>
                     </ChildEntry>
                 </ChildEntry>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_681</EntryCategoryRefKey>
+                </ChildEntry>
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_334</EntryCategoryRefKey>
@@ -681,9 +684,6 @@
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_503</EntryCategoryRefKey>
-                <ChildEntry>
-                    <EntryCategoryRefKey>category_504</EntryCategoryRefKey>
-                </ChildEntry>
                 <ChildEntry>
                     <EntryCategoryRefKey>category_505</EntryCategoryRefKey>
                 </ChildEntry>
@@ -1257,6 +1257,10 @@
                     <ChapterCategoryRefKey>category_497</ChapterCategoryRefKey>
                 </ChildChapter>
             </ChildChapter>
+            <ChildChapter>
+                <ChildCapterNo>5.12.</ChildCapterNo>
+                <ChapterCategoryRefKey>category_681</ChapterCategoryRefKey>
+            </ChildChapter>
         </Chapter>
         <Chapter>
             <ChapterNo>6.</ChapterNo>
@@ -1754,22 +1758,18 @@
                 <ChapterCategoryRefKey>category_503</ChapterCategoryRefKey>
                 <ChildChapter>
                     <ChildCapterNo>7.1.1.</ChildCapterNo>
-                    <ChapterCategoryRefKey>category_504</ChapterCategoryRefKey>
-                </ChildChapter>
-                <ChildChapter>
-                    <ChildCapterNo>7.1.2.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_505</ChapterCategoryRefKey>
                 </ChildChapter>
                 <ChildChapter>
-                    <ChildCapterNo>7.1.3.</ChildCapterNo>
+                    <ChildCapterNo>7.1.2.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_506</ChapterCategoryRefKey>
                 </ChildChapter>
                 <ChildChapter>
-                    <ChildCapterNo>7.1.4.</ChildCapterNo>
+                    <ChildCapterNo>7.1.3.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_507</ChapterCategoryRefKey>
                 </ChildChapter>
                 <ChildChapter>
-                    <ChildCapterNo>7.1.5.</ChildCapterNo>
+                    <ChildCapterNo>7.1.4.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_678</ChapterCategoryRefKey>
                 </ChildChapter>
             </ChildChapter>
@@ -2385,6 +2385,10 @@
             <CategoryName>独自のExceptionHandlerクラスの移行</CategoryName>
             <KnowhowRefKey>knowhow_481</KnowhowRefKey>
         </Category>
+        <Category categoryId="category_681" appropriate="true">
+            <CategoryName>メッセージリソース設定の移行</CategoryName>
+            <KnowhowRefKey>knowhow_641</KnowhowRefKey>
+        </Category>
         <Category categoryId="category_334" appropriate="true">
             <CategoryName>Viewの移行</CategoryName>
         </Category>
@@ -2873,10 +2877,6 @@
         <Category categoryId="category_503" appropriate="true">
             <CategoryName>Struts1固有機能の移行</CategoryName>
             <KnowhowRefKey>knowhow_487</KnowhowRefKey>
-        </Category>
-        <Category categoryId="category_504" appropriate="true">
-            <CategoryName>メッセージリソース設定の移行</CategoryName>
-            <KnowhowRefKey>knowhow_488</KnowhowRefKey>
         </Category>
         <Category categoryId="category_505" appropriate="true">
             <CategoryName>DynaActionForm/Lazy ActionFormの移行</CategoryName>
@@ -3957,6 +3957,20 @@
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
                 <VisualConfirm>該当クラスを拡張したクラスが無いか目視確認する</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_641" knowhowDetailRefKey="knowhowDetail_641">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>設定ファイル</KnowhowName>
+            <CheckItem checkItemId="checkItem_467" searchRefKey="searchInfo_467" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>Check Configuration Files</CheckItemName>
+                <SearchProcess>メッセージリソースの設定をチェックする</SearchProcess>
+                <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
@@ -5619,20 +5633,6 @@
         <KnowhowInfomation knowhowId="knowhow_487" knowhowDetailRefKey="knowhowDetail_487">
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>Struts固有機能の移行戦略</KnowhowName>
-        </KnowhowInfomation>
-        <KnowhowInfomation knowhowId="knowhow_488" knowhowDetailRefKey="knowhowDetail_488">
-            <KnowhowNo>1</KnowhowNo>
-            <KnowhowName>設定ファイル</KnowhowName>
-            <CheckItem checkItemId="checkItem_439" searchRefKey="searchInfo_439" searchExistance="true">
-                <CheckItemNo>1</CheckItemNo>
-                <CheckItemName>Check Configuration Files</CheckItemName>
-                <SearchProcess>メッセージリソースの設定をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低2</DegreeDetail>
-                <VisualConfirm></VisualConfirm>
-                <HearingConfirm></HearingConfirm>
-            </CheckItem>
         </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_489" knowhowDetailRefKey="knowhowDetail_489">
             <KnowhowNo>1</KnowhowNo>
@@ -11472,27 +11472,6 @@ servlet-context.xmlにHandlerExceptionResolver実装クラスが複数指定さ�
                 </ns2:section>
             </ns2:article>
         </DocBook>
-        <DocBook articleId="knowhowDetail_488">
-            <ns2:article>
-                <ns2:info>
-                    <ns2:title>設定ファイル</ns2:title>
-                </ns2:info>
-                <ns2:section>
-                    <ns2:para>SpringMVCでは、web.xml、ApplicationContext.xml（web.xmlのcontext-paramで設定。アプリケーション全体の設定を記述する）、servlet-context.xml（web.xmlのDispatcherServletを定義したservletタグの子要素であるinit-paramタグで設定）などを使って設定を行う。
-</ns2:para>
-                    <ns2:para>web.xmlに設定ファイルを記載するのではなく、WebApplicationInitializeインタフェースを実装したクラスを作成し、コード中で設定ファイルを指定することも可能である
-
-<ns2:itemizedlist>
-                            <ns2:listitem>
-<ns2:para>
-<ns2:command ns3:href="http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html">http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html</ns2:command>
-</ns2:para>
-                            </ns2:listitem>
-                        </ns2:itemizedlist>
-</ns2:para>
-                </ns2:section>
-            </ns2:article>
-        </DocBook>
         <DocBook articleId="knowhowDetail_489">
             <ns2:article>
                 <ns2:info>
@@ -15669,6 +15648,27 @@ lang=&gt;ロケール名&lt;
                 </ns2:section>
             </ns2:article>
         </DocBook>
+        <DocBook articleId="knowhowDetail_641">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>設定ファイル</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>SpringMVCでは、web.xml、ApplicationContext.xml（web.xmlのcontext-paramで設定。アプリケーション全体の設定を記述する）、servlet-context.xml（web.xmlのDispatcherServletを定義したservletタグの子要素であるinit-paramタグで設定）などを使って設定を行う。
+</ns2:para>
+                    <ns2:para>web.xmlに設定ファイルを記載するのではなく、WebApplicationInitializeインタフェースを実装したクラスを作成し、コード中で設定ファイルを指定することも可能である
+
+<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:para>
+<ns2:command ns3:href="http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html">http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html</ns2:command>
+</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
     </DocBookList>
     <SearchInfomationList>
         <SearchInfomation searchInfoId="searchInfo_392">
@@ -16337,6 +16337,20 @@ lang=&gt;ロケール名&lt;
             <LineNumberInfomation>
                 <LineNumber>TODO:SE 手動算出</LineNumber>
                 <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_467">
+            <FileType>*.xml</FileType>
+            <SearchKey1>&lt;message-resources[\s]+</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents>難易度詳細が低2はステップ数10を固定的に設定</LineNumberContents>
                 <Investigation></Investigation>
             </LineNumberInfomation>
             <Appropriate lineNumberAppropriate="true">
@@ -17993,20 +18007,6 @@ lang=&gt;ロケール名&lt;
             </LineNumberInfomation>
             <Appropriate lineNumberAppropriate="false">
                 <AppropriateContents>本ナレッジでは対象外のため</AppropriateContents>
-            </Appropriate>
-        </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_439">
-            <FileType>*.xml</FileType>
-            <SearchKey1>&lt;message-resources[\s]+</SearchKey1>
-            <SearchKey2></SearchKey2>
-            <PythonModule></PythonModule>
-            <LineNumberInfomation>
-                <LineNumber>10</LineNumber>
-                <LineNumberContents>難易度詳細が低2はステップ数10を固定的に設定</LineNumberContents>
-                <Investigation></Investigation>
-            </LineNumberInfomation>
-            <Appropriate lineNumberAppropriate="true">
-                <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_440">
