@@ -3291,18 +3291,8 @@
                 <VisualConfirm>該当クラスを拡張したクラスが無いか目視確認する</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
-            <CheckItem checkItemId="checkItem_449" searchRefKey="searchInfo_449" searchExistance="true">
-                <CheckItemNo>2</CheckItemNo>
-                <CheckItemName>Check ActionForm</CheckItemName>
-                <SearchProcess>ActionForm、ValidatorForm、ValidatorActionFormをextendsしたクラスをチェック</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
-                <PortabilityDegree>Middle</PortabilityDegree>
-                <DegreeDetail>中</DegreeDetail>
-                <VisualConfirm>該当クラスを拡張したクラスが無いか目視確認する</VisualConfirm>
-                <HearingConfirm></HearingConfirm>
-            </CheckItem>
             <CheckItem checkItemId="checkItem_450" searchRefKey="searchInfo_450" searchExistance="true">
-                <CheckItemNo>3</CheckItemNo>
+                <CheckItemNo>2</CheckItemNo>
                 <CheckItemName>Check ActionForm</CheckItemName>
                 <SearchProcess>struts-config.xmlファイルでのActionForm利用をチェック</SearchProcess>
                 <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
@@ -3530,7 +3520,7 @@
             <CheckItem checkItemId="checkItem_408" searchRefKey="searchInfo_408" searchExistance="true">
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Action</CheckItemName>
-                <SearchProcess>struts-config.xmlファイルでのForward設定をチェック</SearchProcess>
+                <SearchProcess>struts-config.xmlファイルでのアクションによるForward設定をチェック</SearchProcess>
                 <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
@@ -3540,7 +3530,7 @@
             <CheckItem checkItemId="checkItem_409" searchRefKey="searchInfo_409" searchExistance="true">
                 <CheckItemNo>2</CheckItemNo>
                 <CheckItemName>Check Action</CheckItemName>
-                <SearchProcess>struts-config.xmlファイルでのForward設定をチェック</SearchProcess>
+                <SearchProcess>struts-config.xmlファイルでのグローバルForward設定をチェック</SearchProcess>
                 <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
@@ -15724,20 +15714,6 @@ lang=&gt;ロケール名&lt;
             </Appropriate>
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_448">
-            <FileType>*.java</FileType>
-            <SearchKey1>import[\s]+org\.apache\.struts\.[\w]+\.[\w]+Form;</SearchKey1>
-            <SearchKey2>extends[\s]+[\w]*Form[^\w]</SearchKey2>
-            <PythonModule></PythonModule>
-            <LineNumberInfomation>
-                <LineNumber>TODO:SE 手動算出</LineNumber>
-                <LineNumberContents>おおよそ、元となるコード量と同じと考える</LineNumberContents>
-                <Investigation></Investigation>
-            </LineNumberInfomation>
-            <Appropriate lineNumberAppropriate="true">
-                <AppropriateContents></AppropriateContents>
-            </Appropriate>
-        </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_449">
             <FileType>*.java</FileType>
             <SearchKey1>import[\s]+org\.apache\.struts\.[\w]+\.[\w]+Form;</SearchKey1>
             <SearchKey2>extends[\s]+[\w]*Form[^\w]</SearchKey2>
