@@ -5627,7 +5627,7 @@
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Configuration Files</CheckItemName>
                 <SearchProcess>メッセージリソースの設定をチェックする</SearchProcess>
-                <PortabilityFactor></PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク(Controller機能)</PortabilityFactor>
                 <PortabilityDegree>Low</PortabilityDegree>
                 <DegreeDetail>低2</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5641,7 +5641,7 @@
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Configuration Files</CheckItemName>
                 <SearchProcess>DynaActionForm/Lazy ActionFormの利用をチェックする</SearchProcess>
-                <PortabilityFactor></PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
