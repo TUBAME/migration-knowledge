@@ -1,12 +1,12 @@
 <HTML xmlns:knowhow="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:doc="http://docbook.org/ns/docbook">
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Struts 1からSpring MVCへのマイグレーションナレッジ</title>
+<title>Struts 1からSpringMVCへのマイグレーションガイド</title>
 <link href="css/knowhow.css" type="text/css" rel="stylesheet">
 <meta content="DocBook XSL Stylesheets V1.78.1" name="generator">
 </HEAD>
 <BODY>
-<H1 class="title">Struts 1からSpring MVCへのマイグレーションナレッジ</H1>
+<H1 class="title">Struts 1からSpringMVCへのマイグレーションガイド</H1>
 <div class="toc">
 <p>
 <b>Index</b>
@@ -294,54 +294,61 @@
 <dd>
 <dl>
 <dt>
-<span class="5.7.1."><a href="#tubame_5.7.1.">5.7.1.XDocletによるActionForm定義</a></span>
+<span class="5.7.1."><a href="#tubame_5.7.1.">5.7.1.ActionForm Beanの設定移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2."><a href="#tubame_5.7.2.">5.7.2.ActionFormクラスの提供するユーティリティメソッドの移行</a></span>
-</dt>
-<dd>
-<dl>
-<dt>
-<span class="5.7.2.1."><a href="#tubame_5.7.2.1.">5.7.2.1.ActionFormユーティリティメソッドgetMultipartRequestHandler/setMultipartRequestHandlerの移行</a></span>
+<span class="5.7.2."><a href="#tubame_5.7.2.">5.7.2.XDocletによるActionForm定義</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.2."><a href="#tubame_5.7.2.2.">5.7.2.2.ActionFormユーティリティメソッドgetServletWrapperの移行</a></span>
+<span class="5.7.3."><a href="#tubame_5.7.3.">5.7.3.ActionFormクラスの提供するユーティリティメソッドの移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="5.7.3.1."><a href="#tubame_5.7.3.1.">5.7.3.1.ActionFormユーティリティメソッドgetMultipartRequestHandler/setMultipartRequestHandlerの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.3."><a href="#tubame_5.7.2.3.">5.7.2.3.ActionFormユーティリティメソッドresetの移行</a></span>
+<span class="5.7.3.2."><a href="#tubame_5.7.3.2.">5.7.3.2.ActionFormユーティリティメソッドgetServletWrapperの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.4."><a href="#tubame_5.7.2.4.">5.7.2.4.ActionFormユーティリティメソッドsetServletの移行</a></span>
+<span class="5.7.3.3."><a href="#tubame_5.7.3.3.">5.7.3.3.ActionFormユーティリティメソッドresetの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.5."><a href="#tubame_5.7.2.5.">5.7.2.5.ActionFormユーティリティメソッドvalidateの移行</a></span>
+<span class="5.7.3.4."><a href="#tubame_5.7.3.4.">5.7.3.4.ActionFormユーティリティメソッドsetServletの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.6."><a href="#tubame_5.7.2.6.">5.7.2.6.ActionFormユーティリティメソッドgetServletの移行</a></span>
+<span class="5.7.3.5."><a href="#tubame_5.7.3.5.">5.7.3.5.ActionFormユーティリティメソッドvalidateの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.7.3.6."><a href="#tubame_5.7.3.6.">5.7.3.6.ActionFormユーティリティメソッドgetServletの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -350,7 +357,7 @@
 <dd>
 <dl>
 <dt>
-<span class="5.7.3."><a href="#tubame_5.7.3.">5.7.3.Map-backed ActionFormの移行</a></span>
+<span class="5.7.4."><a href="#tubame_5.7.4.">5.7.4.Map-backed ActionFormの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -704,6 +711,13 @@
 </dt>
 </dl>
 </dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.12."><a href="#tubame_5.12.">5.12.メッセージリソース設定の移行</a></span>
+</dt>
 </dl>
 </dd>
 <dt>
@@ -1567,35 +1581,28 @@
 <dd>
 <dl>
 <dt>
-<span class="7.1.1."><a href="#tubame_7.1.1.">7.1.1.メッセージリソース設定の移行</a></span>
+<span class="7.1.1."><a href="#tubame_7.1.1.">7.1.1.DynaActionForm/Lazy ActionFormの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="7.1.2."><a href="#tubame_7.1.2.">7.1.2.DynaActionForm/Lazy ActionFormの移行</a></span>
+<span class="7.1.2."><a href="#tubame_7.1.2.">7.1.2.Commandの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="7.1.3."><a href="#tubame_7.1.3.">7.1.3.Commandの移行</a></span>
+<span class="7.1.3."><a href="#tubame_7.1.3.">7.1.3.プラグインの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="7.1.4."><a href="#tubame_7.1.4.">7.1.4.プラグインの移行</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="7.1.5."><a href="#tubame_7.1.5.">7.1.5.Strutsのセッション IDの払い出し</a></span>
+<span class="7.1.4."><a href="#tubame_7.1.4.">7.1.4.Strutsのセッション IDの払い出し</a></span>
 </dt>
 </dl>
 </dd>
@@ -2029,7 +2036,7 @@ Wicketなど）とアクションベース（Struts 1/2、Spring MVCなど）に
 青の箱で示されているものは、ユーザが作成する必要がある。
 </p>
 <div class="figure">
-<a name="N13B97"></a>
+<a name="N13BA1"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts機能概要</b>
 </p>
@@ -2045,7 +2052,7 @@ Wicketなど）とアクションベース（Struts 1/2、Spring MVCなど）に
 </div>
 <br class="figure-break">
 <div class="table">
-<a name="N13BA4"></a>
+<a name="N13BAE"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Strutsの各種Bean一覧</b>
 </p>
@@ -2157,7 +2164,7 @@ Taglib（html,bean,logic,nestタグを提供)及びそのコンポーネント�
 <p>Struts1.3.xのアプリケーションは、おおよそ以下のようなファイル構成となる。
 </p>
 <div class="figure">
-<a name="N13BFA"></a>
+<a name="N13C04"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts1アプリケーション構成</b>
 </p>
@@ -2218,7 +2225,7 @@ Struts1.3.xでは、設定ファイルとして主に以下の二つのファイ
 Prefixマッチング、Extensionマッチングの例をそれぞれ以下に示す。
 </p>
 <div class="figure">
-<a name="N13C2E"></a>
+<a name="N13C38"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;例1) Prefixマッチング</b>
 </p>
@@ -2242,7 +2249,7 @@ Prefixマッチング、Extensionマッチングの例をそれぞれ以下に�
 
 </p>
 <div class="figure">
-<a name="N13C3E"></a>
+<a name="N13C48"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;例2) Extensionマッチング</b>
 </p>
@@ -2274,7 +2281,7 @@ Prefixマッチング、Extensionマッチングの例をそれぞれ以下に�
 struts-config.xmlで設定する設定項目について以下に示す。
 </p>
 <div class="table">
-<a name="N15BC4"></a>
+<a name="N15BB8"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -2511,7 +2518,7 @@ Taglibタグを実装していない。実装していないタグの一覧に�
 
 </p>
 <div class="table">
-<a name="N13D09"></a>
+<a name="N13D13"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts Tilesタグ一覧</b>
 </p>
@@ -2597,7 +2604,7 @@ SpringMVCの概要については、下記URLを参照。
 
 </p>
 <div class="table">
-<a name="N1653E"></a>
+<a name="N16532"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;SpringMVCの各種Bean一覧</b>
 </p>
@@ -2710,7 +2717,7 @@ SpringMVCの概要については、下記URLを参照。
 
 </p>
 <div class="figure">
-<a name="N1651B"></a>
+<a name="N1650F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;SpringMVCアプリケーションの構成</b>
 </p>
@@ -2755,7 +2762,7 @@ Spring MVCで提供されているタグライブラリは以下の2つが存在
 
 </p>
 <div class="figure">
-<a name="N13D63"></a>
+<a name="N13D6D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;タグ宣言例</b>
 </p>
@@ -2771,7 +2778,7 @@ Spring MVCで提供されているタグライブラリは以下の2つが存在
 
 </p>
 <div class="table">
-<a name="N13D6E"></a>
+<a name="N13D78"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;springタグ一覧</b>
 </p>
@@ -2833,7 +2840,7 @@ Beanの「messageSource」からメッセージを取得。入力値検証結果
 
 </p>
 <div class="table">
-<a name="N13DAE"></a>
+<a name="N13DB8"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;formタグ一覧</b>
 </p>
@@ -3066,7 +3073,7 @@ Struts1.2以降では、pathに以下の特殊文字を利用可能となって�
 
 </p>
 <div class="table">
-<a name="N156DF"></a>
+<a name="N156D3"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;pathで利用可能な特殊文字</b>
 </p>
@@ -3101,7 +3108,7 @@ Struts1.2以降では、pathに以下の特殊文字を利用可能となって�
 
 </p>
 <div class="figure">
-<a name="N156FC"></a>
+<a name="N156F0"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ワイルドカード利用例</b>
 </p>
@@ -3207,7 +3214,7 @@ Struts1.3.xではChain of Responsibility（CoR）を実装したCommons
 Chainを使用するComposableRequestProcessorがデフォルトとなっている。ComposableRequestProcessorでは、設定ファイル（chain-config.xml）に使用するCommandを指定することで、リクエスト処理をカスタマイズすることができる。提供されるCommandの一覧は、以下を参照
 </p>
 <div class="table">
-<a name="N15757"></a>
+<a name="N1574B"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;標準Command一覧</b>
 </p>
@@ -3293,7 +3300,7 @@ Struts1.2でTilesを処理する場合は、RequestProcessorのサブクラス�
 
 </p>
 <div class="table">
-<a name="N157C6"></a>
+<a name="N157BA"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;Tiles Command一覧</b>
 </p>
@@ -3363,7 +3370,7 @@ Struts1のRequestProcessorはモジュールにつき１つ定義できたが、
 
 </p>
 <div class="figure">
-<a name="N15289"></a>
+<a name="N15293"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ViewResolver設定例(抜粋)</b>
 </p>
@@ -3379,7 +3386,7 @@ Struts1のRequestProcessorはモジュールにつき１つ定義できたが、
 
 </p>
 <div class="figure">
-<a name="N15294"></a>
+<a name="N1529E"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;ViewResolver設定例(全体)</b>
 </p>
@@ -3529,7 +3536,7 @@ DynaValidatorForm（ValitatorFormに相当）、もしくはDynaValidatorActionF
 Beanを作成する
 </p>
 <div class="figure">
-<a name="N15C39"></a>
+<a name="N15C2D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Form Bean</b>
 </p>
@@ -3556,7 +3563,7 @@ public class UserInfo extends ValidatorForm {
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15C43"></a>
+<a name="N15C37"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラス</b>
 </p>
@@ -3583,7 +3590,7 @@ public class ExtraTest2 extends Action{
 <p>&lt;html:errors&gt;を利用する場合（&lt;html:errors/&gt;とのみ記述した場合）、propertyを記述しないと検証でエラーとなった項目に関するすべてのエラーが表示される（2件エラーが発生していた場合は、その2件に関するエラーが出力される）。したがって、複数項目の検証を行っている場合で項目ごとにエラーメッセージを出力する場合は、下記サンプルのように&lt;html:errors&gt;にproperty属性を指定してメッセージを出力する。
 もしくは、&lt;html:messages&gt;を用いてメッセージを取得し、&lt;bean:write&gt;で出力することもできる。</p>
 <div class="figure">
-<a name="N15C54"></a>
+<a name="N15C48"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPファイル</b>
 </p>
@@ -3615,7 +3622,7 @@ public class ExtraTest2 extends Action{
 &lt;html:messages&gt;を使った場合のエラーメッセージ表示例
 </p>
 <div class="figure">
-<a name="N15C60"></a>
+<a name="N15C54"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;&lt;html:messages&gt;サンプル</b>
 </p>
@@ -3661,7 +3668,7 @@ public class ExtraTest2 extends Action{
 
 </p>
 <div class="figure">
-<a name="N15C7A"></a>
+<a name="N15C6E"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;検証ルールサンプル</b>
 </p>
@@ -3694,7 +3701,7 @@ public class ExtraTest2 extends Action{
 
 </p>
 <div class="figure">
-<a name="N15C8B"></a>
+<a name="N15C7F"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;ValidatorPluginルール適用サンプル</b>
 </p>
@@ -3716,7 +3723,7 @@ public class ExtraTest2 extends Action{
 <li class="listitem">
 <p>&lt;controller&gt;設定を変更する（struts-config.xmlに設定を追加する）</p>
 <div class="figure">
-<a name="N15C99"></a>
+<a name="N15C8D"></a>
 <p class="title">
 <b>Figure&nbsp;8.&nbsp;controller設定サンプル</b>
 </p>
@@ -3731,7 +3738,7 @@ public class ExtraTest2 extends Action{
 <li class="listitem">
 <p>&lt;action&gt;を設定する</p>
 <div class="figure">
-<a name="N15CA6"></a>
+<a name="N15C9A"></a>
 <p class="title">
 <b>Figure&nbsp;9.&nbsp;action設定サンプル</b>
 </p>
@@ -3749,7 +3756,7 @@ public class ExtraTest2 extends Action{
 <li class="listitem">
 <p>&lt;form-bean&gt;を設定する</p>
 <div class="figure">
-<a name="N15CB3"></a>
+<a name="N15CA7"></a>
 <p class="title">
 <b>Figure&nbsp;10.&nbsp;form-bean設定サンプル</b>
 </p>
@@ -3770,7 +3777,7 @@ public class ExtraTest2 extends Action{
 作成したvalidation.xmlでkeyに設定したキーを持つメッセージリソースファイルを作成する。
 </p>
 <div class="figure">
-<a name="N15CC2"></a>
+<a name="N15CB6"></a>
 <p class="title">
 <b>Figure&nbsp;11.&nbsp;メッセージリソースファイルサンプル（org/sample/struts1/extra/ExtraTest2.properties）
 </b>
@@ -3795,7 +3802,7 @@ public class ExtraTest2 extends Action{
 
 </p>
 <div class="figure">
-<a name="N15CD2"></a>
+<a name="N15CC6"></a>
 <p class="title">
 <b>Figure&nbsp;12.&nbsp;</b>
 </p>
@@ -3840,7 +3847,7 @@ Validatorのvalidwhenを使用しても実現することはできるが、よ�
 
 </p>
 <div class="figure">
-<a name="N15CFF"></a>
+<a name="N15CF3"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ActionFormクラスサンプル</b>
 </p>
@@ -3871,7 +3878,7 @@ public ActionErrors validate(ActionMapping mapping,
 
 </p>
 <div class="figure">
-<a name="N15D0D"></a>
+<a name="N15D01"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPファイル（login.jsp）</b>
 </p>
@@ -3914,7 +3921,7 @@ ActionFormクラスには、以下の 「ActionFormクラスのメソッド一�
 
 </p>
 <div class="table">
-<a name="N157FB"></a>
+<a name="N157EF"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;ActionFormクラスのメソッド一覧（publicメソッド）</b>
 </p>
@@ -3974,7 +3981,7 @@ javax.servlet.ServletRequest request)
 
 </p>
 <div class="table">
-<a name="N15830"></a>
+<a name="N15824"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;ActionFormクラスのメソッド一覧（protectedメソッド）</b>
 </p>
@@ -4020,7 +4027,7 @@ Beanである。
 
 </p>
 <div class="figure">
-<a name="N1584F"></a>
+<a name="N15843"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;DynaActionForm定義例</b>
 </p>
@@ -4160,7 +4167,7 @@ ActionForm」という機能を提供している。
 type=textのｖａｌｕｅ属性値がＭａｐのｖａｌｕｅとなる。
 </p>
 <div class="figure">
-<a name="N158B1"></a>
+<a name="N158A5"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;入力用JSPサンプル</b>
 </p>
@@ -4191,7 +4198,7 @@ type=textのｖａｌｕｅ属性値がＭａｐのｖａｌｕｅとなる。
 <p>この例では、参考のためタグlogic:iterateとタグc:forEachを用いたMapアクセスを示している。
 </p>
 <div class="figure">
-<a name="N158C0"></a>
+<a name="N158B4"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;出力用JSPサンプル</b>
 </p>
@@ -4220,7 +4227,7 @@ type=textのｖａｌｕｅ属性値がＭａｐのｖａｌｕｅとなる。
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N158CD"></a>
+<a name="N158C1"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -4248,7 +4255,7 @@ public class ExtraTest3 extends Action {
 key, Object value)メソッドと、getValue(String key)メソッドの実装が必要となる。
 </p>
 <div class="figure">
-<a name="N158DC"></a>
+<a name="N158D0"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;ActionFormクラスサンプル</b>
 </p>
@@ -4275,7 +4282,7 @@ public class MapBackedForm extends ActionForm implements Serializable {
 <li class="listitem">
 <p>struts設定</p>
 <div class="figure">
-<a name="N158E9"></a>
+<a name="N158DD"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;struts設定</b>
 </p>
@@ -4310,7 +4317,7 @@ ActionFormでは特殊なクラスの継承はないが、Mapデータを格納�
 <ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <div class="figure">
-<a name="N158F6"></a>
+<a name="N158EA"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;Map-backed ActionFormサンプル</b>
 </p>
@@ -4347,11 +4354,12 @@ public class MapBackedForm2 extends ActionForm implements Serializable {
 <div class="section">
 <div class="titlepage"></div>
 <p>
+<a name="actionFormPorting"></a>
 Struts1のActionFormに相当するSpringMVCのクラスは、@RequestMappingを付与したメソッドの引数に@ModelAttributeを付与したクラスとなる。このクラスは、単なるPOJOとして作成可能である。Struts1では、ActionFormクラスがユーティリティメソッドを提供している。これらをSpringMVCに移行した際に、どのように移行するかについては、下記の表を参照。
 
 </p>
 <div class="table">
-<a name="N152BA"></a>
+<a name="N152C5"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;ActionFormクラスのユーティリティメソッド移行</b>
 </p>
@@ -4427,7 +4435,7 @@ ActionFormの移行例について、以下に示す。MapへのアクセスはS
 <li class="listitem">
 <p>入力用JSP</p>
 <div class="figure">
-<a name="N152F7"></a>
+<a name="N15302"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;入力用JSPサンプル</b>
 </p>
@@ -4455,7 +4463,7 @@ ActionFormの移行例について、以下に示す。MapへのアクセスはS
 <li class="listitem">
 <p>出力用JSP</p>
 <div class="figure">
-<a name="N15304"></a>
+<a name="N1530F"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;出力用JSPサンプル</b>
 </p>
@@ -4480,7 +4488,7 @@ ActionFormの移行例について、以下に示す。MapへのアクセスはS
 <li class="listitem">
 <p>Controllerクラス</p>
 <div class="figure">
-<a name="N15311"></a>
+<a name="N1531C"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Controllerクラスサンプル</b>
 </p>
@@ -4512,7 +4520,7 @@ public class ExtraTest3 {
 <li class="listitem">
 <p>BEAN</p>
 <div class="figure">
-<a name="N1531E"></a>
+<a name="N15329"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;BEANサンプル</b>
 </p>
@@ -4542,8 +4550,19 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.1." id="category_462"></a>
-<h3 class="title">5.7.1.XDocletによるActionForm定義</h3>
+<a name="tubame_5.7.1." id="category_682"></a>
+<h3 class="title">5.7.1.ActionForm Beanの設定移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+            SpringMVCではBeanの設定は必要ない。詳細は<span class="command"><strong><a class="command" href="#actionFormPorting">ActionFormクラスの移行</a></strong></span>を参考
+        </p>
+</div>
+<br>
+<br>
+<a name="tubame_5.7.2." id="category_462"></a>
+<h3 class="title">5.7.2.XDocletによるActionForm定義</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4552,12 +4571,12 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2." id="category_463"></a>
-<h3 class="title">5.7.2.ActionFormクラスの提供するユーティリティメソッドの移行</h3>
+<a name="tubame_5.7.3." id="category_463"></a>
+<h3 class="title">5.7.3.ActionFormクラスの提供するユーティリティメソッドの移行</h3>
 <br>
 <br>
-<a name="tubame_5.7.2.1." id="category_464"></a>
-<h3 class="title">5.7.2.1.ActionFormユーティリティメソッドgetMultipartRequestHandler/setMultipartRequestHandlerの移行</h3>
+<a name="tubame_5.7.3.1." id="category_464"></a>
+<h3 class="title">5.7.3.1.ActionFormユーティリティメソッドgetMultipartRequestHandler/setMultipartRequestHandlerの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4565,8 +4584,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.2." id="category_465"></a>
-<h3 class="title">5.7.2.2.ActionFormユーティリティメソッドgetServletWrapperの移行</h3>
+<a name="tubame_5.7.3.2." id="category_465"></a>
+<h3 class="title">5.7.3.2.ActionFormユーティリティメソッドgetServletWrapperの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4574,8 +4593,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.3." id="category_466"></a>
-<h3 class="title">5.7.2.3.ActionFormユーティリティメソッドresetの移行</h3>
+<a name="tubame_5.7.3.3." id="category_466"></a>
+<h3 class="title">5.7.3.3.ActionFormユーティリティメソッドresetの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4583,8 +4602,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.4." id="category_467"></a>
-<h3 class="title">5.7.2.4.ActionFormユーティリティメソッドsetServletの移行</h3>
+<a name="tubame_5.7.3.4." id="category_467"></a>
+<h3 class="title">5.7.3.4.ActionFormユーティリティメソッドsetServletの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4592,8 +4611,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.5." id="category_468"></a>
-<h3 class="title">5.7.2.5.ActionFormユーティリティメソッドvalidateの移行</h3>
+<a name="tubame_5.7.3.5." id="category_468"></a>
+<h3 class="title">5.7.3.5.ActionFormユーティリティメソッドvalidateの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4601,8 +4620,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.6." id="category_469"></a>
-<h3 class="title">5.7.2.6.ActionFormユーティリティメソッドgetServletの移行</h3>
+<a name="tubame_5.7.3.6." id="category_469"></a>
+<h3 class="title">5.7.3.6.ActionFormユーティリティメソッドgetServletの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4610,8 +4629,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.3." id="category_470"></a>
-<h3 class="title">5.7.3.Map-backed ActionFormの移行</h3>
+<a name="tubame_5.7.4." id="category_470"></a>
+<h3 class="title">5.7.4.Map-backed ActionFormの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4632,7 +4651,7 @@ Actionクラスの設定は、struts-config.xmlのaction-mappingsタグの子要
 
 </p>
 <div class="figure">
-<a name="N15913"></a>
+<a name="N15907"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;org.apache.struts.action.Actionのオーバライド</b>
 </p>
@@ -4699,7 +4718,7 @@ Extrasに含まれるorg.apache.struts.actions.DispatchActionやそのサブク�
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N1593E"></a>
+<a name="N15932"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xml</b>
 </p>
@@ -4717,7 +4736,7 @@ Extrasに含まれるorg.apache.struts.actions.DispatchActionやそのサブク�
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N1594B"></a>
+<a name="N1593F"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -4740,7 +4759,7 @@ public class MappingTest1 extends Action {
 <p>struts-config.xmlのactionタグのforward設定</p>
 <p>上記の例のように、単にJSPファイルを表示するだけの場合、以下のように設定のみで済ますこともできる。</p>
 <div class="figure">
-<a name="N1595A"></a>
+<a name="N1594E"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;actionタグのforward設定サンプル</b>
 </p>
@@ -4775,7 +4794,7 @@ DispatchActionでは、actionタグのparameter属性に指定したパラメー
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N15975"></a>
+<a name="N15969"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -4794,7 +4813,7 @@ DispatchActionでは、actionタグのparameter属性に指定したパラメー
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N15982"></a>
+<a name="N15976"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -4821,7 +4840,7 @@ public class MappingTest2 extends DispatchAction {
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N1598F"></a>
+<a name="N15983"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPサンプル</b>
 </p>
@@ -4868,7 +4887,7 @@ MappingDispatchActionでは、複数のリクエストを一つのActionクラ�
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N159AA"></a>
+<a name="N1599E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -4884,7 +4903,7 @@ MappingDispatchActionでは、複数のリクエストを一つのActionクラ�
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N159B7"></a>
+<a name="N159AB"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -4916,7 +4935,7 @@ MappingDispatchActionでは、複数のリクエストを一つのActionクラ�
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N159C4"></a>
+<a name="N159B8"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPサンプル</b>
 </p>
@@ -4962,7 +4981,7 @@ LookupDispatchActionでは、これを拡張したクラスでgetKeyMethodMap()�
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N159DF"></a>
+<a name="N159D3"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -4983,7 +5002,7 @@ LookupDispatchActionでは、これを拡張したクラスでgetKeyMethodMap()�
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N159EC"></a>
+<a name="N159E0"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -5018,7 +5037,7 @@ public class MappingTest4 extends LookupDispatchAction {
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N159F9"></a>
+<a name="N159ED"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPサンプル</b>
 </p>
@@ -5049,7 +5068,7 @@ public class MappingTest4 extends LookupDispatchAction {
 <li class="listitem">
 <p>メッセージプロパティファイル（test4.properties）</p>
 <div class="figure">
-<a name="N15A06"></a>
+<a name="N159FA"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;メッセージプロパティファイルサンプル</b>
 </p>
@@ -5090,7 +5109,7 @@ EventDispatchActionでは、actionタグのparameter属性に指定したメソ�
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N15A21"></a>
+<a name="N15A15"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -5106,7 +5125,7 @@ EventDispatchActionでは、actionタグのparameter属性に指定したメソ�
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N15A2E"></a>
+<a name="N15A22"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -5134,7 +5153,7 @@ public class MappingTest5 extends EventDispatchAction {
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N15A3B"></a>
+<a name="N15A2F"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPサンプル</b>
 </p>
@@ -5183,7 +5202,7 @@ public class MappingTest5 extends EventDispatchAction {
 <li class="listitem">
 <p>リダイレクト例</p>
 <div class="figure">
-<a name="N15A80"></a>
+<a name="N15A74"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;リダイレクトサンプル</b>
 </p>
@@ -5218,7 +5237,7 @@ public class MappingTest5 extends EventDispatchAction {
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N15A56"></a>
+<a name="N15A4A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -5288,7 +5307,7 @@ public class MappingTest5 extends EventDispatchAction {
 </p>
 <p></p>
 <div class="table">
-<a name="N1539D"></a>
+<a name="N153A8"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Validator</b>
 </p>
@@ -5353,7 +5372,7 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
 <div>
 <div>
 <h2 class="title" style="clear: both">
-<a name="N1679A"></a>1.&nbsp;body</h2>
+<a name="N1678E"></a>1.&nbsp;body</h2>
 </div>
 </div>
 </div>
@@ -5371,7 +5390,7 @@ SpringMVCでは以下のように記述する。
 
 </p>
 <div class="figure">
-<a name="N15D25"></a>
+<a name="N15D19"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラス</b>
 </p>
@@ -5398,7 +5417,7 @@ public class MappingTest1 {
 <li class="listitem">
 <p>@ModelAttributeを使わないのであれば、Struts1のように設定のみで済ますこともできる。</p>
 <div class="figure">
-<a name="N15D38"></a>
+<a name="N15D2C"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Spring設定</b>
 </p>
@@ -5433,7 +5452,7 @@ Struts1のように、リクエストパラメータにより実行するメソ�
 <li class="listitem">
 <p>Controllerクラス</p>
 <div class="figure">
-<a name="N15D54"></a>
+<a name="N15D48"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラスサンプル</b>
 </p>
@@ -5464,7 +5483,7 @@ public class MappingTest2 {
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N15D61"></a>
+<a name="N15D55"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPサンプル</b>
 </p>
@@ -5522,7 +5541,7 @@ public class MappingTest2 {
 <li class="listitem">
 <p>Controllerクラス</p>
 <div class="figure">
-<a name="N15D8C"></a>
+<a name="N15D80"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラスサンプル</b>
 </p>
@@ -5584,7 +5603,7 @@ public class MappingTest2 {
 <li class="listitem">
 <p>通常のリダイレクト</p>
 <div class="figure">
-<a name="N15AAF"></a>
+<a name="N15AA3"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;通常のリダイレクトサンプル</b>
 </p>
@@ -5605,7 +5624,7 @@ public String dispatch1(@ModelAttribute("message") TestFormBean message) {
 <p>フラッシュスコープを利用したリダイレクト</p>
 <p>引数にRedirectAttributesを取り、addFlashAttributeにより転送するAttributeを設定する。</p>
 <div class="figure">
-<a name="N15ABE"></a>
+<a name="N15AB2"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;フラッシュスコープを利用したリダイレクトサンプル</b>
 </p>
@@ -5640,7 +5659,7 @@ public String dispatch1(@ModelAttribute("message") TestFormBean message, final R
 
 </p>
 <div class="figure">
-<a name="N15459"></a>
+<a name="N15464"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラス</b>
 </p>
@@ -6069,7 +6088,7 @@ Actionクラスのexecute()メソッドで例外が発生した場合、デフ�
 <p>struts-config.xmlのglobal-exceptionsタグの子要素として、例外クラスごとのexceptionタグを記述する。以下はIOExceptionの例で、path属性にエラー表示用JSPを指定している
 </p>
 <div class="figure">
-<a name="N15AF4"></a>
+<a name="N15AE8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;例外設定</b>
 </p>
@@ -6110,7 +6129,7 @@ Actionクラスのexecute()メソッドで例外が発生した場合、デフ�
 
 </p>
 <div class="figure">
-<a name="N15B12"></a>
+<a name="N15B06"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts設定</b>
 </p>
@@ -6145,7 +6164,7 @@ Action内でModuleExceptionをインスタンス化する際に引数として�
 
 </p>
 <div class="figure">
-<a name="N15B29"></a>
+<a name="N15B1D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts設定</b>
 </p>
@@ -6180,7 +6199,7 @@ exceptionタグに指定可能な属性は、以下を参照。
 
 </p>
 <div class="table">
-<a name="N15B40"></a>
+<a name="N15B34"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;&lt;exception&gt;の属性一覧</b>
 </p>
@@ -6315,7 +6334,7 @@ SpringMVC
 
 </p>
 <div class="figure">
-<a name="N1559B"></a>
+<a name="N155A6"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ExceptionHandle例</b>
 </p>
@@ -6370,7 +6389,7 @@ public ModelAndView handler(Exception exception) {
 <p>struts-config.xmlに以下のような定義があった場合、SpringMVCでは、いくつかの移行シナリオが考えられる。
 </p>
 <div class="figure">
-<a name="N1552C"></a>
+<a name="N15537"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlの設定</b>
 </p>
@@ -6412,7 +6431,7 @@ HandlerExceptionResolverを実装したクラスを作成する場合は、作�
 このCustomHandlerExceptionResolverクラスでは、設定ファイルから、受け付ける例外と遷移先、メッセージキーの情報を読み出し、該当する例外が発生した場合に遷移先ページにメッセージを渡して表示する。
 </p>
 <div class="figure">
-<a name="N1554C"></a>
+<a name="N15557"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;CustomHandlerExceptionResolverサンプル</b>
 </p>
@@ -6458,7 +6477,7 @@ public class CustomMappingExceptionResolver extends
 このクラスを利用する場合は、servlet-context.xmlに以下のような設定を追加する。
 </p>
 <div class="figure">
-<a name="N15557"></a>
+<a name="N15562"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;servlet-context.xml</b>
 </p>
@@ -6486,7 +6505,7 @@ servlet-context.xmlにHandlerExceptionResolver実装クラスが複数指定さ�
 
 </p>
 <div class="figure">
-<a name="N15562"></a>
+<a name="N1556D"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;優先順位のプロパティ</b>
 </p>
@@ -6550,6 +6569,33 @@ servlet-context.xmlにHandlerExceptionResolver実装クラスが複数指定さ�
 <div class="section">
 <div class="titlepage"></div>
 <p>独自のExceptionHandlerを使用している個所を確認し、モジュール単位の例外処理に使用している場合は「モジュール単位の例外」の移行手順に応じて、Action単位の例外処理に利用している場合は「Action単位の例外」の移行手順に応じて移行を検討する</p>
+</div>
+<br>
+<br>
+<a name="tubame_5.12." id="category_681"></a>
+<h3 class="title">5.12.メッセージリソース設定の移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>SpringMVCでは、web.xml、ApplicationContext.xml（web.xmlのcontext-paramで設定。アプリケーション全体の設定を記述する）、servlet-context.xml（web.xmlのDispatcherServletを定義したservletタグの子要素であるinit-paramタグで設定）などを使って設定を行う。
+</p>
+<p>web.xmlに設定ファイルを記載するのではなく、WebApplicationInitializeインタフェースを実装したクラスを作成し、コード中で設定ファイルを指定することも可能である
+
+</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>
+
+<span class="command"><strong><a class="command" href="http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html" target="_top">http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html</a></strong></span>
+
+</p>
+</li>
+</ul>
+</div>
+<p>
+
+</p>
 </div>
 <br>
 <br>
@@ -6651,7 +6697,7 @@ Struts1のbeanタグとSpringMVCでの対応を以下に示す。
 bean:cookieと同等な機能は、EL及びJSTLで対応可能で、SpringMVCでは存在しない
 </p>
 <div class="table">
-<a name="N13EAF"></a>
+<a name="N13EB9"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -6719,7 +6765,7 @@ ${cookie["JSESSIONID"].value}
 bean:defineと同等な機能は、EL及びJSTLで対応可能で、SpringMVCでは存在しない
 </p>
 <div class="table">
-<a name="N13EF9"></a>
+<a name="N13F03"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -6904,7 +6950,7 @@ ${tbean.username}
 bean:headerと同等な機能は、EL及びJSTLで対応可能で、SpringMVCでは存在しない
 </p>
 <div class="table">
-<a name="N13FF0"></a>
+<a name="N13FFA"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -7182,7 +7228,7 @@ ${s1_session.getAttribute("data_s1")}
 bean:parameterと同等な機能は、EL及びJSTLで対応可能で、SpringMVCでは存在しない
 </p>
 <div class="table">
-<a name="N1411F"></a>
+<a name="N14129"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -7571,7 +7617,7 @@ ${fn:length(tbean.testMap)}
 
 </p>
 <div class="table">
-<a name="N1434C"></a>
+<a name="N14356"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:baseの属性詳細</b>
 </p>
@@ -7644,7 +7690,7 @@ href="http://&lt;server&gt;:&lt;port&gt;/&lt;context&gt;"&gt;となる。この�
 <a name="strutsHtmlCheckbox"></a>html:checkboxはSpringMVCのform:checkboxが対応する
 </p>
 <div class="table">
-<a name="N14396"></a>
+<a name="N143A0"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:checkboxの属性詳細</b>
 </p>
@@ -7709,7 +7755,7 @@ href="http://&lt;server&gt;:&lt;port&gt;/&lt;context&gt;"&gt;となる。この�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N143E7"></a>
+<a name="N143F1"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのform:checkboxでの対応</b>
 </p>
@@ -7801,7 +7847,7 @@ type="hidden"&gt;を自動生成している。
 <p>
 <a name="strutsHtmlErrors"></a>html:errorsはSpringMVCのform:errorsで対応する</p>
 <div class="table">
-<a name="N14452"></a>
+<a name="N1445C"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:errorsの属性詳細</b>
 </p>
@@ -7830,7 +7876,7 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N14469"></a>
+<a name="N14473"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのform:errorsでの対応</b>
 </p>
@@ -7949,7 +7995,7 @@ strutsのhtml:javascriptについては、<span class="command"><strong><a class
 <p>
 <a name="strutsHtmlLink"></a>html:linkは、SpringMVCのspring:urlが対応する</p>
 <div class="table">
-<a name="N144F3"></a>
+<a name="N144FD"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:linkの属性詳細</b>
 </p>
@@ -8422,7 +8468,7 @@ Query String(#4)
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N146E5"></a>
+<a name="N146EF"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCの&lt;spring:url&gt;での対応
 </b>
@@ -8525,7 +8571,7 @@ Query String(#4)
 
 </p>
 <div class="table">
-<a name="N14752"></a>
+<a name="N1475C"></a>
 <p class="title">
 <b>Table&nbsp;3.&nbsp;spring:mvcUrl関数の利用例</b>
 </p>
@@ -8590,7 +8636,7 @@ FooBar1クラスのexecuteメソッドが「/foo/{id}」にマッピングされ
 <p>
 <a name="strutsHtmlMessages"></a>html:messagesはSpringMVCのspring:messageが対応する</p>
 <div class="table">
-<a name="N14783"></a>
+<a name="N1478D"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:messagesの属性詳細</b>
 </p>
@@ -8645,7 +8691,7 @@ struts-validatorを使用している場合は、対応するフィールド名�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N147B0"></a>
+<a name="N147BA"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのspring:messageでの対応</b>
 </p>
@@ -8692,7 +8738,7 @@ struts-validatorを使用している場合は、対応するフィールド名�
 <p>
 <a name="strutsHtmlMultibox"></a>html:multiboxはSpringMVCのspring:checkboxが対応する</p>
 <div class="table">
-<a name="N147E4"></a>
+<a name="N147EE"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:multiboxの属性詳細</b>
 </p>
@@ -8731,7 +8777,7 @@ struts-validatorを使用している場合は、対応するフィールド名�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N1480C"></a>
+<a name="N14816"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのform:checkboxでの対応</b>
 </p>
@@ -8794,7 +8840,7 @@ struts-validatorを使用している場合は、対応するフィールド名�
 <a name="strutsHtmlOptions"></a>html:optionsはSpringMVCのform:optionsが対応する
 </p>
 <div class="table">
-<a name="N14855"></a>
+<a name="N1485F"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts1のoptionタグ詳細</b>
 </p>
@@ -8918,7 +8964,7 @@ falseの場合、そのまま出力される
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N148A9"></a>
+<a name="N148B3"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCでの対応</b>
 </p>
@@ -8983,7 +9029,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <a name="strutsHtmlOptionsCollection"></a>
 </p>
 <div class="table">
-<a name="N148DC"></a>
+<a name="N148E6"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts1のoptionタグ詳細</b>
 </p>
@@ -9104,7 +9150,7 @@ Bean名の場合、property属性を必ず指定する。property属性にはコ
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N14930"></a>
+<a name="N1493A"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCでの対応</b>
 </p>
@@ -9166,7 +9212,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 
 </p>
 <div class="table">
-<a name="N14960"></a>
+<a name="N1496A"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:paramの属性詳細</b>
 </p>
@@ -9194,7 +9240,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N14983"></a>
+<a name="N1498D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;</b>
 </p>
@@ -9220,7 +9266,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <li class="listitem">
 <p>生成されたHTML</p>
 <div class="figure">
-<a name="N14992"></a>
+<a name="N1499C"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;</b>
 </p>
@@ -9247,7 +9293,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 
 </p>
 <div class="table">
-<a name="N1499C"></a>
+<a name="N149A6"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのspring:paramでの対応</b>
 </p>
@@ -9272,7 +9318,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N149B8"></a>
+<a name="N149C2"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;</b>
 </p>
@@ -9298,7 +9344,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <li class="listitem">
 <p>生成されたHTML</p>
 <div class="figure">
-<a name="N149C7"></a>
+<a name="N149D1"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;</b>
 </p>
@@ -9344,7 +9390,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <p>
 <a name="strutsHtmlRadio"></a>html:radioはSpringMVCのform:radiobuttonが対応する</p>
 <div class="table">
-<a name="N149EB"></a>
+<a name="N149F5"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:radioの属性詳細</b>
 </p>
@@ -9395,7 +9441,7 @@ type="radio"&gt;のvalue属性値を保持するBean名を指定する（必須�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N14A13"></a>
+<a name="N14A1D"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのform:radiobutton属性詳細(一部抜粋)</b>
 </p>
@@ -9430,7 +9476,7 @@ type="radio"&gt;のvalue属性値を保持するBean名を指定する（必須�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N14A2F"></a>
+<a name="N14A39"></a>
 <p class="title">
 <b>Table&nbsp;3.&nbsp;SpringMVCのform:radiobuttons属性詳細(一部抜粋)</b>
 </p>
@@ -9912,7 +9958,7 @@ Tagでは存在しない。
 
 </p>
 <div class="table">
-<a name="N14D4F"></a>
+<a name="N14D59"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10044,7 +10090,7 @@ Struts1のlogicタグとJSTL及びJSP、SpringMVCのタグの対応について�
 logic:greaterEqualと同等な機能を提供するタグは、JSTL Tagにて対応可能だが、JSP Tag及びSpringMVC Tagでは存在しない
 </p>
 <div class="table">
-<a name="N14DE9"></a>
+<a name="N14DF3"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10161,7 +10207,7 @@ ${age &gt;= 30 ? "Over 30" : "Less than 30"}
 logic:matchと同等な機能を提供するタグは、JSTL Tagにて対応可能だが、JSP Tag及びSpringMVC Tagでは存在しない
 </p>
 <div class="table">
-<a name="N14E84"></a>
+<a name="N14E8E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10300,7 +10346,7 @@ ${fn:endsWith(foo,"ABC") ? "Match!" : ""}&lt;p&gt;
 logic:messagesPresentと同等な機能を提供するタグは、JSTL Tagにて対応可能だが、JSP Tag及びSpringMVC Tagでは存在しない
 </p>
 <div class="table">
-<a name="N14F3F"></a>
+<a name="N14F49"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10421,7 +10467,7 @@ ${status.error ? "Error!!" : ""}&lt;p&gt;
 logic:presentと同等な機能を提供するタグは、JSTL Tagにて対応可能だが、JSP Tag及びSpringMVC Tagでは存在しない
 </p>
 <div class="table">
-<a name="N14FDB"></a>
+<a name="N14FE5"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10628,7 +10674,7 @@ validatorを利用している場合はBean Validationを利用する。
 <li class="listitem">
 <p>Controllerクラス</p>
 <div class="figure">
-<a name="N15100"></a>
+<a name="N1510A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラス例</b>
 </p>
@@ -10666,7 +10712,7 @@ public class ExtraTest2 {
 <li class="listitem">
 <p>Bean</p>
 <div class="figure">
-<a name="N1510D"></a>
+<a name="N15117"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Bean例</b>
 </p>
@@ -10696,7 +10742,7 @@ public class UserInfo {
 <li class="listitem">
 <p>JSPファイル（login.jsp）</p>
 <div class="figure">
-<a name="N1511A"></a>
+<a name="N15124"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSP例</b>
 </p>
@@ -10733,7 +10779,7 @@ Validationを利用する場合は、アノテーション単位でメッセー�
 メッセージリソースファイルは名前が「ValidationMessages」固定となっている。ファイルの配置は、設定ファイルで変更することが可能である（bean/property/list/valueタグ）。
 </p>
 <div class="figure">
-<a name="N15129"></a>
+<a name="N15133"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;例</b>
 </p>
@@ -10767,7 +10813,7 @@ Validationを利用する場合は、アノテーション単位でメッセー�
 
 </p>
 <div class="figure">
-<a name="N15139"></a>
+<a name="N15143"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;</b>
 </p>
@@ -10782,7 +10828,7 @@ NotEmpty = {0} is required
 特定のプロパティに制限する場合は、アノテーション名.プロパティ名で記述する。
 </p>
 <div class="figure">
-<a name="N15142"></a>
+<a name="N1514C"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;</b>
 </p>
@@ -10797,7 +10843,7 @@ NotEmpty.username = Username is required
 また、特定のフォームのプロパティに制限する場合は、アノテーション名.フォーム名.プロパティ名の形式で記述する。
 </p>
 <div class="figure">
-<a name="N1514B"></a>
+<a name="N15155"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;</b>
 </p>
@@ -10891,7 +10937,7 @@ public class UserInfoValidator implements Validator {
 <div class="section">
 <div class="titlepage"></div>
 <div class="table">
-<a name="N15177"></a>
+<a name="N15181"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Validator</b>
 </p>
@@ -11122,35 +11168,8 @@ public class UserInfoValidator implements Validator {
 </div>
 <br>
 <br>
-<a name="tubame_7.1.1." id="category_504"></a>
-<h3 class="title">7.1.1.メッセージリソース設定の移行</h3>
-<br>
-<div class="section">
-<div class="titlepage"></div>
-<p>SpringMVCでは、web.xml、ApplicationContext.xml（web.xmlのcontext-paramで設定。アプリケーション全体の設定を記述する）、servlet-context.xml（web.xmlのDispatcherServletを定義したservletタグの子要素であるinit-paramタグで設定）などを使って設定を行う。
-</p>
-<p>web.xmlに設定ファイルを記載するのではなく、WebApplicationInitializeインタフェースを実装したクラスを作成し、コード中で設定ファイルを指定することも可能である
-
-</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p>
-
-<span class="command"><strong><a class="command" href="http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html" target="_top">http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html</a></strong></span>
-
-</p>
-</li>
-</ul>
-</div>
-<p>
-
-</p>
-</div>
-<br>
-<br>
-<a name="tubame_7.1.2." id="category_505"></a>
-<h3 class="title">7.1.2.DynaActionForm/Lazy ActionFormの移行</h3>
+<a name="tubame_7.1.1." id="category_505"></a>
+<h3 class="title">7.1.1.DynaActionForm/Lazy ActionFormの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -11159,8 +11178,8 @@ public class UserInfoValidator implements Validator {
 </div>
 <br>
 <br>
-<a name="tubame_7.1.3." id="category_506"></a>
-<h3 class="title">7.1.3.Commandの移行</h3>
+<a name="tubame_7.1.2." id="category_506"></a>
+<h3 class="title">7.1.2.Commandの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -11169,7 +11188,7 @@ public class UserInfoValidator implements Validator {
 <p>下記表に、Struts1のCommandとSpringMVCのInterceptorの比較を示す。</p>
 <p></p>
 <div class="table">
-<a name="N155F3"></a>
+<a name="N155E7"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Validator</b>
 </p>
@@ -11249,7 +11268,7 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
 </div>
 <br class="table-break">
 <div class="figure">
-<a name="N1565F"></a>
+<a name="N15653"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;CommandとInterceptor（SpringMVC）の実行イメージ</b>
 </p>
@@ -11262,8 +11281,8 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
 </div>
 <br>
 <br>
-<a name="tubame_7.1.4." id="category_507"></a>
-<h3 class="title">7.1.4.プラグインの移行</h3>
+<a name="tubame_7.1.3." id="category_507"></a>
+<h3 class="title">7.1.3.プラグインの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -11272,8 +11291,8 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
 </div>
 <br>
 <br>
-<a name="tubame_7.1.5." id="category_678"></a>
-<h3 class="title">7.1.5.Strutsのセッション IDの払い出し</h3>
+<a name="tubame_7.1.4." id="category_678"></a>
+<h3 class="title">7.1.4.Strutsのセッション IDの払い出し</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -11284,7 +11303,7 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
 
 			</p>
 <div class="figure">
-<a name="N16782"></a>
+<a name="N16776"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Actionクラス</b>
 </p>
@@ -11597,7 +11616,7 @@ Locale locale)
 
 </p>
 <div class="table">
-<a name="N15DA4"></a>
+<a name="N15D98"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Validator比較</b>
 </p>
@@ -11682,7 +11701,7 @@ Locale locale)
 
 </p>
 <div class="table">
-<a name="N15E28"></a>
+<a name="N15E1C"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts1.xとSpringMVCのクラス対応表</b>
 </p>
@@ -11834,7 +11853,7 @@ Locale locale)
 
 </p>
 <div class="figure">
-<a name="N15EBD"></a>
+<a name="N15EB1"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Action</b>
 </p>
@@ -11871,7 +11890,7 @@ public ActionForward execute(ActionMapping mapping, ActionForm form,
 
 </p>
 <div class="figure">
-<a name="N15ECA"></a>
+<a name="N15EBE"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;ResponseEntityを利用したController</b>
 </p>
@@ -11909,7 +11928,7 @@ public ResponseEntity&lt;String&gt; download() throws IOException {
 
 </p>
 <div class="figure">
-<a name="N15EE1"></a>
+<a name="N15ED5"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;roles属性設定</b>
 </p>
@@ -11926,7 +11945,7 @@ public ResponseEntity&lt;String&gt; download() throws IOException {
 <p>SpringMVCでは、UserRoleAuthorizationInterceptorを用いてユーザロールの確認を行う。以下に、設定例を示す。
 </p>
 <div class="figure">
-<a name="N15EEE"></a>
+<a name="N15EE2"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;roles属性設定</b>
 </p>
@@ -11985,7 +12004,7 @@ struts1のhtml:optionsを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15FB8"></a>
+<a name="N15FAC"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;html:optionsを利用したjsp</b>
 </p>
@@ -12027,7 +12046,7 @@ struts1のhtml:optionsを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15FC3"></a>
+<a name="N15FB7"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;html:optionsを利用したjspで生成されるhtml</b>
 </p>
@@ -12087,7 +12106,7 @@ struts1のhtml:optionsを利用したサンプル
 <td valign="top" align="left">
 <p>上記jspでは以下のactionクラスを利用</p>
 <div class="figure">
-<a name="N15FD1"></a>
+<a name="N15FC5"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Action</b>
 </p>
@@ -12175,7 +12194,7 @@ SpringMVCのタグを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15FDE"></a>
+<a name="N15FD2"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;springMVCのタグを利用したjsp</b>
 </p>
@@ -12223,7 +12242,7 @@ SpringMVCのタグを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15FE9"></a>
+<a name="N15FDD"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;springMVCのタグを利用したjspで生成されるhtml</b>
 </p>
@@ -12284,7 +12303,7 @@ SpringMVCのタグを利用したサンプル
 <td valign="top" align="left">
 <p>上記jspでは以下のControllerクラスを利用</p>
 <div class="figure">
-<a name="N15FF7"></a>
+<a name="N15FEB"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;Controller</b>
 </p>
@@ -12413,7 +12432,7 @@ SpringMVCのタグを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N16022"></a>
+<a name="N16016"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ActionForm</b>
 </p>
@@ -12473,7 +12492,7 @@ public class MultiBoxTest extends ActionForm {
 
 </p>
 <div class="figure">
-<a name="N1602D"></a>
+<a name="N16021"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Action</b>
 </p>
@@ -12512,7 +12531,7 @@ public class MultiBoxTest extends ActionForm {
 struts1のhtml:multiboxを利用したサンプル
 </p>
 <div class="figure">
-<a name="N16045"></a>
+<a name="N16039"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12532,7 +12551,7 @@ struts1のhtml:multiboxを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N16050"></a>
+<a name="N16044"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12563,7 +12582,7 @@ struts1のhtml:multiboxを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N16067"></a>
+<a name="N1605B"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12583,7 +12602,7 @@ struts1のhtml:multiboxを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N16072"></a>
+<a name="N16066"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12614,7 +12633,7 @@ struts1のhtml:multiboxを利用したサンプル
 struts1のhtml:checkboxを利用したon/off用チェックボックスサンプル
 </p>
 <div class="figure">
-<a name="N16089"></a>
+<a name="N1607D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12633,7 +12652,7 @@ struts1のhtml:checkboxを利用したon/off用チェックボックスサンプ
 
 </p>
 <div class="figure">
-<a name="N16094"></a>
+<a name="N16088"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12663,7 +12682,7 @@ struts1のhtml:checkboxを利用したon/off用チェックボックスサンプ
 struts1のhtml:checkboxを利用したon/off用チェックボックスサンプル(複数表示)
 </p>
 <div class="figure">
-<a name="N160AB"></a>
+<a name="N1609F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12683,7 +12702,7 @@ struts1のhtml:checkboxを利用したon/off用チェックボックスサンプ
 
 </p>
 <div class="figure">
-<a name="N160B6"></a>
+<a name="N160AA"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12714,7 +12733,7 @@ struts1のhtml:checkboxを利用したon/off用チェックボックスサンプ
 struts1のhtml:checkboxでListデータを利用したサンプル
 </p>
 <div class="figure">
-<a name="N160CD"></a>
+<a name="N160C1"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12740,7 +12759,7 @@ JSP(チェックされた値を表示）
 
 </p>
 <div class="figure">
-<a name="N160D8"></a>
+<a name="N160CC"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12806,7 +12825,7 @@ JSP(チェックされた値を表示）
 
 </p>
 <div class="figure">
-<a name="N16100"></a>
+<a name="N160F4"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Bean</b>
 </p>
@@ -12859,7 +12878,7 @@ public class MultiBoxTest {
 
 </p>
 <div class="figure">
-<a name="N1610B"></a>
+<a name="N160FF"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Controller</b>
 </p>
@@ -12921,7 +12940,7 @@ public class ExtraTest14 {
 SpringMVCのform:checkboxを利用したサンプル
 </p>
 <div class="figure">
-<a name="N16123"></a>
+<a name="N16117"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12946,7 +12965,7 @@ SpringMVCのform:checkboxを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N1612E"></a>
+<a name="N16122"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12977,7 +12996,7 @@ SpringMVCのform:checkboxを利用したサンプル
 SpringMVCのform:checkboxを利用したon/off用チェックボックスサンプル
 </p>
 <div class="figure">
-<a name="N16145"></a>
+<a name="N16139"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12996,7 +13015,7 @@ SpringMVCのform:checkboxを利用したon/off用チェックボックスサン�
 
 </p>
 <div class="figure">
-<a name="N16150"></a>
+<a name="N16144"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13029,7 +13048,7 @@ SpringMVCのform:checkboxを利用したon/off用チェックボックスサン�
 SpringMVCのform:checkboxを利用したon/off用チェックボックスサンプル(複数表示)
 </p>
 <div class="figure">
-<a name="N16167"></a>
+<a name="N1615B"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -13053,7 +13072,7 @@ SpringMVCのform:checkboxを利用したon/off用チェックボックスサン�
 
 </p>
 <div class="figure">
-<a name="N16172"></a>
+<a name="N16166"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13084,7 +13103,7 @@ SpringMVCのform:checkboxを利用したon/off用チェックボックスサン�
 SpringMVCのform:checkboxでListデータを利用したサンプル
 </p>
 <div class="figure">
-<a name="N16189"></a>
+<a name="N1617D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -13106,7 +13125,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N16194"></a>
+<a name="N16188"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13171,7 +13190,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N161C2"></a>
+<a name="N161B6"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンのラベル、値を定義しない場合）</b>
 </p>
@@ -13188,7 +13207,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N161CD"></a>
+<a name="N161C1"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPで生成されたHTML</b>
 </p>
@@ -13215,7 +13234,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N161E4"></a>
+<a name="N161D8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンの値を定義する場合-ListにBeanを格納)</b>
 </p>
@@ -13233,7 +13252,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N161EF"></a>
+<a name="N161E3"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13258,7 +13277,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 <td valign="top" align="left">
 <p>上記で利用するBeanとAction</p>
 <div class="figure">
-<a name="N161FD"></a>
+<a name="N161F1"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Bean</b>
 </p>
@@ -13284,7 +13303,7 @@ public class RadioValue {
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N16207"></a>
+<a name="N161FB"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;Action</b>
 </p>
@@ -13318,7 +13337,7 @@ public class RadioValue {
 
 </p>
 <div class="figure">
-<a name="N1621E"></a>
+<a name="N16212"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンの値を定義する場合-Mapに格納)</b>
 </p>
@@ -13335,7 +13354,7 @@ request.setAttribute("RadioValue", radioValues);
 
 </p>
 <div class="figure">
-<a name="N16229"></a>
+<a name="N1621D"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13360,7 +13379,7 @@ request.setAttribute("RadioValue", radioValues);
 <td valign="top" align="left">
 <p>上記で利用するAction</p>
 <div class="figure">
-<a name="N16237"></a>
+<a name="N1622B"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Action</b>
 </p>
@@ -13423,7 +13442,7 @@ request.setAttribute("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N16265"></a>
+<a name="N16259"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンのラベル、値を定義しない場合）</b>
 </p>
@@ -13440,7 +13459,7 @@ request.setAttribute("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N16270"></a>
+<a name="N16264"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPで生成されたHTML</b>
 </p>
@@ -13467,7 +13486,7 @@ request.setAttribute("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N16287"></a>
+<a name="N1627B"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンの値を定義する場合-ListにBeanを格納)</b>
 </p>
@@ -13501,7 +13520,7 @@ JSP例
 
 </p>
 <div class="figure">
-<a name="N16292"></a>
+<a name="N16286"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13526,7 +13545,7 @@ JSP例
 <td valign="top" align="left">
 <p>上記で利用するBeanとController</p>
 <div class="figure">
-<a name="N162A0"></a>
+<a name="N16294"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Bean</b>
 </p>
@@ -13552,7 +13571,7 @@ public class RadioValue {
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N162AA"></a>
+<a name="N1629E"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;Controller</b>
 </p>
@@ -13585,7 +13604,7 @@ public class RadioValue {
 
 </p>
 <div class="figure">
-<a name="N162C1"></a>
+<a name="N162B5"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンの値を定義する場合-Mapに格納)</b>
 </p>
@@ -13606,7 +13625,7 @@ public class RadioValue {
 
 </p>
 <div class="figure">
-<a name="N162CC"></a>
+<a name="N162C0"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13631,7 +13650,7 @@ public class RadioValue {
 <td valign="top" align="left">
 <p>上記で利用するController</p>
 <div class="figure">
-<a name="N162DA"></a>
+<a name="N162CE"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Controller</b>
 </p>
@@ -13715,7 +13734,7 @@ mav.addObject("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N16314"></a>
+<a name="N16308"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-Action#saveMessagesで保存したメッセージを表示する場合</b>
 </p>
@@ -13736,7 +13755,7 @@ mav.addObject("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N1631F"></a>
+<a name="N16313"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13765,7 +13784,7 @@ super.saveMessages(request, messages1);
 
 </p>
 <div class="figure">
-<a name="N16336"></a>
+<a name="N1632A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-OverrideしたsaveMessagesで保存したメッセージを表示する場合（リクエスト属性のキーを変更したい場合）</b>
 </p>
@@ -13786,7 +13805,7 @@ super.saveMessages(request, messages1);
 
 </p>
 <div class="figure">
-<a name="N16341"></a>
+<a name="N16335"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13829,7 +13848,7 @@ protected void saveMessages(HttpServletRequest request, ActionMessages messages)
 
 </p>
 <div class="figure">
-<a name="N16358"></a>
+<a name="N1634C"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-Action#saveErrorsで保存したメッセージを表示する場合</b>
 </p>
@@ -13850,7 +13869,7 @@ protected void saveMessages(HttpServletRequest request, ActionMessages messages)
 
 </p>
 <div class="figure">
-<a name="N16363"></a>
+<a name="N16357"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13892,7 +13911,7 @@ protected void saveErrors(HttpServletRequest request, ActionMessages errors) {
 
 </p>
 <div class="figure">
-<a name="N1637A"></a>
+<a name="N1636E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-OverrideしたsaveErrorsで保存したメッセージを表示する場合（リクエスト属性のキーを変更したい場合）</b>
 </p>
@@ -13910,7 +13929,7 @@ protected void saveErrors(HttpServletRequest request, ActionMessages errors) {
 
 </p>
 <div class="figure">
-<a name="N16385"></a>
+<a name="N16379"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13938,7 +13957,7 @@ protected void saveErrors(HttpServletRequest request, ActionMessages errors) {
 
 </p>
 <div class="figure">
-<a name="N1639C"></a>
+<a name="N16390"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-Action#saveMessagesで保存したメッセージキーに対応するメッセージを表示する</b>
 </p>
@@ -13957,7 +13976,7 @@ super.addMessages(request, messages5);
 
 </p>
 <div class="figure">
-<a name="N163A7"></a>
+<a name="N1639B"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13987,7 +14006,7 @@ super.addMessages(request, messages7);
 
 </p>
 <div class="figure">
-<a name="N163BE"></a>
+<a name="N163B2"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-メッセージの存在チェック</b>
 </p>
@@ -14024,7 +14043,7 @@ super.addMessages(request, messages7);
 
 </p>
 <div class="figure">
-<a name="N163D5"></a>
+<a name="N163C9"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-struts-validator使用時にメッセージを出力する</b>
 </p>
@@ -14053,7 +14072,7 @@ ValidateActionForm#executeの実行時に呼び出され、ActionErrorsが存在
 
 </p>
 <div class="figure">
-<a name="N163E0"></a>
+<a name="N163D4"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14084,7 +14103,7 @@ public class UserInfo extends ValidatorForm {
 
 </p>
 <div class="figure">
-<a name="N163EB"></a>
+<a name="N163DF"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;設定ファイル</b>
 </p>
@@ -14161,7 +14180,7 @@ public class UserInfo extends ValidatorForm {
 
 </p>
 <div class="figure">
-<a name="N16422"></a>
+<a name="N16416"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-リクエストスコープにメッセージを格納（その１）</b>
 </p>
@@ -14177,7 +14196,7 @@ ${key1}
 
 </p>
 <div class="figure">
-<a name="N1642D"></a>
+<a name="N16421"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14204,7 +14223,7 @@ public ModelAndView  setup(WebRequest request) {
 
 </p>
 <div class="figure">
-<a name="N16444"></a>
+<a name="N16438"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-リクエストスコープにメッセージを格納（その２）</b>
 </p>
@@ -14221,7 +14240,7 @@ mav.addObject("key2", "メッセージ2");
 
 </p>
 <div class="figure">
-<a name="N1644F"></a>
+<a name="N16443"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14247,7 +14266,7 @@ ${key2}
 
 </p>
 <div class="figure">
-<a name="N16466"></a>
+<a name="N1645A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-リクエストスコープに保存されたメッセージキーに対応するメッセージを表示する場合</b>
 </p>
@@ -14263,7 +14282,7 @@ ${key2}
 
 </p>
 <div class="figure">
-<a name="N16471"></a>
+<a name="N16465"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14289,7 +14308,7 @@ request.setAttribute("key4", "global.message", WebRequest.SCOPE_REQUEST);
 
 </p>
 <div class="figure">
-<a name="N16488"></a>
+<a name="N1647C"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-リクエストスコープに保存されたメッセージキーが引数を取る場合</b>
 </p>
@@ -14305,7 +14324,7 @@ request.setAttribute("key4", "global.message", WebRequest.SCOPE_REQUEST);
 
 </p>
 <div class="figure">
-<a name="N16493"></a>
+<a name="N16487"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14333,7 +14352,7 @@ request.setAttribute("args", Arrays.stream(args).collect(Collectors.joining(",")
 
 </p>
 <div class="figure">
-<a name="N164AA"></a>
+<a name="N1649E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-メッセージの存在チェック</b>
 </p>
@@ -14381,7 +14400,7 @@ Struts1において、Validationエラーメッセージの存在有無チェッ
 
 </p>
 <div class="figure">
-<a name="N164C1"></a>
+<a name="N164B5"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Bean Validation使用時にメッセージを出力する</b>
 </p>
@@ -14405,7 +14424,7 @@ Struts1において、Validationエラーメッセージの存在有無チェッ
 
 </p>
 <div class="figure">
-<a name="N164CC"></a>
+<a name="N164C0"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14436,7 +14455,7 @@ public class UserInfo {
 
 </p>
 <div class="figure">
-<a name="N164D7"></a>
+<a name="N164CB"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;設定ファイル</b>
 </p>
@@ -14474,7 +14493,7 @@ public class UserInfo {
 
 </p>
 <div class="figure">
-<a name="N164EE"></a>
+<a name="N164E2"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Actionクラス</b>
 </p>
@@ -14506,7 +14525,7 @@ public class ExtraTest1 extends DownloadAction {
 
 </p>
 <div class="figure">
-<a name="N164F9"></a>
+<a name="N164ED"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPファイル（test1.jsp）</b>
 </p>
@@ -14531,7 +14550,7 @@ public class ExtraTest1 extends DownloadAction {
 
 </p>
 <div class="figure">
-<a name="N16504"></a>
+<a name="N164F8"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;struts-config.xml</b>
 </p>
@@ -14564,7 +14583,7 @@ public class ExtraTest1 extends DownloadAction {
 <a name="frameworkList"></a>Struts 1の代替フレームワークとして、OSS製品のフレームワークを挙げ比較を行い、代替として適切と思われるフレームワークを選択する。
 </p>
 <div class="table">
-<a name="N165BF"></a>
+<a name="N165B3"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts 1の代替フレームワーク比較</b>
 </p>
