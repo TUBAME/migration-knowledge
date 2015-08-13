@@ -1,12 +1,12 @@
 <HTML xmlns:knowhow="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:doc="http://docbook.org/ns/docbook">
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Struts 1からSpring MVCへのマイグレーションナレッジ</title>
+<title>Struts1からSpringMVCへのマイグレーションガイド</title>
 <link href="css/knowhow.css" type="text/css" rel="stylesheet">
 <meta content="DocBook XSL Stylesheets V1.78.1" name="generator">
 </HEAD>
 <BODY>
-<H1 class="title">Struts 1からSpring MVCへのマイグレーションナレッジ</H1>
+<H1 class="title">Struts1からSpringMVCへのマイグレーションガイド</H1>
 <div class="toc">
 <p>
 <b>Index</b>
@@ -294,54 +294,61 @@
 <dd>
 <dl>
 <dt>
-<span class="5.7.1."><a href="#tubame_5.7.1.">5.7.1.XDocletによるActionForm定義</a></span>
+<span class="5.7.1."><a href="#tubame_5.7.1.">5.7.1.ActionForm Beanの設定移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2."><a href="#tubame_5.7.2.">5.7.2.ActionFormクラスの提供するユーティリティメソッドの移行</a></span>
-</dt>
-<dd>
-<dl>
-<dt>
-<span class="5.7.2.1."><a href="#tubame_5.7.2.1.">5.7.2.1.getMultipartRequestHandler/setMultipartRequestHandler</a></span>
+<span class="5.7.2."><a href="#tubame_5.7.2.">5.7.2.XDocletによるActionForm定義</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.2."><a href="#tubame_5.7.2.2.">5.7.2.2.getServletWrapper</a></span>
+<span class="5.7.3."><a href="#tubame_5.7.3.">5.7.3.ActionFormクラスの提供するユーティリティメソッドの移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="5.7.3.1."><a href="#tubame_5.7.3.1.">5.7.3.1.ActionFormユーティリティメソッドgetMultipartRequestHandler/setMultipartRequestHandlerの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.3."><a href="#tubame_5.7.2.3.">5.7.2.3.reset</a></span>
+<span class="5.7.3.2."><a href="#tubame_5.7.3.2.">5.7.3.2.ActionFormユーティリティメソッドgetServletWrapperの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.4."><a href="#tubame_5.7.2.4.">5.7.2.4.ActionForm#setServlet</a></span>
+<span class="5.7.3.3."><a href="#tubame_5.7.3.3.">5.7.3.3.ActionFormユーティリティメソッドresetの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.5."><a href="#tubame_5.7.2.5.">5.7.2.5.validate</a></span>
+<span class="5.7.3.4."><a href="#tubame_5.7.3.4.">5.7.3.4.ActionFormユーティリティメソッドsetServletの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.7.2.6."><a href="#tubame_5.7.2.6.">5.7.2.6.ActionForm#getServlet</a></span>
+<span class="5.7.3.5."><a href="#tubame_5.7.3.5.">5.7.3.5.ActionFormユーティリティメソッドvalidateの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.7.3.6."><a href="#tubame_5.7.3.6.">5.7.3.6.ActionFormユーティリティメソッドgetServletの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -350,7 +357,7 @@
 <dd>
 <dl>
 <dt>
-<span class="5.7.3."><a href="#tubame_5.7.3.">5.7.3.Map-backed ActionFormの移行</a></span>
+<span class="5.7.4."><a href="#tubame_5.7.4.">5.7.4.Map-backed ActionFormの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -427,138 +434,54 @@
 <dd>
 <dl>
 <dt>
-<span class="5.9.1."><a href="#tubame_5.9.1.">5.9.1.シンプルなActionの移行</a></span>
+<span class="5.9.1."><a href="#tubame_5.9.1.">5.9.1.Actionの設定移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.2."><a href="#tubame_5.9.2.">5.9.2.DispatchActionの移行</a></span>
+<span class="5.9.2."><a href="#tubame_5.9.2.">5.9.2.シンプルなActionの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.3."><a href="#tubame_5.9.3.">5.9.3.LookupDispatchActionの移行</a></span>
+<span class="5.9.3."><a href="#tubame_5.9.3.">5.9.3.DispatchActionの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.4."><a href="#tubame_5.9.4.">5.9.4.EventDispatchActionの移行</a></span>
+<span class="5.9.4."><a href="#tubame_5.9.4.">5.9.4.LookupDispatchActionの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.5."><a href="#tubame_5.9.5.">5.9.5.Forwardの移行</a></span>
-</dt>
-<dd>
-<dl>
-<dt>
-<span class="5.9.5.1."><a href="#tubame_5.9.5.1.">5.9.5.1.リクエストのフォワード/リダイレクト移行</a></span>
-</dt>
-</dl>
-</dd>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.6."><a href="#tubame_5.9.6.">5.9.6.モジュールの移行</a></span>
+<span class="5.9.5."><a href="#tubame_5.9.5.">5.9.5.EventDispatchActionの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.7."><a href="#tubame_5.9.7.">5.9.7.Actionクラスの提供するユーティリティメソッドの移行</a></span>
+<span class="5.9.6."><a href="#tubame_5.9.6.">5.9.6.Forwardの移行</a></span>
 </dt>
 <dd>
 <dl>
 <dt>
-<span class="5.9.7.1."><a href="#tubame_5.9.7.1.">5.9.7.1.Action#getServlet</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.2."><a href="#tubame_5.9.7.2.">5.9.7.2.Action#setServlet</a></span>
+<span class="5.9.6.1."><a href="#tubame_5.9.6.1.">5.9.6.1.リクエストのフォワード/リダイレクト移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.7.3."><a href="#tubame_5.9.7.3.">5.9.7.3.execute</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.4."><a href="#tubame_5.9.7.4.">5.9.7.4.addErrors</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.5."><a href="#tubame_5.9.7.5.">5.9.7.5.addMessages</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.6."><a href="#tubame_5.9.7.6.">5.9.7.6.Token管理</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.7."><a href="#tubame_5.9.7.7.">5.9.7.7.getErrors</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.8."><a href="#tubame_5.9.7.8.">5.9.7.8.Locale</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.9."><a href="#tubame_5.9.7.9.">5.9.7.9.getMessages</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.10."><a href="#tubame_5.9.7.10.">5.9.7.10.getResources</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.11."><a href="#tubame_5.9.7.11.">5.9.7.11.isCancelled</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="5.9.7.12."><a href="#tubame_5.9.7.12.">5.9.7.12.saveErrors/saveMessages</a></span>
+<span class="5.9.6.2."><a href="#tubame_5.9.6.2.">5.9.6.2.グローバルFowardの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -567,47 +490,145 @@
 <dd>
 <dl>
 <dt>
-<span class="5.9.8."><a href="#tubame_5.9.8.">5.9.8.Struts Extrasの移行</a></span>
-</dt>
-<dd>
-<dl>
-<dt>
-<span class="5.9.8.1."><a href="#tubame_5.9.8.1.">5.9.8.1.DispatcherAction系の移行</a></span>
+<span class="5.9.7."><a href="#tubame_5.9.7.">5.9.7.モジュールの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.8.2."><a href="#tubame_5.9.8.2.">5.9.8.2.DownloadActionの移行</a></span>
+<span class="5.9.8."><a href="#tubame_5.9.8.">5.9.8.Actionクラスの提供するユーティリティメソッドの移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="5.9.8.1."><a href="#tubame_5.9.8.1.">5.9.8.1.ActionユーティリティメソッドgetServletの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.8.3."><a href="#tubame_5.9.8.3.">5.9.8.3.ForwardActionの移行</a></span>
+<span class="5.9.8.2."><a href="#tubame_5.9.8.2.">5.9.8.2.ActionユーティリティメソッドsetServletの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.8.4."><a href="#tubame_5.9.8.4.">5.9.8.4.IncludeActionの移行</a></span>
+<span class="5.9.8.3."><a href="#tubame_5.9.8.3.">5.9.8.3.Actionユーティリティメソッドexecuteの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.8.5."><a href="#tubame_5.9.8.5.">5.9.8.5.LocaleActionの移行</a></span>
+<span class="5.9.8.4."><a href="#tubame_5.9.8.4.">5.9.8.4.ActionユーティリティメソッドaddErrorsの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="5.9.8.6."><a href="#tubame_5.9.8.6.">5.9.8.6.SwitchActionの移行</a></span>
+<span class="5.9.8.5."><a href="#tubame_5.9.8.5.">5.9.8.5.ActionユーティリティメソッドaddMessagesの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.8.6."><a href="#tubame_5.9.8.6.">5.9.8.6.ActionユーティリティメソッドToken管理機能の移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.8.7."><a href="#tubame_5.9.8.7.">5.9.8.7.ActionユーティリティメソッドgetErrorsの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.8.8."><a href="#tubame_5.9.8.8.">5.9.8.8.ActionユーティリティメソッドLocaleの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.8.9."><a href="#tubame_5.9.8.9.">5.9.8.9.ActionユーティリティメソッドgetMessagesの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.8.10."><a href="#tubame_5.9.8.10.">5.9.8.10.ActionユーティリティメソッドgetResourcesの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.8.11."><a href="#tubame_5.9.8.11.">5.9.8.11.ActionユーティリティメソッドisCancelledの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.8.12."><a href="#tubame_5.9.8.12.">5.9.8.12.ActionユーティリティメソッドsaveErrors/saveMessagesの移行</a></span>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.9."><a href="#tubame_5.9.9.">5.9.9.Struts Extrasの移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="5.9.9.1."><a href="#tubame_5.9.9.1.">5.9.9.1.DispatcherAction系の移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.9.2."><a href="#tubame_5.9.9.2.">5.9.9.2.DownloadActionの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.9.3."><a href="#tubame_5.9.9.3.">5.9.9.3.ForwardActionの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.9.4."><a href="#tubame_5.9.9.4.">5.9.9.4.IncludeActionの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.9.5."><a href="#tubame_5.9.9.5.">5.9.9.5.LocaleActionの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.9.9.6."><a href="#tubame_5.9.9.6.">5.9.9.6.SwitchActionの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -699,6 +720,13 @@
 </dd>
 </dl>
 </dd>
+<dd>
+<dl>
+<dt>
+<span class="5.12."><a href="#tubame_5.12.">5.12.メッセージリソース設定の移行</a></span>
+</dt>
+</dl>
+</dd>
 <dt>
 <span class="6."><a href="#tubame_6.">6.Viewの移行</a></span>
 </dt>
@@ -710,82 +738,89 @@
 <dd>
 <dl>
 <dt>
-<span class="6.1.1."><a href="#tubame_6.1.1.">6.1.1.beanタグ</a></span>
+<span class="6.1.1."><a href="#tubame_6.1.1.">6.1.1.Struts独自タグの宣言の移行</a></span>
 </dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="6.1.2."><a href="#tubame_6.1.2.">6.1.2.beanタグ</a></span>
+</dt>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.1."><a href="#tubame_6.1.1.1.">6.1.1.1.bean:cookie</a></span>
+<span class="6.1.2.1."><a href="#tubame_6.1.2.1.">6.1.2.1.Struts独自タグbean:cookieの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.2."><a href="#tubame_6.1.1.2.">6.1.1.2.bean:define</a></span>
+<span class="6.1.2.2."><a href="#tubame_6.1.2.2.">6.1.2.2.Struts独自タグbean:defineの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.3."><a href="#tubame_6.1.1.3.">6.1.1.3.bean:header</a></span>
+<span class="6.1.2.3."><a href="#tubame_6.1.2.3.">6.1.2.3.Struts独自タグbean:headerの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.4."><a href="#tubame_6.1.1.4.">6.1.1.4.bean:include</a></span>
+<span class="6.1.2.4."><a href="#tubame_6.1.2.4.">6.1.2.4.Struts独自タグbean:includeの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.5."><a href="#tubame_6.1.1.5.">6.1.1.5.bean:message</a></span>
+<span class="6.1.2.5."><a href="#tubame_6.1.2.5.">6.1.2.5.Struts独自タグbean:messageの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.6."><a href="#tubame_6.1.1.6.">6.1.1.6.bean:page</a></span>
+<span class="6.1.2.6."><a href="#tubame_6.1.2.6.">6.1.2.6.Struts独自タグbean:pageの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.7."><a href="#tubame_6.1.1.7.">6.1.1.7.bean:parameter</a></span>
+<span class="6.1.2.7."><a href="#tubame_6.1.2.7.">6.1.2.7.Struts独自タグbean:parameterの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.8."><a href="#tubame_6.1.1.8.">6.1.1.8.bean:resource</a></span>
+<span class="6.1.2.8."><a href="#tubame_6.1.2.8.">6.1.2.8.Struts独自タグbean:resourceの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.9."><a href="#tubame_6.1.1.9.">6.1.1.9.bean:size</a></span>
+<span class="6.1.2.9."><a href="#tubame_6.1.2.9.">6.1.2.9.Struts独自タグbean:sizeの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.10."><a href="#tubame_6.1.1.10.">6.1.1.10.bean:struts</a></span>
+<span class="6.1.2.10."><a href="#tubame_6.1.2.10.">6.1.2.10.Struts独自タグbean:strutsの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.1.11."><a href="#tubame_6.1.1.11.">6.1.1.11.bean:write</a></span>
+<span class="6.1.2.11."><a href="#tubame_6.1.2.11.">6.1.2.11.Struts独自タグbean:writeの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -794,47 +829,47 @@
 <dd>
 <dl>
 <dt>
-<span class="6.1.2."><a href="#tubame_6.1.2.">6.1.2.bean-elタグ</a></span>
+<span class="6.1.3."><a href="#tubame_6.1.3.">6.1.3.bean-elタグ</a></span>
 </dt>
 <dd>
 <dl>
 <dt>
-<span class="6.1.2.1."><a href="#tubame_6.1.2.1.">6.1.2.1.bean-el:include</a></span>
+<span class="6.1.3.1."><a href="#tubame_6.1.3.1.">6.1.3.1.Struts独自タグbean-el:includeの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.2.2."><a href="#tubame_6.1.2.2.">6.1.2.2.bean-el:message</a></span>
+<span class="6.1.3.2."><a href="#tubame_6.1.3.2.">6.1.3.2.Struts独自タグbean-el:messageの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.2.3."><a href="#tubame_6.1.2.3.">6.1.2.3.bean-el:page</a></span>
+<span class="6.1.3.3."><a href="#tubame_6.1.3.3.">6.1.3.3.Struts独自タグbean-el:pageの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.2.4."><a href="#tubame_6.1.2.4.">6.1.2.4.bean-el:resource</a></span>
+<span class="6.1.3.4."><a href="#tubame_6.1.3.4.">6.1.3.4.Struts独自タグbean-el:resourceの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.2.5."><a href="#tubame_6.1.2.5.">6.1.2.5.bean-el:size</a></span>
+<span class="6.1.3.5."><a href="#tubame_6.1.3.5.">6.1.3.5.Struts独自タグbean-el:sizeの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.2.6."><a href="#tubame_6.1.2.6.">6.1.2.6.bean-el:struts</a></span>
+<span class="6.1.3.6."><a href="#tubame_6.1.3.6.">6.1.3.6.Struts独自タグbean-el:strutsの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -843,208 +878,208 @@
 <dd>
 <dl>
 <dt>
-<span class="6.1.3."><a href="#tubame_6.1.3.">6.1.3.htmlタグ</a></span>
+<span class="6.1.4."><a href="#tubame_6.1.4.">6.1.4.htmlタグ</a></span>
 </dt>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.1."><a href="#tubame_6.1.3.1.">6.1.3.1.html:base</a></span>
+<span class="6.1.4.1."><a href="#tubame_6.1.4.1.">6.1.4.1.Struts独自タグhtml:baseの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.2."><a href="#tubame_6.1.3.2.">6.1.3.2.html:button</a></span>
+<span class="6.1.4.2."><a href="#tubame_6.1.4.2.">6.1.4.2.Struts独自タグhtml:buttonの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.3."><a href="#tubame_6.1.3.3.">6.1.3.3.html:cancel</a></span>
+<span class="6.1.4.3."><a href="#tubame_6.1.4.3.">6.1.4.3.Struts独自タグhtml:cancelの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.4."><a href="#tubame_6.1.3.4.">6.1.3.4.html:checkbox</a></span>
+<span class="6.1.4.4."><a href="#tubame_6.1.4.4.">6.1.4.4.Struts独自タグhtml:checkboxの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.5."><a href="#tubame_6.1.3.5.">6.1.3.5.html:errors</a></span>
+<span class="6.1.4.5."><a href="#tubame_6.1.4.5.">6.1.4.5.Struts独自タグhtml:errorsの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.6."><a href="#tubame_6.1.3.6.">6.1.3.6.html:file</a></span>
+<span class="6.1.4.6."><a href="#tubame_6.1.4.6.">6.1.4.6.Struts独自タグhtml:fileの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.7."><a href="#tubame_6.1.3.7.">6.1.3.7.html:form</a></span>
+<span class="6.1.4.7."><a href="#tubame_6.1.4.7.">6.1.4.7.Struts独自タグhtml:formの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.8."><a href="#tubame_6.1.3.8.">6.1.3.8.html:frame</a></span>
+<span class="6.1.4.8."><a href="#tubame_6.1.4.8.">6.1.4.8.Struts独自タグhtml:frameの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.9."><a href="#tubame_6.1.3.9.">6.1.3.9.html:hidden</a></span>
+<span class="6.1.4.9."><a href="#tubame_6.1.4.9.">6.1.4.9.Struts独自タグhtml:hiddenの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.10."><a href="#tubame_6.1.3.10.">6.1.3.10.html:html</a></span>
+<span class="6.1.4.10."><a href="#tubame_6.1.4.10.">6.1.4.10.Struts独自タグhtml:htmlの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.11."><a href="#tubame_6.1.3.11.">6.1.3.11.html:image</a></span>
+<span class="6.1.4.11."><a href="#tubame_6.1.4.11.">6.1.4.11.Struts独自タグhtml:imageの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.12."><a href="#tubame_6.1.3.12.">6.1.3.12.html:img</a></span>
+<span class="6.1.4.12."><a href="#tubame_6.1.4.12.">6.1.4.12.Struts独自タグhtml:imgの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.13."><a href="#tubame_6.1.3.13.">6.1.3.13.html:javascript</a></span>
+<span class="6.1.4.13."><a href="#tubame_6.1.4.13.">6.1.4.13.Struts独自タグhtml:javascriptの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.14."><a href="#tubame_6.1.3.14.">6.1.3.14.html:link</a></span>
+<span class="6.1.4.14."><a href="#tubame_6.1.4.14.">6.1.4.14.Struts独自タグhtml:linkの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.15."><a href="#tubame_6.1.3.15.">6.1.3.15.html:messages</a></span>
+<span class="6.1.4.15."><a href="#tubame_6.1.4.15.">6.1.4.15.Struts独自タグhtml:messagesの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.16."><a href="#tubame_6.1.3.16.">6.1.3.16.html:multibox</a></span>
+<span class="6.1.4.16."><a href="#tubame_6.1.4.16.">6.1.4.16.Struts独自タグhtml:multiboxの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.17."><a href="#tubame_6.1.3.17.">6.1.3.17.html:option</a></span>
+<span class="6.1.4.17."><a href="#tubame_6.1.4.17.">6.1.4.17.Struts独自タグhtml:optionの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.18."><a href="#tubame_6.1.3.18.">6.1.3.18.html:options</a></span>
+<span class="6.1.4.18."><a href="#tubame_6.1.4.18.">6.1.4.18.Struts独自タグhtml:optionsの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.19."><a href="#tubame_6.1.3.19.">6.1.3.19.html:optionsCollection</a></span>
+<span class="6.1.4.19."><a href="#tubame_6.1.4.19.">6.1.4.19.Struts独自タグhtml:optionsCollectionの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.20."><a href="#tubame_6.1.3.20.">6.1.3.20.html:param</a></span>
+<span class="6.1.4.20."><a href="#tubame_6.1.4.20.">6.1.4.20.Struts独自タグhtml:paramの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.21."><a href="#tubame_6.1.3.21.">6.1.3.21.html:password</a></span>
+<span class="6.1.4.21."><a href="#tubame_6.1.4.21.">6.1.4.21.Struts独自タグhtml:passwordの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.22."><a href="#tubame_6.1.3.22.">6.1.3.22.html:radio</a></span>
+<span class="6.1.4.22."><a href="#tubame_6.1.4.22.">6.1.4.22.Struts独自タグhtml:radioの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.23."><a href="#tubame_6.1.3.23.">6.1.3.23.html:reset</a></span>
+<span class="6.1.4.23."><a href="#tubame_6.1.4.23.">6.1.4.23.Struts独自タグhtml:resetの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.24."><a href="#tubame_6.1.3.24.">6.1.3.24.html:rewrite</a></span>
+<span class="6.1.4.24."><a href="#tubame_6.1.4.24.">6.1.4.24.Struts独自タグhtml:rewriteの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.25."><a href="#tubame_6.1.3.25.">6.1.3.25.html:select</a></span>
+<span class="6.1.4.25."><a href="#tubame_6.1.4.25.">6.1.4.25.Struts独自タグhtml:selectの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.26."><a href="#tubame_6.1.3.26.">6.1.3.26.html:submit</a></span>
+<span class="6.1.4.26."><a href="#tubame_6.1.4.26.">6.1.4.26.Struts独自タグhtml:submitの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.27."><a href="#tubame_6.1.3.27.">6.1.3.27.html:text</a></span>
+<span class="6.1.4.27."><a href="#tubame_6.1.4.27.">6.1.4.27.Struts独自タグhtml:textの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.28."><a href="#tubame_6.1.3.28.">6.1.3.28.html:textarea</a></span>
+<span class="6.1.4.28."><a href="#tubame_6.1.4.28.">6.1.4.28.Struts独自タグhtml:textareaの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.3.29."><a href="#tubame_6.1.3.29.">6.1.3.29.html:xhtml</a></span>
+<span class="6.1.4.29."><a href="#tubame_6.1.4.29.">6.1.4.29.Struts独自タグhtml:xhtmlの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -1053,208 +1088,208 @@
 <dd>
 <dl>
 <dt>
-<span class="6.1.4."><a href="#tubame_6.1.4.">6.1.4.html-elタグ</a></span>
+<span class="6.1.5."><a href="#tubame_6.1.5.">6.1.5.html-elタグ</a></span>
 </dt>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.1."><a href="#tubame_6.1.4.1.">6.1.4.1.html-el:base</a></span>
+<span class="6.1.5.1."><a href="#tubame_6.1.5.1.">6.1.5.1.Struts独自タグhtml-el:baseの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.2."><a href="#tubame_6.1.4.2.">6.1.4.2.html-el:button</a></span>
+<span class="6.1.5.2."><a href="#tubame_6.1.5.2.">6.1.5.2.Struts独自タグhtml-el:buttonの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.3."><a href="#tubame_6.1.4.3.">6.1.4.3.html-el:cancel</a></span>
+<span class="6.1.5.3."><a href="#tubame_6.1.5.3.">6.1.5.3.Struts独自タグhtml-el:cancelの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.4."><a href="#tubame_6.1.4.4.">6.1.4.4.html-el:checkbox</a></span>
+<span class="6.1.5.4."><a href="#tubame_6.1.5.4.">6.1.5.4.Struts独自タグhtml-el:checkboxの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.5."><a href="#tubame_6.1.4.5.">6.1.4.5.html-el:errors</a></span>
+<span class="6.1.5.5."><a href="#tubame_6.1.5.5.">6.1.5.5.Struts独自タグhtml-el:errorsの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.6."><a href="#tubame_6.1.4.6.">6.1.4.6.html-el:file</a></span>
+<span class="6.1.5.6."><a href="#tubame_6.1.5.6.">6.1.5.6.Struts独自タグhtml-el:fileの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.7."><a href="#tubame_6.1.4.7.">6.1.4.7.html-el:form</a></span>
+<span class="6.1.5.7."><a href="#tubame_6.1.5.7.">6.1.5.7.Struts独自タグhtml-el:formの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.8."><a href="#tubame_6.1.4.8.">6.1.4.8.html-el:frame</a></span>
+<span class="6.1.5.8."><a href="#tubame_6.1.5.8.">6.1.5.8.Struts独自タグhtml-el:frameの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.9."><a href="#tubame_6.1.4.9.">6.1.4.9.html-el:hidden</a></span>
+<span class="6.1.5.9."><a href="#tubame_6.1.5.9.">6.1.5.9.Struts独自タグhtml-el:hiddenの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.10."><a href="#tubame_6.1.4.10.">6.1.4.10.html-el:html</a></span>
+<span class="6.1.5.10."><a href="#tubame_6.1.5.10.">6.1.5.10.Struts独自タグhtml-el:htmlの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.11."><a href="#tubame_6.1.4.11.">6.1.4.11.html-el:image</a></span>
+<span class="6.1.5.11."><a href="#tubame_6.1.5.11.">6.1.5.11.Struts独自タグhtml-el:imageの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.12."><a href="#tubame_6.1.4.12.">6.1.4.12.html-el:img</a></span>
+<span class="6.1.5.12."><a href="#tubame_6.1.5.12.">6.1.5.12.Struts独自タグhtml-el:imgの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.13."><a href="#tubame_6.1.4.13.">6.1.4.13.html-el:javascript</a></span>
+<span class="6.1.5.13."><a href="#tubame_6.1.5.13.">6.1.5.13.Struts独自タグhtml-el:javascriptの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.14."><a href="#tubame_6.1.4.14.">6.1.4.14.html-el:link</a></span>
+<span class="6.1.5.14."><a href="#tubame_6.1.5.14.">6.1.5.14.Struts独自タグhtml-el:linkの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.15."><a href="#tubame_6.1.4.15.">6.1.4.15.html-el:messages</a></span>
+<span class="6.1.5.15."><a href="#tubame_6.1.5.15.">6.1.5.15.Struts独自タグhtml-el:messagesの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.16."><a href="#tubame_6.1.4.16.">6.1.4.16.html-el:multibox</a></span>
+<span class="6.1.5.16."><a href="#tubame_6.1.5.16.">6.1.5.16.Struts独自タグhtml-el:multiboxの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.17."><a href="#tubame_6.1.4.17.">6.1.4.17.html-el:option</a></span>
+<span class="6.1.5.17."><a href="#tubame_6.1.5.17.">6.1.5.17.Struts独自タグhtml-el:optionの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.18."><a href="#tubame_6.1.4.18.">6.1.4.18.html-el:options</a></span>
+<span class="6.1.5.18."><a href="#tubame_6.1.5.18.">6.1.5.18.Struts独自タグhtml-el:optionsの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.19."><a href="#tubame_6.1.4.19.">6.1.4.19.html-el:optionsCollection</a></span>
+<span class="6.1.5.19."><a href="#tubame_6.1.5.19.">6.1.5.19.Struts独自タグhtml-el:optionsCollectionの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.20."><a href="#tubame_6.1.4.20.">6.1.4.20.html-el:param</a></span>
+<span class="6.1.5.20."><a href="#tubame_6.1.5.20.">6.1.5.20.Struts独自タグhtml-el:paramの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.21."><a href="#tubame_6.1.4.21.">6.1.4.21.html-el:password</a></span>
+<span class="6.1.5.21."><a href="#tubame_6.1.5.21.">6.1.5.21.Struts独自タグhtml-el:passwordの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.22."><a href="#tubame_6.1.4.22.">6.1.4.22.html-el:radio</a></span>
+<span class="6.1.5.22."><a href="#tubame_6.1.5.22.">6.1.5.22.Struts独自タグhtml-el:radioの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.23."><a href="#tubame_6.1.4.23.">6.1.4.23.html-el:reset</a></span>
+<span class="6.1.5.23."><a href="#tubame_6.1.5.23.">6.1.5.23.Struts独自タグhtml-el:resetの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.24."><a href="#tubame_6.1.4.24.">6.1.4.24.html-el:rewrite</a></span>
+<span class="6.1.5.24."><a href="#tubame_6.1.5.24.">6.1.5.24.Struts独自タグhtml-el:rewriteの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.25."><a href="#tubame_6.1.4.25.">6.1.4.25.html-el:select</a></span>
+<span class="6.1.5.25."><a href="#tubame_6.1.5.25.">6.1.5.25.Struts独自タグhtml-el:selectの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.26."><a href="#tubame_6.1.4.26.">6.1.4.26.html-el:submit</a></span>
+<span class="6.1.5.26."><a href="#tubame_6.1.5.26.">6.1.5.26.Struts独自タグhtml-el:submitの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.27."><a href="#tubame_6.1.4.27.">6.1.4.27.html-el:text</a></span>
+<span class="6.1.5.27."><a href="#tubame_6.1.5.27.">6.1.5.27.Struts独自タグhtml-el:textの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.28."><a href="#tubame_6.1.4.28.">6.1.4.28.html-el:textarea</a></span>
+<span class="6.1.5.28."><a href="#tubame_6.1.5.28.">6.1.5.28.Struts独自タグhtml-el:textareaの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.4.29."><a href="#tubame_6.1.4.29.">6.1.4.29.html-el:xhtml</a></span>
+<span class="6.1.5.29."><a href="#tubame_6.1.5.29.">6.1.5.29.Struts独自タグhtml-el:xhtmlの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -1263,124 +1298,124 @@
 <dd>
 <dl>
 <dt>
-<span class="6.1.5."><a href="#tubame_6.1.5.">6.1.5.logicタグ</a></span>
+<span class="6.1.6."><a href="#tubame_6.1.6.">6.1.6.logicタグ</a></span>
 </dt>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.1."><a href="#tubame_6.1.5.1.">6.1.5.1.logic:empty</a></span>
+<span class="6.1.6.1."><a href="#tubame_6.1.6.1.">6.1.6.1.Struts独自タグlogic:emptyの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.2."><a href="#tubame_6.1.5.2.">6.1.5.2.logic:equal</a></span>
+<span class="6.1.6.2."><a href="#tubame_6.1.6.2.">6.1.6.2.Struts独自タグlogic:equalの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.3."><a href="#tubame_6.1.5.3.">6.1.5.3.logic:forward</a></span>
+<span class="6.1.6.3."><a href="#tubame_6.1.6.3.">6.1.6.3.Struts独自タグlogic:forwardの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.4."><a href="#tubame_6.1.5.4.">6.1.5.4.logic:greaterEqual</a></span>
+<span class="6.1.6.4."><a href="#tubame_6.1.6.4.">6.1.6.4.Struts独自タグlogic:greaterEqualの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.5."><a href="#tubame_6.1.5.5.">6.1.5.5.logic:greaterThan</a></span>
+<span class="6.1.6.5."><a href="#tubame_6.1.6.5.">6.1.6.5.Struts独自タグlogic:greaterThanの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.6."><a href="#tubame_6.1.5.6.">6.1.5.6.logic:iterate</a></span>
+<span class="6.1.6.6."><a href="#tubame_6.1.6.6.">6.1.6.6.Struts独自タグlogic:iterateの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.7."><a href="#tubame_6.1.5.7.">6.1.5.7.logic:lessEqual</a></span>
+<span class="6.1.6.7."><a href="#tubame_6.1.6.7.">6.1.6.7.Struts独自タグlogic:lessEqualの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.8."><a href="#tubame_6.1.5.8.">6.1.5.8.logic:lessThan</a></span>
+<span class="6.1.6.8."><a href="#tubame_6.1.6.8.">6.1.6.8.Struts独自タグlogic:lessThanの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.9."><a href="#tubame_6.1.5.9.">6.1.5.9.logic:match</a></span>
+<span class="6.1.6.9."><a href="#tubame_6.1.6.9.">6.1.6.9.Struts独自タグlogic:matchの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.10."><a href="#tubame_6.1.5.10.">6.1.5.10.logic:messagesNotPresent</a></span>
+<span class="6.1.6.10."><a href="#tubame_6.1.6.10.">6.1.6.10.Struts独自タグlogic:messagesNotPresentの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.11."><a href="#tubame_6.1.5.11.">6.1.5.11.logic:messagesPresent</a></span>
+<span class="6.1.6.11."><a href="#tubame_6.1.6.11.">6.1.6.11.Struts独自タグlogic:messagesPresentの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.12."><a href="#tubame_6.1.5.12.">6.1.5.12.logic:notEmpty</a></span>
+<span class="6.1.6.12."><a href="#tubame_6.1.6.12.">6.1.6.12.Struts独自タグlogic:notEmptyの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.13."><a href="#tubame_6.1.5.13.">6.1.5.13.logic:notEqual</a></span>
+<span class="6.1.6.13."><a href="#tubame_6.1.6.13.">6.1.6.13.Struts独自タグlogic:notEqualの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.14."><a href="#tubame_6.1.5.14.">6.1.5.14.logic:notMatch</a></span>
+<span class="6.1.6.14."><a href="#tubame_6.1.6.14.">6.1.6.14.Struts独自タグlogic:notMatchの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.15."><a href="#tubame_6.1.5.15.">6.1.5.15.logic:notPresent</a></span>
+<span class="6.1.6.15."><a href="#tubame_6.1.6.15.">6.1.6.15.Struts独自タグlogic:notPresentの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.16."><a href="#tubame_6.1.5.16.">6.1.5.16.logic:present</a></span>
+<span class="6.1.6.16."><a href="#tubame_6.1.6.16.">6.1.6.16.Struts独自タグlogic:presentの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.5.17."><a href="#tubame_6.1.5.17.">6.1.5.17.logic:redirect</a></span>
+<span class="6.1.6.17."><a href="#tubame_6.1.6.17.">6.1.6.17.Struts独自タグlogic:redirectの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -1389,68 +1424,68 @@
 <dd>
 <dl>
 <dt>
-<span class="6.1.6."><a href="#tubame_6.1.6.">6.1.6.logic-leタグ</a></span>
+<span class="6.1.7."><a href="#tubame_6.1.7.">6.1.7.logic-leタグ</a></span>
 </dt>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.1."><a href="#tubame_6.1.6.1.">6.1.6.1.logic-el:forward</a></span>
+<span class="6.1.7.1."><a href="#tubame_6.1.7.1.">6.1.7.1.Struts独自タグlogic-el:forwardの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.2."><a href="#tubame_6.1.6.2.">6.1.6.2.logic-el:iterate</a></span>
+<span class="6.1.7.2."><a href="#tubame_6.1.7.2.">6.1.7.2.Struts独自タグlogic-el:iterateの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.3."><a href="#tubame_6.1.6.3.">6.1.6.3.logic-el:match</a></span>
+<span class="6.1.7.3."><a href="#tubame_6.1.7.3.">6.1.7.3.Struts独自タグlogic-el:matchの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.4."><a href="#tubame_6.1.6.4.">6.1.6.4.logic-el:messagesNotPresent</a></span>
+<span class="6.1.7.4."><a href="#tubame_6.1.7.4.">6.1.7.4.Struts独自タグlogic-el:messagesNotPresentの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.5."><a href="#tubame_6.1.6.5.">6.1.6.5.logic-el:messagesPresent</a></span>
+<span class="6.1.7.5."><a href="#tubame_6.1.7.5.">6.1.7.5.Struts独自タグlogic-el:messagesPresentの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.6."><a href="#tubame_6.1.6.6.">6.1.6.6.logic-el:notMatch</a></span>
+<span class="6.1.7.6."><a href="#tubame_6.1.7.6.">6.1.7.6.Struts独自タグlogic-el:notMatchの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.7."><a href="#tubame_6.1.6.7.">6.1.6.7.logic-el:notPresent</a></span>
+<span class="6.1.7.7."><a href="#tubame_6.1.7.7.">6.1.7.7.Struts独自タグlogic-el:notPresentの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.8."><a href="#tubame_6.1.6.8.">6.1.6.8.logic-el:present</a></span>
+<span class="6.1.7.8."><a href="#tubame_6.1.7.8.">6.1.7.8.Struts独自タグlogic-el:presentの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.1.6.9."><a href="#tubame_6.1.6.9.">6.1.6.9.logic-el:redirect</a></span>
+<span class="6.1.7.9."><a href="#tubame_6.1.7.9.">6.1.7.9.Struts独自タグlogic-el:redirectの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -1459,7 +1494,7 @@
 <dd>
 <dl>
 <dt>
-<span class="6.1.7."><a href="#tubame_6.1.7.">6.1.7.nestedタグ</a></span>
+<span class="6.1.8."><a href="#tubame_6.1.8.">6.1.8.Struts独自タグnestedタグの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -1468,7 +1503,7 @@
 <dd>
 <dl>
 <dt>
-<span class="6.2."><a href="#tubame_6.2.">6.2.入力値検証機能</a></span>
+<span class="6.2."><a href="#tubame_6.2.">6.2.入力値検証機能の移行</a></span>
 </dt>
 <dd>
 <dl>
@@ -1478,14 +1513,14 @@
 <dd>
 <dl>
 <dt>
-<span class="6.2.1.1."><a href="#tubame_6.2.1.1.">6.2.1.1.Struts Validatorの設定</a></span>
+<span class="6.2.1.1."><a href="#tubame_6.2.1.1.">6.2.1.1.Struts Validatorの設定移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.2.1.2."><a href="#tubame_6.2.1.2.">6.2.1.2.XDocletによるStruts Validatorの設定</a></span>
+<span class="6.2.1.2."><a href="#tubame_6.2.1.2.">6.2.1.2.XDocletによるStruts Validatorの設定移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -1494,7 +1529,7 @@
 <dd>
 <dl>
 <dt>
-<span class="6.2.2."><a href="#tubame_6.2.2.">6.2.2.クライアントサイドの入力値検証機能</a></span>
+<span class="6.2.2."><a href="#tubame_6.2.2.">6.2.2.クライアントサイドの入力値検証機能移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -1508,14 +1543,14 @@
 <dd>
 <dl>
 <dt>
-<span class="6.3.1."><a href="#tubame_6.3.1.">6.3.1.Struts-Tiles</a></span>
+<span class="6.3.1."><a href="#tubame_6.3.1.">6.3.1.テンプレートエンジンStruts-Tilesの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="6.3.2."><a href="#tubame_6.3.2.">6.3.2.Velocity</a></span>
+<span class="6.3.2."><a href="#tubame_6.3.2.">6.3.2.テンプレートエンジンVelocityの移行</a></span>
 </dt>
 <dd>
 <dl>
@@ -1529,7 +1564,7 @@
 <dd>
 <dl>
 <dt>
-<span class="6.3.3."><a href="#tubame_6.3.3.">6.3.3.FreeMarker</a></span>
+<span class="6.3.3."><a href="#tubame_6.3.3.">6.3.3.テンプレートエンジンFreeMarkerの移行</a></span>
 </dt>
 </dl>
 </dd>
@@ -1553,28 +1588,28 @@
 <dd>
 <dl>
 <dt>
-<span class="7.1.1."><a href="#tubame_7.1.1.">7.1.1.設定ファイルの移行</a></span>
+<span class="7.1.1."><a href="#tubame_7.1.1.">7.1.1.DynaActionForm/Lazy ActionFormの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="7.1.2."><a href="#tubame_7.1.2.">7.1.2.DynaActionForm/Lazy ActionForm</a></span>
+<span class="7.1.2."><a href="#tubame_7.1.2.">7.1.2.Commandの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="7.1.3."><a href="#tubame_7.1.3.">7.1.3.Commandの移行</a></span>
+<span class="7.1.3."><a href="#tubame_7.1.3.">7.1.3.プラグインの移行</a></span>
 </dt>
 </dl>
 </dd>
 <dd>
 <dl>
 <dt>
-<span class="7.1.4."><a href="#tubame_7.1.4.">7.1.4.プラグインの移行</a></span>
+<span class="7.1.4."><a href="#tubame_7.1.4.">7.1.4.Strutsのセッション IDの払い出し</a></span>
 </dt>
 </dl>
 </dd>
@@ -1922,14 +1957,7 @@
 <dd>
 <dl>
 <dt>
-<span class="8.9."><a href="#tubame_8.9.">8.9.Struts1のセッション IDの払い出し</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="8.10."><a href="#tubame_8.10.">8.10.フレームワーク比較【参考】</a></span>
+<span class="8.9."><a href="#tubame_8.9.">8.9.フレームワーク比較【参考】</a></span>
 </dt>
 </dl>
 </dd>
@@ -2015,7 +2043,7 @@ Wicketなど）とアクションベース（Struts 1/2、Spring MVCなど）に
 青の箱で示されているものは、ユーザが作成する必要がある。
 </p>
 <div class="figure">
-<a name="N13B5D"></a>
+<a name="N13BC6"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts機能概要</b>
 </p>
@@ -2031,7 +2059,7 @@ Wicketなど）とアクションベース（Struts 1/2、Spring MVCなど）に
 </div>
 <br class="figure-break">
 <div class="table">
-<a name="N13B6A"></a>
+<a name="N13BD3"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Strutsの各種Bean一覧</b>
 </p>
@@ -2143,7 +2171,7 @@ Taglib（html,bean,logic,nestタグを提供)及びそのコンポーネント�
 <p>Struts1.3.xのアプリケーションは、おおよそ以下のようなファイル構成となる。
 </p>
 <div class="figure">
-<a name="N13BC0"></a>
+<a name="N13C29"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts1アプリケーション構成</b>
 </p>
@@ -2204,7 +2232,7 @@ Struts1.3.xでは、設定ファイルとして主に以下の二つのファイ
 Prefixマッチング、Extensionマッチングの例をそれぞれ以下に示す。
 </p>
 <div class="figure">
-<a name="N13BF4"></a>
+<a name="N13C5D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;例1) Prefixマッチング</b>
 </p>
@@ -2228,7 +2256,7 @@ Prefixマッチング、Extensionマッチングの例をそれぞれ以下に�
 
 </p>
 <div class="figure">
-<a name="N13C04"></a>
+<a name="N13C6D"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;例2) Extensionマッチング</b>
 </p>
@@ -2260,7 +2288,7 @@ Prefixマッチング、Extensionマッチングの例をそれぞれ以下に�
 struts-config.xmlで設定する設定項目について以下に示す。
 </p>
 <div class="table">
-<a name="N15BA1"></a>
+<a name="N15BE4"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -2497,7 +2525,7 @@ Taglibタグを実装していない。実装していないタグの一覧に�
 
 </p>
 <div class="table">
-<a name="N13CCF"></a>
+<a name="N13D38"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts Tilesタグ一覧</b>
 </p>
@@ -2583,7 +2611,7 @@ SpringMVCの概要については、下記URLを参照。
 
 </p>
 <div class="table">
-<a name="N1651B"></a>
+<a name="N1655E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;SpringMVCの各種Bean一覧</b>
 </p>
@@ -2696,7 +2724,7 @@ SpringMVCの概要については、下記URLを参照。
 
 </p>
 <div class="figure">
-<a name="N164F8"></a>
+<a name="N1653B"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;SpringMVCアプリケーションの構成</b>
 </p>
@@ -2741,7 +2769,7 @@ Spring MVCで提供されているタグライブラリは以下の2つが存在
 
 </p>
 <div class="figure">
-<a name="N13D29"></a>
+<a name="N13D92"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;タグ宣言例</b>
 </p>
@@ -2757,7 +2785,7 @@ Spring MVCで提供されているタグライブラリは以下の2つが存在
 
 </p>
 <div class="table">
-<a name="N13D34"></a>
+<a name="N13D9D"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;springタグ一覧</b>
 </p>
@@ -2819,7 +2847,7 @@ Beanの「messageSource」からメッセージを取得。入力値検証結果
 
 </p>
 <div class="table">
-<a name="N13D74"></a>
+<a name="N13DDD"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;formタグ一覧</b>
 </p>
@@ -3052,7 +3080,7 @@ Struts1.2以降では、pathに以下の特殊文字を利用可能となって�
 
 </p>
 <div class="table">
-<a name="N156BC"></a>
+<a name="N156FE"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;pathで利用可能な特殊文字</b>
 </p>
@@ -3087,7 +3115,7 @@ Struts1.2以降では、pathに以下の特殊文字を利用可能となって�
 
 </p>
 <div class="figure">
-<a name="N156D9"></a>
+<a name="N1571B"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ワイルドカード利用例</b>
 </p>
@@ -3193,7 +3221,7 @@ Struts1.3.xではChain of Responsibility（CoR）を実装したCommons
 Chainを使用するComposableRequestProcessorがデフォルトとなっている。ComposableRequestProcessorでは、設定ファイル（chain-config.xml）に使用するCommandを指定することで、リクエスト処理をカスタマイズすることができる。提供されるCommandの一覧は、以下を参照
 </p>
 <div class="table">
-<a name="N15734"></a>
+<a name="N15776"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;標準Command一覧</b>
 </p>
@@ -3279,7 +3307,7 @@ Struts1.2でTilesを処理する場合は、RequestProcessorのサブクラス�
 
 </p>
 <div class="table">
-<a name="N157A3"></a>
+<a name="N157E5"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;Tiles Command一覧</b>
 </p>
@@ -3349,7 +3377,7 @@ Struts1のRequestProcessorはモジュールにつき１つ定義できたが、
 
 </p>
 <div class="figure">
-<a name="N15266"></a>
+<a name="N152B8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ViewResolver設定例(抜粋)</b>
 </p>
@@ -3365,7 +3393,7 @@ Struts1のRequestProcessorはモジュールにつき１つ定義できたが、
 
 </p>
 <div class="figure">
-<a name="N15271"></a>
+<a name="N152C3"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;ViewResolver設定例(全体)</b>
 </p>
@@ -3515,7 +3543,7 @@ DynaValidatorForm（ValitatorFormに相当）、もしくはDynaValidatorActionF
 Beanを作成する
 </p>
 <div class="figure">
-<a name="N15C16"></a>
+<a name="N15C59"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Form Bean</b>
 </p>
@@ -3542,7 +3570,7 @@ public class UserInfo extends ValidatorForm {
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15C20"></a>
+<a name="N15C63"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラス</b>
 </p>
@@ -3569,7 +3597,7 @@ public class ExtraTest2 extends Action{
 <p>&lt;html:errors&gt;を利用する場合（&lt;html:errors/&gt;とのみ記述した場合）、propertyを記述しないと検証でエラーとなった項目に関するすべてのエラーが表示される（2件エラーが発生していた場合は、その2件に関するエラーが出力される）。したがって、複数項目の検証を行っている場合で項目ごとにエラーメッセージを出力する場合は、下記サンプルのように&lt;html:errors&gt;にproperty属性を指定してメッセージを出力する。
 もしくは、&lt;html:messages&gt;を用いてメッセージを取得し、&lt;bean:write&gt;で出力することもできる。</p>
 <div class="figure">
-<a name="N15C31"></a>
+<a name="N15C74"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPファイル</b>
 </p>
@@ -3601,7 +3629,7 @@ public class ExtraTest2 extends Action{
 &lt;html:messages&gt;を使った場合のエラーメッセージ表示例
 </p>
 <div class="figure">
-<a name="N15C3D"></a>
+<a name="N15C80"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;&lt;html:messages&gt;サンプル</b>
 </p>
@@ -3647,7 +3675,7 @@ public class ExtraTest2 extends Action{
 
 </p>
 <div class="figure">
-<a name="N15C57"></a>
+<a name="N15C9A"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;検証ルールサンプル</b>
 </p>
@@ -3680,7 +3708,7 @@ public class ExtraTest2 extends Action{
 
 </p>
 <div class="figure">
-<a name="N15C68"></a>
+<a name="N15CAB"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;ValidatorPluginルール適用サンプル</b>
 </p>
@@ -3702,7 +3730,7 @@ public class ExtraTest2 extends Action{
 <li class="listitem">
 <p>&lt;controller&gt;設定を変更する（struts-config.xmlに設定を追加する）</p>
 <div class="figure">
-<a name="N15C76"></a>
+<a name="N15CB9"></a>
 <p class="title">
 <b>Figure&nbsp;8.&nbsp;controller設定サンプル</b>
 </p>
@@ -3717,7 +3745,7 @@ public class ExtraTest2 extends Action{
 <li class="listitem">
 <p>&lt;action&gt;を設定する</p>
 <div class="figure">
-<a name="N15C83"></a>
+<a name="N15CC6"></a>
 <p class="title">
 <b>Figure&nbsp;9.&nbsp;action設定サンプル</b>
 </p>
@@ -3735,7 +3763,7 @@ public class ExtraTest2 extends Action{
 <li class="listitem">
 <p>&lt;form-bean&gt;を設定する</p>
 <div class="figure">
-<a name="N15C90"></a>
+<a name="N15CD3"></a>
 <p class="title">
 <b>Figure&nbsp;10.&nbsp;form-bean設定サンプル</b>
 </p>
@@ -3756,7 +3784,7 @@ public class ExtraTest2 extends Action{
 作成したvalidation.xmlでkeyに設定したキーを持つメッセージリソースファイルを作成する。
 </p>
 <div class="figure">
-<a name="N15C9F"></a>
+<a name="N15CE2"></a>
 <p class="title">
 <b>Figure&nbsp;11.&nbsp;メッセージリソースファイルサンプル（org/sample/struts1/extra/ExtraTest2.properties）
 </b>
@@ -3781,7 +3809,7 @@ public class ExtraTest2 extends Action{
 
 </p>
 <div class="figure">
-<a name="N15CAF"></a>
+<a name="N15CF2"></a>
 <p class="title">
 <b>Figure&nbsp;12.&nbsp;</b>
 </p>
@@ -3826,7 +3854,7 @@ Validatorのvalidwhenを使用しても実現することはできるが、よ�
 
 </p>
 <div class="figure">
-<a name="N15CDC"></a>
+<a name="N15D1F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ActionFormクラスサンプル</b>
 </p>
@@ -3857,7 +3885,7 @@ public ActionErrors validate(ActionMapping mapping,
 
 </p>
 <div class="figure">
-<a name="N15CEA"></a>
+<a name="N15D2D"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPファイル（login.jsp）</b>
 </p>
@@ -3900,7 +3928,7 @@ ActionFormクラスには、以下の 「ActionFormクラスのメソッド一�
 
 </p>
 <div class="table">
-<a name="N157D8"></a>
+<a name="N1581A"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;ActionFormクラスのメソッド一覧（publicメソッド）</b>
 </p>
@@ -3960,7 +3988,7 @@ javax.servlet.ServletRequest request)
 
 </p>
 <div class="table">
-<a name="N1580D"></a>
+<a name="N1584F"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;ActionFormクラスのメソッド一覧（protectedメソッド）</b>
 </p>
@@ -4006,7 +4034,7 @@ Beanである。
 
 </p>
 <div class="figure">
-<a name="N1582C"></a>
+<a name="N1586E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;DynaActionForm定義例</b>
 </p>
@@ -4146,7 +4174,7 @@ ActionForm」という機能を提供している。
 type=textのｖａｌｕｅ属性値がＭａｐのｖａｌｕｅとなる。
 </p>
 <div class="figure">
-<a name="N1588E"></a>
+<a name="N158D0"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;入力用JSPサンプル</b>
 </p>
@@ -4177,7 +4205,7 @@ type=textのｖａｌｕｅ属性値がＭａｐのｖａｌｕｅとなる。
 <p>この例では、参考のためタグlogic:iterateとタグc:forEachを用いたMapアクセスを示している。
 </p>
 <div class="figure">
-<a name="N1589D"></a>
+<a name="N158DF"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;出力用JSPサンプル</b>
 </p>
@@ -4206,7 +4234,7 @@ type=textのｖａｌｕｅ属性値がＭａｐのｖａｌｕｅとなる。
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N158AA"></a>
+<a name="N158EC"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -4234,7 +4262,7 @@ public class ExtraTest3 extends Action {
 key, Object value)メソッドと、getValue(String key)メソッドの実装が必要となる。
 </p>
 <div class="figure">
-<a name="N158B9"></a>
+<a name="N158FB"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;ActionFormクラスサンプル</b>
 </p>
@@ -4261,7 +4289,7 @@ public class MapBackedForm extends ActionForm implements Serializable {
 <li class="listitem">
 <p>struts設定</p>
 <div class="figure">
-<a name="N158C6"></a>
+<a name="N15908"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;struts設定</b>
 </p>
@@ -4296,7 +4324,7 @@ ActionFormでは特殊なクラスの継承はないが、Mapデータを格納�
 <ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <div class="figure">
-<a name="N158D3"></a>
+<a name="N15915"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;Map-backed ActionFormサンプル</b>
 </p>
@@ -4333,11 +4361,12 @@ public class MapBackedForm2 extends ActionForm implements Serializable {
 <div class="section">
 <div class="titlepage"></div>
 <p>
+<a name="actionFormPorting"></a>
 Struts1のActionFormに相当するSpringMVCのクラスは、@RequestMappingを付与したメソッドの引数に@ModelAttributeを付与したクラスとなる。このクラスは、単なるPOJOとして作成可能である。Struts1では、ActionFormクラスがユーティリティメソッドを提供している。これらをSpringMVCに移行した際に、どのように移行するかについては、下記の表を参照。
 
 </p>
 <div class="table">
-<a name="N15297"></a>
+<a name="N152EA"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;ActionFormクラスのユーティリティメソッド移行</b>
 </p>
@@ -4413,7 +4442,7 @@ ActionFormの移行例について、以下に示す。MapへのアクセスはS
 <li class="listitem">
 <p>入力用JSP</p>
 <div class="figure">
-<a name="N152D4"></a>
+<a name="N15327"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;入力用JSPサンプル</b>
 </p>
@@ -4441,7 +4470,7 @@ ActionFormの移行例について、以下に示す。MapへのアクセスはS
 <li class="listitem">
 <p>出力用JSP</p>
 <div class="figure">
-<a name="N152E1"></a>
+<a name="N15334"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;出力用JSPサンプル</b>
 </p>
@@ -4466,7 +4495,7 @@ ActionFormの移行例について、以下に示す。MapへのアクセスはS
 <li class="listitem">
 <p>Controllerクラス</p>
 <div class="figure">
-<a name="N152EE"></a>
+<a name="N15341"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Controllerクラスサンプル</b>
 </p>
@@ -4498,7 +4527,7 @@ public class ExtraTest3 {
 <li class="listitem">
 <p>BEAN</p>
 <div class="figure">
-<a name="N152FB"></a>
+<a name="N1534E"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;BEANサンプル</b>
 </p>
@@ -4528,8 +4557,19 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.1." id="category_462"></a>
-<h3 class="title">5.7.1.XDocletによるActionForm定義</h3>
+<a name="tubame_5.7.1." id="category_682"></a>
+<h3 class="title">5.7.1.ActionForm Beanの設定移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+            SpringMVCではBeanの設定は必要ない。詳細は<span class="command"><strong><a class="command" href="#actionFormPorting">ActionFormクラスの移行</a></strong></span>を参考
+        </p>
+</div>
+<br>
+<br>
+<a name="tubame_5.7.2." id="category_462"></a>
+<h3 class="title">5.7.2.XDocletによるActionForm定義</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4538,12 +4578,12 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2." id="category_463"></a>
-<h3 class="title">5.7.2.ActionFormクラスの提供するユーティリティメソッドの移行</h3>
+<a name="tubame_5.7.3." id="category_463"></a>
+<h3 class="title">5.7.3.ActionFormクラスの提供するユーティリティメソッドの移行</h3>
 <br>
 <br>
-<a name="tubame_5.7.2.1." id="category_464"></a>
-<h3 class="title">5.7.2.1.getMultipartRequestHandler/setMultipartRequestHandler</h3>
+<a name="tubame_5.7.3.1." id="category_464"></a>
+<h3 class="title">5.7.3.1.ActionFormユーティリティメソッドgetMultipartRequestHandler/setMultipartRequestHandlerの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4551,8 +4591,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.2." id="category_465"></a>
-<h3 class="title">5.7.2.2.getServletWrapper</h3>
+<a name="tubame_5.7.3.2." id="category_465"></a>
+<h3 class="title">5.7.3.2.ActionFormユーティリティメソッドgetServletWrapperの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4560,8 +4600,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.3." id="category_466"></a>
-<h3 class="title">5.7.2.3.reset</h3>
+<a name="tubame_5.7.3.3." id="category_466"></a>
+<h3 class="title">5.7.3.3.ActionFormユーティリティメソッドresetの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4569,8 +4609,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.4." id="category_467"></a>
-<h3 class="title">5.7.2.4.ActionForm#setServlet</h3>
+<a name="tubame_5.7.3.4." id="category_467"></a>
+<h3 class="title">5.7.3.4.ActionFormユーティリティメソッドsetServletの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4578,8 +4618,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.5." id="category_468"></a>
-<h3 class="title">5.7.2.5.validate</h3>
+<a name="tubame_5.7.3.5." id="category_468"></a>
+<h3 class="title">5.7.3.5.ActionFormユーティリティメソッドvalidateの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4587,8 +4627,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.2.6." id="category_469"></a>
-<h3 class="title">5.7.2.6.ActionForm#getServlet</h3>
+<a name="tubame_5.7.3.6." id="category_469"></a>
+<h3 class="title">5.7.3.6.ActionFormユーティリティメソッドgetServletの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4596,8 +4636,8 @@ public class MapBackedForm implements Serializable {
 </div>
 <br>
 <br>
-<a name="tubame_5.7.3." id="category_470"></a>
-<h3 class="title">5.7.3.Map-backed ActionFormの移行</h3>
+<a name="tubame_5.7.4." id="category_470"></a>
+<h3 class="title">5.7.4.Map-backed ActionFormの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -4618,7 +4658,7 @@ Actionクラスの設定は、struts-config.xmlのaction-mappingsタグの子要
 
 </p>
 <div class="figure">
-<a name="N158F0"></a>
+<a name="N15932"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;org.apache.struts.action.Actionのオーバライド</b>
 </p>
@@ -4685,7 +4725,7 @@ Extrasに含まれるorg.apache.struts.actions.DispatchActionやそのサブク�
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N1591B"></a>
+<a name="N1595D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xml</b>
 </p>
@@ -4703,7 +4743,7 @@ Extrasに含まれるorg.apache.struts.actions.DispatchActionやそのサブク�
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N15928"></a>
+<a name="N1596A"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -4726,7 +4766,7 @@ public class MappingTest1 extends Action {
 <p>struts-config.xmlのactionタグのforward設定</p>
 <p>上記の例のように、単にJSPファイルを表示するだけの場合、以下のように設定のみで済ますこともできる。</p>
 <div class="figure">
-<a name="N15937"></a>
+<a name="N15979"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;actionタグのforward設定サンプル</b>
 </p>
@@ -4761,7 +4801,7 @@ DispatchActionでは、actionタグのparameter属性に指定したパラメー
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N15952"></a>
+<a name="N15994"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -4780,7 +4820,7 @@ DispatchActionでは、actionタグのparameter属性に指定したパラメー
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N1595F"></a>
+<a name="N159A1"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -4807,7 +4847,7 @@ public class MappingTest2 extends DispatchAction {
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N1596C"></a>
+<a name="N159AE"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPサンプル</b>
 </p>
@@ -4854,7 +4894,7 @@ MappingDispatchActionでは、複数のリクエストを一つのActionクラ�
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N15987"></a>
+<a name="N159C9"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -4870,7 +4910,7 @@ MappingDispatchActionでは、複数のリクエストを一つのActionクラ�
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N15994"></a>
+<a name="N159D6"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -4902,7 +4942,7 @@ MappingDispatchActionでは、複数のリクエストを一つのActionクラ�
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N159A1"></a>
+<a name="N159E3"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPサンプル</b>
 </p>
@@ -4948,7 +4988,7 @@ LookupDispatchActionでは、これを拡張したクラスでgetKeyMethodMap()�
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N159BC"></a>
+<a name="N159FE"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -4969,7 +5009,7 @@ LookupDispatchActionでは、これを拡張したクラスでgetKeyMethodMap()�
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N159C9"></a>
+<a name="N15A0B"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -5004,7 +5044,7 @@ public class MappingTest4 extends LookupDispatchAction {
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N159D6"></a>
+<a name="N15A18"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPサンプル</b>
 </p>
@@ -5035,7 +5075,7 @@ public class MappingTest4 extends LookupDispatchAction {
 <li class="listitem">
 <p>メッセージプロパティファイル（test4.properties）</p>
 <div class="figure">
-<a name="N159E3"></a>
+<a name="N15A25"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;メッセージプロパティファイルサンプル</b>
 </p>
@@ -5076,7 +5116,7 @@ EventDispatchActionでは、actionタグのparameter属性に指定したメソ�
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N159FE"></a>
+<a name="N15A40"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -5092,7 +5132,7 @@ EventDispatchActionでは、actionタグのparameter属性に指定したメソ�
 <li class="listitem">
 <p>Actionクラス</p>
 <div class="figure">
-<a name="N15A0B"></a>
+<a name="N15A4D"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Actionクラスサンプル</b>
 </p>
@@ -5120,7 +5160,7 @@ public class MappingTest5 extends EventDispatchAction {
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N15A18"></a>
+<a name="N15A5A"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPサンプル</b>
 </p>
@@ -5169,7 +5209,7 @@ public class MappingTest5 extends EventDispatchAction {
 <li class="listitem">
 <p>リダイレクト例</p>
 <div class="figure">
-<a name="N15A5D"></a>
+<a name="N15A9F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;リダイレクトサンプル</b>
 </p>
@@ -5204,7 +5244,7 @@ public class MappingTest5 extends EventDispatchAction {
 <li class="listitem">
 <p>struts-config.xmlのaction-mapping設定</p>
 <div class="figure">
-<a name="N15A33"></a>
+<a name="N15A75"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlサンプル</b>
 </p>
@@ -5274,7 +5314,7 @@ public class MappingTest5 extends EventDispatchAction {
 </p>
 <p></p>
 <div class="table">
-<a name="N1537A"></a>
+<a name="N153CD"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Validator</b>
 </p>
@@ -5331,8 +5371,24 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
 </div>
 <br>
 <br>
-<a name="tubame_5.9.1." id="category_565"></a>
-<h3 class="title">5.9.1.シンプルなActionの移行</h3>
+<a name="tubame_5.9.1." id="category_680"></a>
+<h3 class="title">5.9.1.Actionの設定移行</h3>
+<br>
+<div class="section">
+<div class="titlepage">
+<div>
+<div>
+<h2 class="title" style="clear: both">
+<a name="N167BA"></a>1.&nbsp;body</h2>
+</div>
+</div>
+</div>
+<p>SpringMVCではコントーラクラスをController（@ControllerをつけたPOJO）を使用するため、コントローラクラスの設定ファイルの定義は不要である</p>
+</div>
+<br>
+<br>
+<a name="tubame_5.9.2." id="category_565"></a>
+<h3 class="title">5.9.2.シンプルなActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5341,7 +5397,7 @@ SpringMVCでは以下のように記述する。
 
 </p>
 <div class="figure">
-<a name="N15D02"></a>
+<a name="N15D45"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラス</b>
 </p>
@@ -5368,7 +5424,7 @@ public class MappingTest1 {
 <li class="listitem">
 <p>@ModelAttributeを使わないのであれば、Struts1のように設定のみで済ますこともできる。</p>
 <div class="figure">
-<a name="N15D15"></a>
+<a name="N15D58"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Spring設定</b>
 </p>
@@ -5388,8 +5444,8 @@ public class MappingTest1 {
 </div>
 <br>
 <br>
-<a name="tubame_5.9.2." id="category_566"></a>
-<h3 class="title">5.9.2.DispatchActionの移行</h3>
+<a name="tubame_5.9.3." id="category_566"></a>
+<h3 class="title">5.9.3.DispatchActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5403,7 +5459,7 @@ Struts1のように、リクエストパラメータにより実行するメソ�
 <li class="listitem">
 <p>Controllerクラス</p>
 <div class="figure">
-<a name="N15D31"></a>
+<a name="N15D74"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラスサンプル</b>
 </p>
@@ -5434,7 +5490,7 @@ public class MappingTest2 {
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N15D3E"></a>
+<a name="N15D81"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPサンプル</b>
 </p>
@@ -5467,8 +5523,8 @@ public class MappingTest2 {
 </div>
 <br>
 <br>
-<a name="tubame_5.9.3." id="category_567"></a>
-<h3 class="title">5.9.3.LookupDispatchActionの移行</h3>
+<a name="tubame_5.9.4." id="category_567"></a>
+<h3 class="title">5.9.4.LookupDispatchActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5476,8 +5532,8 @@ public class MappingTest2 {
 </div>
 <br>
 <br>
-<a name="tubame_5.9.4." id="category_568"></a>
-<h3 class="title">5.9.4.EventDispatchActionの移行</h3>
+<a name="tubame_5.9.5." id="category_568"></a>
+<h3 class="title">5.9.5.EventDispatchActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5492,7 +5548,7 @@ public class MappingTest2 {
 <li class="listitem">
 <p>Controllerクラス</p>
 <div class="figure">
-<a name="N15D69"></a>
+<a name="N15DAC"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラスサンプル</b>
 </p>
@@ -5528,21 +5584,23 @@ public class MappingTest2 {
 </div>
 <br>
 <br>
-<a name="tubame_5.9.5." id="category_474"></a>
-<h3 class="title">5.9.5.Forwardの移行</h3>
+<a name="tubame_5.9.6." id="category_474"></a>
+<h3 class="title">5.9.6.Forwardの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>struts1のフォワードについては、<span class="command"><strong><a class="command" href="#fowardRedirect">「リクエストのフォワード/リダイレクト」</a></strong></span>を参照</p>
+<p>struts1のフォワードについては、<span class="command"><strong><a class="command" href="#fowardRedirect">「リクエストのフォワード/リダイレクト」</a></strong></span>を参照。</p>
+<p>SpringMVCへの移植方法については<span class="command"><strong><a class="command" href="#redirectAndForwardPorting">「リクエストのフォワード/リダイレクト移行」</a></strong></span>を参照。</p>
 </div>
 <br>
 <br>
-<a name="tubame_5.9.5.1." id="category_537"></a>
-<h3 class="title">5.9.5.1.リクエストのフォワード/リダイレクト移行</h3>
+<a name="tubame_5.9.6.1." id="category_537"></a>
+<h3 class="title">5.9.6.1.リクエストのフォワード/リダイレクト移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>リクエストのフォワード/リダイレクトは、SpringMVCでは戻り値に指定した遷移先のURLに接頭辞「forward:」、もしくは、接頭辞「redirect:」を指定する。</p>
+<p>
+<a name="redirectAndForwardPorting"></a>リクエストのフォワード/リダイレクトは、SpringMVCでは戻り値に指定した遷移先のURLに接頭辞「forward:」、もしくは、接頭辞「redirect:」を指定する。</p>
 <p>Struts1のActionForwardに指定するフォワード先は、forwardタグで設定されたものであればJSPでもActionでも可能であったが、SpringMVCで他のControllerに処理を移す場合は「forward:」もしくは「redirect:」をつけてURLを記述する必要がある。なお、「redirect:」を使用する場合は、自動的にパラメータを引き継がないので、必要に応じてパラメータの再設定を行う。なお、SpringMVC 3.1以上では、リダイレクトに際して一度だけ値を保持するフラッシュスコープと呼ばれるスコープを利用したパラメータの転送も可能となっている。</p>
 <p>
 
@@ -5554,7 +5612,7 @@ public class MappingTest2 {
 <li class="listitem">
 <p>通常のリダイレクト</p>
 <div class="figure">
-<a name="N15A8C"></a>
+<a name="N15ACF"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;通常のリダイレクトサンプル</b>
 </p>
@@ -5575,7 +5633,7 @@ public String dispatch1(@ModelAttribute("message") TestFormBean message) {
 <p>フラッシュスコープを利用したリダイレクト</p>
 <p>引数にRedirectAttributesを取り、addFlashAttributeにより転送するAttributeを設定する。</p>
 <div class="figure">
-<a name="N15A9B"></a>
+<a name="N15ADE"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;フラッシュスコープを利用したリダイレクトサンプル</b>
 </p>
@@ -5600,8 +5658,17 @@ public String dispatch1(@ModelAttribute("message") TestFormBean message, final R
 </div>
 <br>
 <br>
-<a name="tubame_5.9.6." id="category_482"></a>
-<h3 class="title">5.9.6.モジュールの移行</h3>
+<a name="tubame_5.9.6.2." id="category_683"></a>
+<h3 class="title">5.9.6.2.グローバルFowardの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>詳細は、<span class="command"><strong><a class="command" href="#redirectAndForwardPorting">「リクエストのフォワード/リダイレクト移行」</a></strong></span>を参照。</p>
+</div>
+<br>
+<br>
+<a name="tubame_5.9.7." id="category_482"></a>
+<h3 class="title">5.9.7.モジュールの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5610,7 +5677,7 @@ public String dispatch1(@ModelAttribute("message") TestFormBean message, final R
 
 </p>
 <div class="figure">
-<a name="N15436"></a>
+<a name="N1548F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラス</b>
 </p>
@@ -5644,8 +5711,8 @@ public class MappingTest9Nest {
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7." id="category_483"></a>
-<h3 class="title">5.9.7.Actionクラスの提供するユーティリティメソッドの移行</h3>
+<a name="tubame_5.9.8." id="category_483"></a>
+<h3 class="title">5.9.8.Actionクラスの提供するユーティリティメソッドの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5784,8 +5851,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.1." id="category_484"></a>
-<h3 class="title">5.9.7.1.Action#getServlet</h3>
+<a name="tubame_5.9.8.1." id="category_484"></a>
+<h3 class="title">5.9.8.1.ActionユーティリティメソッドgetServletの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5799,8 +5866,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.2." id="category_485"></a>
-<h3 class="title">5.9.7.2.Action#setServlet</h3>
+<a name="tubame_5.9.8.2." id="category_485"></a>
+<h3 class="title">5.9.8.2.ActionユーティリティメソッドsetServletの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5808,8 +5875,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.3." id="category_486"></a>
-<h3 class="title">5.9.7.3.execute</h3>
+<a name="tubame_5.9.8.3." id="category_486"></a>
+<h3 class="title">5.9.8.3.Actionユーティリティメソッドexecuteの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5817,8 +5884,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.4." id="category_487"></a>
-<h3 class="title">5.9.7.4.addErrors</h3>
+<a name="tubame_5.9.8.4." id="category_487"></a>
+<h3 class="title">5.9.8.4.ActionユーティリティメソッドaddErrorsの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5826,8 +5893,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.5." id="category_488"></a>
-<h3 class="title">5.9.7.5.addMessages</h3>
+<a name="tubame_5.9.8.5." id="category_488"></a>
+<h3 class="title">5.9.8.5.ActionユーティリティメソッドaddMessagesの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5835,8 +5902,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.6." id="category_489"></a>
-<h3 class="title">5.9.7.6.Token管理</h3>
+<a name="tubame_5.9.8.6." id="category_489"></a>
+<h3 class="title">5.9.8.6.ActionユーティリティメソッドToken管理機能の移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5844,8 +5911,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.7." id="category_490"></a>
-<h3 class="title">5.9.7.7.getErrors</h3>
+<a name="tubame_5.9.8.7." id="category_490"></a>
+<h3 class="title">5.9.8.7.ActionユーティリティメソッドgetErrorsの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5853,8 +5920,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.8." id="category_491"></a>
-<h3 class="title">5.9.7.8.Locale</h3>
+<a name="tubame_5.9.8.8." id="category_491"></a>
+<h3 class="title">5.9.8.8.ActionユーティリティメソッドLocaleの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5864,8 +5931,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.9." id="category_492"></a>
-<h3 class="title">5.9.7.9.getMessages</h3>
+<a name="tubame_5.9.8.9." id="category_492"></a>
+<h3 class="title">5.9.8.9.ActionユーティリティメソッドgetMessagesの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5873,8 +5940,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.10." id="category_493"></a>
-<h3 class="title">5.9.7.10.getResources</h3>
+<a name="tubame_5.9.8.10." id="category_493"></a>
+<h3 class="title">5.9.8.10.ActionユーティリティメソッドgetResourcesの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5883,8 +5950,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.11." id="category_494"></a>
-<h3 class="title">5.9.7.11.isCancelled</h3>
+<a name="tubame_5.9.8.11." id="category_494"></a>
+<h3 class="title">5.9.8.11.ActionユーティリティメソッドisCancelledの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5892,8 +5959,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.7.12." id="category_495"></a>
-<h3 class="title">5.9.7.12.saveErrors/saveMessages</h3>
+<a name="tubame_5.9.8.12." id="category_495"></a>
+<h3 class="title">5.9.8.12.ActionユーティリティメソッドsaveErrors/saveMessagesの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5902,12 +5969,12 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.8." id="category_475"></a>
-<h3 class="title">5.9.8.Struts Extrasの移行</h3>
+<a name="tubame_5.9.9." id="category_475"></a>
+<h3 class="title">5.9.9.Struts Extrasの移行</h3>
 <br>
 <br>
-<a name="tubame_5.9.8.1." id="category_476"></a>
-<h3 class="title">5.9.8.1.DispatcherAction系の移行</h3>
+<a name="tubame_5.9.9.1." id="category_476"></a>
+<h3 class="title">5.9.9.1.DispatcherAction系の移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5941,8 +6008,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.8.2." id="category_477"></a>
-<h3 class="title">5.9.8.2.DownloadActionの移行</h3>
+<a name="tubame_5.9.9.2." id="category_477"></a>
+<h3 class="title">5.9.9.2.DownloadActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5951,8 +6018,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.8.3." id="category_478"></a>
-<h3 class="title">5.9.8.3.ForwardActionの移行</h3>
+<a name="tubame_5.9.9.3." id="category_478"></a>
+<h3 class="title">5.9.9.3.ForwardActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5960,8 +6027,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.8.4." id="category_479"></a>
-<h3 class="title">5.9.8.4.IncludeActionの移行</h3>
+<a name="tubame_5.9.9.4." id="category_479"></a>
+<h3 class="title">5.9.9.4.IncludeActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5969,8 +6036,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.8.5." id="category_480"></a>
-<h3 class="title">5.9.8.5.LocaleActionの移行</h3>
+<a name="tubame_5.9.9.5." id="category_480"></a>
+<h3 class="title">5.9.9.5.LocaleActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -5980,8 +6047,8 @@ lang=&gt;ロケール名&lt;
 </div>
 <br>
 <br>
-<a name="tubame_5.9.8.6." id="category_481"></a>
-<h3 class="title">5.9.8.6.SwitchActionの移行</h3>
+<a name="tubame_5.9.9.6." id="category_481"></a>
+<h3 class="title">5.9.9.6.SwitchActionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -6039,7 +6106,7 @@ Actionクラスのexecute()メソッドで例外が発生した場合、デフ�
 <p>struts-config.xmlのglobal-exceptionsタグの子要素として、例外クラスごとのexceptionタグを記述する。以下はIOExceptionの例で、path属性にエラー表示用JSPを指定している
 </p>
 <div class="figure">
-<a name="N15AD1"></a>
+<a name="N15B14"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;例外設定</b>
 </p>
@@ -6080,7 +6147,7 @@ Actionクラスのexecute()メソッドで例外が発生した場合、デフ�
 
 </p>
 <div class="figure">
-<a name="N15AEF"></a>
+<a name="N15B32"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts設定</b>
 </p>
@@ -6115,7 +6182,7 @@ Action内でModuleExceptionをインスタンス化する際に引数として�
 
 </p>
 <div class="figure">
-<a name="N15B06"></a>
+<a name="N15B49"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts設定</b>
 </p>
@@ -6150,7 +6217,7 @@ exceptionタグに指定可能な属性は、以下を参照。
 
 </p>
 <div class="table">
-<a name="N15B1D"></a>
+<a name="N15B60"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;&lt;exception&gt;の属性一覧</b>
 </p>
@@ -6285,7 +6352,7 @@ SpringMVC
 
 </p>
 <div class="figure">
-<a name="N15578"></a>
+<a name="N155D1"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ExceptionHandle例</b>
 </p>
@@ -6340,7 +6407,7 @@ public ModelAndView handler(Exception exception) {
 <p>struts-config.xmlに以下のような定義があった場合、SpringMVCでは、いくつかの移行シナリオが考えられる。
 </p>
 <div class="figure">
-<a name="N15509"></a>
+<a name="N15562"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;struts-config.xmlの設定</b>
 </p>
@@ -6382,7 +6449,7 @@ HandlerExceptionResolverを実装したクラスを作成する場合は、作�
 このCustomHandlerExceptionResolverクラスでは、設定ファイルから、受け付ける例外と遷移先、メッセージキーの情報を読み出し、該当する例外が発生した場合に遷移先ページにメッセージを渡して表示する。
 </p>
 <div class="figure">
-<a name="N15529"></a>
+<a name="N15582"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;CustomHandlerExceptionResolverサンプル</b>
 </p>
@@ -6428,7 +6495,7 @@ public class CustomMappingExceptionResolver extends
 このクラスを利用する場合は、servlet-context.xmlに以下のような設定を追加する。
 </p>
 <div class="figure">
-<a name="N15534"></a>
+<a name="N1558D"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;servlet-context.xml</b>
 </p>
@@ -6456,7 +6523,7 @@ servlet-context.xmlにHandlerExceptionResolver実装クラスが複数指定さ�
 
 </p>
 <div class="figure">
-<a name="N1553F"></a>
+<a name="N15598"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;優先順位のプロパティ</b>
 </p>
@@ -6523,11 +6590,42 @@ servlet-context.xmlにHandlerExceptionResolver実装クラスが複数指定さ�
 </div>
 <br>
 <br>
+<a name="tubame_5.12." id="category_681"></a>
+<h3 class="title">5.12.メッセージリソース設定の移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>SpringMVCでは、web.xml、ApplicationContext.xml（web.xmlのcontext-paramで設定。アプリケーション全体の設定を記述する）、servlet-context.xml（web.xmlのDispatcherServletを定義したservletタグの子要素であるinit-paramタグで設定）などを使って設定を行う。
+</p>
+<p>web.xmlに設定ファイルを記載するのではなく、WebApplicationInitializeインタフェースを実装したクラスを作成し、コード中で設定ファイルを指定することも可能である
+
+</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>
+
+<span class="command"><strong><a class="command" href="http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html" target="_top">http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html</a></strong></span>
+
+</p>
+</li>
+</ul>
+</div>
+<p>
+
+</p>
+</div>
+<br>
+<br>
 <a name="tubame_6."></a>
 <h2 class="title">6.Viewの移行</h2>
 <br>
 <a name="tubame_6.1." id="category_335"></a>
 <h3 class="title">6.1.Struts独自タグ</h3>
+<br>
+<br>
+<a name="tubame_6.1.1." id="category_677"></a>
+<h3 class="title">6.1.1.Struts独自タグの宣言の移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -6537,8 +6635,8 @@ servlet-context.xmlにHandlerExceptionResolver実装クラスが複数指定さ�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1." id="category_336"></a>
-<h3 class="title">6.1.1.beanタグ</h3>
+<a name="tubame_6.1.2." id="category_336"></a>
+<h3 class="title">6.1.2.beanタグ</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -6608,8 +6706,8 @@ Struts1のbeanタグとSpringMVCでの対応を以下に示す。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.1." id="category_337"></a>
-<h3 class="title">6.1.1.1.bean:cookie</h3>
+<a name="tubame_6.1.2.1." id="category_337"></a>
+<h3 class="title">6.1.2.1.Struts独自タグbean:cookieの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -6617,7 +6715,7 @@ Struts1のbeanタグとSpringMVCでの対応を以下に示す。
 bean:cookieと同等な機能は、EL及びJSTLで対応可能で、SpringMVCでは存在しない
 </p>
 <div class="table">
-<a name="N13E8C"></a>
+<a name="N13EDE"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -6676,8 +6774,8 @@ ${cookie["JSESSIONID"].value}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.2." id="category_338"></a>
-<h3 class="title">6.1.1.2.bean:define</h3>
+<a name="tubame_6.1.2.2." id="category_338"></a>
+<h3 class="title">6.1.2.2.Struts独自タグbean:defineの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -6685,7 +6783,7 @@ ${cookie["JSESSIONID"].value}
 bean:defineと同等な機能は、EL及びJSTLで対応可能で、SpringMVCでは存在しない
 </p>
 <div class="table">
-<a name="N13ED6"></a>
+<a name="N13F28"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -6860,8 +6958,8 @@ ${tbean.username}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.3." id="category_339"></a>
-<h3 class="title">6.1.1.3.bean:header</h3>
+<a name="tubame_6.1.2.3." id="category_339"></a>
+<h3 class="title">6.1.2.3.Struts独自タグbean:headerの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -6870,7 +6968,7 @@ ${tbean.username}
 bean:headerと同等な機能は、EL及びJSTLで対応可能で、SpringMVCでは存在しない
 </p>
 <div class="table">
-<a name="N13FCD"></a>
+<a name="N1401F"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -6930,8 +7028,8 @@ ${header["User-Agent"]}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.4." id="category_340"></a>
-<h3 class="title">6.1.1.4.bean:include</h3>
+<a name="tubame_6.1.2.4." id="category_340"></a>
+<h3 class="title">6.1.2.4.Struts独自タグbean:includeの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -6999,8 +7097,8 @@ bean:includeは/WEB-INF配下のリソースを読むことができない。c:i
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.5." id="category_341"></a>
-<h3 class="title">6.1.1.5.bean:message</h3>
+<a name="tubame_6.1.2.5." id="category_341"></a>
+<h3 class="title">6.1.2.5.Struts独自タグbean:messageの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7069,8 +7167,8 @@ bean:messageと同等な機能は、EL及びJSTLで対応可能で、SpringMVC�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.6." id="category_342"></a>
-<h3 class="title">6.1.1.6.bean:page</h3>
+<a name="tubame_6.1.2.6." id="category_342"></a>
+<h3 class="title">6.1.2.6.Struts独自タグbean:pageの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7139,8 +7237,8 @@ ${s1_session.getAttribute("data_s1")}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.7." id="category_343"></a>
-<h3 class="title">6.1.1.7.bean:parameter</h3>
+<a name="tubame_6.1.2.7." id="category_343"></a>
+<h3 class="title">6.1.2.7.Struts独自タグbean:parameterの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7148,7 +7246,7 @@ ${s1_session.getAttribute("data_s1")}
 bean:parameterと同等な機能は、EL及びJSTLで対応可能で、SpringMVCでは存在しない
 </p>
 <div class="table">
-<a name="N140FC"></a>
+<a name="N1414E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -7207,8 +7305,8 @@ ${param.foo}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.8." id="category_344"></a>
-<h3 class="title">6.1.1.8.bean:resource</h3>
+<a name="tubame_6.1.2.8." id="category_344"></a>
+<h3 class="title">6.1.2.8.Struts独自タグbean:resourceの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7217,8 +7315,8 @@ ${param.foo}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.9." id="category_345"></a>
-<h3 class="title">6.1.1.9.bean:size</h3>
+<a name="tubame_6.1.2.9." id="category_345"></a>
+<h3 class="title">6.1.2.9.Struts独自タグbean:sizeの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7286,8 +7384,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.10." id="category_346"></a>
-<h3 class="title">6.1.1.10.bean:struts</h3>
+<a name="tubame_6.1.2.10." id="category_346"></a>
+<h3 class="title">6.1.2.10.Struts独自タグbean:strutsの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7296,8 +7394,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.1.11." id="category_347"></a>
-<h3 class="title">6.1.1.11.bean:write</h3>
+<a name="tubame_6.1.2.11." id="category_347"></a>
+<h3 class="title">6.1.2.11.Struts独自タグbean:writeの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7305,8 +7403,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.2." id="category_348"></a>
-<h3 class="title">6.1.2.bean-elタグ</h3>
+<a name="tubame_6.1.3." id="category_348"></a>
+<h3 class="title">6.1.3.bean-elタグ</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7314,8 +7412,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.2.1." id="category_349"></a>
-<h3 class="title">6.1.2.1.bean-el:include</h3>
+<a name="tubame_6.1.3.1." id="category_349"></a>
+<h3 class="title">6.1.3.1.Struts独自タグbean-el:includeの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7330,8 +7428,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.2.2." id="category_350"></a>
-<h3 class="title">6.1.2.2.bean-el:message</h3>
+<a name="tubame_6.1.3.2." id="category_350"></a>
+<h3 class="title">6.1.3.2.Struts独自タグbean-el:messageの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7346,8 +7444,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.2.3." id="category_351"></a>
-<h3 class="title">6.1.2.3.bean-el:page</h3>
+<a name="tubame_6.1.3.3." id="category_351"></a>
+<h3 class="title">6.1.3.3.Struts独自タグbean-el:pageの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7362,8 +7460,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.2.4." id="category_352"></a>
-<h3 class="title">6.1.2.4.bean-el:resource</h3>
+<a name="tubame_6.1.3.4." id="category_352"></a>
+<h3 class="title">6.1.3.4.Struts独自タグbean-el:resourceの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7377,8 +7475,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.2.5." id="category_353"></a>
-<h3 class="title">6.1.2.5.bean-el:size</h3>
+<a name="tubame_6.1.3.5." id="category_353"></a>
+<h3 class="title">6.1.3.5.Struts独自タグbean-el:sizeの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7392,8 +7490,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.2.6." id="category_354"></a>
-<h3 class="title">6.1.2.6.bean-el:struts</h3>
+<a name="tubame_6.1.3.6." id="category_354"></a>
+<h3 class="title">6.1.3.6.Struts独自タグbean-el:strutsの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7407,8 +7505,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3." id="category_355"></a>
-<h3 class="title">6.1.3.htmlタグ</h3>
+<a name="tubame_6.1.4." id="category_355"></a>
+<h3 class="title">6.1.4.htmlタグ</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7525,8 +7623,8 @@ ${fn:length(tbean.testMap)}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.1." id="category_356"></a>
-<h3 class="title">6.1.3.1.html:base</h3>
+<a name="tubame_6.1.4.1." id="category_356"></a>
+<h3 class="title">6.1.4.1.Struts独自タグhtml:baseの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7537,7 +7635,7 @@ ${fn:length(tbean.testMap)}
 
 </p>
 <div class="table">
-<a name="N14329"></a>
+<a name="N1437B"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:baseの属性詳細</b>
 </p>
@@ -7580,8 +7678,8 @@ href="http://&lt;server&gt;:&lt;port&gt;/&lt;context&gt;"&gt;となる。この�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.2." id="category_357"></a>
-<h3 class="title">6.1.3.2.html:button</h3>
+<a name="tubame_6.1.4.2." id="category_357"></a>
+<h3 class="title">6.1.4.2.Struts独自タグhtml:buttonの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7590,8 +7688,8 @@ href="http://&lt;server&gt;:&lt;port&gt;/&lt;context&gt;"&gt;となる。この�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.3." id="category_358"></a>
-<h3 class="title">6.1.3.3.html:cancel</h3>
+<a name="tubame_6.1.4.3." id="category_358"></a>
+<h3 class="title">6.1.4.3.Struts独自タグhtml:cancelの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7601,8 +7699,8 @@ href="http://&lt;server&gt;:&lt;port&gt;/&lt;context&gt;"&gt;となる。この�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.4." id="category_359"></a>
-<h3 class="title">6.1.3.4.html:checkbox</h3>
+<a name="tubame_6.1.4.4." id="category_359"></a>
+<h3 class="title">6.1.4.4.Struts独自タグhtml:checkboxの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7610,7 +7708,7 @@ href="http://&lt;server&gt;:&lt;port&gt;/&lt;context&gt;"&gt;となる。この�
 <a name="strutsHtmlCheckbox"></a>html:checkboxはSpringMVCのform:checkboxが対応する
 </p>
 <div class="table">
-<a name="N14373"></a>
+<a name="N143C5"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:checkboxの属性詳細</b>
 </p>
@@ -7675,7 +7773,7 @@ href="http://&lt;server&gt;:&lt;port&gt;/&lt;context&gt;"&gt;となる。この�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N143C4"></a>
+<a name="N14416"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのform:checkboxでの対応</b>
 </p>
@@ -7759,15 +7857,15 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.5." id="category_360"></a>
-<h3 class="title">6.1.3.5.html:errors</h3>
+<a name="tubame_6.1.4.5." id="category_360"></a>
+<h3 class="title">6.1.4.5.Struts独自タグhtml:errorsの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
 <p>
 <a name="strutsHtmlErrors"></a>html:errorsはSpringMVCのform:errorsで対応する</p>
 <div class="table">
-<a name="N1442F"></a>
+<a name="N14481"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:errorsの属性詳細</b>
 </p>
@@ -7796,7 +7894,7 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N14446"></a>
+<a name="N14498"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのform:errorsでの対応</b>
 </p>
@@ -7823,8 +7921,8 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.6." id="category_361"></a>
-<h3 class="title">6.1.3.6.html:file</h3>
+<a name="tubame_6.1.4.6." id="category_361"></a>
+<h3 class="title">6.1.4.6.Struts独自タグhtml:fileの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7833,8 +7931,8 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.7." id="category_362"></a>
-<h3 class="title">6.1.3.7.html:form</h3>
+<a name="tubame_6.1.4.7." id="category_362"></a>
+<h3 class="title">6.1.4.7.Struts独自タグhtml:formの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7843,8 +7941,8 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.8." id="category_363"></a>
-<h3 class="title">6.1.3.8.html:frame</h3>
+<a name="tubame_6.1.4.8." id="category_363"></a>
+<h3 class="title">6.1.4.8.Struts独自タグhtml:frameの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7853,8 +7951,8 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.9." id="category_364"></a>
-<h3 class="title">6.1.3.9.html:hidden</h3>
+<a name="tubame_6.1.4.9." id="category_364"></a>
+<h3 class="title">6.1.4.9.Struts独自タグhtml:hiddenの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7863,8 +7961,8 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.10." id="category_365"></a>
-<h3 class="title">6.1.3.10.html:html</h3>
+<a name="tubame_6.1.4.10." id="category_365"></a>
+<h3 class="title">6.1.4.10.Struts独自タグhtml:htmlの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7873,8 +7971,8 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.11." id="category_366"></a>
-<h3 class="title">6.1.3.11.html:image</h3>
+<a name="tubame_6.1.4.11." id="category_366"></a>
+<h3 class="title">6.1.4.11.Struts独自タグhtml:imageの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7883,8 +7981,8 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.12." id="category_367"></a>
-<h3 class="title">6.1.3.12.html:img</h3>
+<a name="tubame_6.1.4.12." id="category_367"></a>
+<h3 class="title">6.1.4.12.Struts独自タグhtml:imgの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7893,8 +7991,8 @@ type="hidden"&gt;を自動生成している。
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.13." id="category_368"></a>
-<h3 class="title">6.1.3.13.html:javascript</h3>
+<a name="tubame_6.1.4.13." id="category_368"></a>
+<h3 class="title">6.1.4.13.Struts独自タグhtml:javascriptの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -7907,15 +8005,15 @@ strutsのhtml:javascriptについては、<span class="command"><strong><a class
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.14." id="category_369"></a>
-<h3 class="title">6.1.3.14.html:link</h3>
+<a name="tubame_6.1.4.14." id="category_369"></a>
+<h3 class="title">6.1.4.14.Struts独自タグhtml:linkの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
 <p>
 <a name="strutsHtmlLink"></a>html:linkは、SpringMVCのspring:urlが対応する</p>
 <div class="table">
-<a name="N144D0"></a>
+<a name="N14522"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:linkの属性詳細</b>
 </p>
@@ -8388,7 +8486,7 @@ Query String(#4)
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N146C2"></a>
+<a name="N14714"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCの&lt;spring:url&gt;での対応
 </b>
@@ -8491,7 +8589,7 @@ Query String(#4)
 
 </p>
 <div class="table">
-<a name="N1472F"></a>
+<a name="N14781"></a>
 <p class="title">
 <b>Table&nbsp;3.&nbsp;spring:mvcUrl関数の利用例</b>
 </p>
@@ -8548,15 +8646,15 @@ FooBar1クラスのexecuteメソッドが「/foo/{id}」にマッピングされ
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.15." id="category_370"></a>
-<h3 class="title">6.1.3.15.html:messages</h3>
+<a name="tubame_6.1.4.15." id="category_370"></a>
+<h3 class="title">6.1.4.15.Struts独自タグhtml:messagesの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
 <p>
 <a name="strutsHtmlMessages"></a>html:messagesはSpringMVCのspring:messageが対応する</p>
 <div class="table">
-<a name="N14760"></a>
+<a name="N147B2"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:messagesの属性詳細</b>
 </p>
@@ -8611,7 +8709,7 @@ struts-validatorを使用している場合は、対応するフィールド名�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N1478D"></a>
+<a name="N147DF"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのspring:messageでの対応</b>
 </p>
@@ -8650,15 +8748,15 @@ struts-validatorを使用している場合は、対応するフィールド名�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.16." id="category_371"></a>
-<h3 class="title">6.1.3.16.html:multibox</h3>
+<a name="tubame_6.1.4.16." id="category_371"></a>
+<h3 class="title">6.1.4.16.Struts独自タグhtml:multiboxの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
 <p>
 <a name="strutsHtmlMultibox"></a>html:multiboxはSpringMVCのspring:checkboxが対応する</p>
 <div class="table">
-<a name="N147C1"></a>
+<a name="N14813"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:multiboxの属性詳細</b>
 </p>
@@ -8697,7 +8795,7 @@ struts-validatorを使用している場合は、対応するフィールド名�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N147E9"></a>
+<a name="N1483B"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのform:checkboxでの対応</b>
 </p>
@@ -8741,8 +8839,8 @@ struts-validatorを使用している場合は、対応するフィールド名�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.17." id="category_372"></a>
-<h3 class="title">6.1.3.17.html:option</h3>
+<a name="tubame_6.1.4.17." id="category_372"></a>
+<h3 class="title">6.1.4.17.Struts独自タグhtml:optionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -8751,8 +8849,8 @@ struts-validatorを使用している場合は、対応するフィールド名�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.18." id="category_373"></a>
-<h3 class="title">6.1.3.18.html:options</h3>
+<a name="tubame_6.1.4.18." id="category_373"></a>
+<h3 class="title">6.1.4.18.Struts独自タグhtml:optionsの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -8760,7 +8858,7 @@ struts-validatorを使用している場合は、対応するフィールド名�
 <a name="strutsHtmlOptions"></a>html:optionsはSpringMVCのform:optionsが対応する
 </p>
 <div class="table">
-<a name="N14832"></a>
+<a name="N14884"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts1のoptionタグ詳細</b>
 </p>
@@ -8884,7 +8982,7 @@ falseの場合、そのまま出力される
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N14886"></a>
+<a name="N148D8"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCでの対応</b>
 </p>
@@ -8940,8 +9038,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.19." id="category_374"></a>
-<h3 class="title">6.1.3.19.html:optionsCollection</h3>
+<a name="tubame_6.1.4.19." id="category_374"></a>
+<h3 class="title">6.1.4.19.Struts独自タグhtml:optionsCollectionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -8949,7 +9047,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <a name="strutsHtmlOptionsCollection"></a>
 </p>
 <div class="table">
-<a name="N148B9"></a>
+<a name="N1490B"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts1のoptionタグ詳細</b>
 </p>
@@ -9070,7 +9168,7 @@ Bean名の場合、property属性を必ず指定する。property属性にはコ
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N1490D"></a>
+<a name="N1495F"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCでの対応</b>
 </p>
@@ -9121,8 +9219,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.20." id="category_375"></a>
-<h3 class="title">6.1.3.20.html:param</h3>
+<a name="tubame_6.1.4.20." id="category_375"></a>
+<h3 class="title">6.1.4.20.Struts独自タグhtml:paramの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9132,7 +9230,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 
 </p>
 <div class="table">
-<a name="N1493D"></a>
+<a name="N1498F"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:paramの属性詳細</b>
 </p>
@@ -9160,7 +9258,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N14960"></a>
+<a name="N149B2"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;</b>
 </p>
@@ -9186,7 +9284,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <li class="listitem">
 <p>生成されたHTML</p>
 <div class="figure">
-<a name="N1496F"></a>
+<a name="N149C1"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;</b>
 </p>
@@ -9213,7 +9311,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 
 </p>
 <div class="table">
-<a name="N14979"></a>
+<a name="N149CB"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのspring:paramでの対応</b>
 </p>
@@ -9238,7 +9336,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <li class="listitem">
 <p>JSP</p>
 <div class="figure">
-<a name="N14995"></a>
+<a name="N149E7"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;</b>
 </p>
@@ -9264,7 +9362,7 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 <li class="listitem">
 <p>生成されたHTML</p>
 <div class="figure">
-<a name="N149A4"></a>
+<a name="N149F6"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;</b>
 </p>
@@ -9292,8 +9390,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.21." id="category_376"></a>
-<h3 class="title">6.1.3.21.html:password</h3>
+<a name="tubame_6.1.4.21." id="category_376"></a>
+<h3 class="title">6.1.4.21.Struts独自タグhtml:passwordの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9302,15 +9400,15 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.22." id="category_377"></a>
-<h3 class="title">6.1.3.22.html:radio</h3>
+<a name="tubame_6.1.4.22." id="category_377"></a>
+<h3 class="title">6.1.4.22.Struts独自タグhtml:radioの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
 <p>
 <a name="strutsHtmlRadio"></a>html:radioはSpringMVCのform:radiobuttonが対応する</p>
 <div class="table">
-<a name="N149C8"></a>
+<a name="N14A1A"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;html:radioの属性詳細</b>
 </p>
@@ -9361,7 +9459,7 @@ type="radio"&gt;のvalue属性値を保持するBean名を指定する（必須�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N149F0"></a>
+<a name="N14A42"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;SpringMVCのform:radiobutton属性詳細(一部抜粋)</b>
 </p>
@@ -9396,7 +9494,7 @@ type="radio"&gt;のvalue属性値を保持するBean名を指定する（必須�
 </div>
 <br class="table-break">
 <div class="table">
-<a name="N14A0C"></a>
+<a name="N14A5E"></a>
 <p class="title">
 <b>Table&nbsp;3.&nbsp;SpringMVCのform:radiobuttons属性詳細(一部抜粋)</b>
 </p>
@@ -9438,8 +9536,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.23." id="category_378"></a>
-<h3 class="title">6.1.3.23.html:reset</h3>
+<a name="tubame_6.1.4.23." id="category_378"></a>
+<h3 class="title">6.1.4.23.Struts独自タグhtml:resetの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9448,8 +9546,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.24." id="category_379"></a>
-<h3 class="title">6.1.3.24.html:rewrite</h3>
+<a name="tubame_6.1.4.24." id="category_379"></a>
+<h3 class="title">6.1.4.24.Struts独自タグhtml:rewriteの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9458,8 +9556,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.25." id="category_380"></a>
-<h3 class="title">6.1.3.25.html:select</h3>
+<a name="tubame_6.1.4.25." id="category_380"></a>
+<h3 class="title">6.1.4.25.Struts独自タグhtml:selectの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9471,8 +9569,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.26." id="category_381"></a>
-<h3 class="title">6.1.3.26.html:submit</h3>
+<a name="tubame_6.1.4.26." id="category_381"></a>
+<h3 class="title">6.1.4.26.Struts独自タグhtml:submitの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9481,8 +9579,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.27." id="category_382"></a>
-<h3 class="title">6.1.3.27.html:text</h3>
+<a name="tubame_6.1.4.27." id="category_382"></a>
+<h3 class="title">6.1.4.27.Struts独自タグhtml:textの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9491,8 +9589,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.28." id="category_383"></a>
-<h3 class="title">6.1.3.28.html:textarea</h3>
+<a name="tubame_6.1.4.28." id="category_383"></a>
+<h3 class="title">6.1.4.28.Struts独自タグhtml:textareaの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9501,8 +9599,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.3.29." id="category_384"></a>
-<h3 class="title">6.1.3.29.html:xhtml</h3>
+<a name="tubame_6.1.4.29." id="category_384"></a>
+<h3 class="title">6.1.4.29.Struts独自タグhtml:xhtmlの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9511,8 +9609,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4." id="category_385"></a>
-<h3 class="title">6.1.4.html-elタグ</h3>
+<a name="tubame_6.1.5." id="category_385"></a>
+<h3 class="title">6.1.5.html-elタグ</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9520,8 +9618,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.1." id="category_386"></a>
-<h3 class="title">6.1.4.1.html-el:base</h3>
+<a name="tubame_6.1.5.1." id="category_386"></a>
+<h3 class="title">6.1.5.1.Struts独自タグhtml-el:baseの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9529,8 +9627,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.2." id="category_387"></a>
-<h3 class="title">6.1.4.2.html-el:button</h3>
+<a name="tubame_6.1.5.2." id="category_387"></a>
+<h3 class="title">6.1.5.2.Struts独自タグhtml-el:buttonの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9538,8 +9636,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.3." id="category_388"></a>
-<h3 class="title">6.1.4.3.html-el:cancel</h3>
+<a name="tubame_6.1.5.3." id="category_388"></a>
+<h3 class="title">6.1.5.3.Struts独自タグhtml-el:cancelの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9547,8 +9645,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.4." id="category_389"></a>
-<h3 class="title">6.1.4.4.html-el:checkbox</h3>
+<a name="tubame_6.1.5.4." id="category_389"></a>
+<h3 class="title">6.1.5.4.Struts独自タグhtml-el:checkboxの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9556,8 +9654,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.5." id="category_390"></a>
-<h3 class="title">6.1.4.5.html-el:errors</h3>
+<a name="tubame_6.1.5.5." id="category_390"></a>
+<h3 class="title">6.1.5.5.Struts独自タグhtml-el:errorsの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9565,8 +9663,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.6." id="category_391"></a>
-<h3 class="title">6.1.4.6.html-el:file</h3>
+<a name="tubame_6.1.5.6." id="category_391"></a>
+<h3 class="title">6.1.5.6.Struts独自タグhtml-el:fileの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9574,8 +9672,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.7." id="category_392"></a>
-<h3 class="title">6.1.4.7.html-el:form</h3>
+<a name="tubame_6.1.5.7." id="category_392"></a>
+<h3 class="title">6.1.5.7.Struts独自タグhtml-el:formの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9583,8 +9681,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.8." id="category_393"></a>
-<h3 class="title">6.1.4.8.html-el:frame</h3>
+<a name="tubame_6.1.5.8." id="category_393"></a>
+<h3 class="title">6.1.5.8.Struts独自タグhtml-el:frameの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9592,8 +9690,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.9." id="category_394"></a>
-<h3 class="title">6.1.4.9.html-el:hidden</h3>
+<a name="tubame_6.1.5.9." id="category_394"></a>
+<h3 class="title">6.1.5.9.Struts独自タグhtml-el:hiddenの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9601,8 +9699,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.10." id="category_395"></a>
-<h3 class="title">6.1.4.10.html-el:html</h3>
+<a name="tubame_6.1.5.10." id="category_395"></a>
+<h3 class="title">6.1.5.10.Struts独自タグhtml-el:htmlの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9610,8 +9708,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.11." id="category_396"></a>
-<h3 class="title">6.1.4.11.html-el:image</h3>
+<a name="tubame_6.1.5.11." id="category_396"></a>
+<h3 class="title">6.1.5.11.Struts独自タグhtml-el:imageの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9619,8 +9717,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.12." id="category_397"></a>
-<h3 class="title">6.1.4.12.html-el:img</h3>
+<a name="tubame_6.1.5.12." id="category_397"></a>
+<h3 class="title">6.1.5.12.Struts独自タグhtml-el:imgの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9628,8 +9726,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.13." id="category_398"></a>
-<h3 class="title">6.1.4.13.html-el:javascript</h3>
+<a name="tubame_6.1.5.13." id="category_398"></a>
+<h3 class="title">6.1.5.13.Struts独自タグhtml-el:javascriptの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9637,8 +9735,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.14." id="category_399"></a>
-<h3 class="title">6.1.4.14.html-el:link</h3>
+<a name="tubame_6.1.5.14." id="category_399"></a>
+<h3 class="title">6.1.5.14.Struts独自タグhtml-el:linkの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9646,8 +9744,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.15." id="category_400"></a>
-<h3 class="title">6.1.4.15.html-el:messages</h3>
+<a name="tubame_6.1.5.15." id="category_400"></a>
+<h3 class="title">6.1.5.15.Struts独自タグhtml-el:messagesの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9655,8 +9753,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.16." id="category_401"></a>
-<h3 class="title">6.1.4.16.html-el:multibox</h3>
+<a name="tubame_6.1.5.16." id="category_401"></a>
+<h3 class="title">6.1.5.16.Struts独自タグhtml-el:multiboxの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9664,8 +9762,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.17." id="category_402"></a>
-<h3 class="title">6.1.4.17.html-el:option</h3>
+<a name="tubame_6.1.5.17." id="category_402"></a>
+<h3 class="title">6.1.5.17.Struts独自タグhtml-el:optionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9673,8 +9771,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.18." id="category_403"></a>
-<h3 class="title">6.1.4.18.html-el:options</h3>
+<a name="tubame_6.1.5.18." id="category_403"></a>
+<h3 class="title">6.1.5.18.Struts独自タグhtml-el:optionsの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9682,8 +9780,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.19." id="category_404"></a>
-<h3 class="title">6.1.4.19.html-el:optionsCollection</h3>
+<a name="tubame_6.1.5.19." id="category_404"></a>
+<h3 class="title">6.1.5.19.Struts独自タグhtml-el:optionsCollectionの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9691,8 +9789,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.20." id="category_405"></a>
-<h3 class="title">6.1.4.20.html-el:param</h3>
+<a name="tubame_6.1.5.20." id="category_405"></a>
+<h3 class="title">6.1.5.20.Struts独自タグhtml-el:paramの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9700,8 +9798,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.21." id="category_406"></a>
-<h3 class="title">6.1.4.21.html-el:password</h3>
+<a name="tubame_6.1.5.21." id="category_406"></a>
+<h3 class="title">6.1.5.21.Struts独自タグhtml-el:passwordの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9709,8 +9807,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.22." id="category_407"></a>
-<h3 class="title">6.1.4.22.html-el:radio</h3>
+<a name="tubame_6.1.5.22." id="category_407"></a>
+<h3 class="title">6.1.5.22.Struts独自タグhtml-el:radioの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9718,8 +9816,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.23." id="category_408"></a>
-<h3 class="title">6.1.4.23.html-el:reset</h3>
+<a name="tubame_6.1.5.23." id="category_408"></a>
+<h3 class="title">6.1.5.23.Struts独自タグhtml-el:resetの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9727,8 +9825,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.24." id="category_409"></a>
-<h3 class="title">6.1.4.24.html-el:rewrite</h3>
+<a name="tubame_6.1.5.24." id="category_409"></a>
+<h3 class="title">6.1.5.24.Struts独自タグhtml-el:rewriteの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9736,8 +9834,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.25." id="category_410"></a>
-<h3 class="title">6.1.4.25.html-el:select</h3>
+<a name="tubame_6.1.5.25." id="category_410"></a>
+<h3 class="title">6.1.5.25.Struts独自タグhtml-el:selectの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9745,8 +9843,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.26." id="category_411"></a>
-<h3 class="title">6.1.4.26.html-el:submit</h3>
+<a name="tubame_6.1.5.26." id="category_411"></a>
+<h3 class="title">6.1.5.26.Struts独自タグhtml-el:submitの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9754,8 +9852,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.27." id="category_412"></a>
-<h3 class="title">6.1.4.27.html-el:text</h3>
+<a name="tubame_6.1.5.27." id="category_412"></a>
+<h3 class="title">6.1.5.27.Struts独自タグhtml-el:textの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9763,8 +9861,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.28." id="category_413"></a>
-<h3 class="title">6.1.4.28.html-el:textarea</h3>
+<a name="tubame_6.1.5.28." id="category_413"></a>
+<h3 class="title">6.1.5.28.Struts独自タグhtml-el:textareaの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9772,8 +9870,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.4.29." id="category_414"></a>
-<h3 class="title">6.1.4.29.html-el:xhtml</h3>
+<a name="tubame_6.1.5.29." id="category_414"></a>
+<h3 class="title">6.1.5.29.Struts独自タグhtml-el:xhtmlの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9781,8 +9879,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5." id="category_415"></a>
-<h3 class="title">6.1.5.logicタグ</h3>
+<a name="tubame_6.1.6." id="category_415"></a>
+<h3 class="title">6.1.6.logicタグ</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9864,8 +9962,8 @@ Mapの場合は、keyがvalue属性、valueがLabel属性に自動的に設定�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.1." id="category_416"></a>
-<h3 class="title">6.1.5.1.logic:empty</h3>
+<a name="tubame_6.1.6.1." id="category_416"></a>
+<h3 class="title">6.1.6.1.Struts独自タグlogic:emptyの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9878,7 +9976,7 @@ Tagでは存在しない。
 
 </p>
 <div class="table">
-<a name="N14D2C"></a>
+<a name="N14D7E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -9940,8 +10038,8 @@ Struts1のlogicタグとJSTL及びJSP、SpringMVCのタグの対応について�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.2." id="category_417"></a>
-<h3 class="title">6.1.5.2.logic:equal</h3>
+<a name="tubame_6.1.6.2." id="category_417"></a>
+<h3 class="title">6.1.6.2.Struts独自タグlogic:equalの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -9950,8 +10048,8 @@ Struts1のlogicタグとJSTL及びJSP、SpringMVCのタグの対応について�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.3." id="category_418"></a>
-<h3 class="title">6.1.5.3.logic:forward</h3>
+<a name="tubame_6.1.6.3." id="category_418"></a>
+<h3 class="title">6.1.6.3.Struts独自タグlogic:forwardの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10001,8 +10099,8 @@ Struts1のlogicタグとJSTL及びJSP、SpringMVCのタグの対応について�
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.4." id="category_419"></a>
-<h3 class="title">6.1.5.4.logic:greaterEqual</h3>
+<a name="tubame_6.1.6.4." id="category_419"></a>
+<h3 class="title">6.1.6.4.Struts独自タグlogic:greaterEqualの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10010,7 +10108,7 @@ Struts1のlogicタグとJSTL及びJSP、SpringMVCのタグの対応について�
 logic:greaterEqualと同等な機能を提供するタグは、JSTL Tagにて対応可能だが、JSP Tag及びSpringMVC Tagでは存在しない
 </p>
 <div class="table">
-<a name="N14DC6"></a>
+<a name="N14E18"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10076,8 +10174,8 @@ ${age &gt;= 30 ? "Over 30" : "Less than 30"}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.5." id="category_420"></a>
-<h3 class="title">6.1.5.5.logic:greaterThan</h3>
+<a name="tubame_6.1.6.5." id="category_420"></a>
+<h3 class="title">6.1.6.5.Struts独自タグlogic:greaterThanの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10086,8 +10184,8 @@ ${age &gt;= 30 ? "Over 30" : "Less than 30"}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.6." id="category_421"></a>
-<h3 class="title">6.1.5.6.logic:iterate</h3>
+<a name="tubame_6.1.6.6." id="category_421"></a>
+<h3 class="title">6.1.6.6.Struts独自タグlogic:iterateの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10097,8 +10195,8 @@ ${age &gt;= 30 ? "Over 30" : "Less than 30"}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.7." id="category_422"></a>
-<h3 class="title">6.1.5.7.logic:lessEqual</h3>
+<a name="tubame_6.1.6.7." id="category_422"></a>
+<h3 class="title">6.1.6.7.Struts独自タグlogic:lessEqualの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10107,8 +10205,8 @@ ${age &gt;= 30 ? "Over 30" : "Less than 30"}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.8." id="category_423"></a>
-<h3 class="title">6.1.5.8.logic:lessThan</h3>
+<a name="tubame_6.1.6.8." id="category_423"></a>
+<h3 class="title">6.1.6.8.Struts独自タグlogic:lessThanの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10117,8 +10215,8 @@ ${age &gt;= 30 ? "Over 30" : "Less than 30"}
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.9." id="category_424"></a>
-<h3 class="title">6.1.5.9.logic:match</h3>
+<a name="tubame_6.1.6.9." id="category_424"></a>
+<h3 class="title">6.1.6.9.Struts独自タグlogic:matchの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10127,7 +10225,7 @@ ${age &gt;= 30 ? "Over 30" : "Less than 30"}
 logic:matchと同等な機能を提供するタグは、JSTL Tagにて対応可能だが、JSP Tag及びSpringMVC Tagでは存在しない
 </p>
 <div class="table">
-<a name="N14E61"></a>
+<a name="N14EB3"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10245,8 +10343,8 @@ ${fn:endsWith(foo,"ABC") ? "Match!" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.10." id="category_425"></a>
-<h3 class="title">6.1.5.10.logic:messagesNotPresent</h3>
+<a name="tubame_6.1.6.10." id="category_425"></a>
+<h3 class="title">6.1.6.10.Struts独自タグlogic:messagesNotPresentの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10256,8 +10354,8 @@ ${fn:endsWith(foo,"ABC") ? "Match!" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.11." id="category_426"></a>
-<h3 class="title">6.1.5.11.logic:messagesPresent</h3>
+<a name="tubame_6.1.6.11." id="category_426"></a>
+<h3 class="title">6.1.6.11.Struts独自タグlogic:messagesPresentの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10266,7 +10364,7 @@ ${fn:endsWith(foo,"ABC") ? "Match!" : ""}&lt;p&gt;
 logic:messagesPresentと同等な機能を提供するタグは、JSTL Tagにて対応可能だが、JSP Tag及びSpringMVC Tagでは存在しない
 </p>
 <div class="table">
-<a name="N14F1C"></a>
+<a name="N14F6E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10335,8 +10433,8 @@ ${status.error ? "Error!!" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.12." id="category_427"></a>
-<h3 class="title">6.1.5.12.logic:notEmpty</h3>
+<a name="tubame_6.1.6.12." id="category_427"></a>
+<h3 class="title">6.1.6.12.Struts独自タグlogic:notEmptyの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10345,8 +10443,8 @@ ${status.error ? "Error!!" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.13." id="category_428"></a>
-<h3 class="title">6.1.5.13.logic:notEqual</h3>
+<a name="tubame_6.1.6.13." id="category_428"></a>
+<h3 class="title">6.1.6.13.Struts独自タグlogic:notEqualの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10355,8 +10453,8 @@ ${status.error ? "Error!!" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.14." id="category_429"></a>
-<h3 class="title">6.1.5.14.logic:notMatch</h3>
+<a name="tubame_6.1.6.14." id="category_429"></a>
+<h3 class="title">6.1.6.14.Struts独自タグlogic:notMatchの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10366,8 +10464,8 @@ ${status.error ? "Error!!" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.15." id="category_430"></a>
-<h3 class="title">6.1.5.15.logic:notPresent</h3>
+<a name="tubame_6.1.6.15." id="category_430"></a>
+<h3 class="title">6.1.6.15.Struts独自タグlogic:notPresentの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10377,8 +10475,8 @@ ${status.error ? "Error!!" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.16." id="category_431"></a>
-<h3 class="title">6.1.5.16.logic:present</h3>
+<a name="tubame_6.1.6.16." id="category_431"></a>
+<h3 class="title">6.1.6.16.Struts独自タグlogic:presentの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10387,7 +10485,7 @@ ${status.error ? "Error!!" : ""}&lt;p&gt;
 logic:presentと同等な機能を提供するタグは、JSTL Tagにて対応可能だが、JSP Tag及びSpringMVC Tagでは存在しない
 </p>
 <div class="table">
-<a name="N14FB8"></a>
+<a name="N1500A"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tag Sample</b>
 </p>
@@ -10445,8 +10543,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.5.17." id="category_432"></a>
-<h3 class="title">6.1.5.17.logic:redirect</h3>
+<a name="tubame_6.1.6.17." id="category_432"></a>
+<h3 class="title">6.1.6.17.Struts独自タグlogic:redirectの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10456,8 +10554,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6." id="category_433"></a>
-<h3 class="title">6.1.6.logic-leタグ</h3>
+<a name="tubame_6.1.7." id="category_433"></a>
+<h3 class="title">6.1.7.logic-leタグ</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10465,8 +10563,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.1." id="category_434"></a>
-<h3 class="title">6.1.6.1.logic-el:forward</h3>
+<a name="tubame_6.1.7.1." id="category_434"></a>
+<h3 class="title">6.1.7.1.Struts独自タグlogic-el:forwardの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10474,8 +10572,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.2." id="category_435"></a>
-<h3 class="title">6.1.6.2.logic-el:iterate</h3>
+<a name="tubame_6.1.7.2." id="category_435"></a>
+<h3 class="title">6.1.7.2.Struts独自タグlogic-el:iterateの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10483,8 +10581,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.3." id="category_436"></a>
-<h3 class="title">6.1.6.3.logic-el:match</h3>
+<a name="tubame_6.1.7.3." id="category_436"></a>
+<h3 class="title">6.1.7.3.Struts独自タグlogic-el:matchの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10492,8 +10590,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.4." id="category_437"></a>
-<h3 class="title">6.1.6.4.logic-el:messagesNotPresent</h3>
+<a name="tubame_6.1.7.4." id="category_437"></a>
+<h3 class="title">6.1.7.4.Struts独自タグlogic-el:messagesNotPresentの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10501,8 +10599,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.5." id="category_438"></a>
-<h3 class="title">6.1.6.5.logic-el:messagesPresent</h3>
+<a name="tubame_6.1.7.5." id="category_438"></a>
+<h3 class="title">6.1.7.5.Struts独自タグlogic-el:messagesPresentの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10510,8 +10608,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.6." id="category_439"></a>
-<h3 class="title">6.1.6.6.logic-el:notMatch</h3>
+<a name="tubame_6.1.7.6." id="category_439"></a>
+<h3 class="title">6.1.7.6.Struts独自タグlogic-el:notMatchの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10519,8 +10617,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.7." id="category_440"></a>
-<h3 class="title">6.1.6.7.logic-el:notPresent</h3>
+<a name="tubame_6.1.7.7." id="category_440"></a>
+<h3 class="title">6.1.7.7.Struts独自タグlogic-el:notPresentの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10528,8 +10626,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.8." id="category_441"></a>
-<h3 class="title">6.1.6.8.logic-el:present</h3>
+<a name="tubame_6.1.7.8." id="category_441"></a>
+<h3 class="title">6.1.7.8.Struts独自タグlogic-el:presentの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10537,8 +10635,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.6.9." id="category_442"></a>
-<h3 class="title">6.1.6.9.logic-el:redirect</h3>
+<a name="tubame_6.1.7.9." id="category_442"></a>
+<h3 class="title">6.1.7.9.Struts独自タグlogic-el:redirectの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10546,8 +10644,8 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 </div>
 <br>
 <br>
-<a name="tubame_6.1.7." id="category_443"></a>
-<h3 class="title">6.1.7.nestedタグ</h3>
+<a name="tubame_6.1.8." id="category_443"></a>
+<h3 class="title">6.1.8.Struts独自タグnestedタグの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10556,7 +10654,7 @@ ${foo1 != null ? "Present" : ""}&lt;p&gt;
 <br>
 <br>
 <a name="tubame_6.2." id="category_444"></a>
-<h3 class="title">6.2.入力値検証機能</h3>
+<h3 class="title">6.2.入力値検証機能の移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10594,7 +10692,7 @@ validatorを利用している場合はBean Validationを利用する。
 <li class="listitem">
 <p>Controllerクラス</p>
 <div class="figure">
-<a name="N150DD"></a>
+<a name="N1512F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Controllerクラス例</b>
 </p>
@@ -10632,7 +10730,7 @@ public class ExtraTest2 {
 <li class="listitem">
 <p>Bean</p>
 <div class="figure">
-<a name="N150EA"></a>
+<a name="N1513C"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Bean例</b>
 </p>
@@ -10662,7 +10760,7 @@ public class UserInfo {
 <li class="listitem">
 <p>JSPファイル（login.jsp）</p>
 <div class="figure">
-<a name="N150F7"></a>
+<a name="N15149"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSP例</b>
 </p>
@@ -10699,7 +10797,7 @@ Validationを利用する場合は、アノテーション単位でメッセー�
 メッセージリソースファイルは名前が「ValidationMessages」固定となっている。ファイルの配置は、設定ファイルで変更することが可能である（bean/property/list/valueタグ）。
 </p>
 <div class="figure">
-<a name="N15106"></a>
+<a name="N15158"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;例</b>
 </p>
@@ -10733,7 +10831,7 @@ Validationを利用する場合は、アノテーション単位でメッセー�
 
 </p>
 <div class="figure">
-<a name="N15116"></a>
+<a name="N15168"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;</b>
 </p>
@@ -10748,7 +10846,7 @@ NotEmpty = {0} is required
 特定のプロパティに制限する場合は、アノテーション名.プロパティ名で記述する。
 </p>
 <div class="figure">
-<a name="N1511F"></a>
+<a name="N15171"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;</b>
 </p>
@@ -10763,7 +10861,7 @@ NotEmpty.username = Username is required
 また、特定のフォームのプロパティに制限する場合は、アノテーション名.フォーム名.プロパティ名の形式で記述する。
 </p>
 <div class="figure">
-<a name="N15128"></a>
+<a name="N1517A"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;</b>
 </p>
@@ -10857,7 +10955,7 @@ public class UserInfoValidator implements Validator {
 <div class="section">
 <div class="titlepage"></div>
 <div class="table">
-<a name="N15154"></a>
+<a name="N151A6"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Validator</b>
 </p>
@@ -10939,7 +11037,7 @@ public class UserInfoValidator implements Validator {
 <br>
 <br>
 <a name="tubame_6.2.1.1." id="category_446"></a>
-<h3 class="title">6.2.1.1.Struts Validatorの設定</h3>
+<h3 class="title">6.2.1.1.Struts Validatorの設定移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10948,7 +11046,7 @@ public class UserInfoValidator implements Validator {
 <br>
 <br>
 <a name="tubame_6.2.1.2." id="category_447"></a>
-<h3 class="title">6.2.1.2.XDocletによるStruts Validatorの設定</h3>
+<h3 class="title">6.2.1.2.XDocletによるStruts Validatorの設定移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10958,7 +11056,7 @@ public class UserInfoValidator implements Validator {
 <br>
 <br>
 <a name="tubame_6.2.2." id="category_448"></a>
-<h3 class="title">6.2.2.クライアントサイドの入力値検証機能</h3>
+<h3 class="title">6.2.2.クライアントサイドの入力値検証機能移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10971,7 +11069,7 @@ public class UserInfoValidator implements Validator {
 <br>
 <br>
 <a name="tubame_6.3.1." id="category_450"></a>
-<h3 class="title">6.3.1.Struts-Tiles</h3>
+<h3 class="title">6.3.1.テンプレートエンジンStruts-Tilesの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -10986,7 +11084,7 @@ public class UserInfoValidator implements Validator {
 <br>
 <br>
 <a name="tubame_6.3.2." id="category_451"></a>
-<h3 class="title">6.3.2.Velocity</h3>
+<h3 class="title">6.3.2.テンプレートエンジンVelocityの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -11046,7 +11144,7 @@ public class UserInfoValidator implements Validator {
 <br>
 <br>
 <a name="tubame_6.3.3." id="category_452"></a>
-<h3 class="title">6.3.3.FreeMarker</h3>
+<h3 class="title">6.3.3.テンプレートエンジンFreeMarkerの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -11088,35 +11186,8 @@ public class UserInfoValidator implements Validator {
 </div>
 <br>
 <br>
-<a name="tubame_7.1.1." id="category_504"></a>
-<h3 class="title">7.1.1.設定ファイルの移行</h3>
-<br>
-<div class="section">
-<div class="titlepage"></div>
-<p>SpringMVCでは、web.xml、ApplicationContext.xml（web.xmlのcontext-paramで設定。アプリケーション全体の設定を記述する）、servlet-context.xml（web.xmlのDispatcherServletを定義したservletタグの子要素であるinit-paramタグで設定）などを使って設定を行う。
-</p>
-<p>web.xmlに設定ファイルを記載するのではなく、WebApplicationInitializeインタフェースを実装したクラスを作成し、コード中で設定ファイルを指定することも可能である
-
-</p>
-<div class="itemizedlist">
-<ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p>
-
-<span class="command"><strong><a class="command" href="http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html" target="_top">http://docs.spring.io/spring/docs/4.0.x/javadoc-api/org/springframework/web/WebApplicationInitializer.html</a></strong></span>
-
-</p>
-</li>
-</ul>
-</div>
-<p>
-
-</p>
-</div>
-<br>
-<br>
-<a name="tubame_7.1.2." id="category_505"></a>
-<h3 class="title">7.1.2.DynaActionForm/Lazy ActionForm</h3>
+<a name="tubame_7.1.1." id="category_505"></a>
+<h3 class="title">7.1.1.DynaActionForm/Lazy ActionFormの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -11125,8 +11196,8 @@ public class UserInfoValidator implements Validator {
 </div>
 <br>
 <br>
-<a name="tubame_7.1.3." id="category_506"></a>
-<h3 class="title">7.1.3.Commandの移行</h3>
+<a name="tubame_7.1.2." id="category_506"></a>
+<h3 class="title">7.1.2.Commandの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -11135,7 +11206,7 @@ public class UserInfoValidator implements Validator {
 <p>下記表に、Struts1のCommandとSpringMVCのInterceptorの比較を示す。</p>
 <p></p>
 <div class="table">
-<a name="N155D0"></a>
+<a name="N15612"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Validator</b>
 </p>
@@ -11215,7 +11286,7 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
 </div>
 <br class="table-break">
 <div class="figure">
-<a name="N1563C"></a>
+<a name="N1567E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;CommandとInterceptor（SpringMVC）の実行イメージ</b>
 </p>
@@ -11228,13 +11299,79 @@ http://docs.spring.io/spring/docs/4.0.x/spring-framework-reference/html/mvc.html
 </div>
 <br>
 <br>
-<a name="tubame_7.1.4." id="category_507"></a>
-<h3 class="title">7.1.4.プラグインの移行</h3>
+<a name="tubame_7.1.3." id="category_507"></a>
+<h3 class="title">7.1.3.プラグインの移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
 <p>Struts1のプラグインのうち、初期化に関してはorg.sprintframework.web.servlet.DispatcherServletのサブクラスを作成し、initFrameworkServlet ()に実装することで対応する。</p>
 <p>destroy()に関してはinit()のようなメソッド呼び出しは存在しないが、destroy()メソッドはfinal宣言されていないため、オーバーライドは可能となっている（init()メソッドはfinal宣言されている）。</p>
+</div>
+<br>
+<br>
+<a name="tubame_7.1.4." id="category_678"></a>
+<h3 class="title">7.1.4.Strutsのセッション IDの払い出し</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			RequestProcessor#processLocale にて引数なしのHttpServletRequest#getSession()
+			が呼ばれるため、
+			Action クラスが呼び出される前にセッション ID が払い出される。このため、アクション内で以下のような実装な場合がある場合、
+
+			</p>
+<div class="figure">
+<a name="N167A2"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;Actionクラス</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+public class SessionAction extends Action {
+ 
+  @Override
+  public ActionForward execute(ActionMapping mapping, ActionForm form,
+                               HttpServletRequest request, HttpServletResponse response) {
+ 
+    HttpSession session = request.getSession(false);
+    String sessionId = session.getId();
+    request.setAttribute("sessionId", sessionId);
+    System.out.println(sessionId);
+ 
+    return mapping.findForward("session");
+  }
+}
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+			すでにStrutsの実装でセッションが払い出せれているため、最初のリクエストでも、nullを返さず、セッションを取得する。
+			SpringMVCの実装では、通常セッションは払い出されないため、nullを返す。
+			通常はログインが成功したタイミングでセッションIDを払い出すが、Strutsでは最初にアクセスした場合に、セッションIDが払い出されるため、
+			現行アプリケーションが意図しないセッションのライフサイクルになっている場合、セッションのライフサイクルが正しくなるように
+			修正を行う必要がある。
+			
+			</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>移行後の環境でHttpServletRequest#getSession(false)でnullを返すことが許容できない場合は、HttpServletRequest#getSession(true)で、セッションIDが払い出されていない場合でもSessionを取得することは可能である
+			
+			</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+		
+</p>
 </div>
 <br>
 <br>
@@ -11497,7 +11634,7 @@ Locale locale)
 
 </p>
 <div class="table">
-<a name="N15D81"></a>
+<a name="N15DC4"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Validator比較</b>
 </p>
@@ -11582,7 +11719,7 @@ Locale locale)
 
 </p>
 <div class="table">
-<a name="N15E05"></a>
+<a name="N15E48"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts1.xとSpringMVCのクラス対応表</b>
 </p>
@@ -11734,7 +11871,7 @@ Locale locale)
 
 </p>
 <div class="figure">
-<a name="N15E9A"></a>
+<a name="N15EDD"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Action</b>
 </p>
@@ -11771,7 +11908,7 @@ public ActionForward execute(ActionMapping mapping, ActionForm form,
 
 </p>
 <div class="figure">
-<a name="N15EA7"></a>
+<a name="N15EEA"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;ResponseEntityを利用したController</b>
 </p>
@@ -11809,7 +11946,7 @@ public ResponseEntity&lt;String&gt; download() throws IOException {
 
 </p>
 <div class="figure">
-<a name="N15EBE"></a>
+<a name="N15F01"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;roles属性設定</b>
 </p>
@@ -11826,7 +11963,7 @@ public ResponseEntity&lt;String&gt; download() throws IOException {
 <p>SpringMVCでは、UserRoleAuthorizationInterceptorを用いてユーザロールの確認を行う。以下に、設定例を示す。
 </p>
 <div class="figure">
-<a name="N15ECB"></a>
+<a name="N15F0E"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;roles属性設定</b>
 </p>
@@ -11885,7 +12022,7 @@ struts1のhtml:optionsを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15F95"></a>
+<a name="N15FD8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;html:optionsを利用したjsp</b>
 </p>
@@ -11927,7 +12064,7 @@ struts1のhtml:optionsを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15FA0"></a>
+<a name="N15FE3"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;html:optionsを利用したjspで生成されるhtml</b>
 </p>
@@ -11987,7 +12124,7 @@ struts1のhtml:optionsを利用したサンプル
 <td valign="top" align="left">
 <p>上記jspでは以下のactionクラスを利用</p>
 <div class="figure">
-<a name="N15FAE"></a>
+<a name="N15FF1"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Action</b>
 </p>
@@ -12075,7 +12212,7 @@ SpringMVCのタグを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15FBB"></a>
+<a name="N15FFE"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;springMVCのタグを利用したjsp</b>
 </p>
@@ -12123,7 +12260,7 @@ SpringMVCのタグを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15FC6"></a>
+<a name="N16009"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;springMVCのタグを利用したjspで生成されるhtml</b>
 </p>
@@ -12184,7 +12321,7 @@ SpringMVCのタグを利用したサンプル
 <td valign="top" align="left">
 <p>上記jspでは以下のControllerクラスを利用</p>
 <div class="figure">
-<a name="N15FD4"></a>
+<a name="N16017"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;Controller</b>
 </p>
@@ -12313,7 +12450,7 @@ SpringMVCのタグを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N15FFF"></a>
+<a name="N16042"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ActionForm</b>
 </p>
@@ -12373,7 +12510,7 @@ public class MultiBoxTest extends ActionForm {
 
 </p>
 <div class="figure">
-<a name="N1600A"></a>
+<a name="N1604D"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Action</b>
 </p>
@@ -12412,7 +12549,7 @@ public class MultiBoxTest extends ActionForm {
 struts1のhtml:multiboxを利用したサンプル
 </p>
 <div class="figure">
-<a name="N16022"></a>
+<a name="N16065"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12432,7 +12569,7 @@ struts1のhtml:multiboxを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N1602D"></a>
+<a name="N16070"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12463,7 +12600,7 @@ struts1のhtml:multiboxを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N16044"></a>
+<a name="N16087"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12483,7 +12620,7 @@ struts1のhtml:multiboxを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N1604F"></a>
+<a name="N16092"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12514,7 +12651,7 @@ struts1のhtml:multiboxを利用したサンプル
 struts1のhtml:checkboxを利用したon/off用チェックボックスサンプル
 </p>
 <div class="figure">
-<a name="N16066"></a>
+<a name="N160A9"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12533,7 +12670,7 @@ struts1のhtml:checkboxを利用したon/off用チェックボックスサンプ
 
 </p>
 <div class="figure">
-<a name="N16071"></a>
+<a name="N160B4"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12563,7 +12700,7 @@ struts1のhtml:checkboxを利用したon/off用チェックボックスサンプ
 struts1のhtml:checkboxを利用したon/off用チェックボックスサンプル(複数表示)
 </p>
 <div class="figure">
-<a name="N16088"></a>
+<a name="N160CB"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12583,7 +12720,7 @@ struts1のhtml:checkboxを利用したon/off用チェックボックスサンプ
 
 </p>
 <div class="figure">
-<a name="N16093"></a>
+<a name="N160D6"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12614,7 +12751,7 @@ struts1のhtml:checkboxを利用したon/off用チェックボックスサンプ
 struts1のhtml:checkboxでListデータを利用したサンプル
 </p>
 <div class="figure">
-<a name="N160AA"></a>
+<a name="N160ED"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12640,7 +12777,7 @@ JSP(チェックされた値を表示）
 
 </p>
 <div class="figure">
-<a name="N160B5"></a>
+<a name="N160F8"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12706,7 +12843,7 @@ JSP(チェックされた値を表示）
 
 </p>
 <div class="figure">
-<a name="N160DD"></a>
+<a name="N16120"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Bean</b>
 </p>
@@ -12759,7 +12896,7 @@ public class MultiBoxTest {
 
 </p>
 <div class="figure">
-<a name="N160E8"></a>
+<a name="N1612B"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Controller</b>
 </p>
@@ -12821,7 +12958,7 @@ public class ExtraTest14 {
 SpringMVCのform:checkboxを利用したサンプル
 </p>
 <div class="figure">
-<a name="N16100"></a>
+<a name="N16143"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12846,7 +12983,7 @@ SpringMVCのform:checkboxを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N1610B"></a>
+<a name="N1614E"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12877,7 +13014,7 @@ SpringMVCのform:checkboxを利用したサンプル
 SpringMVCのform:checkboxを利用したon/off用チェックボックスサンプル
 </p>
 <div class="figure">
-<a name="N16122"></a>
+<a name="N16165"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12896,7 +13033,7 @@ SpringMVCのform:checkboxを利用したon/off用チェックボックスサン�
 
 </p>
 <div class="figure">
-<a name="N1612D"></a>
+<a name="N16170"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12929,7 +13066,7 @@ SpringMVCのform:checkboxを利用したon/off用チェックボックスサン�
 SpringMVCのform:checkboxを利用したon/off用チェックボックスサンプル(複数表示)
 </p>
 <div class="figure">
-<a name="N16144"></a>
+<a name="N16187"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -12953,7 +13090,7 @@ SpringMVCのform:checkboxを利用したon/off用チェックボックスサン�
 
 </p>
 <div class="figure">
-<a name="N1614F"></a>
+<a name="N16192"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -12984,7 +13121,7 @@ SpringMVCのform:checkboxを利用したon/off用チェックボックスサン�
 SpringMVCのform:checkboxでListデータを利用したサンプル
 </p>
 <div class="figure">
-<a name="N16166"></a>
+<a name="N161A9"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jsp</b>
 </p>
@@ -13006,7 +13143,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N16171"></a>
+<a name="N161B4"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13071,7 +13208,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N1619F"></a>
+<a name="N161E2"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンのラベル、値を定義しない場合）</b>
 </p>
@@ -13088,7 +13225,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N161AA"></a>
+<a name="N161ED"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPで生成されたHTML</b>
 </p>
@@ -13115,7 +13252,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N161C1"></a>
+<a name="N16204"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンの値を定義する場合-ListにBeanを格納)</b>
 </p>
@@ -13133,7 +13270,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 
 </p>
 <div class="figure">
-<a name="N161CC"></a>
+<a name="N1620F"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13158,7 +13295,7 @@ SpringMVCのform:checkboxでListデータを利用したサンプル
 <td valign="top" align="left">
 <p>上記で利用するBeanとAction</p>
 <div class="figure">
-<a name="N161DA"></a>
+<a name="N1621D"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Bean</b>
 </p>
@@ -13184,7 +13321,7 @@ public class RadioValue {
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N161E4"></a>
+<a name="N16227"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;Action</b>
 </p>
@@ -13218,7 +13355,7 @@ public class RadioValue {
 
 </p>
 <div class="figure">
-<a name="N161FB"></a>
+<a name="N1623E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンの値を定義する場合-Mapに格納)</b>
 </p>
@@ -13235,7 +13372,7 @@ request.setAttribute("RadioValue", radioValues);
 
 </p>
 <div class="figure">
-<a name="N16206"></a>
+<a name="N16249"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13260,7 +13397,7 @@ request.setAttribute("RadioValue", radioValues);
 <td valign="top" align="left">
 <p>上記で利用するAction</p>
 <div class="figure">
-<a name="N16214"></a>
+<a name="N16257"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Action</b>
 </p>
@@ -13323,7 +13460,7 @@ request.setAttribute("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N16242"></a>
+<a name="N16285"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンのラベル、値を定義しない場合）</b>
 </p>
@@ -13340,7 +13477,7 @@ request.setAttribute("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N1624D"></a>
+<a name="N16290"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPで生成されたHTML</b>
 </p>
@@ -13367,7 +13504,7 @@ request.setAttribute("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N16264"></a>
+<a name="N162A7"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンの値を定義する場合-ListにBeanを格納)</b>
 </p>
@@ -13401,7 +13538,7 @@ JSP例
 
 </p>
 <div class="figure">
-<a name="N1626F"></a>
+<a name="N162B2"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13426,7 +13563,7 @@ JSP例
 <td valign="top" align="left">
 <p>上記で利用するBeanとController</p>
 <div class="figure">
-<a name="N1627D"></a>
+<a name="N162C0"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Bean</b>
 </p>
@@ -13452,7 +13589,7 @@ public class RadioValue {
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N16287"></a>
+<a name="N162CA"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;Controller</b>
 </p>
@@ -13485,7 +13622,7 @@ public class RadioValue {
 
 </p>
 <div class="figure">
-<a name="N1629E"></a>
+<a name="N162E1"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル(ActionでRadioボタンの値を定義する場合-Mapに格納)</b>
 </p>
@@ -13506,7 +13643,7 @@ public class RadioValue {
 
 </p>
 <div class="figure">
-<a name="N162A9"></a>
+<a name="N162EC"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jspで生成されるhtml</b>
 </p>
@@ -13531,7 +13668,7 @@ public class RadioValue {
 <td valign="top" align="left">
 <p>上記で利用するController</p>
 <div class="figure">
-<a name="N162B7"></a>
+<a name="N162FA"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Controller</b>
 </p>
@@ -13615,7 +13752,7 @@ mav.addObject("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N162F1"></a>
+<a name="N16334"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-Action#saveMessagesで保存したメッセージを表示する場合</b>
 </p>
@@ -13636,7 +13773,7 @@ mav.addObject("MapValue", valueMap);
 
 </p>
 <div class="figure">
-<a name="N162FC"></a>
+<a name="N1633F"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13665,7 +13802,7 @@ super.saveMessages(request, messages1);
 
 </p>
 <div class="figure">
-<a name="N16313"></a>
+<a name="N16356"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-OverrideしたsaveMessagesで保存したメッセージを表示する場合（リクエスト属性のキーを変更したい場合）</b>
 </p>
@@ -13686,7 +13823,7 @@ super.saveMessages(request, messages1);
 
 </p>
 <div class="figure">
-<a name="N1631E"></a>
+<a name="N16361"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13729,7 +13866,7 @@ protected void saveMessages(HttpServletRequest request, ActionMessages messages)
 
 </p>
 <div class="figure">
-<a name="N16335"></a>
+<a name="N16378"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-Action#saveErrorsで保存したメッセージを表示する場合</b>
 </p>
@@ -13750,7 +13887,7 @@ protected void saveMessages(HttpServletRequest request, ActionMessages messages)
 
 </p>
 <div class="figure">
-<a name="N16340"></a>
+<a name="N16383"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13792,7 +13929,7 @@ protected void saveErrors(HttpServletRequest request, ActionMessages errors) {
 
 </p>
 <div class="figure">
-<a name="N16357"></a>
+<a name="N1639A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-OverrideしたsaveErrorsで保存したメッセージを表示する場合（リクエスト属性のキーを変更したい場合）</b>
 </p>
@@ -13810,7 +13947,7 @@ protected void saveErrors(HttpServletRequest request, ActionMessages errors) {
 
 </p>
 <div class="figure">
-<a name="N16362"></a>
+<a name="N163A5"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13838,7 +13975,7 @@ protected void saveErrors(HttpServletRequest request, ActionMessages errors) {
 
 </p>
 <div class="figure">
-<a name="N16379"></a>
+<a name="N163BC"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-Action#saveMessagesで保存したメッセージキーに対応するメッセージを表示する</b>
 </p>
@@ -13857,7 +13994,7 @@ super.addMessages(request, messages5);
 
 </p>
 <div class="figure">
-<a name="N16384"></a>
+<a name="N163C7"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13887,7 +14024,7 @@ super.addMessages(request, messages7);
 
 </p>
 <div class="figure">
-<a name="N1639B"></a>
+<a name="N163DE"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-メッセージの存在チェック</b>
 </p>
@@ -13924,7 +14061,7 @@ super.addMessages(request, messages7);
 
 </p>
 <div class="figure">
-<a name="N163B2"></a>
+<a name="N163F5"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-struts-validator使用時にメッセージを出力する</b>
 </p>
@@ -13953,7 +14090,7 @@ ValidateActionForm#executeの実行時に呼び出され、ActionErrorsが存在
 
 </p>
 <div class="figure">
-<a name="N163BD"></a>
+<a name="N16400"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -13984,7 +14121,7 @@ public class UserInfo extends ValidatorForm {
 
 </p>
 <div class="figure">
-<a name="N163C8"></a>
+<a name="N1640B"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;設定ファイル</b>
 </p>
@@ -14061,7 +14198,7 @@ public class UserInfo extends ValidatorForm {
 
 </p>
 <div class="figure">
-<a name="N163FF"></a>
+<a name="N16442"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-リクエストスコープにメッセージを格納（その１）</b>
 </p>
@@ -14077,7 +14214,7 @@ ${key1}
 
 </p>
 <div class="figure">
-<a name="N1640A"></a>
+<a name="N1644D"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14104,7 +14241,7 @@ public ModelAndView  setup(WebRequest request) {
 
 </p>
 <div class="figure">
-<a name="N16421"></a>
+<a name="N16464"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-リクエストスコープにメッセージを格納（その２）</b>
 </p>
@@ -14121,7 +14258,7 @@ mav.addObject("key2", "メッセージ2");
 
 </p>
 <div class="figure">
-<a name="N1642C"></a>
+<a name="N1646F"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14147,7 +14284,7 @@ ${key2}
 
 </p>
 <div class="figure">
-<a name="N16443"></a>
+<a name="N16486"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-リクエストスコープに保存されたメッセージキーに対応するメッセージを表示する場合</b>
 </p>
@@ -14163,7 +14300,7 @@ ${key2}
 
 </p>
 <div class="figure">
-<a name="N1644E"></a>
+<a name="N16491"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14189,7 +14326,7 @@ request.setAttribute("key4", "global.message", WebRequest.SCOPE_REQUEST);
 
 </p>
 <div class="figure">
-<a name="N16465"></a>
+<a name="N164A8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-リクエストスコープに保存されたメッセージキーが引数を取る場合</b>
 </p>
@@ -14205,7 +14342,7 @@ request.setAttribute("key4", "global.message", WebRequest.SCOPE_REQUEST);
 
 </p>
 <div class="figure">
-<a name="N16470"></a>
+<a name="N164B3"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14233,7 +14370,7 @@ request.setAttribute("args", Arrays.stream(args).collect(Collectors.joining(",")
 
 </p>
 <div class="figure">
-<a name="N16487"></a>
+<a name="N164CA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPサンプル-メッセージの存在チェック</b>
 </p>
@@ -14281,7 +14418,7 @@ Struts1において、Validationエラーメッセージの存在有無チェッ
 
 </p>
 <div class="figure">
-<a name="N1649E"></a>
+<a name="N164E1"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Bean Validation使用時にメッセージを出力する</b>
 </p>
@@ -14305,7 +14442,7 @@ Struts1において、Validationエラーメッセージの存在有無チェッ
 
 </p>
 <div class="figure">
-<a name="N164A9"></a>
+<a name="N164EC"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Java</b>
 </p>
@@ -14336,7 +14473,7 @@ public class UserInfo {
 
 </p>
 <div class="figure">
-<a name="N164B4"></a>
+<a name="N164F7"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;設定ファイル</b>
 </p>
@@ -14374,7 +14511,7 @@ public class UserInfo {
 
 </p>
 <div class="figure">
-<a name="N164CB"></a>
+<a name="N1650E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Actionクラス</b>
 </p>
@@ -14406,7 +14543,7 @@ public class ExtraTest1 extends DownloadAction {
 
 </p>
 <div class="figure">
-<a name="N164D6"></a>
+<a name="N16519"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JSPファイル（test1.jsp）</b>
 </p>
@@ -14431,7 +14568,7 @@ public class ExtraTest1 extends DownloadAction {
 
 </p>
 <div class="figure">
-<a name="N164E1"></a>
+<a name="N16524"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;struts-config.xml</b>
 </p>
@@ -14455,74 +14592,8 @@ public class ExtraTest1 extends DownloadAction {
 </div>
 <br>
 <br>
-<a name="tubame_8.9." id="category_676"></a>
-<h3 class="title">8.9.Struts1のセッション IDの払い出し</h3>
-<br>
-<div class="section">
-<div class="titlepage"></div>
-<p>
-			RequestProcessor#processLocale にて引数なしのHttpServletRequest#getSession()
-			が呼ばれるため、
-			Action クラスが呼び出される前にセッション ID が払い出される。このため、アクション内で以下のような実装な場合がある場合、
-
-			</p>
-<div class="figure">
-<a name="N16748"></a>
-<p class="title">
-<b>Figure&nbsp;1.&nbsp;Actionクラス</b>
-</p>
-<div class="figure-contents">
-<pre class="programlisting">
-					
-public class SessionAction extends Action {
- 
-  @Override
-  public ActionForward execute(ActionMapping mapping, ActionForm form,
-                               HttpServletRequest request, HttpServletResponse response) {
- 
-    HttpSession session = request.getSession(false);
-    String sessionId = session.getId();
-    request.setAttribute("sessionId", sessionId);
-    System.out.println(sessionId);
- 
-    return mapping.findForward("session");
-  }
-}
-				</pre>
-</div>
-</div>
-<p>
-<br class="figure-break">
-			すでにStrutsの実装でセッションが払い出せれているため、最初のリクエストでも、nullを返さず、セッションを取得する。
-			SpringMVCの実装では、通常セッションは払い出されないため、nullを返す。
-			通常はログインが成功したタイミングでセッションIDを払い出すが、Strutsでは最初にアクセスした場合に、セッションIDが払い出されるため、
-			現行アプリケーションが意図しないセッションのライフサイクルになっている場合、セッションのライフサイクルが正しくなるように
-			修正を行う必要がある。
-			
-			</p>
-<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
-<table border="0" summary="Note">
-<tr>
-<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
-</tr>
-<tr>
-<td valign="top" align="left">
-<p>移行後の環境でHttpServletRequest#getSession(false)でnullを返すことが許容できない場合は、HttpServletRequest#getSession(true)で、セッションIDが払い出されていない場合でもSessionを取得することは可能である
-			
-			</p>
-</td>
-</tr>
-</table>
-</div>
-<p>
-
-		
-</p>
-</div>
-<br>
-<br>
-<a name="tubame_8.10." id="category_671"></a>
-<h3 class="title">8.10.フレームワーク比較【参考】</h3>
+<a name="tubame_8.9." id="category_671"></a>
+<h3 class="title">8.9.フレームワーク比較【参考】</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -14530,7 +14601,7 @@ public class SessionAction extends Action {
 <a name="frameworkList"></a>Struts 1の代替フレームワークとして、OSS製品のフレームワークを挙げ比較を行い、代替として適切と思われるフレームワークを選択する。
 </p>
 <div class="table">
-<a name="N1659C"></a>
+<a name="N165DF"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Struts 1の代替フレームワーク比較</b>
 </p>
