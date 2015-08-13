@@ -1,13 +1,12 @@
 <HTML xmlns:knowhow="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:doc="http://docbook.org/ns/docbook">
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Tomcat7.0.xから8.0.xへのマイグレーションガイド</title>
+<title>TomcatMigration_Tomcat7.0_To_Tomcat8.0</title>
 <link href="css/knowhow.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="js/prettify.js"></script>
 <meta content="DocBook XSL Stylesheets V1.78.1" name="generator">
 </HEAD>
 <BODY>
-<H1 class="title">Tomcat7.0.xから8.0.xへのマイグレーションガイド</H1>
+<H1 class="title">TomcatMigration_Tomcat7.0_To_Tomcat8.0</H1>
 <div class="toc">
 <p>
 <b>Index</b>
@@ -209,12 +208,12 @@
 <a name="tubame_1."></a>
 <h2 class="title">1.はじめに</h2>
 <br>
-<a name="tubame_1.1." id="category_22"></a>
+<a name="tubame_1.1." id="category_1"></a>
 <h3 class="title">1.1.本ドキュメントについて</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>本マイグレーションガイドはTomcat間（7.0-8.0）のマイグレーション時に注意すべき項目について整理したものである。</p>
+<p>本マイグレーションガイドはTomcat間（7.0.x -&gt; 8.0.x）のマイグレーション時に注意すべき項目について整理したものである。</p>
 <p>本内容はTomcatコミュニティのMigration Guideの情報を参考に作成している。</p>
 <p>
             
@@ -226,19 +225,28 @@
 <span class="command"><strong><a class="command" href="http://tomcat.apache.org/migration-8.html" target="_top">http://tomcat.apache.org/migration-8.html</a></strong></span>
         
 </p>
+<p>コミュニティのMigration Guide はマイナーバージョンアップ時やバグ修正時に適宜更新されているため、最新情報はコミュニティページを参照のこと。</p>
 </div>
 <br>
 <br>
-<a name="tubame_1.1.1." id="category_24"></a>
+<a name="tubame_1.1.1." id="category_2"></a>
 <h3 class="title">1.1.1.Javaバージョンについて</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>Apache Tomcatのあるメジャーバージョンから新しいバージョンのものへアップデートをするとき、システムにインストールされているJVMが必要なJavaバージョンをサポートしていることを確認する必要がある。</p>
+<p>Apache
+			Tomcatのあるメジャーバージョンから新しいバージョンのものへアップデートをするとき、システムにインストールされているJVMが必要なJavaバージョンをサポートしていることを確認する必要がある。
+		</p>
+<p>サポートするJavaバージョンは以下で確認できる。</p>
+<p>
+			
+<span class="command"><strong><a class="command" href="http://tomcat.apache.org/whichversion.html" target="_top">http://tomcat.apache.org/whichversion.html</a></strong></span>
+		
+</p>
 </div>
 <br>
 <br>
-<a name="tubame_1.1.2." id="category_25"></a>
+<a name="tubame_1.1.2." id="category_3"></a>
 <h3 class="title">1.1.2.設定ファイルについて</h3>
 <br>
 <div class="section">
@@ -257,7 +265,7 @@
 <a name="tubame_2."></a>
 <h2 class="title">2.Java7</h2>
 <br>
-<a name="tubame_2.1." id="category_1"></a>
+<a name="tubame_2.1." id="category_4"></a>
 <h3 class="title">2.1.Java7必須</h3>
 <br>
 <div class="section">
@@ -270,7 +278,7 @@
 <a name="tubame_3."></a>
 <h2 class="title">3.Java API</h2>
 <br>
-<a name="tubame_3.1." id="category_2"></a>
+<a name="tubame_3.1." id="category_5"></a>
 <h3 class="title">3.1.非推奨API</h3>
 <br>
 <div class="section">
@@ -285,7 +293,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_3.1.1." id="category_3"></a>
+<a name="tubame_3.1.1." id="category_6"></a>
 <h3 class="title">3.1.1.Servlet非推奨API</h3>
 <br>
 <div class="section">
@@ -299,7 +307,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_3.1.2." id="category_4"></a>
+<a name="tubame_3.1.2." id="category_7"></a>
 <h3 class="title">3.1.2.JSP非推奨API</h3>
 <br>
 <div class="section">
@@ -313,7 +321,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_3.1.3." id="category_5"></a>
+<a name="tubame_3.1.3." id="category_8"></a>
 <h3 class="title">3.1.3.EL非推奨API</h3>
 <br>
 <div class="section">
@@ -327,7 +335,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_3.1.4." id="category_6"></a>
+<a name="tubame_3.1.4." id="category_9"></a>
 <h3 class="title">3.1.4.Servlet、JSP以外の非推奨API</h3>
 <br>
 <div class="section">
@@ -341,7 +349,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_3.2." id="category_7"></a>
+<a name="tubame_3.2." id="category_10"></a>
 <h3 class="title">3.2.Servlet 3.1 API</h3>
 <br>
 <div class="section">
@@ -363,7 +371,7 @@
 <a name="tubame_4."></a>
 <h2 class="title">4.設定項目の変更</h2>
 <br>
-<a name="tubame_4.1." id="category_8"></a>
+<a name="tubame_4.1." id="category_11"></a>
 <h3 class="title">4.1.デフォルトコネクタ</h3>
 <br>
 <div class="section">
@@ -383,7 +391,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.2." id="category_9"></a>
+<a name="tubame_4.2." id="category_12"></a>
 <h3 class="title">4.2.Web Application Resources</h3>
 <br>
 <div class="section">
@@ -392,7 +400,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.2.1." id="category_10"></a>
+<a name="tubame_4.2.1." id="category_13"></a>
 <h3 class="title">4.2.1.Context要素の属性</h3>
 <br>
 <div class="section">
@@ -430,7 +438,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.2.2." id="category_11"></a>
+<a name="tubame_4.2.2." id="category_14"></a>
 <h3 class="title">4.2.2.Resoucesの指定方法変更</h3>
 <br>
 <div class="section">
@@ -449,26 +457,26 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.3." id="category_12"></a>
+<a name="tubame_4.3." id="category_15"></a>
 <h3 class="title">4.3.DBCPバージョンアップ</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>DBCPが2.0にバージョンアップした。</p>
+<p>DBCPが2.xにバージョンアップした。</p>
 </div>
 <br>
 <br>
-<a name="tubame_4.3.1." id="category_13"></a>
+<a name="tubame_4.3.1." id="category_16"></a>
 <h3 class="title">4.3.1.JDBCドライバのバージョン</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>JDBCドライバはバージョン4.1に対応したものが必須となる。</p>
-<p>古いバージョンを利用している場合はアップデートを行う必要がある。</p>
+<p>DBCP2.0 はJDBC4.1 をサポートしている。</p>
+<p>DBCP2.0 では互換性を持っているため、JDBCの下位バージョンのドライバでも問題なく動作するはずではあるが、一部JDBC4.1 用のインタフェースを持っているため、JDBCドライバのアップデートを検討すること。</p>
 </div>
 <br>
 <br>
-<a name="tubame_4.3.2." id="category_14"></a>
+<a name="tubame_4.3.2." id="category_17"></a>
 <h3 class="title">4.3.2.設定項目の変更</h3>
 <br>
 <div class="section">
@@ -477,17 +485,20 @@
 <div class="itemizedlist">
 <ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p>maxWaitはmaxWaitMillisに変更</p>
+<p>maxWait はmaxWaitMillis に変更</p>
 </li>
 <li class="listitem">
-<p>maxActiveはmaxTotalに変更</p>
+<p>maxActive はmaxTotal に変更</p>
+</li>
+<li class="listitem">
+<p>removeAbandoned はremoveAbandonedOnBorrow およびremoveAbandonedOnMaintenance に変更</p>
 </li>
 </ul>
 </div>
 </div>
 <br>
 <br>
-<a name="tubame_4.3.3." id="category_15"></a>
+<a name="tubame_4.3.3." id="category_18"></a>
 <h3 class="title">4.3.3.JDBCドライバ配置場所</h3>
 <br>
 <div class="section">
@@ -496,7 +507,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.3.4." id="category_16"></a>
+<a name="tubame_4.3.4." id="category_19"></a>
 <h3 class="title">4.3.4.Validation方式の変更</h3>
 <br>
 <div class="section">
@@ -506,11 +517,11 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.4." id="category_17"></a>
+<a name="tubame_4.4." id="category_20"></a>
 <h3 class="title">4.4.クラスタリング</h3>
 <br>
 <br>
-<a name="tubame_4.4.1." id="category_18"></a>
+<a name="tubame_4.4.1." id="category_21"></a>
 <h3 class="title">4.4.1.セッションID変更</h3>
 <br>
 <div class="section">
@@ -520,7 +531,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.4.2." id="category_19"></a>
+<a name="tubame_4.4.2." id="category_22"></a>
 <h3 class="title">4.4.2.SessionIdGeneratorの追加</h3>
 <br>
 <div class="section">
@@ -531,7 +542,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.5." id="category_23"></a>
+<a name="tubame_4.5." id="category_25"></a>
 <h3 class="title">4.5.CredentialHandlerの追加</h3>
 <br>
 <div class="section">
@@ -548,7 +559,7 @@
 <a name="tubame_5."></a>
 <h2 class="title">5.その他</h2>
 <br>
-<a name="tubame_5.1." id="category_20"></a>
+<a name="tubame_5.1." id="category_23"></a>
 <h3 class="title">5.1.Debug用ポート</h3>
 <br>
 <div class="section">
@@ -558,7 +569,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_5.2." id="category_21"></a>
+<a name="tubame_5.2." id="category_24"></a>
 <h3 class="title">5.2.内部APIの変更</h3>
 <br>
 <div class="section">
