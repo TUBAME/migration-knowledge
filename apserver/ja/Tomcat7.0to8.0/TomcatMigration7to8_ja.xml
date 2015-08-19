@@ -77,6 +77,12 @@
         <EntryCategory>
             <EntryCategoryRefKey>category_25</EntryCategoryRefKey>
         </EntryCategory>
+        <EntryCategory>
+            <EntryCategoryRefKey>category_27</EntryCategoryRefKey>
+        </EntryCategory>
+        <EntryCategory>
+            <EntryCategoryRefKey>category_28</EntryCategoryRefKey>
+        </EntryCategory>
     </EntryViewList>
     <ChapterList>
         <Chapter>
@@ -129,6 +135,10 @@
             <ChildChapter>
                 <ChildCapterNo>3.2.</ChildCapterNo>
                 <ChapterCategoryRefKey>category_10</ChapterCategoryRefKey>
+            </ChildChapter>
+            <ChildChapter>
+                <ChildCapterNo>3.3.</ChildCapterNo>
+                <ChapterCategoryRefKey>category_27</ChapterCategoryRefKey>
             </ChildChapter>
         </Chapter>
         <Chapter>
@@ -197,6 +207,10 @@
             <ChildChapter>
                 <ChildCapterNo>5.2.</ChildCapterNo>
                 <ChapterCategoryRefKey>category_24</ChapterCategoryRefKey>
+            </ChildChapter>
+            <ChildChapter>
+                <ChildCapterNo>5.3.</ChildCapterNo>
+                <ChapterCategoryRefKey>category_28</ChapterCategoryRefKey>
             </ChildChapter>
         </Chapter>
     </ChapterList>
@@ -299,6 +313,14 @@
         <Category categoryId="category_25" appropriate="true">
             <CategoryName>CredentialHandlerの追加</CategoryName>
             <KnowhowRefKey>knowhow_24</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_27" appropriate="true">
+            <CategoryName>JavaServer Pages 2.3</CategoryName>
+            <KnowhowRefKey>knowhow_25</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_28" appropriate="true">
+            <CategoryName>Deployment</CategoryName>
+            <KnowhowRefKey>knowhow_26</KnowhowRefKey>
         </Category>
     </CategoryList>
     <KnowhowList>
@@ -3608,6 +3630,48 @@
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_25" knowhowDetailRefKey="knowhowDetail_25">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>JavaServer Pages 2.3</KnowhowName>
+            <CheckItem checkItemId="checkItem_322" searchRefKey="searchInfo_322" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>check EL undefined scope</CheckItemName>
+                <SearchProcess>EL式で明示的にスコープを指定していない箇所を検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
+                <PortabilityDegree>Middle</PortabilityDegree>
+                <DegreeDetail>中</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_26" knowhowDetailRefKey="knowhowDetail_26">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>Deployment</KnowhowName>
+            <CheckItem checkItemId="checkItem_323" searchRefKey="searchInfo_323" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>check unpack WARs config</CheckItemName>
+                <SearchProcess>Host要素のunpackWARs属性の値があるかどうか確認する</SearchProcess>
+                <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm>unpackWARs属性の値をtrue / falseのどちらにするか確認する。&#xD;
+性能面を考慮した場合、true に設定すべきであるが、&#xD;
+アンパックしてはいけない理由がある場合にはfalse を設定したままにする。</HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_324" searchRefKey="searchInfo_324" searchExistance="true">
+                <CheckItemNo>2</CheckItemNo>
+                <CheckItemName>check unpack WARs config</CheckItemName>
+                <SearchProcess>Context要素のunpackWAR属性の値があるかどうか確認する</SearchProcess>
+                <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm>unpackWAR属性の値をtrue / falseのどちらにするか確認する。&#xD;
+性能面を考慮した場合、true に設定すべきであるが、&#xD;
+アンパックしてはいけない理由がある場合にはfalse を設定したままにする。</HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
     </KnowhowList>
     <DocBookList>
         <DocBook articleId="knowhowDetail_1">
@@ -3970,6 +4034,40 @@
 		</ns2:para>
                     <ns2:para>ダイジェスト化されたパスワードを使用している場合は、&lt;Realm&gt;の子要素に&lt;CredentialHandler&gt;
 			を定義する必要がある。</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_25">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>JavaServer Pages 2.3</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>統一された式言語（Java Unified Expression Language 3.0）はstatic フィールドおよびstatic メソッドを参照するためのサポートが追加されました。</ns2:para>
+                    <ns2:para>JSP で本機能をサポートするためには、インポートされたクラスやフィールドの名前が存在するかどうか確認するためにID をチェックするようにjavax.servlet.jsp.el.ScopedAttributeELResolver 実装の変更が必要でした。</ns2:para>
+                    <ns2:para>いくつかの状況において、本変更は重大なスローダウンを引き起します。</ns2:para>
+                    <ns2:para>これは、ページスコープ、リクエストスコープ、セッションスコープ、もしくはアプリケーションスコープの変数を参照する、もしくはスコープ未定義のID に影響を与えます。</ns2:para>
+                    <ns2:para>未定義の場合、インポートされたクラスもしくはフィールドが存在するかどうかを確認するためにチェックされるので、ID を解決するために大幅に時間がかかります。</ns2:para>
+                    <ns2:para>以上のスローダウンを回避するために、次のコード：</ns2:para>
+                    <ns2:programlisting>
+${undefined}
+        </ns2:programlisting>
+                    <ns2:para>は次のコードに置換える必要があります。</ns2:para>
+                    <ns2:programlisting>
+${requestScope.undefined}
+        </ns2:programlisting>
+                    <ns2:para>もしくは、変数が定義されているスコープに対して適切にスコープを使用する必要があります。</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_26">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>デプロイメント</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>WebアプリケーションがWARファイルとしてデプロイされており、WARファイルを展開するように設定されていない場合、Tomcat 起動時に大幅に遅延（3～10倍）が発生し、実行パフォーマンスの大幅な遅延（ユーザアプリケーションの構造に依存）を引き起こします。</ns2:para>
+                    <ns2:para>Host 要素の属性unpackWARs にfalse、もしくはContext 要素の属性unpackWAR にfalse を設定しないことを推奨します。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -8458,6 +8556,48 @@
         <SearchInfomation searchInfoId="searchInfo_321">
             <FileType>*.xml</FileType>
             <SearchKey1>//*[local-name()='Realm'][@digest]</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_322">
+            <FileType>*.jsp</FileType>
+            <SearchKey1>\$\{[^pageScope|requestScope|sessionScope|applicationScope]</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents>未定義のスコープを明示的に記述する（同一行で変換可能）ため</LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_323">
+            <FileType>server.xml</FileType>
+            <SearchKey1>//*[local-name()='Host'][@unpackWARs]</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_324">
+            <FileType>*.xml</FileType>
+            <SearchKey1>//*[local-name()='Context'][@unpackWAR]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
