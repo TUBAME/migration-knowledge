@@ -91,6 +91,13 @@
 </dt>
 </dl>
 </dd>
+<dd>
+<dl>
+<dt>
+<span class="3.3."><a href="#tubame_3.3.">3.3.JavaServer Pages 2.3</a></span>
+</dt>
+</dl>
+</dd>
 <dt>
 <span class="4."><a href="#tubame_4.">4.設定項目の変更</a></span>
 </dt>
@@ -199,6 +206,13 @@
 <dl>
 <dt>
 <span class="5.2."><a href="#tubame_5.2.">5.2.内部APIの変更</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="5.3."><a href="#tubame_5.3.">5.3.Deployment</a></span>
 </dt>
 </dl>
 </dd>
@@ -365,6 +379,28 @@
 <p>これは、javax.servlet.*の暗黙的なimportとa.*の明示的なimportにおいて、Servlet3.1で追加されたReadListenerクラスの定義の競合するために発生する問題である。</p>
 <p>Tomcatは、JSPからServletファイル（.java）へのコンパイルの際、デフォルトのimportとして "javax.servlet.*"、"javax.servlet.http.*"、"javax.servlet.jsp.*" を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.1で追加されたクラスと衝突してしまう。</p>
 <p>この問題を解決するには、明示的なimport (この例では、import="a.ReadListener") を利用する必要がある。</p>
+</div>
+<br>
+<br>
+<a name="tubame_3.3." id="category_27"></a>
+<h3 class="title">3.3.JavaServer Pages 2.3</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>統一された式言語（Java Unified Expression Language 3.0）はstatic フィールドおよびstatic メソッドを参照するためのサポートが追加されました。</p>
+<p>JSP で本機能をサポートするためには、インポートされたクラスやフィールドの名前が存在するかどうか確認するためにID をチェックするようにjavax.servlet.jsp.el.ScopedAttributeELResolver 実装の変更が必要でした。</p>
+<p>いくつかの状況において、本変更は重大なスローダウンを引き起します。</p>
+<p>これは、ページスコープ、リクエストスコープ、セッションスコープ、もしくはアプリケーションスコープの変数を参照する、もしくはスコープ未定義のID に影響を与えます。</p>
+<p>未定義の場合、インポートされたクラスもしくはフィールドが存在するかどうかを確認するためにチェックされるので、ID を解決するために大幅に時間がかかります。</p>
+<p>以上のスローダウンを回避するために、次のコード：</p>
+<pre class="programlisting">
+${undefined}
+        </pre>
+<p>は次のコードに置換える必要があります。</p>
+<pre class="programlisting">
+${requestScope.undefined}
+        </pre>
+<p>もしくは、変数が定義されているスコープに対して適切にスコープを使用する必要があります。</p>
 </div>
 <br>
 <br>
@@ -588,6 +624,16 @@
 </li>
 </ul>
 </div>
+</div>
+<br>
+<br>
+<a name="tubame_5.3." id="category_28"></a>
+<h3 class="title">5.3.Deployment</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>WebアプリケーションがWARファイルとしてデプロイされており、WARファイルを展開するように設定されていない場合、Tomcat 起動時に大幅に遅延（3～10倍）が発生し、実行パフォーマンスの大幅な遅延（ユーザアプリケーションの構造に依存）を引き起こします。</p>
+<p>Host 要素の属性unpackWARs にfalse、もしくはContext 要素の属性unpackWAR にfalse を設定しないことを推奨します。</p>
 </div>
 <br>
 <br>
