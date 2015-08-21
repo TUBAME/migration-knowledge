@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://www.w3.org/1999/xlink" xmlns:ns3="http://docbook.org/ns/docbook">
+<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook" xmlns:ns3="http://www.w3.org/1999/xlink">
     <PortabilityKnowhowTitle>TomcatMigration_Tomcat6.0_To_Tomcat7.0</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
@@ -3658,857 +3658,859 @@
     </KnowhowList>
     <DocBookList>
         <DocBook articleId="knowhowDetail_8">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Servlet、JSP以外の非推奨APIについて</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Servlet、JSP以外にも、非推奨となっているAPIを利用している場合は、代替となるAPIを利用するように修正する必要がある。
-		</ns3:para>
-                    <ns3:para>詳細は下記URLを参照のこと。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>
-					<ns3:command ns2:href="http://docs.oracle.com/javaee/6/api/deprecated-list.html">http://docs.oracle.com/javaee/6/api/deprecated-list.html</ns3:command>
-				</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Servlet、JSP以外の非推奨APIについて</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Servlet、JSP以外にも、非推奨となっているAPIを利用している場合は、代替となるAPIを利用するように修正する必要がある。
+		</ns2:para>
+                    <ns2:para>詳細は下記URLを参照のこと。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>
+					<ns2:command ns3:href="http://docs.oracle.com/javaee/6/api/deprecated-list.html">http://docs.oracle.com/javaee/6/api/deprecated-list.html</ns2:command>
+				</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_9">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Servletの非推奨APIについて</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat7.0は、Servlet3.0仕様をサポートしている。</ns3:para>
-                    <ns3:para>以下は、Servlet3.0で非推奨となったAPIの一覧であり、これらのAPIを利用している場合には、代替となるAPIを利用するように修正する必要がある。
-		</ns3:para>
-                    <ns3:para>推奨されていないインタフェース</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpSessionContext</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.SingleThreadModel</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>推奨されていないクラス</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpUtils</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>推奨されていないメソッド</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpServletRequest.isRequestedSessionIdFromUrl()
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpServletRequestWrapper.isRequestedSessionIdFromUrl()
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpServletResponse.encodeRedirectUrl(String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpServletResponse.encodeUrl(String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpServletResponse.setStatus(int,
-					String)</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpServletResponseWrapper.encodeRedirectUrl(String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpServletResponseWrapper.encodeUrl(String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpServletResponseWrapper.setStatus(int,
-					String)</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpSession.getSessionContext()
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpSession.getValue(String)</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpSession.getValueNames()</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpSession.putValue(String, Object)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpSession.removeValue(String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpSessionContext.getIds()</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.http.HttpSessionContext.getSession(String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.ServletContext.getServlet(String)</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.ServletContext.getServletNames()</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.ServletContext.getServlets()</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.ServletContext.log(Exception, String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.ServletRequest.getRealPath(String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.ServletRequestWrapper.getRealPath(String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.UnavailableException.getServlet()</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>推奨されていないコンストラクタ</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.UnavailableException(int, Servlet, String)
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.UnavailableException(Servlet, String)
-				</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>詳細は下記URLを参照のこと。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>
-					<ns3:command ns2:href="http://docs.oracle.com/javaee/6/api/deprecated-list.html">http://docs.oracle.com/javaee/6/api/deprecated-list.html
-					</ns3:command>
-				</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Servletの非推奨APIについて</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Tomcat7.0は、Servlet3.0仕様をサポートしている。</ns2:para>
+                    <ns2:para>以下は、Servlet3.0で非推奨となったAPIの一覧であり、これらのAPIを利用している場合には、代替となるAPIを利用するように修正する必要がある。
+		</ns2:para>
+                    <ns2:para>推奨されていないインタフェース</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpSessionContext</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.SingleThreadModel</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>推奨されていないクラス</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpUtils</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>推奨されていないメソッド</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpServletRequest.isRequestedSessionIdFromUrl()
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpServletRequestWrapper.isRequestedSessionIdFromUrl()
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpServletResponse.encodeRedirectUrl(String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpServletResponse.encodeUrl(String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpServletResponse.setStatus(int,
+					String)</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpServletResponseWrapper.encodeRedirectUrl(String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpServletResponseWrapper.encodeUrl(String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpServletResponseWrapper.setStatus(int,
+					String)</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpSession.getSessionContext()
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpSession.getValue(String)</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpSession.getValueNames()</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpSession.putValue(String, Object)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpSession.removeValue(String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpSessionContext.getIds()</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.http.HttpSessionContext.getSession(String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.ServletContext.getServlet(String)</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.ServletContext.getServletNames()</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.ServletContext.getServlets()</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.ServletContext.log(Exception, String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.ServletRequest.getRealPath(String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.ServletRequestWrapper.getRealPath(String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.UnavailableException.getServlet()</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>推奨されていないコンストラクタ</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.UnavailableException(int, Servlet, String)
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.UnavailableException(Servlet, String)
+				</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>詳細は下記URLを参照のこと。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>
+					<ns2:command ns3:href="http://docs.oracle.com/javaee/6/api/deprecated-list.html">http://docs.oracle.com/javaee/6/api/deprecated-list.html
+					</ns2:command>
+				</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_10">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>JSPの非推奨APIについて</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat7.0は、JSP2.2仕様をサポートしている。</ns3:para>
-                    <ns3:para>以下は、JSP2.2で非推奨となったAPIの一覧であり、これらAPIを利用している場合には、代替となるAPIを利用するように修正する必要がある。
-		</ns3:para>
-                    <ns3:para>推奨されていないインタフェース</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.el.FunctionMapper</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.el.VariableResolver</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>推奨されていないクラス</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.el.Expression</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.el.ExpressionEvaluator</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>推奨されていない例外</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.el.ELException</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.el.ELParseException</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>推奨されていないフィールド</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_TAG</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>推奨されていないメソッド</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.JspContext.getExpressionEvaluator()
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.JspContext.getVariableResolver()
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>javax.servlet.jsp.JspContext.getRootCause()</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>詳細は下記URLを参照のこと。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>
-					<ns3:command ns2:href="http://docs.oracle.com/javaee/6/api/deprecated-list.html">http://docs.oracle.com/javaee/6/api/deprecated-list.html
-					</ns3:command>
-				</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>JSPの非推奨APIについて</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Tomcat7.0は、JSP2.2仕様をサポートしている。</ns2:para>
+                    <ns2:para>以下は、JSP2.2で非推奨となったAPIの一覧であり、これらAPIを利用している場合には、代替となるAPIを利用するように修正する必要がある。
+		</ns2:para>
+                    <ns2:para>推奨されていないインタフェース</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.el.FunctionMapper</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.el.VariableResolver</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>推奨されていないクラス</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.el.Expression</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.el.ExpressionEvaluator</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>推奨されていない例外</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.el.ELException</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.el.ELParseException</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>推奨されていないフィールド</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_TAG</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>推奨されていないメソッド</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.JspContext.getExpressionEvaluator()
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.JspContext.getVariableResolver()
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>javax.servlet.jsp.JspContext.getRootCause()</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>詳細は下記URLを参照のこと。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>
+					<ns2:command ns3:href="http://docs.oracle.com/javaee/6/api/deprecated-list.html">http://docs.oracle.com/javaee/6/api/deprecated-list.html
+					</ns2:command>
+				</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_11">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Java6必須</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat7.0は、実行環境としてJava6以降が必須となる。</ns3:para>
-                    <ns3:para>古いバージョンのJavaを利用している場合はアップデートを行う必要がある。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Java6必須</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Tomcat7.0は、実行環境としてJava6以降が必須となる。</ns2:para>
+                    <ns2:para>古いバージョンのJavaを利用している場合はアップデートを行う必要がある。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_12">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Servlet 3.0 API</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>ワイルドカード (*) のimport構文を使用するJSPページでは、Servlet APIに追加された新しいクラスとWebアプリケーションに含まれるクラスが競合する可能性がある。</ns3:para>
-                    <ns3:para>例えば、パッケージ「a」にPartクラスが含まれている場合、以下のJSPページはTomcat7でコンパイルできなくなる。</ns3:para>
-                    <ns3:programlisting>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Servlet 3.0 API</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>ワイルドカード (*) のimport構文を使用するJSPページでは、Servlet APIに追加された新しいクラスとWebアプリケーションに含まれるクラスが競合する可能性がある。</ns2:para>
+                    <ns2:para>例えば、パッケージ「a」にPartクラスが含まれている場合、以下のJSPページはTomcat7でコンパイルできなくなる。</ns2:para>
+                    <ns2:programlisting>
 
 &lt;%@page import=&quot;a.*&quot;%&gt;
 &lt;% Part page = new Part(); %&gt;
 
-		</ns3:programlisting>
-                    <ns3:para>これは、javax.servlet.http.*の暗黙的なimportとa.*の明示的なimportにおいて、Servlet3.0で追加されたPartクラスの定義が競合するために発生する問題である。</ns3:para>
-                    <ns3:para>Tomcatは、JSPからServletファイル（.java）へのコンパイルの際、デフォルトのimportとして javax.servlet.*、javax.servlet.http.*、javax.servlet.jsp.* を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.0で追加されたクラスと衝突してしまう。</ns3:para>
-                    <ns3:para>この問題を解決するには、明示的なimport（この例では、import=&quot;a.Part&quot;）を利用する必要がある。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+		</ns2:programlisting>
+                    <ns2:para>これは、javax.servlet.http.*の暗黙的なimportとa.*の明示的なimportにおいて、Servlet3.0で追加されたPartクラスの定義が競合するために発生する問題である。</ns2:para>
+                    <ns2:para>Tomcatは、JSPからServletファイル（.java）へのコンパイルの際、デフォルトのimportとして javax.servlet.*、javax.servlet.http.*、javax.servlet.jsp.* を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.0で追加されたクラスと衝突してしまう。</ns2:para>
+                    <ns2:para>この問題を解決するには、明示的なimport（この例では、import=&quot;a.Part&quot;）を利用する必要がある。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_13">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>正規表現</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>正規表現を使用するすべての設定オプションは、コンマあるいはセミコロン区切りのリストではなく、単一の正規表現（java.util.regex
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>正規表現</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>正規表現を使用するすべての設定オプションは、コンマあるいはセミコロン区切りのリストではなく、単一の正規表現（java.util.regex
 			を利用）を用いて指定する必要がある。
-		</ns3:para>
-                    <ns3:para>以下の属性が関係するため、正規表現を見直す必要がある。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>
-					<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/filter.html#Remote_Address_Filter">RemoteAddrFilter</ns3:command>
+		</ns2:para>
+                    <ns2:para>以下の属性が関係するため、正規表現を見直す必要がある。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>
+					<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/filter.html#Remote_Address_Filter">RemoteAddrFilter</ns2:command>
 					、
-					<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/filter.html#Remote_Host_Filter">RemoteHostFilter</ns3:command>
+					<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/filter.html#Remote_Host_Filter">RemoteHostFilter</ns2:command>
 					と
-					<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Remote_Address_Filter">RemoteAddrValve</ns3:command>
+					<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Remote_Address_Filter">RemoteAddrValve</ns2:command>
 					、
-					<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Remote_Host_Filter">RemoteHostValve</ns3:command>
+					<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Remote_Host_Filter">RemoteHostValve</ns2:command>
 					のallow属性とdeny属性
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>
-					<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/filter.html#Remote_IP_Filter">RemoteIpFilter</ns3:command>
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>
+					<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/filter.html#Remote_IP_Filter">RemoteIpFilter</ns2:command>
 					、
-					<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Remote_IP_Valvel">RemoteIpValve</ns3:command>
+					<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/valve.html#Remote_IP_Valvel">RemoteIpValve</ns2:command>
 					のinternalProxies属性とtrustedProxies属性
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>
-					<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/cluster-valve.html#org.apache.catalina.ha.tcp.ReplicationValve">ReplicationValve</ns3:command>
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>
+					<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/cluster-valve.html#org.apache.catalina.ha.tcp.ReplicationValve">ReplicationValve</ns2:command>
 					のfilter属性
-				</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>
-					<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/http.html">HTTP Connector</ns3:command>
+				</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>
+					<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/http.html">HTTP Connector</ns2:command>
 					のrestrictedUserAgents属性とnoCompressionUserAgents属性
-				</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>また、「|」演算子を用いて、個別の正規表現を連結することが可能である。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+				</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>また、「|」演算子を用いて、個別の正規表現を連結することが可能である。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_14">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>デプロイメント</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>デプロイメント</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
         Tomcat7において、Hostに追加されたxmlBase属性、copyXML属性によって、デフォルトの動作が変更されたので注意が必要となる。
-        </ns3:para>
-                    <ns3:para>xmlBase属性によって、Hostのコンフィグレーションファイルの配置場所が変更可能になった。デフォルトは未設定で、Tomcat6と同様「$CATALINA_BASE/conf/Engine名/Host名」となる。</ns3:para>
-                    <ns3:para>copyXML属性によって、 META-INF/context.xml をxmlBaseにコピーするかどうかを決定する。デフォルトはfalseで、デプロイしたWARファイルやディレクトリからcontext.xmlはコピーされない。</ns3:para>
-                    <ns3:para>したがって、Tomcat6 → Tomcat7へのバージョンアップで、META-INF/context.xmlの取扱いが変更されたこととなる。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>Tomcat6では、META-INF/context.xmlを$CATALINA_BASE/conf/Engine名/Host名に&lt; コンテキスト名&gt;.xmlとしてコピーする。リデプロイのチェック対象は、&lt; コンテキスト名&gt;.xmlとなる。</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Tomcat7では、META-INF/context.xmlをパースだけしコピーはしない。リデプロイのチェック対象は、META-INF/context.xmlとなる。copyXMLがtrueの場合にのみxmlBaseへcontext.xmlをコピーする。</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>Tomcat6のデフォルトの振る舞いに戻したい場合は、HostのcopyXML属性をtrueに変更する必要がある。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+        </ns2:para>
+                    <ns2:para>xmlBase属性によって、Hostのコンフィグレーションファイルの配置場所が変更可能になった。デフォルトは未設定で、Tomcat6と同様「$CATALINA_BASE/conf/Engine名/Host名」となる。</ns2:para>
+                    <ns2:para>copyXML属性によって、 META-INF/context.xml をxmlBaseにコピーするかどうかを決定する。デフォルトはfalseで、デプロイしたWARファイルやディレクトリからcontext.xmlはコピーされない。</ns2:para>
+                    <ns2:para>したがって、Tomcat6 → Tomcat7へのバージョンアップで、META-INF/context.xmlの取扱いが変更されたこととなる。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>Tomcat6では、META-INF/context.xmlを$CATALINA_BASE/conf/Engine名/Host名に&lt; コンテキスト名&gt;.xmlとしてコピーする。リデプロイのチェック対象は、&lt; コンテキスト名&gt;.xmlとなる。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Tomcat7では、META-INF/context.xmlをパースだけしコピーはしない。リデプロイのチェック対象は、META-INF/context.xmlとなる。copyXMLがtrueの場合にのみxmlBaseへcontext.xmlをコピーする。</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>Tomcat6のデフォルトの振る舞いに戻したい場合は、HostのcopyXML属性をtrueに変更する必要がある。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_15">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Host Managerアプリケーション</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Host Managerアプリケーションは、Tomcat7以降では再構成されており、いくつかのURLが変更されている。Host Managerアプリケーションへのアクセスに使用されるすべてのURLは、次のオプションのいずれかで始まる必要がある。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>&lt;ContextPath&gt;/html（HTML GUI）</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>&lt;ContextPath&gt;/text（テキストインタフェース）</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>特に、テキストインタフェースのURLが、&lt;ContextPath&gt;/textに変更されていることに注意すること。</ns3:para>
-                    <ns3:para>Host Managerアプリケーションを利用するために必要なロールが、単一のadminロールから次の2つのロールに変更され、アクセスしたい機能に必要なロールを割り当てる必要がある。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>admin-gui：HTML GUIとstatusページへのアクセスを許可</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>admin-script：テキストインタフェースとstatusページへのアクセスを許可</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>HTMLインタフェースは、CSRFに対して保護されているが、テキストインタフェースは保護されていない。</ns3:para>
-                    <ns3:para>CSRFに対して保護するために、以下を確認すること。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>admin-guiロールが付与されているユーザには、admin-scriptロールを付与しない</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Host Managerアプリケーションがadmin-scriptロールが付与されているユーザからブラウザでアクセスされた場合には、
-                セッションを終了させるために後でブラウザの全てのウィンドウを閉じる必要がある。</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Host Managerアプリケーション</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Host Managerアプリケーションは、Tomcat7以降では再構成されており、いくつかのURLが変更されている。Host Managerアプリケーションへのアクセスに使用されるすべてのURLは、次のオプションのいずれかで始まる必要がある。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>&lt;ContextPath&gt;/html（HTML GUI）</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>&lt;ContextPath&gt;/text（テキストインタフェース）</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>特に、テキストインタフェースのURLが、&lt;ContextPath&gt;/textに変更されていることに注意すること。</ns2:para>
+                    <ns2:para>Host Managerアプリケーションを利用するために必要なロールが、単一のadminロールから次の2つのロールに変更され、アクセスしたい機能に必要なロールを割り当てる必要がある。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>admin-gui：HTML GUIとstatusページへのアクセスを許可</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>admin-script：テキストインタフェースとstatusページへのアクセスを許可</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>HTMLインタフェースは、CSRFに対して保護されているが、テキストインタフェースは保護されていない。</ns2:para>
+                    <ns2:para>CSRFに対して保護するために、以下を確認すること。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>admin-guiロールが付与されているユーザには、admin-scriptロールを付与しない</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Host Managerアプリケーションがadmin-scriptロールが付与されているユーザからブラウザでアクセスされた場合には、
+                セッションを終了させるために後でブラウザの全てのウィンドウを閉じる必要がある。</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_17">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>セッションマネージャコンフィグレーション</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>セッションの生成や破棄のパフォーマンスを改善するために、セッションID作成に対する変更など、セッションマネージャに対して多くの変更が実施された。</ns3:para>
-                    <ns3:para>コンフィグレーションの変更点は、以下のとおり。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>ManagerのrandomClass属性は、secureRandomClassに変更。提供されるクラスは、java.secure.SecureRandomを拡張する必要がある</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>追加されたsecureRandomAlgorithm属性とsecureRandomProvider属性は、SecureRandom実装の選択を可能とする</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>algorithm属性、entropy属性は削除</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>セッションID作成処理が大幅に変更となったため、旧バージョンとの互換性がなくなり、上記設定を行っているユーザは、設定ファイルの変更が必須となる。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>セッションマネージャコンフィグレーション</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>セッションの生成や破棄のパフォーマンスを改善するために、セッションID作成に対する変更など、セッションマネージャに対して多くの変更が実施された。</ns2:para>
+                    <ns2:para>コンフィグレーションの変更点は、以下のとおり。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>ManagerのrandomClass属性は、secureRandomClassに変更。提供されるクラスは、java.secure.SecureRandomを拡張する必要がある</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>追加されたsecureRandomAlgorithm属性とsecureRandomProvider属性は、SecureRandom実装の選択を可能とする</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>algorithm属性、entropy属性は削除</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>セッションID作成処理が大幅に変更となったため、旧バージョンとの互換性がなくなり、上記設定を行っているユーザは、設定ファイルの変更が必須となる。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_18">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Session Cookieコンフィグレーション</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Servlet 3.0仕様におけるSessionCookieConfigの追加により、コンフィグレーションおよびコードの複雑さを軽減するために、いくつかのSession Cookie設定オプションは削除された。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>ConnectorのemptySessionPath：本属性は削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookiePath=&quot;/&quot;を設定することによって、同等の結果を得ることが可能</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.catalina.SESSION_COOKIE_NAME システムプロパティ：本プロパティは削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookieName属性を設定することによって、同等の結果を得ることが可能</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.catalina.SESSION_PARAMETER_NAME システムプロパティ：本プロパティは削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookieName属性を設定することによって、同等の結果を得ることが可能</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>ContextのdisableURLRewriting：本属性は削除された。Webアプリケーションあるいは$CATALINA_BASE/conf/web.xmlにおいて、&lt;session-config&gt;&lt;tracking-mode&gt; 要素を設定することによって、同等の結果を得ることが可能</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>Tomcat7のセッションおよびSSO Cookieは、JavaScriptからのアクセスを防ぐために、デフォルトでHttpOnlyフラグで送信されてくる。この機能は、Context要素のuseHttpOnly属性によって制御することができる（この機能は、Tomcat6.0の最新バージョンでは、デフォルトでオフとなっているため、有効にするには、Web アプリケーションあるいは$CATALINA_BASE/conf/context.xml のContext 要素のuseHttpOnly 属性にtrueを設定すればよい）。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Session Cookieコンフィグレーション</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Servlet 3.0仕様におけるSessionCookieConfigの追加により、コンフィグレーションおよびコードの複雑さを軽減するために、いくつかのSession Cookie設定オプションは削除された。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>ConnectorのemptySessionPath：本属性は削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookiePath=&quot;/&quot;を設定することによって、同等の結果を得ることが可能</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.SESSION_COOKIE_NAME システムプロパティ：本プロパティは削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookieName属性を設定することによって、同等の結果を得ることが可能</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.SESSION_PARAMETER_NAME システムプロパティ：本プロパティは削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookieName属性を設定することによって、同等の結果を得ることが可能</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>ContextのdisableURLRewriting：本属性は削除された。Webアプリケーションあるいは$CATALINA_BASE/conf/web.xmlにおいて、&lt;session-config&gt;&lt;tracking-mode&gt; 要素を設定することによって、同等の結果を得ることが可能</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>Tomcat7のセッションおよびSSO Cookieは、JavaScriptからのアクセスを防ぐために、デフォルトでHttpOnlyフラグで送信されてくる。この機能は、Context要素のuseHttpOnly属性によって制御することができる（この機能は、Tomcat6.0の最新バージョンでは、デフォルトでオフとなっているため、有効にするには、Web アプリケーションあるいは$CATALINA_BASE/conf/context.xml のContext 要素のuseHttpOnly 属性にtrueを設定すればよい）。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_19">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Cookies</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat は仕様に準拠していない名前だけ（値のない）のCookie をデフォルトで許容しない。</ns3:para>
-                    <ns3:para>ただし、新たなシステムプロパティ「org.apache.tomcat.util.http.ServerCookie.ALLOW_NAME_ONLY」が追加され、名前だけのCookie を許容するように利用できる。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:section>
+                    <ns2:para>Tomcat は仕様に準拠していない、名前だけ（つまり、値のない）のCookie をデフォルトで許容しない。
+        ただし、新たなシステムプロパティ「org.apache.tomcat.util.http.ServerCookie.ALLOW_NAME_ONLY」が追加され、名前だけのCookieを許容するように設定できる。</ns2:para>
+                </ns2:section>
+                <ns2:section>
+                    <ns2:para>（RFC 2109 の仕様によって）Cookie のvalue もしくはpath が引用符で囲まれていなければならない文字を含んでいる場合、Cookie がクライアントへ送信される前に「version 0」から「version 1」へ自動的に変換され、value もしくはpath はダブルコーテーションで囲まれる。
+        引用符で囲む必要がある文字は、「org.apache.tomcat.util.http.ServerCookie.FWD_SLASH_IS_SEPARATOR」のようないくつかの<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/systemprops.html">システムプロパティ</ns2:command>によって制御される。
+        Internet Explorer は「version 1」のCookie の処理で問題があることが知られているため注意が必要である（<ns2:command ns3:href="https://bz.apache.org/bugzilla/show_bug.cgi?id=57872">Bug 57872</ns2:command>）。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_20">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Request属性</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Servlet仕様において、標準Request属性javax.servlet.request.ssl_session_idが新しく定義されたため、SSLセッションIDにアクセスするために提供されているカスタムRequest属性javax.servlet.request.ssl_sessionは廃止となった。</ns3:para>
-                    <ns3:para>このカスタム属性は、Tomcat8で削除されている。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Request属性</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Servlet仕様において、標準Request属性javax.servlet.request.ssl_session_idが新しく定義されたため、SSLセッションIDにアクセスするために提供されているカスタムRequest属性javax.servlet.request.ssl_sessionは廃止となった。</ns2:para>
+                    <ns2:para>このカスタム属性は、Tomcat8で削除されている。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_21">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Comet</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>セキュリティマネージャの下で、Cometが正しく動作することを可能にするために、Cometのクラスは、org.apache.catalinaパッケージからorg.apache.catalina.cometパッケージに移動された。</ns3:para>
-                    <ns3:para>Cometを使用するコードは更新し、新しいパッケージ名を反映するように再コンパイルする必要がある。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Comet</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>セキュリティマネージャの下で、Cometが正しく動作することを可能にするために、Cometのクラスは、org.apache.catalinaパッケージからorg.apache.catalina.cometパッケージに移動された。</ns2:para>
+                    <ns2:para>Cometを使用するコードは更新し、新しいパッケージ名を反映するように再コンパイルする必要がある。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_22">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>XMLバリデーション</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>XMLバリデーションの構成が簡素化され、xmlValidationとxmlNamespaceAware属性は、Host要素から削除された。</ns3:para>
-                    <ns3:para>これらの属性は、tldValidationとtldNamespaceAware属性とともに、Context要素ごとに設定される。デフォルト値は、各属性とも変更されておらず、falseである。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>XMLバリデーション</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>XMLバリデーションの構成が簡素化され、xmlValidationとxmlNamespaceAware属性は、Host要素から削除された。</ns2:para>
+                    <ns2:para>これらの属性は、tldValidationとtldNamespaceAware属性とともに、Context要素ごとに設定される。デフォルト値は、各属性とも変更されておらず、falseである。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_23">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>システムプロパティ</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat6.0では、org.apache.catalina.STRICT_SERVLET_COMPLIANCEシステムプロパティによって、統一的に仕様制約を制御していた。
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>システムプロパティ</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Tomcat6.0では、org.apache.catalina.STRICT_SERVLET_COMPLIANCEシステムプロパティによって、統一的に仕様制約を制御していた。
         ただし、それでは柔軟な設定ができないということで、Tomcat7.0では、org.apache.catalina.STRICT_SERVLET_COMPLIANCEシステムプロパティで
-        デフォルト値を設定し、仕様制約ごとのシステムプロパティや設定で上書きできるように変更された。</ns3:para>
-                    <ns3:para>Tomcat7.0で、org.apache.catalina.STRICT_SERVLET_COMPLIANCEシステムプロパティがデフォルトを設定する制約は、以下のとおり。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.catalina.core.ApplicationContext.GET_RESOURCE_REQUIRE_SLASH</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.catalina.core.ApplicationDispatcher.WRAP_SAME_OBJECT</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.catalina.core.StandardHostValve.ACCESS_SESSION</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.catalina.session.StandardSession.ACTIVITY_CHECK</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.catalina.session.StandardSession.LAST_ACCESS_AT_START</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.tomcat.util.http.ServerCookie.ALWAYS_ADD_EXPIRES</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.tomcat.util.http.ServerCookie.FWD_SLASH_OS_SEPARATOR</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>org.apache.tomcat.util.http.ServerCookie.STRICT_NAMING</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Context要素のresourceOnlyServlets属性</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Context要素のtldNamespaceAware属性</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Context要素のtldValidation属性</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Context要素のxmlNamespaceAware属性</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Context要素のxmlValidation属性</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>org.apache.coyote.MAX_TRAILER_SIZEシステムプロパティは削除され、Connector要素のmaxTrailerSize属性によって置き換えられる。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+        デフォルト値を設定し、仕様制約ごとのシステムプロパティや設定で上書きできるように変更された。</ns2:para>
+                    <ns2:para>Tomcat7.0で、org.apache.catalina.STRICT_SERVLET_COMPLIANCEシステムプロパティがデフォルトを設定する制約は、以下のとおり。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.core.ApplicationContext.GET_RESOURCE_REQUIRE_SLASH</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.core.ApplicationDispatcher.WRAP_SAME_OBJECT</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.core.StandardHostValve.ACCESS_SESSION</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.session.StandardSession.ACTIVITY_CHECK</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.session.StandardSession.LAST_ACCESS_AT_START</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.tomcat.util.http.ServerCookie.ALWAYS_ADD_EXPIRES</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.tomcat.util.http.ServerCookie.FWD_SLASH_OS_SEPARATOR</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.tomcat.util.http.ServerCookie.STRICT_NAMING</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Context要素のresourceOnlyServlets属性</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Context要素のtldNamespaceAware属性</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Context要素のtldValidation属性</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Context要素のxmlNamespaceAware属性</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Context要素のxmlValidation属性</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>org.apache.coyote.MAX_TRAILER_SIZEシステムプロパティは削除され、Connector要素のmaxTrailerSize属性によって置き換えられる。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_24">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>conf/web.xmlファイル処理</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Servlet3.0仕様では、web fragmentおよびアノテーションからどのようにアプリケーションのweb.xmlファイルを組合わせることができるかを定義する。</ns3:para>
-                    <ns3:para>それらの規則を実装した結果、サーバ全体に渡るデフォルトを定義するグローバルなconf/web.xmlファイルの処理は変更された。</ns3:para>
-                    <ns3:para>ひとつ顕著な違いとしては、conf/web.xmlに定義されているFilterではなく、Webアプリケーションに定義されているものに従うといったものである。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>conf/web.xmlファイル処理</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Servlet3.0仕様では、web fragmentおよびアノテーションからどのようにアプリケーションのweb.xmlファイルを組合わせることができるかを定義する。</ns2:para>
+                    <ns2:para>それらの規則を実装した結果、サーバ全体に渡るデフォルトを定義するグローバルなconf/web.xmlファイルの処理は変更された。</ns2:para>
+                    <ns2:para>ひとつ顕著な違いとしては、conf/web.xmlに定義されているFilterではなく、Webアプリケーションに定義されているものに従うといったものである。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_25">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Welcomeファイル処理</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Servlet3.0仕様において、welcomeファイルに対する処理が変更され、Context要素のresourceOnlyServlets属性が追加された。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Welcomeファイル処理</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Servlet3.0仕様において、welcomeファイルに対する処理が変更され、Context要素のresourceOnlyServlets属性が追加された。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_26">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>アノテーション・スキャン</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Servlet3.0仕様にて必要となるアノテーション・スキャンは、Webアプリケーションの起動時間に影響を与えるだけでなく、スキャンされるクラスをロードするために多くのメモリ容量が必要となる可能性がある。</ns3:para>
-                    <ns3:para>この問題に対する対処策はいくつか存在する。</ns3:para>
-                    <ns3:para>1つ目の推奨方法は、WebアプリケーションのWEB-INF/web.xmlにおいて次の手順を実施することにより、アノテーション・スキャンを必要としないアプリケーションをマークすることである。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>WebアプリケーションがServlet 3.0仕様を使用していることを示すために、web-app要素を更新する。内容はデフォルトのconf/web.xmlからversion、xsi:schemaLocation、xmlns、xmlns:xsi属性の値をコピーできる。</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>web-app要素に、属性metadata-complete=&quot;true&quot;を追加する。</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>空の&lt;absolute-ordering /&gt;要素を追加する。</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>2つ目の推奨方法は、特定のJARファイルを無視するように、JarScannerコンポーネントを設定することである。通常、<ns3:command ns2:href="http://tomcat.apache.org/tomcat-7.0-doc/config/systemprops.html#JAR_Scanning">tomcat.util.scan.DefaultJarScanner.jarsToSkipシステムプロパティ</ns3:command> は、conf/catalina.propertiesファイルに設定する。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>アノテーション・スキャン</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Servlet3.0仕様にて必要となるアノテーション・スキャンは、Webアプリケーションの起動時間に影響を与えるだけでなく、スキャンされるクラスをロードするために多くのメモリ容量が必要となる可能性がある。</ns2:para>
+                    <ns2:para>この問題に対する対処策はいくつか存在する。</ns2:para>
+                    <ns2:para>1つ目の推奨方法は、WebアプリケーションのWEB-INF/web.xmlにおいて次の手順を実施することにより、アノテーション・スキャンを必要としないアプリケーションをマークすることである。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>WebアプリケーションがServlet 3.0仕様を使用していることを示すために、web-app要素を更新する。内容はデフォルトのconf/web.xmlからversion、xsi:schemaLocation、xmlns、xmlns:xsi属性の値をコピーできる。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>web-app要素に、属性metadata-complete=&quot;true&quot;を追加する。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>空の&lt;absolute-ordering /&gt;要素を追加する。</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>2つ目の推奨方法は、特定のJARファイルを無視するように、JarScannerコンポーネントを設定することである。通常、<ns2:command ns3:href="http://tomcat.apache.org/tomcat-7.0-doc/config/systemprops.html#JAR_Scanning">tomcat.util.scan.DefaultJarScanner.jarsToSkipシステムプロパティ</ns2:command> は、conf/catalina.propertiesファイルに設定する。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_27">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>TLD処理</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat7.0 ではTLD 処理のためのいくつかの改善が行われている。一貫性の改善や重複の排除のためのリファクタリングに加えて、いくつかの機能改善が行われている。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>タグファイルに含まれるEL 処理は、タグファイルに宣言されたJSP バージョンと矛盾しない。</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>TLDファイルをWEB-INF/libあるいはWEB-INF/classesディレクトリに配置することは許可されていない。</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>TLD処理</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Tomcat7.0 ではTLD 処理のためのいくつかの改善が行われている。一貫性の改善や重複の排除のためのリファクタリングに加えて、いくつかの機能改善が行われている。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>タグファイルに含まれるEL 処理は、タグファイルに宣言されたJSP バージョンと矛盾しない。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>TLDファイルをWEB-INF/libあるいはWEB-INF/classesディレクトリに配置することは許可されていない。</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_28">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>内部API</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat7の内部APIが、Tomcat6と広く互換性をもっている一方、詳細レベルに多くの変更がありバイナリ互換ではない。</ns3:para>
-                    <ns3:para>Tomcat内部APIを利用しているカスタムコンポーネントについては、関連するAPIのJavaDocを確認する必要がある。特に注目すべき点は以下のとおり。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>すべてのコンポーネントが拡張するLifecycleインタフェースの標準実装のリファクタリング。Lifecycle インタフェースをコンテナのほとんどのコンポーネントが実装することで、ライフサイクル（初期化、起動、停止、削除、定期イベントなど）を共通処理として実装するようにリファクタリングした。Tomcat6 とは全くの別物と考えた方が良いと思われる。</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Generics の利用</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Host 内のContext のためのユニークな識別子として、Context パスではなく、Context 名を利用。パラレルデプロイメントの実装によって、1 つのコンテキストパスに対して複数のコンテキストが持てるようになったため、名前で識別するようになった。したがって、TomcatのAPI を利用してアプリを開発している利用者（Context やManager を継承して独自実装を組み込んでいる、カスタムValve などを作成しているなど）は、互換性がないので注意が必要である。</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>内部API</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Tomcat7の内部APIが、Tomcat6と広く互換性をもっている一方、詳細レベルに多くの変更がありバイナリ互換ではない。</ns2:para>
+                    <ns2:para>Tomcat内部APIを利用しているカスタムコンポーネントについては、関連するAPIのJavaDocを確認する必要がある。特に注目すべき点は以下のとおり。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>すべてのコンポーネントが拡張するLifecycleインタフェースの標準実装のリファクタリング。Lifecycle インタフェースをコンテナのほとんどのコンポーネントが実装することで、ライフサイクル（初期化、起動、停止、削除、定期イベントなど）を共通処理として実装するようにリファクタリングした。Tomcat6 とは全くの別物と考えた方が良いと思われる。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Generics の利用</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Host 内のContext のためのユニークな識別子として、Context パスではなく、Context 名を利用。パラレルデプロイメントの実装によって、1 つのコンテキストパスに対して複数のコンテキストが持てるようになったため、名前で識別するようになった。したがって、TomcatのAPI を利用してアプリを開発している利用者（Context やManager を継承して独自実装を組み込んでいる、カスタムValve などを作成しているなど）は、互換性がないので注意が必要である。</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_29">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>JSPコンパイラ</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>JspServletの初期化パラメータが、genStrAsCharArrayからgenStringAsCharArrayに変更された。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>JSPコンパイラ</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>JspServletの初期化パラメータが、genStrAsCharArrayからgenStringAsCharArrayに変更された。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_30">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>コネクタとスレッドプール</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>今まで統一されていなかったコネクタの実装をリファクタリングにより統一された実装とした。また、独自のスレッドプールの実装からjava標準のExecutorベースのスレッドプールに変更された。</ns3:para>
-                    <ns3:para>その結果、以下のような変更があり注意が必要である。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>コネクタの設定からmaxSpareThreads属性が削除された</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>スレッドプールを参照するためのObjectNameも変更された</ns3:para>
-                            <ns3:para>具体的には、Tomcat7からnameが(ajp/http)-(bio/nio/apr)+encodedAddr+endpoint.getPort()となった</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>各コネクタでLogfullメッセージも出力されない</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>AJPコネクタは、registerRequests属性が無効となった</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>また、特にjk系のパッケージは全て削除されたため、今までのJKコネクタとはまったく異なる実装となっており、以前のノウハウは利用できないものが多くなった。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>コネクタとスレッドプール</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>今まで統一されていなかったコネクタの実装をリファクタリングにより統一された実装とした。また、独自のスレッドプールの実装からjava標準のExecutorベースのスレッドプールに変更された。</ns2:para>
+                    <ns2:para>その結果、以下のような変更があり注意が必要である。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>コネクタの設定からmaxSpareThreads属性が削除された</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>スレッドプールを参照するためのObjectNameも変更された</ns2:para>
+                            <ns2:para>具体的には、Tomcat7からnameが(ajp/http)-(bio/nio/apr)+encodedAddr+endpoint.getPort()となった</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>各コネクタでLogfullメッセージも出力されない</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>AJPコネクタは、registerRequests属性が無効となった</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>また、特にjk系のパッケージは全て削除されたため、今までのJKコネクタとはまったく異なる実装となっており、以前のノウハウは利用できないものが多くなった。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_31">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>アクセスログ</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>デフォルトで無効から有効に変更され、ログのフォーマットもcommonから &quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; に変更された。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>アクセスログ</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>デフォルトで無効から有効に変更され、ログのフォーマットもcommonから &quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; に変更された。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_32">
-            <ns3:article>
-                <ns3:info/>
-                <ns3:section>
-                    <ns3:para>Tomcat7.0では、デフォルトで、LockOutRealmが有効に設定されているため、認証失敗の回数に制限がかかる。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info/>
+                <ns2:section>
+                    <ns2:para>Tomcat7.0では、デフォルトで、LockOutRealmが有効に設定されているため、認証失敗の回数に制限がかかる。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_33">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>セッションの最終アクセス時間</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>LAST_ACCESS_AT_STARTシステムプロパティの追加により、セッションの最終アクセス時間とアイドル時間の算出方法が変更となった。</ns3:para>
-                    <ns3:para>LAST_ACCESS_AT_START がtrue なら、最終アクセス時間の値は前のリクエストの開始から計算される。アイドル時間の基準値が最終アクセス時間になる。LAST_ACCESS_AT_START がfalse なら、最終アクセス時間の値は前のリクエストの終了から計算される。アイドル時間の基準値は現在のアクセス時間（6.0 と同様）のままとなる。</ns3:para>
-                    <ns3:para>セッションタイムアウトをチェックするためのセッションアイドル時間は、LAST_ACCESS_AT_STARTの値を元に決定される。</ns3:para>
-                    <ns3:table frame="all">
-                        <ns3:title>LAST_ACCESS_AT_STARTによる動作の違い</ns3:title>
-                        <ns3:tgroup cols="4">
-                            <ns3:tbody>
-<ns3:row>
-    <ns3:entry/>
-    <ns3:entry>LAST_ACCESS_AT_START=true</ns3:entry>
-    <ns3:entry>LAST_ACCESS_AT_START=false</ns3:entry>
-</ns3:row>
-<ns3:row>
-    <ns3:entry>セッションアクセス時</ns3:entry>
-    <ns3:entry>thisAccessTimeにカレントタイムを設定</ns3:entry>
-    <ns3:entry>thisAccessTimeにカレントタイムを設定</ns3:entry>
-</ns3:row>
-<ns3:row>
-    <ns3:entry>セッションアクセス終了時</ns3:entry>
-    <ns3:entry>lastAccessTimeにthisAcccessTimeを設定し、thisAccessTimeにカレントタイムを設定</ns3:entry>
-    <ns3:entry>lastAccessTimeとthisAccessTimeにカレントタイムを設定</ns3:entry>
-</ns3:row>
-<ns3:row>
-    <ns3:entry>セッションアイドル時間の算出</ns3:entry>
-    <ns3:entry>lastAccessTimeからの経過時間</ns3:entry>
-    <ns3:entry>thisAccessTimeからの経過時間</ns3:entry>
-</ns3:row>
-                            </ns3:tbody>
-                        </ns3:tgroup>
-                    </ns3:table>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>セッションの最終アクセス時間</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>LAST_ACCESS_AT_STARTシステムプロパティの追加により、セッションの最終アクセス時間とアイドル時間の算出方法が変更となった。</ns2:para>
+                    <ns2:para>LAST_ACCESS_AT_START がtrue なら、最終アクセス時間の値は前のリクエストの開始から計算される。アイドル時間の基準値が最終アクセス時間になる。LAST_ACCESS_AT_START がfalse なら、最終アクセス時間の値は前のリクエストの終了から計算される。アイドル時間の基準値は現在のアクセス時間（6.0 と同様）のままとなる。</ns2:para>
+                    <ns2:para>セッションタイムアウトをチェックするためのセッションアイドル時間は、LAST_ACCESS_AT_STARTの値を元に決定される。</ns2:para>
+                    <ns2:table frame="all">
+                        <ns2:title>LAST_ACCESS_AT_STARTによる動作の違い</ns2:title>
+                        <ns2:tgroup cols="4">
+                            <ns2:tbody>
+<ns2:row>
+    <ns2:entry/>
+    <ns2:entry>LAST_ACCESS_AT_START=true</ns2:entry>
+    <ns2:entry>LAST_ACCESS_AT_START=false</ns2:entry>
+</ns2:row>
+<ns2:row>
+    <ns2:entry>セッションアクセス時</ns2:entry>
+    <ns2:entry>thisAccessTimeにカレントタイムを設定</ns2:entry>
+    <ns2:entry>thisAccessTimeにカレントタイムを設定</ns2:entry>
+</ns2:row>
+<ns2:row>
+    <ns2:entry>セッションアクセス終了時</ns2:entry>
+    <ns2:entry>lastAccessTimeにthisAcccessTimeを設定し、thisAccessTimeにカレントタイムを設定</ns2:entry>
+    <ns2:entry>lastAccessTimeとthisAccessTimeにカレントタイムを設定</ns2:entry>
+</ns2:row>
+<ns2:row>
+    <ns2:entry>セッションアイドル時間の算出</ns2:entry>
+    <ns2:entry>lastAccessTimeからの経過時間</ns2:entry>
+    <ns2:entry>thisAccessTimeからの経過時間</ns2:entry>
+</ns2:row>
+                            </ns2:tbody>
+                        </ns2:tgroup>
+                    </ns2:table>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_34">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>ライフサイクルリスナ</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>org.apache.catalina.mbeans.ServerLifecycleListenerが、ライフサイクルのリファクタリングによって不要となったため、削除された。</ns3:para>
-                    <ns3:para>Tomcat6.0では、デフォルトでserver.xmlに設定されているため、server.xmlをそのまま利用することができない。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>ライフサイクルリスナ</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>org.apache.catalina.mbeans.ServerLifecycleListenerが、ライフサイクルのリファクタリングによって不要となったため、削除された。</ns2:para>
+                    <ns2:para>Tomcat6.0では、デフォルトでserver.xmlに設定されているため、server.xmlをそのまま利用することができない。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_35">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>クラスタ</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>BackupManagerが返却するアクティブなセッションの数が変更され、Tomcat6.0ではプライマリセッションのみであったが、Tomcat7.0からはプライマリ＋バックアップセッションとなった。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>クラスタ</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>BackupManagerが返却するアクティブなセッションの数が変更され、Tomcat6.0ではプライマリセッションのみであったが、Tomcat7.0からはプライマリ＋バックアップセッションとなった。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_36">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Valve</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>RequestDumperValveとWebdavFixValveは削除され、代わりにorg.apache.catalina.filtersパッケージのFilterとして実装された。。Filter なので設定ファイルもserver.xml（context.xml）からweb.xmlに変更となる。</ns3:para>
-                    <ns3:para>また、FastCommonAccessLogValveが削除された。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Valve</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>RequestDumperValveとWebdavFixValveは削除され、代わりにorg.apache.catalina.filtersパッケージのFilterとして実装された。。Filter なので設定ファイルもserver.xml（context.xml）からweb.xmlに変更となる。</ns2:para>
+                    <ns2:para>また、FastCommonAccessLogValveが削除された。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_37">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>スレッドローカル削除</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>clearReferencesThreadLocals属性（デフォルト：false）が削除され、org.apache.catalina.core.ThreadLocalLeakPreventionListenerが追加された。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>スレッドローカル削除</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>clearReferencesThreadLocals属性（デフォルト：false）が削除され、org.apache.catalina.core.ThreadLocalLeakPreventionListenerが追加された。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_38">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Managerアプリケーション</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Managerアプリケーションは、Tomcat7以降では再構成されており、いくつかのURLが変更されている。Managerアプリケーションへのアクセスに使用されるすべてのURLは、次のオプションのいずれかで始まる必要がある。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>&lt;ContextPath&gt;/html（HTML GUI）</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>&lt;ContextPath&gt;/text（テキストインタフェース）</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>&lt;ContextPath&gt;/jmxproxy（JMXプロキシ）</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>&lt;ContextPath&gt;/status（statusページ）</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>特に、テキストインタフェースのURLが、&lt;ContextPath&gt;/textに変更されていることに注意すること。</ns3:para>
-                    <ns3:para>Managerアプリケーションを利用するために必要なロールは、単一のmanagerロールから次の4つのロールに変更され、アクセスしたい機能に必要なロールを割り当てる必要がある。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>manager-gui：HTML GUIとstatusページへのアクセスを許可</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>manager-script：テキストインタフェースとstatusページへのアクセスを許可</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>manager-jmx：JMXプロキシとstatusページへのアクセスを許可</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>manager-status：statusページへのアクセスのみ許可</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>HTMLインタフェースは、CSRF（Cross Site Request Forgeries）に対して保護されているが、テキストインタフェースとJMXインタフェースは保護されていない。</ns3:para>
-                    <ns3:para>CSRFに対して保護するために、以下を確認すること。</ns3:para>
-                    <ns3:itemizedlist>
-                        <ns3:listitem>
-                            <ns3:para>manager-guiロールが付与されているユーザには、manager-scriptあるいはmanager-jmxロールを付与しない</ns3:para>
-                        </ns3:listitem>
-                        <ns3:listitem>
-                            <ns3:para>Managerアプリケーションがmanager-scriptあるいはmanager-jmxロールが付与されているユーザからブラウザでアクセスされた場合には、
-                セッションを終了させるために後でブラウザの全てのウィンドウを閉じる必要がある。</ns3:para>
-                        </ns3:listitem>
-                    </ns3:itemizedlist>
-                    <ns3:para>rolesコマンドは、デフォルト設定では動作しないことと、ほとんどのレルムがロールリストのサポートをしていないため、Managerアプリケーションから削除された。HTMLインタフェースは、CSRF（Cross Site Request Forgeries）に対して保護されているが、テキストインタフェースとJMXインタフェースは保護されていない。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Managerアプリケーション</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Managerアプリケーションは、Tomcat7以降では再構成されており、いくつかのURLが変更されている。Managerアプリケーションへのアクセスに使用されるすべてのURLは、次のオプションのいずれかで始まる必要がある。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>&lt;ContextPath&gt;/html（HTML GUI）</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>&lt;ContextPath&gt;/text（テキストインタフェース）</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>&lt;ContextPath&gt;/jmxproxy（JMXプロキシ）</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>&lt;ContextPath&gt;/status（statusページ）</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>特に、テキストインタフェースのURLが、&lt;ContextPath&gt;/textに変更されていることに注意すること。</ns2:para>
+                    <ns2:para>Managerアプリケーションを利用するために必要なロールは、単一のmanagerロールから次の4つのロールに変更され、アクセスしたい機能に必要なロールを割り当てる必要がある。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>manager-gui：HTML GUIとstatusページへのアクセスを許可</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>manager-script：テキストインタフェースとstatusページへのアクセスを許可</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>manager-jmx：JMXプロキシとstatusページへのアクセスを許可</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>manager-status：statusページへのアクセスのみ許可</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>HTMLインタフェースは、CSRF（Cross Site Request Forgeries）に対して保護されているが、テキストインタフェースとJMXインタフェースは保護されていない。</ns2:para>
+                    <ns2:para>CSRFに対して保護するために、以下を確認すること。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>manager-guiロールが付与されているユーザには、manager-scriptあるいはmanager-jmxロールを付与しない</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>Managerアプリケーションがmanager-scriptあるいはmanager-jmxロールが付与されているユーザからブラウザでアクセスされた場合には、
+                セッションを終了させるために後でブラウザの全てのウィンドウを閉じる必要がある。</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>rolesコマンドは、デフォルト設定では動作しないことと、ほとんどのレルムがロールリストのサポートをしていないため、Managerアプリケーションから削除された。HTMLインタフェースは、CSRF（Cross Site Request Forgeries）に対して保護されているが、テキストインタフェースとJMXインタフェースは保護されていない。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_39">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>クラスローダの優先順位</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat7.0.51 以降、Web アプリケーションクラスローダによるクラスローディングはSystem クラス
-ローダより優先されます。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>クラスローダの優先順位</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Tomcat7.0.51 以降、Web アプリケーションクラスローダによるクラスローディングはSystem クラス
+ローダより優先されます。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_40">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>本ドキュメントについて</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>本マイグレーションガイドはTomcat間（6.0-7.0）のマイグレーション時に注意すべき項目について整理したものである。</ns3:para>
-                    <ns3:para>本内容はTomcatコミュニティのMigration Guideの情報を参考に作成している。</ns3:para>
-                    <ns3:para>
-            <ns3:command ns2:href="http://tomcat.apache.org/migration.html">http://tomcat.apache.org/migration.html</ns3:command>
-        </ns3:para>
-                    <ns3:para>
-            <ns3:command ns2:href="http://tomcat.apache.org/migration-7.html">http://tomcat.apache.org/migration-7.html</ns3:command>
-        </ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>本ドキュメントについて</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>本マイグレーションガイドはTomcat間（6.0-7.0）のマイグレーション時に注意すべき項目について整理したものである。</ns2:para>
+                    <ns2:para>本内容はTomcatコミュニティのMigration Guideの情報を参考に作成している。</ns2:para>
+                    <ns2:para>
+            <ns2:command ns3:href="http://tomcat.apache.org/migration.html">http://tomcat.apache.org/migration.html</ns2:command>
+        </ns2:para>
+                    <ns2:para>
+            <ns2:command ns3:href="http://tomcat.apache.org/migration-7.html">http://tomcat.apache.org/migration-7.html</ns2:command>
+        </ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_41">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>Javaバージョンについて</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Apache Tomcatのあるメジャーバージョンから新しいバージョンのものへアップデートをするとき、システムにインストールされているJVMが必要なJavaバージョンをサポートしていることを確認する必要がある。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>Javaバージョンについて</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Apache Tomcatのあるメジャーバージョンから新しいバージョンのものへアップデートをするとき、システムにインストールされているJVMが必要なJavaバージョンをサポートしていることを確認する必要がある。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_42">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>設定ファイルについて</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Apache Tomcatのあるメジャーバージョンから他のバージョンへマイグレーション（例：Tomcat
-			6からTomcat 7）するとき、古いバージョンの設定ファイルをむやみにコピーすべきではありません。</ns3:para>
-                    <ns3:para>推奨されているアプローチはApache
-			Tomcatの新しいバージョンのデフォルト設定ファイルを必要に応じて修正する方法である。</ns3:para>
-                    <ns3:para/>
-                    <ns3:para>本ドキュメントでは対象外であるが、同じメジャーバージョン内であるマイナーバージョンから別のマイナーバージョンへマイグレーション（例；Tomcat 6.0.41からTomcat 6.0.43）するとき、設定ファイルは再利用することが可能である。</ns3:para>
-                    <ns3:para>しかし、デフォルト値が変更されていないか、また、新たな要素が追加されていないかを確認するべきである。</ns3:para>
-                    <ns3:para>確認結果に応じて設定ファイルを修正するべきである。</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>設定ファイルについて</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Apache Tomcatのあるメジャーバージョンから他のバージョンへマイグレーション（例：Tomcat
+			6からTomcat 7）するとき、古いバージョンの設定ファイルをむやみにコピーすべきではありません。</ns2:para>
+                    <ns2:para>推奨されているアプローチはApache
+			Tomcatの新しいバージョンのデフォルト設定ファイルを必要に応じて修正する方法である。</ns2:para>
+                    <ns2:para/>
+                    <ns2:para>本ドキュメントでは対象外であるが、同じメジャーバージョン内であるマイナーバージョンから別のマイナーバージョンへマイグレーション（例；Tomcat 6.0.41からTomcat 6.0.43）するとき、設定ファイルは再利用することが可能である。</ns2:para>
+                    <ns2:para>しかし、デフォルト値が変更されていないか、また、新たな要素が追加されていないかを確認するべきである。</ns2:para>
+                    <ns2:para>確認結果に応じて設定ファイルを修正するべきである。</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
         <DocBook articleId="knowhowDetail_43">
-            <ns3:article>
-                <ns3:info>
-                    <ns3:title>非推奨API</ns3:title>
-                </ns3:info>
-                <ns3:section>
-                    <ns3:para>Tomcat7.0は、Servlet
-			3.0、JSP2.2およびEL2.2仕様をサポートしている。</ns3:para>
-                    <ns3:para>
-			<ns3:command ns2:href="http://tomcat.apache.org/whichversion.html">http://tomcat.apache.org/whichversion.html
-			</ns3:command>
-		</ns3:para>
-                    <ns3:para>これらの仕様で非推奨となったAPIを利用している場合は代替APIを利用するように変更する必要がある。
-		</ns3:para>
-                </ns3:section>
-            </ns3:article>
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>非推奨API</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Tomcat7.0は、Servlet
+			3.0、JSP2.2およびEL2.2仕様をサポートしている。</ns2:para>
+                    <ns2:para>
+			<ns2:command ns3:href="http://tomcat.apache.org/whichversion.html">http://tomcat.apache.org/whichversion.html
+			</ns2:command>
+		</ns2:para>
+                    <ns2:para>これらの仕様で非推奨となったAPIを利用している場合は代替APIを利用するように変更する必要がある。
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
         </DocBook>
     </DocBookList>
     <SearchInfomationList>
