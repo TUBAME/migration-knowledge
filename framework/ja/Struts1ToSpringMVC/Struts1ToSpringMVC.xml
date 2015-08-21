@@ -5523,7 +5523,7 @@
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Validation</CheckItemName>
                 <SearchProcess>クライアントでの入力値検証機能のチェックを行う</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>Unknown</PortabilityDegree>
                 <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5537,7 +5537,7 @@
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Template Engine</CheckItemName>
                 <SearchProcess>Struts-Tilesの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>Unknown</PortabilityDegree>
                 <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5547,7 +5547,7 @@
                 <CheckItemNo>2</CheckItemNo>
                 <CheckItemName>Check Template Engine</CheckItemName>
                 <SearchProcess>Struts-Tilesの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>Unknown</PortabilityDegree>
                 <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5639,7 +5639,7 @@
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Template Engine</CheckItemName>
                 <SearchProcess>FreeMarkerの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換あり）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換あり)</PortabilityFactor>
                 <PortabilityDegree>Unknown</PortabilityDegree>
                 <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5681,7 +5681,7 @@
                 <CheckItemNo>2</CheckItemNo>
                 <CheckItemName>Check Configuration Files</CheckItemName>
                 <SearchProcess>DynaActionForm/Lazy ActionFormの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5691,7 +5691,7 @@
                 <CheckItemNo>3</CheckItemNo>
                 <CheckItemName>Check Configuration Files</CheckItemName>
                 <SearchProcess>DynaActionForm/Lazy ActionFormの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5701,7 +5701,7 @@
                 <CheckItemNo>4</CheckItemNo>
                 <CheckItemName>Check Configuration Files</CheckItemName>
                 <SearchProcess>DynaActionForm/Lazy ActionFormの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5711,7 +5711,7 @@
                 <CheckItemNo>5</CheckItemNo>
                 <CheckItemName>Check Configuration Files</CheckItemName>
                 <SearchProcess>DynaActionForm/Lazy ActionFormの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5725,7 +5725,7 @@
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Commands</CheckItemName>
                 <SearchProcess>Commandの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>High</PortabilityDegree>
                 <DegreeDetail>高</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
@@ -5739,7 +5739,7 @@
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check Plugins</CheckItemName>
                 <SearchProcess>プラグインの利用をチェックする</SearchProcess>
-                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし）</PortabilityFactor>
+                <PortabilityFactor>MVCフレームワーク独自機能(上位互換なし)</PortabilityFactor>
                 <PortabilityDegree>High</PortabilityDegree>
                 <DegreeDetail>高</DegreeDetail>
                 <VisualConfirm>ValidatorPluginの場合は、入力値検証機能の移行で対処するため、ここでの対処は不要</VisualConfirm>
