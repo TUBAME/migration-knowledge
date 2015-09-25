@@ -3896,13 +3896,13 @@
                     <ns2:para>例えば、パッケージ「a」にPartクラスが含まれている場合、以下のJSPページはTomcat7でコンパイルできなくなる。</ns2:para>
                     <ns2:programlisting>
 
-&lt;%@page import=&quot;a.*&quot;%&gt;
+&lt;%@page import="a.*"%&gt;
 &lt;% Part page = new Part(); %&gt;
 
 		</ns2:programlisting>
                     <ns2:para>これは、javax.servlet.http.*の暗黙的なimportとa.*の明示的なimportにおいて、Servlet3.0で追加されたPartクラスの定義が競合するために発生する問題である。</ns2:para>
                     <ns2:para>Tomcatは、JSPからServletファイル（.java）へのコンパイルの際、デフォルトのimportとして javax.servlet.*、javax.servlet.http.*、javax.servlet.jsp.* を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.0で追加されたクラスと衝突してしまう。</ns2:para>
-                    <ns2:para>この問題を解決するには、明示的なimport（この例では、import=&quot;a.Part&quot;）を利用する必要がある。</ns2:para>
+                    <ns2:para>この問題を解決するには、明示的なimport（この例では、import="a.Part"）を利用する必要がある。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -4049,7 +4049,7 @@
                     <ns2:para>Servlet 3.0仕様におけるSessionCookieConfigの追加により、コンフィグレーションおよびコードの複雑さを軽減するために、いくつかのSession Cookie設定オプションは削除された。</ns2:para>
                     <ns2:itemizedlist>
                         <ns2:listitem>
-                            <ns2:para>ConnectorのemptySessionPath：本属性は削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookiePath=&quot;/&quot;を設定することによって、同等の結果を得ることが可能</ns2:para>
+                            <ns2:para>ConnectorのemptySessionPath：本属性は削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookiePath="/"を設定することによって、同等の結果を得ることが可能</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
                             <ns2:para>org.apache.catalina.SESSION_COOKIE_NAME システムプロパティ：本プロパティは削除された。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookieName属性を設定することによって、同等の結果を得ることが可能</ns2:para>
@@ -4202,7 +4202,7 @@
                             <ns2:para>WebアプリケーションがServlet 3.0仕様を使用していることを示すために、web-app要素を更新する。内容はデフォルトのconf/web.xmlからversion、xsi:schemaLocation、xmlns、xmlns:xsi属性の値をコピーできる。</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
-                            <ns2:para>web-app要素に、属性metadata-complete=&quot;true&quot;を追加する。</ns2:para>
+                            <ns2:para>web-app要素に、属性metadata-complete="true"を追加する。</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
                             <ns2:para>空の&lt;absolute-ordering /&gt;要素を追加する。</ns2:para>
@@ -4295,7 +4295,7 @@
                     <ns2:title>アクセスログ</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>デフォルトで無効から有効に変更され、ログのフォーマットもcommonから &quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; に変更された。</ns2:para>
+                    <ns2:para>デフォルトで無効から有効に変更され、ログのフォーマットもcommonから "%h %l %u %t &amp;quot;%r&amp;quot; %s %b" に変更された。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -8128,8 +8128,8 @@
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_304">
             <FileType>*.jsp</FileType>
-            <SearchKey1>^&lt;%@ page import=.*\*.*%&gt;</SearchKey1>
-            <SearchKey2></SearchKey2>
+            <SearchKey1>&lt;%@ page.*%&gt;</SearchKey1>
+            <SearchKey2>import=\".*\*.*\"</SearchKey2>
             <PythonModule></PythonModule>
             <LineNumberInfomation>
                 <LineNumber>1</LineNumber>

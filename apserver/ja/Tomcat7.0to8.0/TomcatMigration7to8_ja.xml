@@ -3809,16 +3809,16 @@
                 </ns2:info>
                 <ns2:section>
                     <ns2:para>ワイルドカード (*) のimport構文を使用するJSPページでは、Servlet APIに追加された新しいクラスとWebアプリケーションに含まれるクラスが競合する可能性がある。</ns2:para>
-                    <ns2:para>例えば、パッケージ &quot;a&quot; にReadListenerクラスが含まれている場合、以下のJSPページはTomcat8でコンパイルできなくなる。</ns2:para>
+                    <ns2:para>例えば、パッケージ "a" にReadListenerクラスが含まれている場合、以下のJSPページはTomcat8でコンパイルできなくなる。</ns2:para>
                     <ns2:programlisting>
 
-&lt;%@page import=&quot;a.*&quot;%&gt;
+&lt;%@page import="a.*"%&gt;
 &lt;% ReadListener listener = new ReadListener(); %&gt;
 
 </ns2:programlisting>
                     <ns2:para>これは、javax.servlet.*の暗黙的なimportとa.*の明示的なimportにおいて、Servlet3.1で追加されたReadListenerクラスの定義の競合するために発生する問題である。</ns2:para>
-                    <ns2:para>Tomcatは、JSPからServletファイル（.java）へのコンパイルの際、デフォルトのimportとして &quot;javax.servlet.*&quot;、&quot;javax.servlet.http.*&quot;、&quot;javax.servlet.jsp.*&quot; を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.1で追加されたクラスと衝突してしまう。</ns2:para>
-                    <ns2:para>この問題を解決するには、明示的なimport (この例では、import=&quot;a.ReadListener&quot;) を利用する必要がある。</ns2:para>
+                    <ns2:para>Tomcatは、JSPからServletファイル（.java）へのコンパイルの際、デフォルトのimportとして "javax.servlet.*"、"javax.servlet.http.*"、"javax.servlet.jsp.*" を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.1で追加されたクラスと衝突してしまう。</ns2:para>
+                    <ns2:para>この問題を解決するには、明示的なimport (この例では、import="a.ReadListener") を利用する必要がある。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -3876,11 +3876,11 @@
                     <ns2:para>例として、Tomcat7とTomcat8の設定例を以下に示す。</ns2:para>
                     <ns2:programlisting>
 &lt;!-- Tomcat 7: --&gt;
-&lt;Context allowLinking=&quot;true&quot; /&gt;
+&lt;Context allowLinking="true" /&gt;
 
 &lt;!-- Tomcat 8: --&gt;
 &lt;Context&gt;
-&lt;Resources allowLinking=&quot;true&quot; /&gt;
+&lt;Resources allowLinking="true" /&gt;
 &lt;/Context&gt;
 		</ns2:programlisting>
                 </ns2:section>
@@ -8359,8 +8359,8 @@ ${requestScope.undefined}
         </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_307">
             <FileType>*.jsp</FileType>
-            <SearchKey1>^&lt;%@ page import=.*\*.*%&gt;</SearchKey1>
-            <SearchKey2></SearchKey2>
+            <SearchKey1>&lt;%@ page.*%&gt;</SearchKey1>
+            <SearchKey2>import=\".*\*.*\"</SearchKey2>
             <PythonModule></PythonModule>
             <LineNumberInfomation>
                 <LineNumber>1</LineNumber>
