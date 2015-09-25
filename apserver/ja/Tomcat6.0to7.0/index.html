@@ -1,13 +1,12 @@
 <HTML xmlns:knowhow="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:doc="http://docbook.org/ns/docbook">
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Tomcat6.0.xから7.0.xへのマイグレーションガイド</title>
+<title>TomcatMigration_Tomcat6.0_To_Tomcat7.0</title>
 <link href="css/knowhow.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="js/prettify.js"></script>
 <meta content="DocBook XSL Stylesheets V1.78.1" name="generator">
 </HEAD>
 <BODY>
-<H1 class="title">Tomcat6.0.xから7.0.xへのマイグレーションガイド</H1>
+<H1 class="title">TomcatMigration_Tomcat6.0_To_Tomcat7.0</H1>
 <div class="toc">
 <p>
 <b>Index</b>
@@ -948,8 +947,14 @@
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>Tomcat は仕様に準拠していない名前だけ（値のない）のCookie をデフォルトで許容しない。</p>
-<p>ただし、新たなシステムプロパティ「org.apache.tomcat.util.http.ServerCookie.ALLOW_NAME_ONLY」が追加され、名前だけのCookie を許容するように利用できる。</p>
+<p>Tomcat は仕様に準拠していない、名前だけ（つまり、値のない）のCookie をデフォルトで許容しない。
+        ただし、新たなシステムプロパティ「org.apache.tomcat.util.http.ServerCookie.ALLOW_NAME_ONLY」が追加され、名前だけのCookieを許容するように設定できる。</p>
+</div>
+<div class="section">
+<div class="titlepage"></div>
+<p>（RFC 2109 の仕様によって）Cookie のvalue もしくはpath が引用符で囲まれていなければならない文字を含んでいる場合、Cookie がクライアントへ送信される前に「version 0」から「version 1」へ自動的に変換され、value もしくはpath はダブルコーテーションで囲まれる。
+        引用符で囲む必要がある文字は、「org.apache.tomcat.util.http.ServerCookie.FWD_SLASH_IS_SEPARATOR」のようないくつかの<span class="command"><strong><a class="command" href="http://tomcat.apache.org/tomcat-7.0-doc/config/systemprops.html" target="_top">システムプロパティ</a></strong></span>によって制御される。
+        Internet Explorer は「version 1」のCookie の処理で問題があることが知られているため注意が必要である（<span class="command"><strong><a class="command" href="https://bz.apache.org/bugzilla/show_bug.cgi?id=57872" target="_top">Bug 57872</a></strong></span>）。</p>
 </div>
 <br>
 <br>
@@ -1223,7 +1228,7 @@
 <p>LAST_ACCESS_AT_START がtrue なら、最終アクセス時間の値は前のリクエストの開始から計算される。アイドル時間の基準値が最終アクセス時間になる。LAST_ACCESS_AT_START がfalse なら、最終アクセス時間の値は前のリクエストの終了から計算される。アイドル時間の基準値は現在のアクセス時間（6.0 と同様）のままとなる。</p>
 <p>セッションタイムアウトをチェックするためのセッションアイドル時間は、LAST_ACCESS_AT_STARTの値を元に決定される。</p>
 <div class="table">
-<a name="N12B18"></a>
+<a name="N12B1E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;LAST_ACCESS_AT_STARTによる動作の違い</b>
 </p>
