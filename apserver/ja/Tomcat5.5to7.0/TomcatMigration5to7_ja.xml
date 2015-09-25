@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
+<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook" xmlns:ns3="http://www.w3.org/1999/xlink">
     <PortabilityKnowhowTitle>TomcatMigration_Tomcat5.5_To_Tomcat7.0</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
@@ -3935,13 +3935,13 @@
                 <ns2:section>
                     <ns2:para>
     	 ワイルドカード（*）のimport構文を使用するJSPページでは、Servlet APIに追加された新しいクラスとWebアプリケーションに含まれるクラスが競合する可能性がある。
-    	 例えば、パッケージ &quot;a&quot; にPartクラスが含まれている場合、次のJSPページはTomcat7でコンパイルできなくなる。
+    	 例えば、パッケージ "a" にPartクラスが含まれている場合、次のJSPページはTomcat7でコンパイルできなくなる。
     	 </ns2:para>
                     <ns2:para>
          これは、javax.servlet.http.*の暗黙的なimportとa.*の明示的なimportにおいて、Servlet3.0で追加されたPartクラスの定義の競合するために発生する問題である。
-        Tomcatは、JSP→Servletファイル（.java）のコンパイルの際、デフォルトのimportとして&quot;javax.servlet.*&quot;、&quot;javax.servlet.http.*&quot;、&quot;javax.servlet.jsp.*&quot;を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.0で追加されたクラスと衝突してしまう。
+        Tomcatは、JSP→Servletファイル（.java）のコンパイルの際、デフォルトのimportとして"javax.servlet.*"、"javax.servlet.http.*"、"javax.servlet.jsp.*"を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.0で追加されたクラスと衝突してしまう。
         </ns2:para>
-                    <ns2:para>この問題を解決するには、明示的なimport（この例では、import=&quot;a.Part&quot;）を利用することである。</ns2:para>
+                    <ns2:para>この問題を解決するには、明示的なimport（この例では、import="a.Part"）を利用することである。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -4169,7 +4169,7 @@
                             <ns2:para>デフォルトのconf/web.xmlからversion、xsi:schemaLocation、xmlns、xmlns:xsi属性の値をコピーする</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
-                            <ns2:para>web-app要素に、属性metadata-complete=&quot;true&quot;を追加</ns2:para>
+                            <ns2:para>web-app要素に、属性metadata-complete="true"を追加</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
                             <ns2:para>空の&lt;absolute-ordering /&gt;要素を追加</ns2:para>
@@ -4188,7 +4188,7 @@
                     <ns2:para>全てのSSLを有効にするConnectorの場合、SSLEnabledフラグにtrueを設定しなければならない。</ns2:para>
                     <ns2:programlisting>
         &lt;Connector ...
-            SSLEnabled=&quot;true&quot;
+            SSLEnabled="true"
               ... /&gt;
         </ns2:programlisting>
                     <ns2:para>Tomcat単体でSSL通信を行う場合、上記設定が必要となる。Apacheと連携してTomcatを動かす場合、ApacheにてSSL通信を行うため、Tomcatでの設定は不要となる。</ns2:para>
@@ -4316,11 +4316,11 @@
                             <ns2:para>&lt;Cluster&gt; &lt;Manager&gt; domainReplication</ns2:para>
                             <ns2:para>この属性は、DomainFilterInterceptorに代替され、以下のように設定する。</ns2:para>
                             <ns2:programlisting>
-                &lt;Channel className=&quot;...&quot; ... &gt;
+                &lt;Channel className="..." ... &gt;
                     ...
                   &lt;Interceptor
-                    className=&quot;org.apache.catalina.tribes.group.interceptors.DomainFilterInterceptor&quot;
-                    domain=&quot;...&quot;
+                    className="org.apache.catalina.tribes.group.interceptors.DomainFilterInterceptor"
+                    domain="..."
                     ...
                 &lt;/Channel&gt;
                 </ns2:programlisting>
@@ -4346,10 +4346,10 @@
                 <ns2:section>
                     <ns2:para>Tomcat5.5.xでは、セッションレプリケーションの送受信の統計情報をデフォルトで出力していたが、Tomcat7.0.xではデフォルトでは出力しない。出力する場合には、server.xmlに以下のように設定する必要がある。</ns2:para>
                     <ns2:programlisting>
-        &lt;Channel className=&quot;...&quot; ...&gt;
+        &lt;Channel className="..." ...&gt;
            ...
           &lt;Interceptor
-            className=&quot;org.apache.catalina.trivbes.group.interceptors.ThroughputInterceptor&quot;
+            className="org.apache.catalina.trivbes.group.interceptors.ThroughputInterceptor"
            ...
         &lt;/Channel&gt;
         </ns2:programlisting>
@@ -4388,7 +4388,7 @@
                             <ns2:para>HTTP ConnectorsのrestrictedUserAgents属性とnoCompressionUserAgents属性</ns2:para>
                         </ns2:listitem>
                     </ns2:itemizedlist>
-                    <ns2:para>また、&quot;|&quot;演算子を用いて、別々の正規表現を連結することができることに注意すること。</ns2:para>
+                    <ns2:para>また、"|"演算子を用いて、別々の正規表現を連結することができることに注意すること。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -4424,7 +4424,7 @@
                     <ns2:para>Servlet 3.0仕様におけるSessionCookieConfigの追加により、コンフィグレーションおよびコードの複雑さを軽減するために、多くのSession Cookie設定オプションは削除された。</ns2:para>
                     <ns2:itemizedlist>
                         <ns2:listitem>
-                            <ns2:para>ConnectorのemptySessionPath属性は削除。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookiePath=&quot;/&quot;を設定することによって、同等の効果が得られる</ns2:para>
+                            <ns2:para>ConnectorのemptySessionPath属性は削除。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookiePath="/"を設定することによって、同等の効果が得られる</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
                             <ns2:para>org.apache.catalina.SESSION_COOKIE_NAME システムプロパティは削除。$CATALINA_BASE/conf/context.xmlにおいて、sessionCookieName属性を設定することによって、同等の効果が得られる</ns2:para>
@@ -4479,7 +4479,7 @@
                             <ns2:para>Tomcat5.5.xのwebappsディレクトリに配置している独自のWebアプリケーションは、そのままTomcat7.0.xのwebappsディレクトリに移動する。</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
-                            <ns2:para>Tomcat5.5.xと同じディレクトリ構造でTomcat6.0.xを使用する場合、conf/catalina.propertiesファイルの&quot;common.loader&quot;、&quot;server.loader&quot;、&quot;shared.loader&quot;にそれぞれ設定する必要がある。設定例は以下のとおり。</ns2:para>
+                            <ns2:para>Tomcat5.5.xと同じディレクトリ構造でTomcat6.0.xを使用する場合、conf/catalina.propertiesファイルの"common.loader"、"server.loader"、"shared.loader"にそれぞれ設定する必要がある。設定例は以下のとおり。</ns2:para>
                             <ns2:programlisting>
                 shared.loader=${catalina_base}/shared/classes,${catalina_base}/shared/lib/*.jar,
                 ${catalina_home}/shared/classes,${catalina_home}/shared/lib/*.jar
@@ -4681,7 +4681,7 @@
                     <ns2:para>したがって、Tomcat6→Tomcat7へのバージョンアップで、META-INF/context.xmlの取扱いが変更されたこととなる。</ns2:para>
                     <ns2:itemizedlist>
                         <ns2:listitem>
-                            <ns2:para>Tomcat6では、META-INF/context.xmlを$CATALINA_BASE/conf/Engine名/Host名に&quot;コンテキスト名&quot;.xmlとしてコピーし、リデプロイのチェック対象は、&quot;コンテキスト名&quot;.xmlとなる。</ns2:para>
+                            <ns2:para>Tomcat6では、META-INF/context.xmlを$CATALINA_BASE/conf/Engine名/Host名に"コンテキスト名".xmlとしてコピーし、リデプロイのチェック対象は、"コンテキスト名".xmlとなる。</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
                             <ns2:para>Tomcat7では、META-INF/context.xmlをパースだけしコピーはしない。リデプロイのチェック対象は、META-INF/context.xmlとなる。</ns2:para>
@@ -4795,7 +4795,7 @@
                     <ns2:para>Tomcatの認証機能を使用している場合、changeSessionIdOnAuthentication属性のデフォルト値が変更されて、Tomcat5.5.xではfalseであったが、Tomcat6.0.x以降ではtrueとなっている。</ns2:para>
                     <ns2:para>Tomcat6.0.x以降でこの属性を無効にする場合（Tomcat5.5.xと同様の動作にする場合）、changeSessionIdOnAuthentication属性を設定する必要がある。</ns2:para>
                     <ns2:programlisting>
-        &lt;Valve className=&quot;...&quot;
+        &lt;Valve className="..."
          ...
           changeSessionIdOnAuthentication=&amp;quot;false&amp;quot;
          ... /&gt;
@@ -4847,7 +4847,7 @@
                     <ns2:title>アクセスログ</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>デフォルトで無効から有効に変更され、server.xmlに指定されているログフォーマットもcommonから&quot;%h %l %u %t &quot;%r&quot; %s %b&quot;に変更された。</ns2:para>
+                    <ns2:para>デフォルトで無効から有効に変更され、server.xmlに指定されているログフォーマットもcommonから"%h %l %u %t "%r" %s %b"に変更された。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -4931,8 +4931,8 @@
     <SearchInfomationList>
         <SearchInfomation searchInfoId="searchInfo_1">
             <FileType>*.jsp</FileType>
-            <SearchKey1>^&lt;%@ page import=.*\*.*%&gt;</SearchKey1>
-            <SearchKey2></SearchKey2>
+            <SearchKey1>&lt;%@ page.*%&gt;</SearchKey1>
+            <SearchKey2>import=\".*\*.*\"</SearchKey2>
             <PythonModule></PythonModule>
             <LineNumberInfomation>
                 <LineNumber>1</LineNumber>
