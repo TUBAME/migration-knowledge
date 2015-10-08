@@ -3544,7 +3544,7 @@
             <CheckItem checkItemId="checkItem_316" searchRefKey="searchInfo_316" searchExistance="true">
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check if maxActive is used</CheckItemName>
-                <SearchProcess>Resrouce要素にmaxActive があるかチェック</SearchProcess>
+                <SearchProcess>Resource要素にmaxActive があるかチェック</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
@@ -3554,7 +3554,7 @@
             <CheckItem checkItemId="checkItem_317" searchRefKey="searchInfo_317" searchExistance="true">
                 <CheckItemNo>2</CheckItemNo>
                 <CheckItemName>Check if maxWait is used</CheckItemName>
-                <SearchProcess>Resrouce要素にmaxWait があるかチェック</SearchProcess>
+                <SearchProcess>Resource要素にmaxWait があるかチェック</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
@@ -3564,7 +3564,7 @@
             <CheckItem checkItemId="checkItem_318" searchRefKey="searchInfo_318" searchExistance="true">
                 <CheckItemNo>3</CheckItemNo>
                 <CheckItemName>Check if removeAbandoned is used</CheckItemName>
-                <SearchProcess>Resrouce要素にremoveAbandoned があるかチェック</SearchProcess>
+                <SearchProcess>Resource要素にremoveAbandoned があるかチェック</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
                 <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>中</DegreeDetail>
