@@ -368,17 +368,33 @@
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>ワイルドカード (*) のimport構文を使用するJSPページでは、Servlet APIに追加された新しいクラスとWebアプリケーションに含まれるクラスが競合する可能性がある。</p>
-<p>例えば、パッケージ "a" にReadListenerクラスが含まれている場合、以下のJSPページはTomcat8でコンパイルできなくなる。</p>
+<p>JSPページにおいて、import属性（&lt;%@page import="パッケージ名" %&gt;）のパッケージ名にワイルドカード（*）を使用している場合、Servlet APIに新しく追加されたクラスとWebアプリケーション内のクラスが同名クラスであると競合する可能性がある。</p>
+<p>例えば、パッケージ"tubame.example"にReadListenerクラスが含まれている場合、以下のJSPページはTomcat8でコンパイルできなくなる。</p>
 <pre class="programlisting">
-
-&lt;%@page import="a.*"%&gt;
+&lt;%@page import="tubame.example.*"%&gt;
 &lt;% ReadListener listener = new ReadListener(); %&gt;
-
 </pre>
-<p>これは、javax.servlet.*の暗黙的なimportとa.*の明示的なimportにおいて、Servlet3.1で追加されたReadListenerクラスの定義の競合するために発生する問題である。</p>
-<p>Tomcatは、JSPからServletファイル（.java）へのコンパイルの際、デフォルトのimportとして "javax.servlet.*"、"javax.servlet.http.*"、"javax.servlet.jsp.*" を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.1で追加されたクラスと衝突してしまう。</p>
-<p>この問題を解決するには、明示的なimport (この例では、import="a.ReadListener") を利用する必要がある。</p>
+<p>Tomcatでは、JSPからServlet（Java）にコンパイルする際に、「javax.servlet.*」「javax.servlet.http.*」「javax.servlet.jsp.*」のインポートを設定するため、Servlet3.1で当該パッケージに新たに追加された以下のクラスと、同名クラスを持つパッケージをワイルドカードを使用してインポートした場合に衝突してしまう。</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>ReadListener</p>
+</li>
+<li class="listitem">
+<p>WriteListener</p>
+</li>
+<li class="listitem">
+<p>HttpSessionIdListener</p>
+</li>
+<li class="listitem">
+<p>HttpUpgradeHandler</p>
+</li>
+<li class="listitem">
+<p>WebConnection</p>
+</li>
+</ul>
+</div>
+<p>本問題の対処方法は、明示的なインポートにおいて、クラス名まで指定することである（上記例では「import="tubame.example.ReadListener"」とする）。</p>
 </div>
 <br>
 <br>
@@ -498,7 +514,7 @@ ${requestScope.undefined}
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>DBCPが2.xにバージョンアップした。</p>
+<p>Tomcat同梱版のDBコネクションプールがDBCP1.4からDBCP2に変更された。</p>
 </div>
 <br>
 <br>
@@ -517,17 +533,17 @@ ${requestScope.undefined}
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>以下の設定項目名が変更となった。</p>
+<p>DBCP1.4で使用されていたいくつかのパラメータ名が、DBCP2で変更されている。</p>
 <div class="itemizedlist">
 <ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
-<p>maxWait はmaxWaitMillis に変更</p>
+<p>maxActive（コネクションの最大生成数）はmaxTotalに変更された</p>
 </li>
 <li class="listitem">
-<p>maxActive はmaxTotal に変更</p>
+<p>maxWait（コネクション取得時の最大待ち時間(ミリ秒)）はmaxWaitMillisに変更された</p>
 </li>
 <li class="listitem">
-<p>removeAbandoned はremoveAbandonedOnBorrow およびremoveAbandonedOnMaintenance に変更</p>
+<p>removeAbandonedはremoveAbandonedOnBorrow（コネクションを取得するときにremoveAbandoned()を実施するかどうかを設定）およびremoveAbandonedOnMaintenance（EvictorスレッドによってremoveAbandoned()を実施するかどうかを設定）に変更</p>
 </li>
 </ul>
 </div>
