@@ -3426,11 +3426,16 @@
             <CheckItem checkItemId="checkItem_307" searchRefKey="searchInfo_307" searchExistance="true">
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check the import syntax</CheckItemName>
-                <SearchProcess>ワイルドカード（*）を用いた import 構文があるかをチェック</SearchProcess>
+                <SearchProcess>Servlet3.1 APIで新たに追加されたクラスと同名のクラスをJSPファイル内でインポート（ワイルドカード利用）しているかチェック</SearchProcess>
                 <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
                 <PortabilityDegree>Low</PortabilityDegree>
                 <DegreeDetail>低2</DegreeDetail>
-                <VisualConfirm>import 構文を確認し、ワイルドカードを利用しているかを目視で確認する</VisualConfirm>
+                <VisualConfirm>ワイルドカードを使用してインポートしているクラス群の中に、以下の名前のクラスが含まれているか目視で確認する&#xD;
+　・ReadListener&#xD;
+　・WriteListener&#xD;
+　・HttpSessionIdListener&#xD;
+　・HttpUpgradeHandler&#xD;
+　・WebConnection</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
@@ -3544,31 +3549,31 @@
             <CheckItem checkItemId="checkItem_316" searchRefKey="searchInfo_316" searchExistance="true">
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>Check if maxActive is used</CheckItemName>
-                <SearchProcess>Resource要素にmaxActive があるかチェック</SearchProcess>
+                <SearchProcess>コンテキストXMLのResource要素にmaxActive属性があるかチェック</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Middle</PortabilityDegree>
-                <DegreeDetail>中</DegreeDetail>
-                <VisualConfirm>属性の記述有無を目視で確認する</VisualConfirm>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>ヒットした箇所がデフォルトのDBコネクションプール（DBCP2）の設定であることを目視確認する</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
             <CheckItem checkItemId="checkItem_317" searchRefKey="searchInfo_317" searchExistance="true">
                 <CheckItemNo>2</CheckItemNo>
                 <CheckItemName>Check if maxWait is used</CheckItemName>
-                <SearchProcess>Resource要素にmaxWait があるかチェック</SearchProcess>
+                <SearchProcess>コンテキストXMLのResource要素にmaxWait属性があるかチェック</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Middle</PortabilityDegree>
-                <DegreeDetail>中</DegreeDetail>
-                <VisualConfirm>属性の記述有無を目視で確認する</VisualConfirm>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>ヒットした箇所がデフォルトのDBコネクションプール（DBCP2）の設定であることを目視確認する</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
             <CheckItem checkItemId="checkItem_318" searchRefKey="searchInfo_318" searchExistance="true">
                 <CheckItemNo>3</CheckItemNo>
                 <CheckItemName>Check if removeAbandoned is used</CheckItemName>
-                <SearchProcess>Resource要素にremoveAbandoned があるかチェック</SearchProcess>
+                <SearchProcess>コンテキストXMLのResource要素にremoveAbandoned属性があるかチェック</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Middle</PortabilityDegree>
-                <DegreeDetail>中</DegreeDetail>
-                <VisualConfirm>属性の記述有無を目視で確認する</VisualConfirm>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>ヒットした箇所がデフォルトのDBコネクションプール（DBCP2）の設定であることを目視確認する</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
@@ -3808,17 +3813,31 @@
                     <ns2:title>Servlet 3.1 API</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>ワイルドカード (*) のimport構文を使用するJSPページでは、Servlet APIに追加された新しいクラスとWebアプリケーションに含まれるクラスが競合する可能性がある。</ns2:para>
-                    <ns2:para>例えば、パッケージ "a" にReadListenerクラスが含まれている場合、以下のJSPページはTomcat8でコンパイルできなくなる。</ns2:para>
+                    <ns2:para>JSPページにおいて、import属性（&lt;%@page import="パッケージ名" %&gt;）のパッケージ名にワイルドカード（*）を使用している場合、Servlet APIに新しく追加されたクラスとWebアプリケーション内のクラスが同名クラスであると競合する可能性がある。</ns2:para>
+                    <ns2:para>例えば、パッケージ"tubame.example"にReadListenerクラスが含まれている場合、以下のJSPページはTomcat8でコンパイルできなくなる。</ns2:para>
                     <ns2:programlisting>
-
-&lt;%@page import="a.*"%&gt;
+&lt;%@page import="tubame.example.*"%&gt;
 &lt;% ReadListener listener = new ReadListener(); %&gt;
-
 </ns2:programlisting>
-                    <ns2:para>これは、javax.servlet.*の暗黙的なimportとa.*の明示的なimportにおいて、Servlet3.1で追加されたReadListenerクラスの定義の競合するために発生する問題である。</ns2:para>
-                    <ns2:para>Tomcatは、JSPからServletファイル（.java）へのコンパイルの際、デフォルトのimportとして "javax.servlet.*"、"javax.servlet.http.*"、"javax.servlet.jsp.*" を設定するため、JSPにおいてワイルドカードのimport文を使用すると、Servlet3.1で追加されたクラスと衝突してしまう。</ns2:para>
-                    <ns2:para>この問題を解決するには、明示的なimport (この例では、import="a.ReadListener") を利用する必要がある。</ns2:para>
+                    <ns2:para>Tomcatでは、JSPからServlet（Java）にコンパイルする際に、「javax.servlet.*」「javax.servlet.http.*」「javax.servlet.jsp.*」のインポートを設定するため、Servlet3.1で当該パッケージに新たに追加された以下のクラスと、同名クラスを持つパッケージをワイルドカードを使用してインポートした場合に衝突してしまう。</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:listitem>
+                            <ns2:para>ReadListener</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>WriteListener</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>HttpSessionIdListener</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>HttpUpgradeHandler</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>WebConnection</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                    <ns2:para>本問題の対処方法は、明示的なインポートにおいて、クラス名まで指定することである（上記例では「import="tubame.example.ReadListener"」とする）。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -3910,7 +3929,7 @@
                     <ns2:title>DBCPバージョンアップ</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>DBCPが2.xにバージョンアップした。</ns2:para>
+                    <ns2:para>Tomcat同梱版のDBコネクションプールがDBCP1.4からDBCP2に変更された。</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -3931,16 +3950,16 @@
                     <ns2:title>設定項目の変更</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>以下の設定項目名が変更となった。</ns2:para>
+                    <ns2:para>DBCP1.4で使用されていたいくつかのパラメータ名が、DBCP2で変更されている。</ns2:para>
                     <ns2:itemizedlist>
                         <ns2:listitem>
-                            <ns2:para>maxWait はmaxWaitMillis に変更</ns2:para>
+                            <ns2:para>maxActive（コネクションの最大生成数）はmaxTotalに変更された</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
-                            <ns2:para>maxActive はmaxTotal に変更</ns2:para>
+                            <ns2:para>maxWait（コネクション取得時の最大待ち時間(ミリ秒)）はmaxWaitMillisに変更された</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
-                            <ns2:para>removeAbandoned はremoveAbandonedOnBorrow およびremoveAbandonedOnMaintenance に変更</ns2:para>
+                            <ns2:para>removeAbandonedはremoveAbandonedOnBorrow（コネクションを取得するときにremoveAbandoned()を実施するかどうかを設定）およびremoveAbandonedOnMaintenance（EvictorスレッドによってremoveAbandoned()を実施するかどうかを設定）に変更</ns2:para>
                         </ns2:listitem>
                     </ns2:itemizedlist>
                 </ns2:section>
