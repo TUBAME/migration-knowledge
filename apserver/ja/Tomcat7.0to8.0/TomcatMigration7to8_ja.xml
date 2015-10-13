@@ -3430,12 +3430,7 @@
                 <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
                 <PortabilityDegree>Low</PortabilityDegree>
                 <DegreeDetail>低2</DegreeDetail>
-                <VisualConfirm>ワイルドカードを使用してインポートしているクラス群の中に、以下の名前のクラスが含まれているか目視で確認する&#xD;
-　・ReadListener&#xD;
-　・WriteListener&#xD;
-　・HttpSessionIdListener&#xD;
-　・HttpUpgradeHandler&#xD;
-　・WebConnection</VisualConfirm>
+                <VisualConfirm>ワイルドカードを使用してインポートしているクラス群の中に、「ReadListener」「WriteListener」「HttpSessionIdListener」「HttpUpgradeHandler」「WebConnection」の名前のクラスが含まれているか目視で確認する</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
