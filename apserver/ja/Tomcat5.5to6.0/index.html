@@ -739,8 +739,7 @@ response.setContentType("text/html");
 
 ServletOutputStream outputStream = response.getOutputStream();
 String s = "テスト";
-byte[] bytes =
-s.getBytes("UTF-8");
+byte[] bytes = s.getBytes("UTF-8");
 outputStream.write(bytes);
 outputStream.close();
 		</pre>

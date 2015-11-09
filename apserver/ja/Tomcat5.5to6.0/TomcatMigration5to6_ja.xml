@@ -3057,8 +3057,8 @@
                 <SearchProcess>javax.servlet.ServletOutputStreamが利用されているかをチェック</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
                 <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低2</DegreeDetail>
-                <VisualConfirm>利用有無を目視で確認する</VisualConfirm>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm>ServletOutputStream オブジェクトのprint(String) メソッドが利用されている場合は移植が必要となる。</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
@@ -3591,8 +3591,7 @@ response.setContentType("text/html");
 
 ServletOutputStream outputStream = response.getOutputStream();
 String s = "テスト";
-byte[] bytes =
-s.getBytes("UTF-8");
+byte[] bytes = s.getBytes("UTF-8");
 outputStream.write(bytes);
 outputStream.close();
 		</ns2:programlisting>
@@ -7343,7 +7342,7 @@ writer.close();
             <SearchKey2>ServletOutputStream</SearchKey2>
             <PythonModule></PythonModule>
             <LineNumberInfomation>
-                <LineNumber>2</LineNumber>
+                <LineNumber>3</LineNumber>
                 <LineNumberContents></LineNumberContents>
                 <Investigation></Investigation>
             </LineNumberInfomation>
