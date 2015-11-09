@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook">
+<PortabilityKnowhow xmlns="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:ns2="http://docbook.org/ns/docbook" xmlns:ns3="http://www.w3.org/1999/xlink">
     <PortabilityKnowhowTitle>TomcatMigration_Tomcat5.5_To_Tomcat6.0</PortabilityKnowhowTitle>
     <EntryViewList>
         <EntryCategory>
@@ -3255,7 +3255,7 @@
                             <ns2:para>Tomcat5.5.xのwebappsディレクトリに配置している独自のWebアプリケーションは、そのままTomcat6.0.xのwebappsディレクトリに移動する。</ns2:para>
                         </ns2:listitem>
                         <ns2:listitem>
-                            <ns2:para>Tomcat5.5.xと同じディレクトリ構造でTomcat6.0.xを使用する場合、conf/catalina.propertiesファイルの&quot;common.loader&quot;、&quot;server.loader&quot;、&quot;shared.loader&quot;にそれぞれ設定する必要がある。設定例は以下のとおり。</ns2:para>
+                            <ns2:para>Tomcat5.5.xと同じディレクトリ構造でTomcat6.0.xを使用する場合、conf/catalina.propertiesファイルの"common.loader"、"server.loader"、"shared.loader"にそれぞれ設定する必要がある。設定例は以下のとおり。</ns2:para>
                             <ns2:programlisting>
                 shared.loader=${catalina_base}/shared/classes,${catalina_base}/shared/lib/*.jar,
                 ${catalina_home}/shared/classes,${catalina_home}/shared/lib/*.jar
@@ -3329,7 +3329,7 @@
                     <ns2:para>全てのSSLを有効にするConnectorの場合、SSLEnabledフラグにtrueを設定しなければならない。</ns2:para>
                     <ns2:programlisting>
         &lt;Connector ...
-            SSLEnabled=&quot;true&quot;
+            SSLEnabled="true"
               ... /&gt;
         </ns2:programlisting>
                     <ns2:para>Tomcat単体でSSL通信を行う場合、上記設定が必要となる。Apacheと連携してTomcatを動かす場合、ApacheにてSSL通信を行うため、Tomcatでの設定は不要となる。</ns2:para>
@@ -3430,11 +3430,11 @@
                             <ns2:para>&lt;Cluster&gt; &lt;Manager&gt; domainReplication</ns2:para>
                             <ns2:para>この属性は、DomainFilterInterceptorに代替され、以下のように設定する。</ns2:para>
                             <ns2:programlisting>
-                &lt;Channel className=&quot;...&quot; ... &gt;
+                &lt;Channel className="..." ... &gt;
                     ...
                   &lt;Interceptor
-                    className=&quot;org.apache.catalina.tribes.group.interceptors.DomainFilterInterceptor&quot;
-                    domain=&quot;...&quot;
+                    className="org.apache.catalina.tribes.group.interceptors.DomainFilterInterceptor"
+                    domain="..."
                     ...
                 &lt;/Channel&gt;
                 </ns2:programlisting>
@@ -3460,10 +3460,10 @@
                 <ns2:section>
                     <ns2:para>Tomcat5.5.xでは、セッションレプリケーションの送受信の統計情報をデフォルトで出力していたが、Tomcat6.0.xではデフォルトでは出力しない。出力する場合には、server.xmlに以下のように設定する必要がある。</ns2:para>
                     <ns2:programlisting>
-        &lt;Channel className=&quot;...&quot; ...&gt;
+        &lt;Channel className="..." ...&gt;
            ...
           &lt;Interceptor
-            className=&quot;org.apache.catalina.trivbes.group.interceptors.ThroughputInterceptor&quot;
+            className="org.apache.catalina.trivbes.group.interceptors.ThroughputInterceptor"
            ...
         &lt;/Channel&gt;
         </ns2:programlisting>
@@ -3500,7 +3500,7 @@
                     <ns2:para>Tomcatの認証機能を使用している場合、changeSessionIdOnAuthentication属性のデフォルト値が変更されて、Tomcat5.5.xではfalseであったが、Tomcat6.0.xではtrueとなっている。</ns2:para>
                     <ns2:para>Tomcat6.0.xでこの属性を無効にする場合（Tomcat5.5.xと同様の動作にする場合）、changeSessionIdOnAuthentication属性を設定する必要がある。</ns2:para>
                     <ns2:programlisting>
-        &lt;Valve className=&quot;...&quot;
+        &lt;Valve className="..."
          ...
           changeSessionIdOnAuthentication=&amp;quot;false&amp;quot;
          ... /&gt;
@@ -3553,15 +3553,61 @@
         <DocBook articleId="knowhowDetail_26">
             <ns2:article>
                 <ns2:info>
-                    <ns2:title>ServletOutputStreamクラス</ns2:title>
+                    <ns2:title>ServletOutputStream クラス</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>Tomcat6.0以降、ServletOutputStreamクラスのprint(String s)メソッドを使用している場合、パラメータの文字列にISO 8559-1以外が設定されると、CharConvertsionExceptionが発生する。</ns2:para>
-                    <ns2:para>ISO 8559-1以外が設定されても例外が発生しないようにするためには、以下の実装をすることで対応可能である。</ns2:para>
+                    <ns2:para>Tomcat5.5 以前とTomcat6.0 以降で、javax.servlet.ServletOutputStream
+			のサブクラスであるorg.apache.catalina.connector.CoyoteOutputStream
+			クラスの実装が変更されているため、レスポンスデータでの2byte文字の扱いが異なっている。
+		</ns2:para>
+                    <ns2:para>ServletOutputStream クラスではprint(String) メソッドを提供している。 Servlet
+			仕様では当該メソッド内において、パラメータで渡される文字列がISO 8859-1 かどうかをチェックし、ISO 8859-1
+			以外の場合はCharConversionException をスローすることになっている。 Tomcat5.5
+			以前のCoyoteOutputStream では、当該メソッドをオーバライドしており、ISO 8859-1
+			チェックをスキップしてしまっている（これは仕様違反である）。 Tomcat6.0 以降のCoyoteOutputStream
+			では、仕様に準拠するため、当該メソッドのオーバライドを行わないように修正している。 これにより、Tomcat6.0
+			以降では、ServletOutputStream オブジェクトのprint(String)
+			メソッドのパラメータに2byte文字を渡した場合、CharConversionException が発生する。
+		</ns2:para>
+                    <ns2:para>以下のようにprint(String) メソッドに2byte文字を渡すコードが存在している場合、Tomcat5.5
+			では正常に動作するが、Tomcat6.0 以降ではCharConversionException が発生する。
+		</ns2:para>
                     <ns2:programlisting>
-        PrintWriter pw = response.getWriter();
-        pw.print(string);
-        </ns2:programlisting>
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html");
+
+ServletOutputStream outputStream = response.getOutputStream();
+String s = "テスト";
+outputStream.print(s);
+outputStream.close();
+		</ns2:programlisting>
+                    <ns2:para>Tomcat6.0 以降でレスポンスデータに2byte文字を書込みたい場合は、String#getBytes(Charset)
+			を利用して指定した文字コードでエンコードを行い、ServletOutputStream オブジェクトのwrite(byte[])
+			メソッドにエンコードした文字列を渡す。
+		</ns2:para>
+                    <ns2:programlisting>
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html");
+
+ServletOutputStream outputStream = response.getOutputStream();
+String s = "テスト";
+byte[] bytes =
+s.getBytes("UTF-8");
+outputStream.write(bytes);
+outputStream.close();
+		</ns2:programlisting>
+                    <ns2:para>なお、レスポンスデータがテキストデータのみ（バイナリデータなし）の場合は、java.io.PrintWriter
+			（HttpServletResponse#getWriter で取得）を利用することも検討する。
+		</ns2:para>
+                    <ns2:programlisting>
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html");
+
+PrintWriter writer = response.getWriter();
+String s = "テスト";
+writer.println(s);
+writer.close();
+		</ns2:programlisting>
                 </ns2:section>
             </ns2:article>
         </DocBook>

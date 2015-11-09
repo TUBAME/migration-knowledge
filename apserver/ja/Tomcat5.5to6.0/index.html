@@ -1,13 +1,12 @@
 <HTML xmlns:knowhow="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:doc="http://docbook.org/ns/docbook">
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Tomcat5.5.xから6.0.xへのマイグレーションガイド</title>
+<title>TomcatMigration_Tomcat5.5_To_Tomcat6.0</title>
 <link href="css/knowhow.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="js/prettify.js"></script>
 <meta content="DocBook XSL Stylesheets V1.78.1" name="generator">
 </HEAD>
 <BODY>
-<H1 class="title">Tomcat5.5.xから6.0.xへのマイグレーションガイド</H1>
+<H1 class="title">TomcatMigration_Tomcat5.5_To_Tomcat6.0</H1>
 <div class="toc">
 <p>
 <b>Index</b>
@@ -184,7 +183,7 @@
 <a name="tubame_1."></a>
 <h2 class="title">1.Java5必須</h2>
 <br>
-<a name="tubame_1.1."></a>
+<a name="tubame_1.1." id="category_7"></a>
 <h3 class="title">1.1.Java5必須</h3>
 <br>
 <div class="section">
@@ -193,11 +192,11 @@
 </div>
 <br>
 <br>
-<a name="tubame_1.2."></a>
+<a name="tubame_1.2." id="category_9"></a>
 <h3 class="title">1.2.J2EE非推奨API</h3>
 <br>
 <br>
-<a name="tubame_1.2.1."></a>
+<a name="tubame_1.2.1." id="category_10"></a>
 <h3 class="title">1.2.1.Servlet非推奨API</h3>
 <br>
 <div class="section">
@@ -292,7 +291,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_1.2.2."></a>
+<a name="tubame_1.2.2." id="category_11"></a>
 <h3 class="title">1.2.2.JSP非推奨API</h3>
 <br>
 <div class="section">
@@ -356,7 +355,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_1.2.3."></a>
+<a name="tubame_1.2.3." id="category_12"></a>
 <h3 class="title">1.2.3.Servlet、JSP以外の非推奨API</h3>
 <br>
 <div class="section">
@@ -379,7 +378,7 @@
 <a name="tubame_2."></a>
 <h2 class="title">2.ディレクトリ構造の変更</h2>
 <br>
-<a name="tubame_2.1."></a>
+<a name="tubame_2.1." id="category_13"></a>
 <h3 class="title">2.1.sharedライブラリ</h3>
 <br>
 <div class="section">
@@ -409,7 +408,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_2.2."></a>
+<a name="tubame_2.2." id="category_14"></a>
 <h3 class="title">2.2.Endorsedライブラリ</h3>
 <br>
 <div class="section">
@@ -419,7 +418,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_2.3."></a>
+<a name="tubame_2.3." id="category_15"></a>
 <h3 class="title">2.3.デフォルトWebアプリケーション</h3>
 <br>
 <div class="section">
@@ -429,7 +428,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_2.4."></a>
+<a name="tubame_2.4." id="category_16"></a>
 <h3 class="title">2.4.共有Webホスティング環境</h3>
 <br>
 <div class="section">
@@ -441,7 +440,7 @@
 <a name="tubame_3."></a>
 <h2 class="title">3.内部のLogging APIパッケージ名の変更</h2>
 <br>
-<a name="tubame_3.1."></a>
+<a name="tubame_3.1." id="category_17"></a>
 <h3 class="title">3.1.Apache Commons Logging</h3>
 <br>
 <div class="section">
@@ -468,7 +467,7 @@
 <a name="tubame_4."></a>
 <h2 class="title">4.Connectorの仕様変更</h2>
 <br>
-<a name="tubame_4.1."></a>
+<a name="tubame_4.1." id="category_18"></a>
 <h3 class="title">4.1.SSL設定</h3>
 <br>
 <div class="section">
@@ -483,7 +482,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_4.2."></a>
+<a name="tubame_4.2." id="category_19"></a>
 <h3 class="title">4.2.スレッドプール</h3>
 <br>
 <div class="section">
@@ -504,14 +503,14 @@
 <a name="tubame_5."></a>
 <h2 class="title">5.クラスタリングのコンフィグレーションの変更</h2>
 <br>
-<a name="tubame_5.1."></a>
+<a name="tubame_5.1." id="category_20"></a>
 <h3 class="title">5.1.クラスタリング構成のサーバ設定</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
 <p>クラスタリングの構成はリファクタリングされた。クラスタを設定するにあたり、Tomcat5.5.xとTomcat6.0.xでserver.xmlで使用されるタグと属性の変更点と対応づけを以下に示す。</p>
 <div class="table">
-<a name="N1235A"></a>
+<a name="N1235B"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;server.xmlのクラスタに関する変更点</b>
 </p>
@@ -604,7 +603,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_5.2."></a>
+<a name="tubame_5.2." id="category_21"></a>
 <h3 class="title">5.2.ThroughputInterceptor</h3>
 <br>
 <div class="section">
@@ -621,7 +620,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_5.3."></a>
+<a name="tubame_5.3." id="category_22"></a>
 <h3 class="title">5.3.Cluster用MBean</h3>
 <br>
 <div class="section">
@@ -633,7 +632,7 @@
 <a name="tubame_6."></a>
 <h2 class="title">6.その他</h2>
 <br>
-<a name="tubame_6.1."></a>
+<a name="tubame_6.1." id="category_23"></a>
 <h3 class="title">6.1.FastCommonAccessLogValveクラス</h3>
 <br>
 <div class="section">
@@ -643,7 +642,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_6.2."></a>
+<a name="tubame_6.2." id="category_24"></a>
 <h3 class="title">6.2.changeSessionIdOnAuthentication属性</h3>
 <br>
 <div class="section">
@@ -659,7 +658,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_6.3."></a>
+<a name="tubame_6.3." id="category_25"></a>
 <h3 class="title">6.3.Administration Web Application の廃止</h3>
 <br>
 <div class="section">
@@ -668,7 +667,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_6.4."></a>
+<a name="tubame_6.4." id="category_26"></a>
 <h3 class="title">6.4.使用不可となった属性</h3>
 <br>
 <div class="section">
@@ -688,7 +687,7 @@
 </div>
 <br>
 <br>
-<a name="tubame_6.5."></a>
+<a name="tubame_6.5." id="category_27"></a>
 <h3 class="title">6.5.ACTIVITY_CHECKフィールド</h3>
 <br>
 <div class="section">
@@ -700,17 +699,63 @@
 </div>
 <br>
 <br>
-<a name="tubame_6.6."></a>
+<a name="tubame_6.6." id="category_28"></a>
 <h3 class="title">6.6.ServletOutputStreamクラス</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>Tomcat6.0以降、ServletOutputStreamクラスのprint(String s)メソッドを使用している場合、パラメータの文字列にISO 8559-1以外が設定されると、CharConvertsionExceptionが発生する。</p>
-<p>ISO 8559-1以外が設定されても例外が発生しないようにするためには、以下の実装をすることで対応可能である。</p>
+<p>Tomcat5.5 以前とTomcat6.0 以降で、javax.servlet.ServletOutputStream
+			のサブクラスであるorg.apache.catalina.connector.CoyoteOutputStream
+			クラスの実装が変更されているため、レスポンスデータでの2byte文字の扱いが異なっている。
+		</p>
+<p>ServletOutputStream クラスではprint(String) メソッドを提供している。 Servlet
+			仕様では当該メソッド内において、パラメータで渡される文字列がISO 8859-1 かどうかをチェックし、ISO 8859-1
+			以外の場合はCharConversionException をスローすることになっている。 Tomcat5.5
+			以前のCoyoteOutputStream では、当該メソッドをオーバライドしており、ISO 8859-1
+			チェックをスキップしてしまっている（これは仕様違反である）。 Tomcat6.0 以降のCoyoteOutputStream
+			では、仕様に準拠するため、当該メソッドのオーバライドを行わないように修正している。 これにより、Tomcat6.0
+			以降では、ServletOutputStream オブジェクトのprint(String)
+			メソッドのパラメータに2byte文字を渡した場合、CharConversionException が発生する。
+		</p>
+<p>以下のようにprint(String) メソッドに2byte文字を渡すコードが存在している場合、Tomcat5.5
+			では正常に動作するが、Tomcat6.0 以降ではCharConversionException が発生する。
+		</p>
 <pre class="programlisting">
-        PrintWriter pw = response.getWriter();
-        pw.print(string);
-        </pre>
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html");
+
+ServletOutputStream outputStream = response.getOutputStream();
+String s = "テスト";
+outputStream.print(s);
+outputStream.close();
+		</pre>
+<p>Tomcat6.0 以降でレスポンスデータに2byte文字を書込みたい場合は、String#getBytes(Charset)
+			を利用して指定した文字コードでエンコードを行い、ServletOutputStream オブジェクトのwrite(byte[])
+			メソッドにエンコードした文字列を渡す。
+		</p>
+<pre class="programlisting">
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html");
+
+ServletOutputStream outputStream = response.getOutputStream();
+String s = "テスト";
+byte[] bytes =
+s.getBytes("UTF-8");
+outputStream.write(bytes);
+outputStream.close();
+		</pre>
+<p>なお、レスポンスデータがテキストデータのみ（バイナリデータなし）の場合は、java.io.PrintWriter
+			（HttpServletResponse#getWriter で取得）を利用することも検討する。
+		</p>
+<pre class="programlisting">
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html");
+
+PrintWriter writer = response.getWriter();
+String s = "テスト";
+writer.println(s);
+writer.close();
+		</pre>
 </div>
 <br>
 <br>
