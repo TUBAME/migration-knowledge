@@ -704,22 +704,29 @@
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>Tomcat5.5 以前とTomcat6.0 以降で、javax.servlet.ServletOutputStream
-			のサブクラスであるorg.apache.catalina.connector.CoyoteOutputStream
-			クラスの実装が変更されているため、レスポンスデータでの2byte文字の扱いが異なっている。
-		</p>
-<p>ServletOutputStream クラスではprint(String) メソッドを提供している。 Servlet
+<p>Tomcat5.5 以前とTomcat6.0 以降で、レスポンスデータにおける2byte文字の扱いが異なっている。</p>
+<p>クライアントへバイナリデータを送信するためのjavax.servlet.ServletOutputStream
+			クラスではprint(String) メソッドを提供している。 Servlet
 			仕様では当該メソッド内において、パラメータで渡される文字列がISO 8859-1 かどうかをチェックし、ISO 8859-1
-			以外の場合はCharConversionException をスローすることになっている。 Tomcat5.5
-			以前のCoyoteOutputStream では、当該メソッドをオーバライドしており、ISO 8859-1
-			チェックをスキップしてしまっている（これは仕様違反である）。 Tomcat6.0 以降のCoyoteOutputStream
-			では、仕様に準拠するため、当該メソッドのオーバライドを行わないように修正している。 これにより、Tomcat6.0
-			以降では、ServletOutputStream オブジェクトのprint(String)
-			メソッドのパラメータに2byte文字を渡した場合、CharConversionException が発生する。
-		</p>
+			以外の場合はCharConversionException をスローすることになっている。 また、Servlet
+			コンテナはバイナリデータをエンコードしない仕様のため、
+			ServletResponse#setCharacterEncoding(String)
+			メソッドを利用して文字コードを指定していてもバイナリデータはエンコードされないことになっている。</p>
+<p>Tomcat5.5 以前とTomcat6.0 以降では、ServletOutputStream
+			のサブクラスであるorg.apache.catalina.connector.CoyoteOutputStream
+			クラスの実装が変更されているため、Tomcat5.5 以前で動作していたアプリケーションがTomcat6.0
+			以降で動作しない可能性がある。 Tomcat5.5 以前のCoyoteOutputStream では、print(String)
+			メソッドをオーバライドしており、ISO 8859-1 チェックをスキップしてしまっている（これは仕様違反である）。 Tomcat6.0
+			以降のCoyoteOutputStream では、仕様に準拠するため、print(String)
+			メソッドのオーバライドを行わないように修正している。 これにより、Tomcat6.0 以降では、ServletOutputStream
+			オブジェクトのprint(String) メソッドのパラメータに2byte文字を渡した場合、CharConversionException
+			が発生する。 一方、Tomcat5.5 以前では、ISO 8859-1 チェックをスキップしているため、print(String)
+			メソッドに2byte文字を渡しても問題なく動作し、バイナリデータをエンコードしてしまう実装も含まれているため、ServletResponse#setCharacterEncoding(String)
+			メソッドで指定した文字コードでエンコードが可能になっている。</p>
+<p>以下に具体例を示す。</p>
 <p>以下のようにprint(String) メソッドに2byte文字を渡すコードが存在している場合、Tomcat5.5
-			では正常に動作するが、Tomcat6.0 以降ではCharConversionException が発生する。
-		</p>
+			では正常に動作するが、Tomcat6.0 以降ではCharConversionException が発生する。 また、Tomcat5.5
+			ではsetCharacterEncoding(String) メソッドで指定した文字コードにエンコードが可能である。</p>
 <pre class="programlisting">
 response.setCharacterEncoding("UTF-8");
 response.setContentType("text/html");
@@ -731,23 +738,22 @@ outputStream.close();
 		</pre>
 <p>Tomcat6.0 以降でレスポンスデータに2byte文字を書込みたい場合は、String#getBytes(Charset)
 			を利用して指定した文字コードでエンコードを行い、ServletOutputStream オブジェクトのwrite(byte[])
-			メソッドにエンコードした文字列を渡す。
-		</p>
+			メソッドにエンコードした文字列を渡す。 また、setCharacterEncoding(String)
+			メソッドは仕様上無効な設定のため、削除する。</p>
 <pre class="programlisting">
-response.setCharacterEncoding("UTF-8");
 response.setContentType("text/html");
 
 ServletOutputStream outputStream = response.getOutputStream();
 String s = "テスト";
-byte[] bytes = s.getBytes("UTF-8");
+byte[] bytes = s.getBytes("UTF-8"); // Encodes using the charset.
 outputStream.write(bytes);
 outputStream.close();
 		</pre>
 <p>なお、レスポンスデータがテキストデータのみ（バイナリデータなし）の場合は、java.io.PrintWriter
-			（HttpServletResponse#getWriter で取得）を利用することも検討する。
-		</p>
+			（HttpServletResponse#getWriter で取得）を利用することも検討する。 PrintWriter
+			はsetCharacterEncoding(String) メソッドで指定された文字コードでエンコードを行う。</p>
 <pre class="programlisting">
-response.setCharacterEncoding("UTF-8");
+response.setCharacterEncoding("UTF-8"); // Sets the character encoding
 response.setContentType("text/html");
 
 PrintWriter writer = response.getWriter();
