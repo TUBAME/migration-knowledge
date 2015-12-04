@@ -1,0 +1,11 @@
+
+<jboss>
+  <enterprise-beans>
+    <entity>
+      <ejb-name>MessageEntity</ejb-name>
+        <ejb-ref>
+          <ejb-ref-name>ejb/otherBean</ejb-ref-name>
+          <jndi-name>otherBean</jndi-name>
+         </ejb-ref>
+    </entity>
+    

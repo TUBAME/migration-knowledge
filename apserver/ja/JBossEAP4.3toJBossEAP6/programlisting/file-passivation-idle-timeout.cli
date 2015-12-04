@@ -1,3 +1,0 @@
-
-/subsystem=ejb3/file-passivation-store=file:write-attribute(name=idle-timeout,value=300L)
-

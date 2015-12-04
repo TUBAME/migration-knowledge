@@ -1,0 +1,129 @@
+
+[standalone@2e3799aba350:9999 /] /subsystem=naming:jndi-view
+{
+    "outcome" => "success",
+    "result" => {
+        "java: contexts" => {
+            "java:" => {
+                "ConnectionFactory" => {
+                    "class-name" => "org.hornetq.jms.client.HornetQJMSConnectionFactory",
+                    "value" => "HornetQConnectionFactory [serverLocator=ServerLocatorImpl [initialConnectors=[TransportConfiguration(name=in-vm, factory=org-hornetq-core-remoting-impl-invm-InVMConnectorFactory) ?server-id=0], discoveryGroupConfiguration=null], clientID=null, dupsOKBatchSize=1048576, transactionBatchSize=1048576, readOnly=false]"
+                },
+                "JmsXA" => {
+                    "class-name" => "java.lang.Object",
+                    "value" => "?"
+                },
+                "TransactionManager" => {
+                    "class-name" => "com.arjuna.ats.jbossatx.jta.TransactionManagerDelegate",
+                    "value" => "com.arjuna.ats.jbossatx.jta.TransactionManagerDelegate@1ef13d9a"
+                },
+                "jms" => {
+                    "class-name" => "javax.naming.Context",
+                    "children" => {"queue" => {
+                        "class-name" => "javax.naming.Context",
+                        "children" => {
+                            "DLQ" => {
+                                "class-name" => "org.hornetq.jms.client.HornetQQueue",
+                                "value" => "HornetQQueue[DLQ]"
+                            },
+                            "ExpiryQueue" => {
+                                "class-name" => "org.hornetq.jms.client.HornetQQueue",
+                                "value" => "HornetQQueue[ExpiryQueue]"
+                            }
+                        }
+                    }}
+                },
+                "jboss" => {
+                    "class-name" => "javax.naming.Context",
+                    "value" => "org.jboss.as.naming.WritableServiceBasedNamingStore@6692872c"
+                },
+                "ejb" => {
+                    "class-name" => "javax.naming.Context",
+                    "children" => {"mgmt" => {
+                        "class-name" => "javax.naming.Context",
+                        "children" => {"MEJB" => {
+                            "class-name" => "javax.management.j2ee.ManagementHome",
+                            "value" => "Proxy for remote EJB EJBHomeLocator{appName='jsr-77', moduleName='jsr-77', distinctName='', beanName='EJB', view='interface javax.management.j2ee.ManagementHome'}"
+                        }}
+                    }}
+                }
+            },
+            "java:jboss" => {
+                "ORB" => {
+                    "class-name" => "org.jacorb.orb.ORB",
+                    "value" => "org.jacorb.orb.ORB@76d85c1a"
+                },
+                "TransactionManager" => {
+                    "class-name" => "com.arjuna.ats.jbossatx.jta.TransactionManagerDelegate",
+                    "value" => "com.arjuna.ats.jbossatx.jta.TransactionManagerDelegate@1ef13d9a"
+                },
+                "TransactionSynchronizationRegistry" => {
+                    "class-name" => "com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionSynchronizationRegistryImple",
+                    "value" => "com.arjuna.ats.internal.jta.transaction.arjunacore.TransactionSynchronizationRegistryImple@12f8c201"
+                },
+                "UserTransaction" => {
+                    "class-name" => "org.jboss.tm.usertx.client.ServerVMClientUserTransaction",
+                    "value" => "org.jboss.tm.usertx.client.ServerVMClientUserTransaction@aff933f"
+                },
+                "corbanaming" => {
+                    "class-name" => "org.omg.CosNaming._NamingContextExtStub",
+                    "value" => "IOR:000000000000002B49444C3A6F6D672E6F72672F436F734E616D696E672F4E616D696E67436F6E746578744578743A312E3000000000000100000000000000B0000102000000000A3132372E302E302E31000DC8000000114A426F73732F4E616D696E672F726F6F74000000000000040000000000000008000000004A4143000000000100000020000000000001000100000001050100010001010900000002050100010001010000000014000000080000001A00000DC90000002100000030000000000000000100000000000000220000000000000000000000000000000000000000000000000000000000000000"
+                },
+                "irpoa" => {
+                    "class-name" => "org.jacorb.poa.POA",
+                    "value" => "org.jacorb.poa.POA@6af31fe8"
+                },
+                "jaas" => {
+                    "class-name" => "com.sun.proxy.$Proxy34",
+                    "value" => "java:jboss/jaas/ Context proxy"
+                },
+                "poa" => {
+                    "class-name" => "org.jacorb.poa.POA",
+                    "value" => "org.jacorb.poa.POA@56d0f892"
+                },
+                "infinispan" => {
+                    "class-name" => "javax.naming.Context",
+                    "children" => {
+                        "container" => {
+                            "class-name" => "javax.naming.Context",
+                            "children" => {"web" => {
+                                "class-name" => "org.jboss.as.clustering.infinispan.DefaultCacheContainer",
+                                "value" => "web"
+                            }}
+                        },
+                        "cache" => {
+                            "class-name" => "javax.naming.Context",
+                            "children" => {"web" => {
+                                "class-name" => "javax.naming.Context",
+                                "children" => {"repl" => {
+                                    "class-name" => "org.jboss.as.clustering.infinispan.DefaultCacheContainer$DelegatingCache",
+                                    "value" => "Cache 'repl'@2e3799aba350/web"
+                                }}
+                            }}
+                        }
+                    }
+                },
+                "datasources" => {
+                    "class-name" => "javax.naming.Context",
+                    "children" => {"ExampleDS" => {
+                        "class-name" => "org.jboss.jca.adapters.jdbc.WrapperDataSource",
+                        "value" => "org.jboss.jca.adapters.jdbc.WrapperDataSource@3c10064c"
+                    }}
+                },
+                "mail" => {
+                    "class-name" => "javax.naming.Context",
+                    "children" => {"Default" => {
+                        "class-name" => "javax.mail.Session",
+                        "value" => "javax.mail.Session@371a1f8f"
+                    }}
+                }
+            },
+            "java:jboss/exported" => {"jms" => {
+                "class-name" => "javax.naming.Context",
+                "children" => {"RemoteConnectionFactory" => {
+                    "class-name" => "org.hornetq.jms.client.HornetQJMSConnectionFactory",
+                    "value" => "HornetQConnectionFactory [serverLocator=ServerLocatorImpl [initialConnectors=[TransportConfiguration(name=netty, factory=org-hornetq-core-remoting-impl-netty-NettyConnectorFactory) ?port=5445&host=172-17-0-202], discoveryGroupConfiguration=null], clientID=null, dupsOKBatchSize=1048576, transactionBatchSize=1048576, readOnly=false]"
+                }}
+            }},
+            "java:global" => undefined
+        }

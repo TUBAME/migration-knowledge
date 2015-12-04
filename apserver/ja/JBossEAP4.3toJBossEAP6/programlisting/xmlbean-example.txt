@@ -1,3 +1,0 @@
-
-scomp -out aaaBean.jar ./aaa.xsd
-

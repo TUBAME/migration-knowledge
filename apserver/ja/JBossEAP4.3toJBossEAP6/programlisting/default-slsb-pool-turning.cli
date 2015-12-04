@@ -1,0 +1,2 @@
+
+/subsystem=ejb3/strict-max-bean-instance-pool=slsb-strict-max-pool:write-attribute(name=max-pool-size,value=100)

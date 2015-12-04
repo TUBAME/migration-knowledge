@@ -1,0 +1,2 @@
+
+[standalone@2e3799aba350:9999 /] /subsystem=web/connector=ajp/:write-attribute(name=max-connections,value=1000)

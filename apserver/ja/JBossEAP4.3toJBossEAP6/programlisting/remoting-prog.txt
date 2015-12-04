@@ -1,0 +1,5 @@
+
+Properties props = new Properties();
+props.put(InitialContext.PROVIDER_URL, "remote://localhost:4447");
+props.put(InitialContext.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+InitialContext initialContext = new InitialContext(props);

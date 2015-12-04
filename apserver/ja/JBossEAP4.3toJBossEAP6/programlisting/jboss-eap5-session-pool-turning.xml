@@ -1,0 +1,20 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise-beans>
+<session>
+  <ejb-name>○○○</ejb-name>
+  <jndi-name>△△△</jndi-name>
+  <configuration-name>XXX Stateless Session Bean</configuration-name>
+    </session>
+</enterprise-beans>
+
+<container-configurations>
+  <container-configuration
+    extends =”Standard Stateless SessionBean”>
+    <container-name>XXX Stateless Session Bean</container-name>
+    <container-pool-conf>                                 
+      <MinimumSize>□□□</MinimumSize>                   
+      <MaximumSize>■■■</MaximumSize>                                    
+    </container-pool-conf>
+  </container-configurations>
+</jboss>

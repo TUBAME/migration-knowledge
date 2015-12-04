@@ -1,0 +1,7 @@
+
+xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdbc/{datasource-name} --driver-name={driver-name} --use-java-context=true --jta=true --max-pool-size=100 --min-pool-size=100 --pool-prefill=true --idle-timeout-minutes=0 --check-valid-connection-sql="select 1" --prepared-statements-cache-size=50 --xa-datasource-class=org.postgresql.xa.PGXADataSource
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=ServerName:add(value="localhost")
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=PortNumber:add(value="5432")
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=DatabaseName:add(value="testdb")
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=User:add(value="postgres")
+/subsystem=datasources/xa-data-source=appDS/xa-datasource-properties=Password:add(value="postgres")

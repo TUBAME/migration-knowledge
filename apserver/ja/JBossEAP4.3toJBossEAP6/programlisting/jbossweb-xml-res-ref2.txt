@@ -1,0 +1,8 @@
+
+<jboss-web>
+   ...
+   <ejb-local-ref>
+        <ejb-ref-name>OrzBean</ejb-ref-name>
+        <local-jndi-name>šOrzBean/local</local-jndi-name>
+   </ejb-local-ref>
+</jboss-web>

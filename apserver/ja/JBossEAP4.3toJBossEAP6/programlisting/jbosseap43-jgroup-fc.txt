@@ -1,0 +1,40 @@
+
+...
+ <attribute name="ClusterConfig">
+            <!--
+            The default UDP stack:
+            - If you have a multihomed machine, set the UDP protocol's bind_addr attribute to the
+            appropriate NIC IP address, e.g bind_addr="192.168.0.2".
+            - On Windows machines, because of the media sense feature being broken with multicast
+            (even after disabling media sense) set the UDP protocol's loopback attribute to true
+            
+            - If your CacheMode is set to REPL_SYNC we recommend you comment 
+            out the FC (flow control) protocol 
+            -->
+            <config>
+                <UDP mcast_addr="${jboss.partition.udpGroup:230.1.2.7}" 
+                     mcast_port="${jboss.webpartition.mcast_port:45577}"
+		             tos="8"
+		             ucast_recv_buf_size="20000000"
+		             ucast_send_buf_size="640000"
+		             mcast_recv_buf_size="25000000"
+		             mcast_send_buf_size="640000"
+		             loopback="false"
+		             discard_incompatible_packets="true"
+		             enable_bundling="true"
+		             max_bundle_size="64000"
+		             max_bundle_timeout="30"
+		             use_incoming_packet_handler="true"
+		             use_outgoing_packet_handler="false"
+		             ip_ttl="${jgroups.udp.ip_ttl:2}"
+		             down_thread="false" up_thread="false"/>
+		          ...
+		          <FC max_credits="2000000" down_thread="false" up_thread="false"
+		              min_threshold="0.10"/>
+		          ...
+           </config>
+
+          ...
+
+  </attribute>
+        

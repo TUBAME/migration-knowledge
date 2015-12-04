@@ -1,0 +1,15 @@
+
+ <Context reloadable="false" crossContext="false">
+    <Resource name="jdbc/postgresDS"
+        auth="Container"
+        type="javax.sql.DataSource"
+        driverClassName="org.postgresql.Driver"
+        url="jdbc:postgresql://localhost:5433/testdb"
+        connectionProperties="tcpKeepAlive=true;socketTimeout=0"
+        username="postgres" password="postgres"
+        maxTotal="10" maxIdle="10" maxWaitMillis="10000"
+        removeAbandonedOnBorrow="true"  removeAbandonedTimeout="300" logAbandoned="true"
+        testOnBorrow="true" testOnReturn="false"
+        poolPreparedStatements="true"
+        validationQuery="select 1" />
+</Context>

@@ -1,0 +1,17 @@
+
+    private static InitialContext getInitialContext() throws NamingException {
+    	
+    	final Properties env = new Properties();
+    	// set com.sun.CORBA.ORBUseDynamicStub property
+    	System.setProperty("com.sun.CORBA.ORBUseDynamicStub", "true");
+        env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.cosnaming.CNCtxFactory");
+        env.put(Context.PROVIDER_URL,"corbaloc:iiop:localhost:3528/JBoss/Naming/root");
+        
+    	InitialContext context = null;
+    	try {
+    		context = new InitialContext(env);
+    	} catch (NamingException e) {
+    		throw e;
+    	}
+    	return context;
+    }

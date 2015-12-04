@@ -1,0 +1,21 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<enterprise-beans>
+    <message-driven>
+      <ejb-name>○○○</ejb-name>
+      <destination-jndi-name>●●●</destination-jndi-name>
+      <configuration-name>Message Driven Bean</configuration-name>
+    </message-driven>
+  </enterprise-beans>
+  <container-configurations>
+    <container-configuration extends="Standard Message Driven Bean">
+      <container-name>Message Driven Bean</container-name>
+		<invoker-proxy-binding-name>
+		message-driven-bean
+		</invoker-proxy-binding-name>
+		<container-pool-conf>                                    
+			<MinimumSize>□□□</MinimumSize>                      
+			<MaximumSize>△△△</MaximumSize>             
+		</container-pool-conf>
+    </container-configuration>
+  </container-configurations>

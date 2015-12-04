@@ -1,0 +1,11 @@
+
+[JBOSS_HOME]
+	|-- bin/
+	|-- client/
+	|-- docs/
+	|-- lib/
+	|-- server/
+		|-- all/
+		|-- default/
+		|-- minimal/
+		|-- production
