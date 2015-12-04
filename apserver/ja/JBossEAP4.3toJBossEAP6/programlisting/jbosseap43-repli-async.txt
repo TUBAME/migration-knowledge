@@ -1,0 +1,18 @@
+
+<server>
+
+    <!-- ==================================================================== -->
+    <!-- Defines TreeCache configuration                                      -->
+    <!-- ==================================================================== -->
+
+	 <!-- Note we are using TreeCacheAop -->
+    <mbean code="org.jboss.cache.aop.TreeCacheAop"
+        name="jboss.cache:service=TomcatClusteringCache">
+        ...
+        <!-- Valid modes are LOCAL, REPL_ASYNC and REPL_SYNC
+             
+             If you use REPL_SYNC and a UDP-based ClusterConfig
+             we recommend you comment out the FC (flow control)
+             protocol in the ClusterConfig section below.
+        -->
+        <attribute name="CacheMode">REPL_ASYNC</attribute>

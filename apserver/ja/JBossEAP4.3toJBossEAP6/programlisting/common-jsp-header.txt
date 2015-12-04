@@ -1,5 +1,0 @@
-
-<%@ page language="java"  %>
-<%@ page import="java.io.*" %>
-<%@ page import="java.util.*" %>
-

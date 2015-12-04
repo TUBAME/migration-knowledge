@@ -1,3 +1,0 @@
-
-xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
-

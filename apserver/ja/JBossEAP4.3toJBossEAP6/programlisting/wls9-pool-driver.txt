@@ -1,9 +1,0 @@
-
-Driver myDriver = (Driver)
-Class.forName("weblogic.jdbc.pool.Driver").newInstance();
-...
-Properties props = new Properties();
-props.put("connectionPoolID", "myConnectionPool");
-Connection conn =
-myDriver.connect("jdbc:weblogic:pool", props);
-

@@ -1,7 +1,0 @@
-
-<jdbc-system-resource>
-    <name>ExampleDataSource</name>
-    <target>exampleServer</target>
-    <descriptor-file-name>jdbc/example-jdbc.xml</descriptor-file-name>
-</jdbc-system-resource>
-

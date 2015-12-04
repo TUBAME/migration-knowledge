@@ -1,0 +1,23 @@
+
+...
+<attribute name="BuddyReplicationConfig">
+	<config>
+		<buddyReplicationEnabled>false</buddyReplicationEnabled>
+		<buddyLocatorClass>org.jboss.cache.buddyreplication.NextMemberBuddyLocator
+		</buddyLocatorClass>
+		<buddyLocatorProperties>
+			numBuddies = 1
+			ignoreColocatedBuddies = true
+		</buddyLocatorProperties>
+
+		<buddyPoolName>default</buddyPoolName>
+		<buddyCommunicationTimeout>2000</buddyCommunicationTimeout>
+
+		<autoDataGravitation>false</autoDataGravitation>
+		<dataGravitationRemoveOnFind>true</dataGravitationRemoveOnFind>
+		<dataGravitationSearchBackupTrees>true
+		</dataGravitationSearchBackupTrees>
+
+	</config>
+</attribute>
+...

@@ -1,0 +1,4 @@
+
+<Cluster>
+    <Valve className="org.apache.catalina.ha.session.JvmRouteBinderValve" enabled="false">
+</Cluster>

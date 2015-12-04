@@ -1,0 +1,15 @@
+   ...
+	    <enterprise-beans>
+	        <session>
+	            <ejb-name>OrzBean</ejb-name>
+	            <!-- ★ no use in jboss-ejb3.xml
+	            <jndi-name>OrzBean</jndi-name>
+	            -->
+	         </session>
+	    </enterprise-beans>
+   ...
+  
+  //modify ejb jndi-name
+  //home = (OrzBeanHome) initialContext.lookup("OrzBean");
+  home = (OrzBeanHome) initialContext.lookup("java:app/orz-ejb-module/OrzEJB!orz.ejb.OrzBeanHome");
+  

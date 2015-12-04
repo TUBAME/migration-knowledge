@@ -1,0 +1,9 @@
+
+Properties props = new Properties();
+props.put(InitialContext.INITIAL_CONTEXT_FACTORY,"org.jnp.interfaces.NamingContextFactory");
+props.put(InitialContext.URL_PKG_PREFIXES,"org.jboss.naming:org.jnp.interfaces");    
+props.put(InitialContext.PROVIDER_UR,"jnp://XXX.XXX.XXX.XXX:1099");
+
+Context ctx = new InitialContext(props);
+
+ctx.lookup("ejb/testBean");  

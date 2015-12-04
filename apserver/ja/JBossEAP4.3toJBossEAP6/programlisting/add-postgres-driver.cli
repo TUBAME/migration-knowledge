@@ -1,4 +1,2 @@
 
-/subsystem=datasources/jdbc-driver=postgres9-driver:add(driver-name=postgres9-driver,driver-module-name=org.postgres)
-
-	
+/subsystem=datasources/jdbc-driver={driver-name}:add(driver-name={driver-name},driver-xa-datasource-class-name=org.postgresql.xa.PGXADataSource,driver-module-name=org.postgresql)

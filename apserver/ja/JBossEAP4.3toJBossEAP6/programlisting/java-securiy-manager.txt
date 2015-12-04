@@ -1,4 +1,0 @@
-
-  if ( System.getSecurityManager() == null )
-            System.setSecurityManager(new RMISecurityManager());
-

@@ -1,0 +1,4 @@
+
+Properties props = new Properties();
+props.put(InitialContext.URL_PKG_PREFIXES, "org.jboss.ejb.client.naming");
+InitialContext initialContext = new InitialContext(props);

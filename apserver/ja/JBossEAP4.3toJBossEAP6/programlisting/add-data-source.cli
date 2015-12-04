@@ -1,0 +1,2 @@
+
+data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdbc/{datasource-name} --driver-name={driver-name} --use-java-context=true --jta=true --max-pool-size=100 --min-pool-size=100 --pool-prefill=true --idle-timeout-minutes=0 --check-valid-connection-sql="select 1" --prepared-statements-cache-size=50 --driver-class=org.postgresql.Driver --connection-url=jdbc:postgresql://localhost:5432/testdb --user-name=postgres --password=postgres

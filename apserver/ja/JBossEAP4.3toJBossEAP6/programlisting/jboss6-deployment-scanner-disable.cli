@@ -1,3 +1,0 @@
-
-/subsystem=deployment-scanner/scanner=default/scanner=default:write-attribute(name=scan-enabled,value=false)
-

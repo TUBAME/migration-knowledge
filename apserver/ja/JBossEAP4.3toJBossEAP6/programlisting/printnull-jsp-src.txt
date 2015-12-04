@@ -1,6 +1,0 @@
-
-<%
-String xxx = null;
-%>
-value=<%= xxx %>
-

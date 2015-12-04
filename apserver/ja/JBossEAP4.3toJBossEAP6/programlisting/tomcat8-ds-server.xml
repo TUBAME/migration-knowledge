@@ -1,0 +1,22 @@
+
+<GlobalNamingResources>
+   <Resource name="UserDatabase" auth="Container"
+             type="org.apache.catalina.UserDatabase"
+             description="User database that can be updated and saved"
+             factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+             pathname="conf/tomcat-users.xml" />
+             
+    <Resource name="jdbc/postgresDS"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/testdb"
+              connectionProperties="tcpKeepAlive=true;socketTimeout=0"
+              username="postgres" password="postgres"
+              maxTotal="10" maxIdle="10" maxWaitMillis="10000"
+              removeAbandonedOnBorrow="true"  removeAbandonedTimeout="300" logAbandoned="true"
+              testOnBorrow="true" testOnReturn="false"
+              poolPreparedStatements="true"
+              validationQuery="select 1"/>
+              
+</GlobalNamingResources>

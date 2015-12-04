@@ -1,6 +1,0 @@
-
-Properties props = new Properties();
-props.put(InitialContext.INITIAL_CONTEXT_FACTORY,"weblogic.jndi.WLInitialContextFactory");
-props.put(InitialContext.PROVIDER_URL, "t3://127.0.0.1:7001");
-InitialContext initialContext = new InitialContext(props);
-

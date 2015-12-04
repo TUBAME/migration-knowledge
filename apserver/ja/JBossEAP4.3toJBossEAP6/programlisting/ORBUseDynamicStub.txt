@@ -1,0 +1,2 @@
+
+System.setProperty("com.sun.CORBA.ORBUseDynamicStub", "true");

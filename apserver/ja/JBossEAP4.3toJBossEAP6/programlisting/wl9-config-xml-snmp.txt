@@ -1,5 +1,0 @@
-
-  <snmp-agent>
-    <enabled>true</enabled>
-  </snmp-agent>
-

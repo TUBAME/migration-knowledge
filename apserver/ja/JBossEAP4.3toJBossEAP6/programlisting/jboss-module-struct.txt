@@ -1,0 +1,4 @@
+
+$JBOSS_HOME/modules/hoge/hoge/util/
+                                |- module.xml
+                                |- hogehogeutil-1.0-SNAPSHOT.jar

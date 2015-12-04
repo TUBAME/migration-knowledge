@@ -1,0 +1,14 @@
+
+<jboss>
+    <enterprise-beans>
+	        Å@<entity>
+	            <ejb-name>MessageEntity</ejb-name>
+	            <jndi-name>ex/MessageEntity</jndi-name>
+	            <resource-ref>
+	                <res-ref-name>jdbc/exampleDataSource</res-ref-name>
+	                <jndi-name>ÅöexampleDataSource</jndi-name>
+	            </resource-ref>
+        </entity>
+    </enterprise-beans>
+ </jboss>
+  

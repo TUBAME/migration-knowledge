@@ -1,3 +1,0 @@
-
-InitialContext initialContext = new InitialContext();
-

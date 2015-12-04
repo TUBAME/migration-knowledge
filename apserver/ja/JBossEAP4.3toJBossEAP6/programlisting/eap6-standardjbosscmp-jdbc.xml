@@ -1,0 +1,35 @@
+
+<jbosscmp-jdbc>
+    <defaults>
+        <datasource>java:jboss/datasources/ExampleDS</datasource>
+        <datasource-mapping>Hypersonic SQL</datasource-mapping>
+
+        <create-table>true</create-table>
+        <remove-table>false</remove-table>
+        <read-only>false</read-only>
+        <read-time-out>300000</read-time-out>
+        <row-locking>false</row-locking>
+        <pk-constraint>true</pk-constraint>
+        <fk-constraint>false</fk-constraint>
+        <preferred-relation-mapping>foreign-key</preferred-relation-mapping>
+        <read-ahead>
+            <strategy>on-load</strategy>
+            <page-size>1000</page-size>
+            <eager-load-group>*</eager-load-group>
+        </read-ahead>
+        <list-cache-max>1000</list-cache-max>
+        <clean-read-ahead-on-load>false</clean-read-ahead-on-load>
+
+        <unknown-pk>
+            <key-generator-factory>UUIDKeyGeneratorFactory</key-generator-factory>
+            <unknown-pk-class>java.lang.String</unknown-pk-class>
+            <jdbc-type>VARCHAR</jdbc-type>
+            <sql-type>VARCHAR(32)</sql-type>
+        </unknown-pk>
+
+        <entity-command name="default"/>
+        <ql-compiler>org.jboss.as.cmp.jdbc.JDBCEJBQLCompiler</ql-compiler>
+        <throw-runtime-exceptions>false</throw-runtime-exceptions>
+    </defaults>
+    ...
+</jbosscmp-jdbc>

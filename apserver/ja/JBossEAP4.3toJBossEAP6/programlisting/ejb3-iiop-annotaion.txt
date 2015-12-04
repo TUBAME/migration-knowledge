@@ -1,0 +1,6 @@
+
+
+@Stateless
+@RemoteHome(ExampleIiopBeanHome.class)
+@IIOP
+public class ExampleIiopBean {
