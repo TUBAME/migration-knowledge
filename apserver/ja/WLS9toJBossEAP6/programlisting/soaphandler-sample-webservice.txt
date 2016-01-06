@@ -1,0 +1,10 @@
+
+import javax.jws.HandlerChain;
+import javax.jws.WebService;
+
+@WebService
+@HandlerChain(file = "/sample/soap/handler/handler-chain.xml")
+public class SampleWebService {
+
+...
+}

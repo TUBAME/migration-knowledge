@@ -181,6 +181,12 @@
             <ChildEntry>
                 <EntryCategoryRefKey>category_91</EntryCategoryRefKey>
             </ChildEntry>
+            <ChildEntry>
+                <EntryCategoryRefKey>category_277</EntryCategoryRefKey>
+            </ChildEntry>
+            <ChildEntry>
+                <EntryCategoryRefKey>category_278</EntryCategoryRefKey>
+            </ChildEntry>
         </EntryCategory>
         <EntryCategory>
             <EntryCategoryRefKey>category_159</EntryCategoryRefKey>
@@ -201,6 +207,12 @@
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_165</EntryCategoryRefKey>
+            </ChildEntry>
+            <ChildEntry>
+                <EntryCategoryRefKey>category_279</EntryCategoryRefKey>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_280</EntryCategoryRefKey>
+                </ChildEntry>
             </ChildEntry>
         </EntryCategory>
         <EntryCategory>
@@ -470,6 +482,9 @@
                 </ChildEntry>
             </ChildEntry>
         </EntryCategory>
+        <EntryCategory>
+            <EntryCategoryRefKey>category_282</EntryCategoryRefKey>
+        </EntryCategory>
     </EntryViewList>
     <ChapterList>
         <Chapter>
@@ -557,6 +572,14 @@
                 <ChildChapter>
                     <ChildCapterNo>1.2.6.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_91</ChapterCategoryRefKey>
+                </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>1.2.7.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_277</ChapterCategoryRefKey>
+                </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>1.2.8.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_278</ChapterCategoryRefKey>
                 </ChildChapter>
             </ChildChapter>
             <ChildChapter>
@@ -718,6 +741,10 @@
                         <ChapterCategoryRefKey>category_253</ChapterCategoryRefKey>
                     </ChildChapter>
                 </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>1.5.2.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_282</ChapterCategoryRefKey>
+                </ChildChapter>
             </ChildChapter>
             <ChildChapter>
                 <ChildCapterNo>1.6.</ChildCapterNo>
@@ -741,6 +768,14 @@
                 <ChildChapter>
                     <ChildCapterNo>1.6.5.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_165</ChapterCategoryRefKey>
+                </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>1.6.6.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_279</ChapterCategoryRefKey>
+                    <ChildChapter>
+                        <ChildCapterNo>1.6.6.1.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_280</ChapterCategoryRefKey>
+                    </ChildChapter>
                 </ChildChapter>
             </ChildChapter>
             <ChildChapter>
@@ -1310,6 +1345,14 @@
             <CategoryName>UseBeanのgetProperty及びsetProperty利用時の移植</CategoryName>
             <KnowhowRefKey>knowhow_87</KnowhowRefKey>
         </Category>
+        <Category categoryId="category_277" appropriate="true">
+            <CategoryName>JSPカスタムタグの属性名の大文字、小文字の扱いについて</CategoryName>
+            <KnowhowRefKey>knowhow_249</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_278" appropriate="true">
+            <CategoryName>Servlet仕様に伴うweb.xmlファイルのtaglibタグについて</CategoryName>
+            <KnowhowRefKey>knowhow_250</KnowhowRefKey>
+        </Category>
         <Category categoryId="category_159" appropriate="true">
             <CategoryName>EJBの移行</CategoryName>
             <KnowhowRefKey>knowhow_142</KnowhowRefKey>
@@ -1337,6 +1380,13 @@
         <Category categoryId="category_165" appropriate="true">
             <CategoryName>EJB実装のWebサービス（JAX-WS仕様）への移行</CategoryName>
             <KnowhowRefKey>knowhow_149</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_279" appropriate="true">
+            <CategoryName>Webサービスのサーバ移行TIPS</CategoryName>
+        </Category>
+        <Category categoryId="category_280" appropriate="true">
+            <CategoryName>SOAPのprefixの変更</CategoryName>
+            <KnowhowRefKey>knowhow_251</KnowhowRefKey>
         </Category>
         <Category categoryId="category_166" appropriate="true">
             <CategoryName>Webサービスのクライアント移行</CategoryName>
@@ -1688,6 +1738,10 @@
         <Category categoryId="category_275" appropriate="true">
             <CategoryName>JOLTを利用したTuxedoのATMIサービスとの接続確認</CategoryName>
             <KnowhowRefKey>knowhow_247</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_282" appropriate="true">
+            <CategoryName>業務アプリケーションによるRemoteExceptionのスロー</CategoryName>
+            <KnowhowRefKey>knowhow_252</KnowhowRefKey>
         </Category>
     </CategoryList>
     <KnowhowList>
@@ -2708,6 +2762,24 @@ APサーバコンテナ外の呼び出しの場合は、本項目では検知す
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_249" knowhowDetailRefKey="knowhowDetail_249">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_250" knowhowDetailRefKey="knowhowDetail_250">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1047" searchRefKey="searchInfo_1047" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>Check if taglib exists in web.xml</CheckItemName>
+                <SearchProcess>web.xmlを対象にweb-app配下のtaglibを検索する</SearchProcess>
+                <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_142" knowhowDetailRefKey="knowhowDetail_142">
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>EJBの移行</KnowhowName>
@@ -2825,6 +2897,10 @@ APサーバコンテナ外の呼び出しの場合は、本項目では検知す
         <KnowhowInfomation knowhowId="knowhow_149" knowhowDetailRefKey="knowhowDetail_149">
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>EJB実装のWebサービス（JAX-WS仕様）への移行</KnowhowName>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_251" knowhowDetailRefKey="knowhowDetail_251">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
         </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_150" knowhowDetailRefKey="knowhowDetail_150">
             <KnowhowNo>1</KnowhowNo>
@@ -6467,6 +6543,20 @@ APサーバコンテナ外の呼び出しの場合は、本項目では検知す
                 <PortabilityDegree>NOT_TRN</PortabilityDegree>
                 <DegreeDetail>移植不可</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_252" knowhowDetailRefKey="knowhowDetail_252">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1048" searchRefKey="searchInfo_1048" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>Check if RemoteException in java</CheckItemName>
+                <SearchProcess>javaファイルを対象にRemoteExceptionインスタンスを作成している箇所を検索する</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm>RemoteExceptionインスタンスを作成して、スローしているか確認する。</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
@@ -14769,6 +14859,214 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
                 </ns2:section>
             </ns2:article>
         </DocBook>
+        <DocBook articleId="knowhowDetail_249">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			JSPカスタムタグで属性を利用するために、TLDファイルでattributeタグでを属性名を設定するが
+			WebLogicの場合は、JSPファイルのカスタムタグの属性名が大文字・小文字を区別せずに
+			動作可能である。
+
+			<ns2:figure>
+                            <ns2:title>WebLogic上で動作するJSP</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/wls-noproblem-customtag-attr.jsp"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+			
+			
+			<ns2:figure>
+                            <ns2:title>参考.TLDファイル</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/customtag.tld"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+			
+		</ns2:para>
+                    <ns2:para>JBossの場合は、属性名の大文字・小文字は区別され、必須属性が見つからない旨を示す以下の例外メッセージが、JSPアクセス時に出力される
+		
+		<ns2:figure>
+                            <ns2:title>JBossエラーメッセージ</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/customtag-attr-miss.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+		
+		TLDファイルで設定された属性(formatName）を設定することで対応する。
+		
+		<ns2:figure>
+                            <ns2:title>修正後のJSP</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss-noproblem-customtag-attr.jsp"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+			
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_250">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			web.xmlにスキーマ定義がなく、かつtaglib定義をjsp-configタグで囲っていない場合、
+			JBossはServlet3.0としてweb.xmlを解釈するため、jsp-configタグで囲まれていないtaglib定義はデプロイ時にパースエラーとなる。
+			<ns2:figure>
+                            <ns2:title>JBossでパースエラーとなるJSP</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss-jspconfig-parse-err.jsp"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+			下記例のように、Servet2.3用のDTDが有効化がされていれば、JBossEAP6においてもServlet2.3の
+			web.xmlとしてパースするためエラーは発生しない。
+
+			<ns2:figure>
+                            <ns2:title>Servlet2.3用のDTDを有効化したJSP</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss-jspconfig-parse-noerr1.jsp"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			Servlet3.0仕様で動作させる場合は、XMLスキーマはServlet3.0を宣言し、jsp-configタグの追記する。
+			
+			<ns2:figure>
+                            <ns2:title>Servlet3.0用のスキーマを有効化したJSP</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss-jspconfig-parse-noerr2.jsp"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+			
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_251">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>Webサービスは、他システム連携として、一般的に外部インタフェース仕様書に従った電文を
+			取り扱う。このため、Webサービス移植にあたり、SOAP電文のprefixの修正が伴う場合がある。
+
+		</ns2:para>
+                    <ns2:para>
+			本例では、JavaEE標準のJAX-WS
+			Handler(javax.xml.ws.handler.soap.SOAPHandler)を利用した、prefixの変更例を示す。
+
+			<ns2:note>
+                            <ns2:para>
+					JAX-WS Handler以外に
+					<ns2:command ns3:href="http://cxf.apache.org/docs/interceptors.html">Apache CFX 独自のインタセプタ</ns2:command>
+					や、
+					<ns2:command ns3:href="http://cxf.apache.org/docs/jax-ws-configuration.html">Apache CFX 独自のエンドポイントコンフィグレーション</ns2:command>
+					を利用する方法もあるが、APサーバの実装に影響しないように、JavaEE標準のJAX-WS
+					Handlerを利用することを推奨する。
+				</ns2:para>
+                        </ns2:note>
+
+			<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:para>実装SOAPHandler</ns2:para>
+<ns2:para>
+						<ns2:figure>
+        <ns2:title>SOAPHandler実装例</ns2:title>
+        <ns2:programlisting language="txt">
+								<ns2:textobject>
+                <ns2:textdata fileref="programlisting/soap-handler.txt"/>
+            </ns2:textobject>
+							</ns2:programlisting>
+    </ns2:figure>
+					</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>handler-chain.xmlの作成</ns2:para>
+<ns2:para>
+						src/main/resources配下にhandler-chain.xmlを作成する。（この例では、src/main/resources/sample/soap/handler配下に作成する。
+
+						<ns2:figure>
+        <ns2:title>handler-chain.xml</ns2:title>
+        <ns2:programlisting language="xml">
+								<ns2:textobject>
+                <ns2:textdata fileref="programlisting/handler-chain.xml"/>
+            </ns2:textobject>
+							</ns2:programlisting>
+    </ns2:figure>
+					</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>HandlerChainアノテーション設定</ns2:para>
+<ns2:para>
+						WebサービスのクラスのHandlerChainアノテーション設定し、handler-chain.xmlとほ紐づけを行う。
+
+						<ns2:figure>
+        <ns2:title>HandlerChainアノテーション設定</ns2:title>
+        <ns2:programlisting language="txt">
+								<ns2:textobject>
+                <ns2:textdata fileref="programlisting/soaphandler-sample-webservice.txt"/>
+            </ns2:textobject>
+							</ns2:programlisting>
+    </ns2:figure>
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_252">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>EJB内でjava.lang.RemoteExceptionインスタンスを生成し、スローした場合、WebLogicのEJBコンテナは
+			トランザクションをロールバックする。
+		</ns2:para>
+                    <ns2:para>
+			JBossのEJBコンテナは、RemoteExceptionがスローされた場合、ロールバックを実施せず、
+			例外を握りつぶす。
+			以下EJB仕様ではRemoteExceptionやそのサブクラスは、システム例外として予約されており、アプリケーション自身が スローするものでないため、仕様違反にあたる恐れがある。
+
+			<ns2:note>
+                            <ns2:para>EJB3.1仕様</ns2:para>
+                            <ns2:para>An application exception may be a subclass (direct or
+					indirect) of java.lang.Exception (i.e., a“checked exception”), or an application
+					exception class may be defined as a subclass of	the java.lang.RuntimeException (an “unchecked exception”).
+					An application exception may not be a subclass of the
+					java.rmi.RemoteException.
+					The java.rmi.RemoteException and its subclasses are reserved for
+					system exceptions.
+				</ns2:para>
+                        </ns2:note>
+		</ns2:para>
+                    <ns2:para>
+			WebLogicと同様にトランザクションをロールバックする場合は、
+			RemoteExceptionのスローはせず、java.lang.RuntimeExceptionやそのサブクラスを作成し、スローすることで対応可能となる。
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
     </DocBookList>
     <SearchInfomationList>
         <SearchInfomation searchInfoId="searchInfo_163">
@@ -15868,6 +16166,20 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
             <SearchKey1>&lt;jsp:setProperty&gt;</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1047">
+            <FileType>web.xml</FileType>
+            <SearchKey1>//web-app/taglib</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
                 <LineNumber>1</LineNumber>
                 <LineNumberContents></LineNumberContents>
@@ -20602,6 +20914,20 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
                 <LineNumber>不明</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1048">
+            <FileType>*.java</FileType>
+            <SearchKey1>new.*RemoteException\(</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
                 <LineNumberContents></LineNumberContents>
                 <Investigation></Investigation>
             </LineNumberInfomation>

@@ -1,0 +1,4 @@
+
+13:03:41,749 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/JSPCompatibility].[jsp]]
+(http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet jsp threw exception: org.apache.jasper.JasperException:
+/test.jsp(10,12) JBWEB004090: formatName: Mandatory attribute text missing
