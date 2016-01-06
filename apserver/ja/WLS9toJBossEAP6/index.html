@@ -160,6 +160,20 @@
 </dt>
 </dl>
 </dd>
+<dd>
+<dl>
+<dt>
+<span class="1.2.7."><a href="#tubame_1.2.7.">1.2.7.JSPカスタムタグの属性名の大文字、小文字の扱いについて</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="1.2.8."><a href="#tubame_1.2.8.">1.2.8.Servlet仕様に伴うweb.xmlファイルのtaglibタグについて</a></span>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 <dd>
@@ -440,6 +454,13 @@
 </dd>
 </dl>
 </dd>
+<dd>
+<dl>
+<dt>
+<span class="1.5.2."><a href="#tubame_1.5.2.">1.5.2.業務アプリケーションによるRemoteExceptionのスロー</a></span>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 <dd>
@@ -480,6 +501,20 @@
 <dt>
 <span class="1.6.5."><a href="#tubame_1.6.5.">1.6.5.EJB実装のWebサービス（JAX-WS仕様）への移行</a></span>
 </dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="1.6.6."><a href="#tubame_1.6.6.">1.6.6.Webサービスのサーバ移行TIPS</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="1.6.6.1."><a href="#tubame_1.6.6.1.">1.6.6.1.SOAPのprefixの変更</a></span>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -1386,7 +1421,7 @@
 			アプリケーション・デプロイメント記述子（web.xml）のtaglib要素にて参照する。以下に、web.xmlの例を示す。
 		</p>
 <div class="figure">
-<a name="N14853"></a>
+<a name="N14937"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebアプリケーションでのWebLogicカスタム・タグの使用
 			</b>
@@ -1416,7 +1451,7 @@
 <p>wl:cacheタグは、JSPソースファイル内のcacheタグ内で行われた処理をキャッシュするために使用する。
         </p>
 <div class="figure">
-<a name="N14869"></a>
+<a name="N1494D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;cacheタグを使用したJSPの例
 			</b>
@@ -1483,7 +1518,7 @@ and display them--&gt;
 
 			</p>
 <div class="table">
-<a name="N1488B"></a>
+<a name="N1496F"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;processタグの属性名の代替表
 				</b>
@@ -1556,7 +1591,7 @@ and display them--&gt;
 			以下ではJavaコードで代替する方法を説明する。
 			</p>
 <div class="figure">
-<a name="N148D0"></a>
+<a name="N149B4"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;processタグを使用した変更前のjspの例
 				</b>
@@ -1597,7 +1632,7 @@ and the value of lastBookRead is "A Man in Full"--&gt;
 			
 </p>
 <div class="figure">
-<a name="N148DB"></a>
+<a name="N149BF"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;変更後のjspの例
 				</b>
@@ -1651,7 +1686,7 @@ and the value of lastBookRead is "A Man in Full"--&gt;
 			JBossにはrepeatタグに相当するタグはないため、Javaコードを記述してこのタグの代替とする方法がある。また、別の方法として、JSTLタグのc:forEachまたはx:forEachで代用する方法がある。
 		</p>
 <div class="table">
-<a name="N148F2"></a>
+<a name="N149D6"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;repeatタグの要素
 			</b>
@@ -1714,7 +1749,7 @@ and the value of lastBookRead is "A Man in Full"--&gt;
 			 
 </p>
 <div class="figure">
-<a name="N1492C"></a>
+<a name="N14A10"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;repeatタグを使用した変更前のjspの例
 			</b>
@@ -1734,7 +1769,7 @@ and the value of lastBookRead is "A Man in Full"--&gt;
             
 </p>
 <div class="figure">
-<a name="N14937"></a>
+<a name="N14A1B"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;変更後のjspの例
 			</b>
@@ -1772,7 +1807,7 @@ and the value of lastBookRead is "A Man in Full"--&gt;
 <p>修正対象ファイル数が少ない場合</p>
 <p>対象のJSPファイルにインポート宣言を追加する。</p>
 <div class="figure">
-<a name="N14956"></a>
+<a name="N14A3A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JSPのヘッダ部分のインポート宣言の例
 							</b>
@@ -1799,7 +1834,7 @@ and the value of lastBookRead is "A Man in Full"--&gt;
 						web.xmlファイルのヘッダの定義を変更し、共通JSPの定義(jsp-config/jsp-property-group/include-preludedタグに共通JSPファイル)を追加する。
 						</p>
 <div class="figure">
-<a name="N14968"></a>
+<a name="N14A4C"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;web.xmlファイルのヘッダ例
 							</b>
@@ -1832,7 +1867,7 @@ xmlns:j2ee="http://java.sun.com/xml/ns/javaee"
 						JSPの共通ヘッダファイルCommonJSPHeaders.jspを以下の内容で作成する。
 						</p>
 <div class="figure">
-<a name="N14975"></a>
+<a name="N14A59"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JSPの共通ヘッダファイルの例
 							</b>
@@ -1890,7 +1925,7 @@ xmlns:j2ee="http://java.sun.com/xml/ns/javaee"
 <p>WebLogic6.1以降の場合でweblogic.xmlのprintNulls設定がfalseの場合（空文字列（""）を返す）
 						</p>
 <div class="figure">
-<a name="N14999"></a>
+<a name="N14A7D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic.xmlのprintNulls設定例
 							</b>
@@ -1913,7 +1948,7 @@ xmlns:j2ee="http://java.sun.com/xml/ns/javaee"
 						
 </p>
 <div class="figure">
-<a name="N149A4"></a>
+<a name="N14A88"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;変更前のjspの例
 							</b>
@@ -1949,7 +1984,7 @@ value=&lt;%= xxx %&gt;
 						三項演算子を用いた修正後のJSPの例(nullチェックを行い、空文字列（""）を設定する例)
 						</p>
 <div class="figure">
-<a name="N149B6"></a>
+<a name="N14A9A"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;三項演算子を用いた変更後のjspの例
 							</b>
@@ -1975,7 +2010,7 @@ value=&lt;%= xxx == null ? "" : xxx %&gt;
 						IF文を用いた修正後のJSPの例(nullチェックを行い、空文字列（""）を設定する例)
 						</p>
 <div class="figure">
-<a name="N149C4"></a>
+<a name="N14AA8"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;IF文を用いた変更後のjspの例	
 							</b>
@@ -2008,7 +2043,7 @@ value=&lt;%= xxx %&gt;
 						EL式を適用した場合および出力がnullの場合、&rdquo;null&rdquo;と表示されるのでなく、空文字列（""）が出力される。
 						</p>
 <div class="figure">
-<a name="N149D4"></a>
+<a name="N14AB8"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;変更前のjspの例
 							</b>
@@ -2026,7 +2061,7 @@ value=&lt;%= xxx %&gt;
 						
 </p>
 <div class="figure">
-<a name="N149DF"></a>
+<a name="N14AC3"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;EL式を用いた変更後のjspの例
 							</b>
@@ -2078,7 +2113,7 @@ value=&lt;%= xxx %&gt;
 						なお、WebLogicでは、想定どおり、headerページ出力も行われ、Sessionは払い出される。
 						</p>
 <div class="figure">
-<a name="N14A00"></a>
+<a name="N14AE4"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;top.jsp
 							</b>
@@ -2111,7 +2146,7 @@ value=&lt;%= xxx %&gt;
 						
 </p>
 <div class="figure">
-<a name="N14A0B"></a>
+<a name="N14AEF"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;heaer.jsp
 							</b>
@@ -2140,7 +2175,7 @@ out.println("My Header");
 <p>修正方法を以下に示す。jsp:includeタグにかわり、includeディレクティブを利用する。
 		</p>
 <div class="figure">
-<a name="N14A19"></a>
+<a name="N14AFD"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;変更後のtop.jsp
 							</b>
@@ -2203,7 +2238,7 @@ out.println("My Header");
 									以下のようにweb.xmlファイルのtaglib-urlにエイリアスを指定することにより、taglib-locationで定義する。
 									</p>
 <div class="figure">
-<a name="N14A3E"></a>
+<a name="N14B22"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;web.xmlへtaglibの定義を追加する例
 										</b>
@@ -2289,7 +2324,7 @@ out.println("My Header");
 			JBossは、以下のようにBeanで大文字のgetter(getURL)やsetterメソッド(setURL)が定義されているBeanに対して、jsp:getPropertyタグでpropertyに小文字(url)で設定すると、setUrlやgetUrlが定義されていないため実行時エラーとなる。この挙動の違いはJSP実装の違いで発生するもので、JSP仕様では特に明記されていない。
 			</p>
 <div class="figure">
-<a name="N14A71"></a>
+<a name="N14B55"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;UseBeanタグで利用されるBean
 				</b>
@@ -2324,7 +2359,7 @@ URL = url;
 			
 </p>
 <div class="figure">
-<a name="N14A7C"></a>
+<a name="N14B60"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;実行時エラーが発生するJSP
 				</b>
@@ -2353,7 +2388,7 @@ URL = url;
 <li class="listitem">
 <p>setXXX、getXXXの最初のXのみ大文字にし以降は小文字にするように、該当Beanのセッターとゲッターを修正する方法。</p>
 <div class="figure">
-<a name="N14A8D"></a>
+<a name="N14B71"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;UseBeanタグで利用されるBeanのゲッターとセッターの変更例
 				</b>
@@ -2387,7 +2422,7 @@ URL = url;
 <li class="listitem">
 <p>Beanのセッターとゲッターを修正せずにjspのpropertyを修正する方法。</p>
 <div class="figure">
-<a name="N14A9A"></a>
+<a name="N14B7E"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;property属性を修正したJSP修正後の例
 				</b>
@@ -2408,6 +2443,242 @@ URL = url;
 </ol>
 </div>
 <p>
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_1.2.7." id="category_277"></a>
+<h3 class="title">1.2.7.JSPカスタムタグの属性名の大文字、小文字の扱いについて</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			JSPカスタムタグで属性を利用するために、TLDファイルでattributeタグでを属性名を設定するが
+			WebLogicの場合は、JSPファイルのカスタムタグの属性名が大文字・小文字を区別せずに
+			動作可能である。
+
+			</p>
+<div class="figure">
+<a name="N16845"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;WebLogic上で動作するJSP</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;%@ page language="java" contentType="text/html; charset=windows-31j"
+  pageEncoding="windows-31j"%&gt;
+&lt;%@ taglib  uri="/WEB-INF/tlds/mytag.tld" prefix="myTag" %&gt;
+
+
+&lt;!-- 属性名FORMATNAMEでもWebLogicは動作する--&gt;
+&lt;myTag:dateString FORMATNAME="yyyy/M/d hh:mm:ss"/&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+			
+			
+			
+</p>
+<div class="figure">
+<a name="N16850"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;参考.TLDファイル</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- &lt;!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 
+	1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd"&gt; &lt;taglib&gt; --&gt;
+&lt;taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0"&gt;
+
+	&lt;tlib-version&gt;1.0&lt;/tlib-version&gt;
+	&lt;short-name&gt;dateString&lt;/short-name&gt;
+	&lt;tag&gt;
+		&lt;name&gt;dateString&lt;/name&gt;
+		&lt;tag-class&gt;examples.webapp.jsp.tags.simple.MySimpleTag&lt;/tag-class&gt;
+		&lt;body-content&gt;empty&lt;/body-content&gt;
+		&lt;!-- 属性設定 --&gt;
+		&lt;attribute&gt;
+			&lt;name&gt;formatName&lt;/name&gt;
+			&lt;type&gt;java.lang.String&lt;/type&gt;
+			&lt;required&gt;true&lt;/required&gt;
+			&lt;rtexprvalue&gt;true&lt;/rtexprvalue&gt;
+		&lt;/attribute&gt;
+	&lt;/tag&gt;
+&lt;/taglib&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+			
+		
+</p>
+<p>JBossの場合は、属性名の大文字・小文字は区別され、必須属性が見つからない旨を示す以下の例外メッセージが、JSPアクセス時に出力される
+		
+		</p>
+<div class="figure">
+<a name="N1685D"></a>
+<p class="title">
+<b>Figure&nbsp;3.&nbsp;JBossエラーメッセージ</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+13:03:41,749 ERROR [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/JSPCompatibility].[jsp]]
+(http-/127.0.0.1:8080-1) JBWEB000236: Servlet.service() for servlet jsp threw exception: org.apache.jasper.JasperException:
+/test.jsp(10,12) JBWEB004090: message: Mandatory attribute text missing
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+		
+		TLDファイルで設定された属性(formatName）を設定することで対応する。
+		
+		</p>
+<div class="figure">
+<a name="N16868"></a>
+<p class="title">
+<b>Figure&nbsp;4.&nbsp;修正後のJSP</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;%@ page language="java" contentType="text/html; charset=windows-31j"
+  pageEncoding="windows-31j"%&gt;
+&lt;%@ taglib  uri="/WEB-INF/tlds/mytag.tld" prefix="myTag" %&gt;
+
+&lt;!-- 属性をFORMATNAMEですべて大文字で指定してもWebLogicでは利用可能だが、
+JBossでは動作しないため、tldファイルで定義された正しい属性名を設定する--&gt;
+&lt;myTag:dateString formatName="yyyy/M/d hh:mm:ss"/&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+			
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_1.2.8." id="category_278"></a>
+<h3 class="title">1.2.8.Servlet仕様に伴うweb.xmlファイルのtaglibタグについて</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			web.xmlにスキーマ定義がなく、かつtaglib定義をjsp-configタグで囲っていない場合、
+			JBossはServlet3.0としてweb.xmlを解釈するため、jsp-configタグで囲まれていないtaglib定義はデプロイ時にパースエラーとなる。
+			</p>
+<div class="figure">
+<a name="N1687F"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;JBossでパースエラーとなるJSP</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;web-app xmlns:j2ee="http://java.sun.com/xml/ns/j2ee"&gt;
+　
+	&lt;taglib&gt;
+		&lt;taglib-uri&gt;/WEB-INF/tlds/mytag.tld&lt;/taglib-uri&gt;
+		&lt;taglib-location&gt;/WEB-INF/tlds/mytag.tld&lt;/taglib-location&gt;
+	&lt;/taglib&gt;
+
+	&lt;error-page&gt;
+		&lt;error-code&gt;500&lt;/error-code&gt;
+		&lt;location&gt;/error.jsp&lt;/location&gt;
+	&lt;/error-page&gt;
+&lt;/web-app&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+			下記例のように、Servet2.3用のDTDが有効化がされていれば、JBossEAP6においてもServlet2.3の
+			web.xmlとしてパースするためエラーは発生しない。
+
+			</p>
+<div class="figure">
+<a name="N1688A"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;Servlet2.3用のDTDを有効化したJSP</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE web-app PUBLIC
+"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+"http://java.sun.com/dtd/web-app_2_3.dtd"&gt; 
+&lt;web-app&gt;
+
+	&lt;taglib&gt;
+		&lt;taglib-uri&gt;/WEB-INF/tlds/mytag.tld&lt;/taglib-uri&gt;
+		&lt;taglib-location&gt;/WEB-INF/tlds/mytag.tld&lt;/taglib-location&gt;
+	&lt;/taglib&gt;
+
+     
+	&lt;error-page&gt;
+		&lt;error-code&gt;500&lt;/error-code&gt;
+		&lt;location&gt;/error.jsp&lt;/location&gt;
+	&lt;/error-page&gt;
+&lt;/web-app&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			Servlet3.0仕様で動作させる場合は、XMLスキーマはServlet3.0を宣言し、jsp-configタグの追記する。
+			
+			</p>
+<div class="figure">
+<a name="N16895"></a>
+<p class="title">
+<b>Figure&nbsp;3.&nbsp;Servlet3.0用のスキーマを有効化したJSP</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+           http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0"&gt;
+
+ 
+	&lt;jsp-config&gt;
+		&lt;taglib&gt;
+			&lt;taglib-uri&gt;/WEB-INF/tlds/mytag.tld&lt;/taglib-uri&gt;
+			&lt;taglib-location&gt;/WEB-INF/tlds/mytag.tld&lt;/taglib-location&gt;
+		&lt;/taglib&gt;
+	&lt;/jsp-config&gt;
+
+     	
+	&lt;error-page&gt;
+		&lt;error-code&gt;500&lt;/error-code&gt;
+		&lt;location&gt;/error.jsp&lt;/location&gt;
+	&lt;/error-page&gt;
+&lt;/web-app&gt;
+
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+			
 		
 </p>
 </div>
@@ -2496,7 +2767,7 @@ URL = url;
 					プログラムコード上は、上記のJNDIスコープを利用することなく、参照が可能となる。
 				</p>
 <div class="figure">
-<a name="N14B30"></a>
+<a name="N14C14"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;デプロイメントディスクリプタ(jboss-ejb3.xml)</b>
 </p>
@@ -2516,7 +2787,7 @@ URL = url;
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N14B3A"></a>
+<a name="N14C1E"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;EJB呼び出しもとのプログラムコード（MusicLibraryEJB内での呼び出し）</b>
 </p>
@@ -2561,7 +2832,7 @@ URL = url;
 <td valign="top" align="left">
 <p>移植を行う上で、なるべくJBoss固有の「jboss」スコープをアプリケーション上から利用するのは避けるべきであり、可能な限りリソースリファレンスの設定で、ポータビリティを保つようにしたほうがよい。</p>
 <div class="figure">
-<a name="N14B51"></a>
+<a name="N14C35"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;Webのリソースリファレンス設定(web.xml)</b>
 </p>
@@ -2582,7 +2853,7 @@ URL = url;
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N14B5B"></a>
+<a name="N14C3F"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;呼び出しもとのプログラムコード（SerletB内での呼び出し）</b>
 </p>
@@ -2616,7 +2887,7 @@ URL = url;
 
 			</p>
 <div class="figure">
-<a name="N14B69"></a>
+<a name="N14C4D"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;EJBのJNDI名の変更例</b>
 </p>
@@ -2670,7 +2941,7 @@ URL = url;
 <div class="titlepage"></div>
 <p>JBossでAPサーバのコンテナ内からのJNDIルックアップを行う場合、InitialContextのコンストラクタの引数にPropertiesを設定する必要はなく、引数なしのコンストラクタでInitialContextを生成し、Jndiルックアップが可能である </p>
 <div class="figure">
-<a name="N14AC2"></a>
+<a name="N14BA6"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogic（移行前）のソースコード例</b>
 </p>
@@ -2688,7 +2959,7 @@ InitialContext initialContext = new InitialContext(props);
 <br class="figure-break">
 <p>JBossに移行する際に、以下のようにプログラムを変更する。</p>
 <div class="figure">
-<a name="N14ACE"></a>
+<a name="N14BB2"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBoss（移行後）のソースコード例</b>
 </p>
@@ -2713,7 +2984,7 @@ InitialContext initialContext = new InitialContext();
 			EJBクライアントなどのようにAPサーバのコンテナ外からのJNDIルックアップ呼び出しが必要な場合に、APサーバのコンテナ外からのJNDIルックアップ呼び出しが必要である。JBossではAPサーバのコンテナ外からのJNDIルックアップ呼び出しを行う場合、InitialContextの引数にPropertiesを設定する必要がある
 			</p>
 <div class="figure">
-<a name="N14AE4"></a>
+<a name="N14BC8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogicのInitialContextのコンストラクタのProperties設定</b>
 </p>
@@ -2747,7 +3018,7 @@ InitialContext initialContext = new InitialContext();
 <p>InitialContextのコンストラクタの引数に設定するPropertiesの内容を変更する
 					</p>
 <div class="figure">
-<a name="N14AF5"></a>
+<a name="N14BD9"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBossのInitialContextのコンストラクタのProperties設定</b>
 </p>
@@ -2771,7 +3042,7 @@ InitialContext initialContext = new InitialContext(props);
 <p>プロパティファイル(jboss-ejb-client.properties)を配置して、クラスパスに通す必要がある。(本例ではEJBクライアントの例を示す)
 					</p>
 <div class="figure">
-<a name="N14B02"></a>
+<a name="N14BE6"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;jboss-ejb-client.properties</b>
 </p>
@@ -2819,7 +3090,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 						weblogic.ejb.Generic○○○Beanクラスから派生したものであった場合、JavaEE標準のEJBクラスから派生するようにEJBの実装を修正する。
 						</p>
 <div class="table">
-<a name="N155FC"></a>
+<a name="N156E0"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;WebLogic独自クラスとJavaEE標準のEJBクラスとの対応</b>
 </p>
@@ -2872,7 +3143,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 </table>
 </div>
 <div class="figure">
-<a name="N15628"></a>
+<a name="N1570C"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-ejb-jar.xmlのヘッダ例
 						</b>
@@ -2888,7 +3159,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15632"></a>
+<a name="N15716"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-ejb3.xmlのヘッダ例
 						</b>
@@ -2962,7 +3233,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>weblogic-ejb-jar.xmlのweblogic-enterprise-beanタグ配下のタグの対応表を以下に示す
 		</p>
 <div class="table">
-<a name="N14B80"></a>
+<a name="N14C64"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;タグの変換対応表（Stateless Session Bean）
 			</b>
@@ -3065,7 +3336,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <div class="titlepage"></div>
 <p>weblogic-enterprise-bean配下にstateless-session-descriptorが設定されている場合は、jboss-ejb3.xmlのenterprise-beans配下の&rdquo;session&rdquo;として置き換えて設定する。</p>
 <div class="figure">
-<a name="N14C3E"></a>
+<a name="N14D22"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-ejb-jar.xmlの例</b>
 </p>
@@ -3091,7 +3362,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N14C48"></a>
+<a name="N14D2C"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-ejb3.xmlの例</b>
 </p>
@@ -3134,7 +3405,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 					設定されるインスタンスプールの上限値の設定を、JBossのインスタンスプール設定のmax-pool-sizeに設定する。なおインスタンスプールの下限値についてはJBossでは設定されないので注意すること。
 				</p>
 <div class="figure">
-<a name="N14C64"></a>
+<a name="N14D48"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;EJBのインスタンスプール設定を管理CLIより登録する.</b>
 </p>
@@ -3169,7 +3440,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 					デプロイメントデスクリプタファイル(jboss-ejb3.xml）を作成し、EJBに対してインスタンスプールのリファレンス(bean-instance-pool-ref)を設定する
 					</p>
 <div class="figure">
-<a name="N14C71"></a>
+<a name="N14D55"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-ebj3.xmlのインスタンスプール設定</b>
 </p>
@@ -3209,7 +3480,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 
 			</p>
 <div class="figure">
-<a name="N14C88"></a>
+<a name="N14D6C"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogicのEJBクラスタリングの設定).</b>
 </p>
@@ -3235,7 +3506,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 
 			</p>
 <div class="table">
-<a name="N14C93"></a>
+<a name="N14D77"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;WebLogicのEJBクラスタ設定内容
 				</b>
@@ -3315,7 +3586,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>weblogic-ejb-jar.xmlのweblogic-enterprise-beanタグ配下のタグの対応表を以下に示す
 		</p>
 <div class="table">
-<a name="N14CE4"></a>
+<a name="N14DC8"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;タグの変換対応表（Statefull Session Bean）
 			</b>
@@ -3430,7 +3701,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <div class="titlepage"></div>
 <p>weblogic-enterprise-bean配下にstatefull-session-descriptorが設定されている場合は、jboss-ejb3.xmlのenterprise-beans配下の&rdquo;session&rdquo;として置き換え、ejb-name、jndi-nameタグはsessionタグの子要素として設定する。</p>
 <div class="figure">
-<a name="N14DBE"></a>
+<a name="N14EA2"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-ejb-jar.xmlの例</b>
 </p>
@@ -3456,7 +3727,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N14DC8"></a>
+<a name="N14EAC"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-ejb3.xmlの例</b>
 </p>
@@ -3520,7 +3791,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 
 			</p>
 <div class="figure">
-<a name="N15538"></a>
+<a name="N1561C"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogicのキャッシュ設定(weblogic-ejb-jar.xmlのstateful-session-cache)
 				</b>
@@ -3570,7 +3841,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>clusterdキャッシュでは/subsystem=infinispan/cache-container=ejb/replicaed-cache=replリソースのeviction属性のmax-entriesに、キャッシュ内のBeanのエントリ数の上限が設定可能である。
 								</p>
 <div class="figure">
-<a name="N15556"></a>
+<a name="N1563A"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;管理CLIによる設定.
 									</b>
@@ -3618,7 +3889,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>/subsystem=infinispan/cache-container=ejb/replicaed-cache=replリソースのeviction属性のstrategyでLRUが設定可能。これらのほかにFIFO,LRU,LIRSが設定可能。
 								</p>
 <div class="figure">
-<a name="N15573"></a>
+<a name="N15657"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;管理CLIによる設定.
 									</b>
@@ -3677,7 +3948,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>/subsystem=ejb3/file-passivation-store=fileリソースのidle-timeoutで設定可能
 											</p>
 <div class="figure">
-<a name="N15596"></a>
+<a name="N1567A"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;管理CLIによる設定.
 												</b>
@@ -3700,7 +3971,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>/subsystem=ejb3/cluster-passivation-store=infinispanリソースのidle-timeoutで設定可能
 								</p>
 <div class="figure">
-<a name="N155A5"></a>
+<a name="N15689"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;管理CLIによる設定.
 									</b>
@@ -3754,7 +4025,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>/subsystem=ejb3/file-passivation-store=fileリソースのrelative-toで設定可能。デフォルトではjboss.server.data.dirが設定
 											</p>
 <div class="figure">
-<a name="N155C8"></a>
+<a name="N156AC"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;管理CLIによる設定.
 												</b>
@@ -3777,7 +4048,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>/subsystem=ejb3/cluster-passivation-store=infinispanリソースのfile-storeのrelative-toで設定可能。デフォルトではjboss.server.data.dirが設定
 								</p>
 <div class="figure">
-<a name="N155D7"></a>
+<a name="N156BB"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;管理CLIによる設定.
 									</b>
@@ -3824,7 +4095,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 
 			</p>
 <div class="figure">
-<a name="N14DE0"></a>
+<a name="N14EC4"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogicのEJBクラスタリングの設定.</b>
 </p>
@@ -3848,7 +4119,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 			
 </p>
 <div class="table">
-<a name="N14DEB"></a>
+<a name="N14ECF"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;WebLogicのEJBクラスタ設定内容
 				</b>
@@ -3948,7 +4219,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <p>weblogic-ejb-jar.xmlからjboss-ejb3.xmlへ移行する。weblogic-ejb-jar.xmlのEntity Beanに関連するタグとjboss-ejb3.xmlの対応表を以下に示す
 		</p>
 <div class="table">
-<a name="N14E32"></a>
+<a name="N14F16"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;タグの変換対応表（Entity Bean）
 			</b>
@@ -4082,7 +4353,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 <div class="titlepage"></div>
 <p>weblogic-enterprise-bean配下にentity-descriptorが設定されている場合は、jboss-ejb3.xmlのenterprise-beans配下の&rdquo;entity&rdquo;として置き換え、ejb-name、jndi-nameタグはsessionタグの子要素として設定する。</p>
 <div class="figure">
-<a name="N14F35"></a>
+<a name="N15019"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-ejb-jar.xmlの例</b>
 </p>
@@ -4106,7 +4377,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N14F3F"></a>
+<a name="N15023"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-ejb3.xmlの例</b>
 </p>
@@ -4146,7 +4417,7 @@ remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMO
 			WebLogicではweblogic-ejb-jar.xmlのpoolタグにより、EJBインスタンスプール設定を行う。
 			</p>
 <div class="figure">
-<a name="N14F57"></a>
+<a name="N1503B"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-ejb-jar.xml</b>
 </p>
@@ -4186,7 +4457,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 			WebLogicにはEntityBeanのインスタンスキャッシュ設定が可能で、キャッシュ設定が以下のように可能である。
 			</p>
 <div class="figure">
-<a name="N14F70"></a>
+<a name="N15054"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-ejb-jar.xml</b>
 </p>
@@ -4237,7 +4508,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 						Beanへの同時アクセスを管理するためのロック戦略を指定する(concurrency-strategyの移行)
 					</p>
 <div class="table">
-<a name="N14F90"></a>
+<a name="N15074"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;weblogic-ejb-jar.xml のconcurrency-strategyタグ設定</b>
 </p>
@@ -4290,7 +4561,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 						JBossの場合は、Pessimisticロック以外には、Optimisticロックが設定可能であり、Optimisticロックの戦略として以下が設定可能である。
 						</p>
 <div class="table">
-<a name="N14FBC"></a>
+<a name="N150A0"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;jbosscmp-jdbc.xmlにおけるPessimisticロックの種別について
 							</b>
@@ -4352,7 +4623,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 			WebLogicではpersistence設定を行うことで、コンテナ管理の永続性サービスを指定でき、各エンティティBeanに対応させた設定が可能である
 			</p>
 <div class="table">
-<a name="N14FF4"></a>
+<a name="N150D8"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;persistenceタグ子要素の対応表</b>
 </p>
@@ -4410,7 +4681,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 
 			</p>
 <div class="figure">
-<a name="N1503B"></a>
+<a name="N1511F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogicのEJBクラスタリングの設定.</b>
 </p>
@@ -4436,7 +4707,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 
 			</p>
 <div class="table">
-<a name="N15046"></a>
+<a name="N1512A"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;WebLogicのEJBクラスタ設定内容
 				</b>
@@ -4499,7 +4770,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 <li class="listitem">
 <p>ヘッダが参照しているdtdを変更する。</p>
 <div class="figure">
-<a name="N1508A"></a>
+<a name="N1516E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-cmp-rdbms-jar.xmlのヘッダ例.</b>
 </p>
@@ -4518,7 +4789,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15094"></a>
+<a name="N15178"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jbosscmp-jdbc.xmlのヘッダ例.</b>
 </p>
@@ -4538,7 +4809,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
                     
                       </p>
 <div class="table">
-<a name="N150A1"></a>
+<a name="N15185"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;タグの変換対応表（Statefull Session Bean）
 			</b>
@@ -4646,7 +4917,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
         
         </p>
 <div class="figure">
-<a name="N1515A"></a>
+<a name="N1523E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-cmp-rdbms-jar.xmlの例.</b>
 </p>
@@ -4669,7 +4940,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
                 
 </p>
 <div class="figure">
-<a name="N15165"></a>
+<a name="N15249"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jbosscmp-jdbc.xmlの例.</b>
 </p>
@@ -4703,7 +4974,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
         
         </p>
 <div class="figure">
-<a name="N1517C"></a>
+<a name="N15260"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-cmp-rdbms-jar.xmlの例.</b>
 </p>
@@ -4729,7 +5000,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
                 
 </p>
 <div class="figure">
-<a name="N15187"></a>
+<a name="N1526B"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jbosscmp-jdbc.xmlの例.</b>
 </p>
@@ -4779,7 +5050,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 						WebLogicではweblogic-rdbms-relationタグ、JBossではejb-relationタグを指定して設定する。)
 					</p>
 <div class="table">
-<a name="N151A6"></a>
+<a name="N1528A"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;1対1、1対多のリレーション設定対応表
 						</b>
@@ -4818,7 +5089,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 <p>weblogic-cmp-rdbms-jar.xmlのweblogic-rdbms-relation関連タグ及び、ejb-jar.xmlのrelationships関連タグは以下のように変換する
 					</p>
 <div class="figure">
-<a name="N151D3"></a>
+<a name="N152B7"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ejb-jar.xml（Weblogic）の例.</b>
 </p>
@@ -4858,7 +5129,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N151DD"></a>
+<a name="N152C1"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;ejb-jar.xml（JBoss）の例.</b>
 </p>
@@ -4898,7 +5169,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N151E7"></a>
+<a name="N152CB"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;weblogic-cmp-rdbms-jar.xmlの例.</b>
 </p>
@@ -4923,7 +5194,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N151F1"></a>
+<a name="N152D5"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;jbosscmp-jdbc.xmlの例.</b>
 </p>
@@ -4959,7 +5230,7 @@ JBossではEntityBeanのインスタンスプール設定はサポートしな�
 <p>多対多のリレーション設定の場合は、２つのテーブル間でリレーション用の中間テーブルを指定する必要がある。WebLogicでは、table-name 、JBossではrelation-table-mapping、table-nameを使用する。
 ejb-jar.xml の変換については、前述の1対1、1対多の例と同様である。以下に、多対多の注意点となる箇所の定義方法と例を示す。その他は前述記述を参考のこと。</p>
 <div class="table">
-<a name="N15200"></a>
+<a name="N152E4"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;多対多のリレーション設定対応表
 						</b>
@@ -4993,7 +5264,7 @@ ejb-jar.xml の変換については、前述の1対1、1対多の例と同様�
 <p>対多でのweblogic-rdbms-relation関連タグ及び、ejb-jar.xmlのrelationships関連タグは以下のように変換する
 					</p>
 <div class="figure">
-<a name="N15224"></a>
+<a name="N15308"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;ejb-jar.xml（Weblogic）の例.</b>
 </p>
@@ -5033,7 +5304,7 @@ ejb-jar.xml の変換については、前述の1対1、1対多の例と同様�
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N1522E"></a>
+<a name="N15312"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;ejb-jar.xml（JBoss）の例.</b>
 </p>
@@ -5073,7 +5344,7 @@ ejb-jar.xml の変換については、前述の1対1、1対多の例と同様�
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15238"></a>
+<a name="N1531C"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;weblogic-cmp-rdbms-jar.xmlの例.</b>
 </p>
@@ -5108,7 +5379,7 @@ ejb-jar.xml の変換については、前述の1対1、1対多の例と同様�
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15242"></a>
+<a name="N15326"></a>
 <p class="title">
 <b>Figure&nbsp;8.&nbsp;jbosscmp-jdbc.xmlの例.</b>
 </p>
@@ -5164,7 +5435,7 @@ ejb-jar.xml の変換については、前述の1対1、1対多の例と同様�
 <p>Weblogicの自動主キー生成設定は、weblogic-cmp-rdbms-jar.xmlの automatic-key-generationタグで設定可能で、JBossの場合はentity-commandタグを指定して設定することが可能である。以下に、定義の対応表と例を示す。
         </p>
 <div class="table">
-<a name="N15259"></a>
+<a name="N1533D"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;自動主キー設定対応表
 				</b>
@@ -5207,7 +5478,7 @@ ejb-jar.xml の変換については、前述の1対1、1対多の例と同様�
 <p>自動主キー生成の例を以下に示す
          </p>
 <div class="figure">
-<a name="N15290"></a>
+<a name="N15374"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-cmp-rdbms-jar.xmlのヘッダ例.</b>
 </p>
@@ -5239,7 +5510,7 @@ ejb-jar.xml の変換については、前述の1対1、1対多の例と同様�
                     
 </p>
 <div class="figure">
-<a name="N1529B"></a>
+<a name="N1537F"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jbosscmp-jdbc.xmlのHiLoKeyGeneratorFactoryを使用した例.</b>
 </p>
@@ -5282,7 +5553,7 @@ HiLoKeyGeneratorFactory
 <p>テーブルの自動作成・削除などの設定は、WebLogicでは、create-default-dbms-tablesタグを使用し、JBossでは、remove-table、create-tableを使用する。以下に、定義の対応表と例を示す。
          </p>
 <div class="table">
-<a name="N152B2"></a>
+<a name="N15396"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;テーブルの自動作成・削除対応表
 				</b>
@@ -5324,7 +5595,7 @@ HiLoKeyGeneratorFactory
 <p>WebLogicとJBossで完全に同等のタグは存在しないため、代替機能としての例を示す
              </p>
 <div class="figure">
-<a name="N152E6"></a>
+<a name="N153CA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-cmp-rdbms-jar.xmlのヘッダ例.</b>
 </p>
@@ -5343,7 +5614,7 @@ HiLoKeyGeneratorFactory
                     
 </p>
 <div class="figure">
-<a name="N152F1"></a>
+<a name="N153D5"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jbosscmp-jdbc.xmlの例.</b>
 </p>
@@ -5378,7 +5649,7 @@ HiLoKeyGeneratorFactory
 以下は、参考としてWeblogicにおけるweblogic-queryの定義とjboss-qlのタグの対応表を示すが、置き換えるだけでは移行はできず、WebLogicのweblogic-qeuryでどのような拡張クエリー機能を特定し、jboss-qlで代替できるかを検討する必要がある。
 </p>
 <div class="table">
-<a name="N15308"></a>
+<a name="N153EC"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;タグの変換対応表（weblogic-query、jboss-ql）
 				</b>
@@ -5428,7 +5699,7 @@ HiLoKeyGeneratorFactory
 			なお、WebLogicにおける拡張クエリ機能は、上記のほかに、以下の機能が存在する
 			</p>
 <div class="table">
-<a name="N15347"></a>
+<a name="N1542B"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;WebLogicにおける拡張クエリ機能
 				</b>
@@ -5475,7 +5746,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <p>max-elementsの移植についてejb-jar.xmlのejb-qlではOFFSET、LIMIT関数は使用できないため、ejb-jar.xmlでは仮のejb-qlを定義し、jbosscmp-jdbc.xmlのjboss-qlで、OFFSET、LIMIT関数を指定したjboss-qlでオーバライドする方法について示す。（起動時には、jbosscmp-jdbc.xmlの定義が優先される。）
 </p>
 <div class="table">
-<a name="N1537C"></a>
+<a name="N15460"></a>
 <p class="title">
 <b>Table&nbsp;3.&nbsp;拡張クエリー設定対応表
 				</b>
@@ -5512,7 +5783,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 
 </p>
 <div class="figure">
-<a name="N1539F"></a>
+<a name="N15483"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;Weblogic、JBoss の ejb-jar.xmlの例.</b>
 </p>
@@ -5546,7 +5817,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
             
 </p>
 <div class="figure">
-<a name="N153AA"></a>
+<a name="N1548E"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;weblogic-cmp-rdbms-jar.xmlのヘッダ例.</b>
 </p>
@@ -5581,7 +5852,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
                     
 </p>
 <div class="figure">
-<a name="N153B5"></a>
+<a name="N15499"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;jbosscmp-jdbc.xmlの例.</b>
 </p>
@@ -5632,7 +5903,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <p>以下に全体の変更例を示す。
         </p>
 <div class="figure">
-<a name="N153CC"></a>
+<a name="N154B0"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-cmp-rdbms-jar.xmlの例.</b>
 </p>
@@ -5677,7 +5948,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
                     
 </p>
 <div class="figure">
-<a name="N153D7"></a>
+<a name="N154BB"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jbosscmp-jdbc.xmlの例.</b>
 </p>
@@ -5741,7 +6012,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <p>WebLogicではEntityBeanのインサートするタイミングをweblogic-cmp-rdbms-jar.xmlのdelay-database-insert-untilで設定することができる。デフォルトではデータベースへの挿入はEntityBeanのejbPostCreate メソッドを呼び出した後に行う。
           </p>
 <div class="figure">
-<a name="N153EE"></a>
+<a name="N154D2"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-cmp-rdbms-jar.xmlの例.</b>
 </p>
@@ -5761,7 +6032,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <p> JBossはWebLogicの挙動と異なりejbCreateコール時にインサートするので、ejbPostCreateコール時のインサートを期待する場合、jbosscmp-jdbc.xmlのinsert-after-ejb-post-createタグにtrueを設定する。
         </p>
 <div class="figure">
-<a name="N153FB"></a>
+<a name="N154DF"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jbosscmp-jdbc.xmlの例.</b>
 </p>
@@ -5791,7 +6062,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <p>weblogic-ejb-jar.xmlのweblogic-enterprise-beanタグ配下のタグの対応表を以下に示す
 		</p>
 <div class="table">
-<a name="N1542A"></a>
+<a name="N1550E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;タグの変換対応表（MessageDrivenBean）
 			</b>
@@ -5919,7 +6190,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <div class="titlepage"></div>
 <p>weblogic-enterprise-bean配下にmessage-driven-descriptorが設定されている場合は、jboss-ejb3.xmlのenterprise-beans配下の&rdquo;message-driven&rdquo;として置き換えて設定する。</p>
 <div class="figure">
-<a name="N154E4"></a>
+<a name="N155C8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-ejb-jar.xmlの例</b>
 </p>
@@ -5940,7 +6211,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N154EE"></a>
+<a name="N155D2"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-ejb3.xmlの例</b>
 </p>
@@ -5978,7 +6249,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <p>weblogic-enterprise-bean配下にdestination-jndi-nameでdestination設定が設定されている場合、ejb-jar.xmlにactivation-configタグ配下に、activation-config-property-nameとして、destinationType及びdestinationを行う。
         </p>
 <div class="figure">
-<a name="N16592"></a>
+<a name="N16676"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-ejb-jar.xmlの例</b>
 </p>
@@ -5999,7 +6270,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N1659C"></a>
+<a name="N16680"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;ejb-jar.xmlの例</b>
 </p>
@@ -6055,7 +6326,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <div class="titlepage"></div>
 <p>WebLogicではweblogic-ejb-jar.xmlのpoolタグにより、EJBインスタンスプール設定を行う。</p>
 <div class="figure">
-<a name="N15506"></a>
+<a name="N155EA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;</b>
 </p>
@@ -6084,7 +6355,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 					設定されるインスタンスプールの上限値の設定を、JBossのインスタンスプール設定(mdb-strict-max-pool)のmax-pool-sizeを変更する方法を示す。
 				</p>
 <div class="figure">
-<a name="N15515"></a>
+<a name="N155F9"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;mdb-strict-max-poolののmax-pool-sizeをデフォルトの20より25に変更する.</b>
 </p>
@@ -6127,7 +6398,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 						WebLogicでは、&rdquo;trans-timeout-seconds&rdquo;にてトランザクションタイムアウト時間をミリ秒単位で指定していることに対し、JBossでは秒単位を指定している。そのため、移行を行う際には秒単位の数値に適宜置き換えること
 						</p>
 <div class="figure">
-<a name="N16514"></a>
+<a name="N165F8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogicのweblogic-ejb-jar.xmlによるトランザクションタイムアウト設定.</b>
 </p>
@@ -6152,7 +6423,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 						
 </p>
 <div class="figure">
-<a name="N1651F"></a>
+<a name="N16603"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBossのjboss-ejb3.xmlによるトランザクションタイムアウト設定.</b>
 </p>
@@ -6206,7 +6477,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 						を利用しデータソース単位でトランザクション アイソレーションレベルの設定を行う必要がある。
 						</p>
 <div class="figure">
-<a name="N1652F"></a>
+<a name="N16613"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;WebLogicのトランザクション アイソレーション設定(weblogic-ejb-jar.xml).
 							</b>
@@ -6234,7 +6505,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 						
 </p>
 <div class="figure">
-<a name="N1653A"></a>
+<a name="N1661E"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;ejb-jar.xmlの設定</b>
 </p>
@@ -6263,7 +6534,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 						
 </p>
 <div class="figure">
-<a name="N16545"></a>
+<a name="N16629"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;JBossデータソースのトランザクション アイソレーション設定</b>
 </p>
@@ -6298,7 +6569,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 			WebLogicではweblogic-ejb-jar.xmlのenable-call-by-referenceでEJBの参照渡し、値渡しの宣言を行う。
 			</p>
 <div class="table">
-<a name="N1655D"></a>
+<a name="N16641"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;weblogic-ejb-jar.xml設定項目</b>
 </p>
@@ -6336,7 +6607,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 			JBossでの参照渡し、値渡しの設定方法について以下に示す。Remote EJBを利用する場合、Remoete	EJBのメソッド引数で指定するパラメータを参照渡し、値渡しにするか設定する必要がある。JBoss EAP6のデフォルトでは、値渡しが設定される。値渡しが有効であると、分散GCアルゴリズムにより、定期的に分散GCが行われるため、要件に応じて適切にパラメータ（参照渡し/値渡し）を設定する必要がある。
 			</p>
 <div class="figure">
-<a name="N1657B"></a>
+<a name="N1665F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;管理CLIによるRemoteEJBの参照渡し設定.
 				</b>
@@ -6353,6 +6624,50 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 <br class="figure-break">
 		
 </p>
+</div>
+<br>
+<br>
+<a name="tubame_1.5.2." id="category_282"></a>
+<h3 class="title">1.5.2.業務アプリケーションによるRemoteExceptionのスロー</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>EJB内でjava.lang.RemoteExceptionインスタンスを生成し、スローした場合、WebLogicのEJBコンテナは
+			トランザクションをロールバックする。
+		</p>
+<p>
+			JBossのEJBコンテナは、RemoteExceptionがスローされた場合、ロールバックを実施せず、
+			例外を握りつぶす。
+			以下EJB仕様ではRemoteExceptionやそのサブクラスは、システム例外として予約されており、アプリケーション自身が スローするものでないため、仕様違反にあたる恐れがある。
+
+			</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>EJB3.1仕様</p>
+<p>An application exception may be a subclass (direct or
+					indirect) of java.lang.Exception (i.e., a&ldquo;checked exception&rdquo;), or an application
+					exception class may be defined as a subclass of	the java.lang.RuntimeException (an &ldquo;unchecked exception&rdquo;).
+					An application exception may not be a subclass of the
+					java.rmi.RemoteException.
+					The java.rmi.RemoteException and its subclasses are reserved for
+					system exceptions.
+				</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+		
+</p>
+<p>
+			WebLogicと同様にトランザクションをロールバックする場合は、
+			RemoteExceptionのスローはせず、java.lang.RuntimeExceptionやそのサブクラスを作成し、スローすることで対応可能となる。
+		</p>
 </div>
 <br>
 <br>
@@ -6400,7 +6715,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 
 			</p>
 <div class="table">
-<a name="N1565B"></a>
+<a name="N1573F"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;オペレーションスタイルの動作の違い</b>
 </p>
@@ -6430,7 +6745,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 			
 </p>
 <div class="table">
-<a name="N15671"></a>
+<a name="N15755"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;XMLデータ相互変換方式の違い</b>
 </p>
@@ -6486,7 +6801,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 						Metadataアノテーション及び、WebLogic固有のJWSアノテーションを含むJWSファイルを入力に、WebLogic Web
 						サービスの作成に必要なアーティファクトをすべて生成します。</p>
 <div class="figure">
-<a name="N1569D"></a>
+<a name="N15781"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jwsc Antタスク
 						</b>
@@ -6534,7 +6849,7 @@ WebLogic Server 9.0 より前のリリースでは EJB-QL クエリ (WebLogic �
 					Metadataノテーションに加えて以下のようなWebLogoc独自アノテーションであるWLHttpTransportアノテーションを利用したWebサービスの実装が多い。
 					</p>
 <div class="figure">
-<a name="N156AB"></a>
+<a name="N1578F"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;WebLogic9のWebサービス実装
 						</b>
@@ -6593,7 +6908,7 @@ import weblogic.jws.WLHttpTransport;
 			この際、WebLogic9ではJWSアノテーションを利用したエンドポイントクラスが想定されるが、wstoolはJWSアノテーションが付与されたエンドポイントクラスを入力とすることができないため、、JWSアノテーションを依存を削除し、Webサービス実装を以下のように修正する必要がある。
 			</p>
 <div class="figure">
-<a name="N156C5"></a>
+<a name="N157A9"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogic9のWebサービス実装
 				</b>
@@ -6637,7 +6952,7 @@ public class HelloWorld {
 <p>JWSアノテーションを依存をなくし、あらたにサービスエンドポイント用のインタフェースクラスを作成する。
 					</p>
 <div class="figure">
-<a name="N156D4"></a>
+<a name="N157B8"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBossのサービスエンドポイント用のインタフェースクラス(SEI)
 						</b>
@@ -6659,7 +6974,7 @@ String sayHello(int num, String s)
 <li class="listitem">
 <p>サービスエンドポイントインタフェース(SEI)の実装</p>
 <div class="figure">
-<a name="N156E1"></a>
+<a name="N157C5"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JBossのサービスエンドポイント用のインタフェースクラス(SEI)の実装
 						</b>
@@ -6688,7 +7003,7 @@ public class HelloWorldJSE implements HelloWorld {
 <li class="listitem">
 <p>wstoolを実行する上で必要なwstools-config.xmlファイルを作成 </p>
 <div class="figure">
-<a name="N156EE"></a>
+<a name="N157D2"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;wstools-config.xml
 						</b>
@@ -6720,7 +7035,7 @@ public class HelloWorldJSE implements HelloWorld {
 						デプロイメント記述子ファイルであるwebservices.xml、jaxrpc-mapping.xml及びWSDLファイルを作成
 					</p>
 <div class="figure">
-<a name="N156FB"></a>
+<a name="N157DF"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;JBossEAP5のwstools実行例
 						</b>
@@ -6746,7 +7061,7 @@ genereted?z????????t?@?C???????????
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15705"></a>
+<a name="N157E9"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;wstoolsのant例(build.xml)
 						</b>
@@ -6793,7 +7108,7 @@ genereted?z????????t?@?C???????????
 						サービスエンドポイント(JSE)は、WEBアプリケーションとしてデプロイする必要があるので、web.xmlファイルを作成servlet及びservlet-mapping設定を行う。本設定で指定するservlet-nameはwstools-config.xmlファイルで設定したwebservicesタグのservlet-link属性の値と同じように設定し、servlet-classは、WebServiceアノテーションを付与したサービスエンドポイントとなるクラスを指定する。
 					</p>
 <div class="figure">
-<a name="N15714"></a>
+<a name="N157F8"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;web.xml例
 						</b>
@@ -6837,7 +7152,7 @@ genereted?z????????t?@?C???????????
 <p>WebLogicのWLHttpTransportアノテーションでcontextPathの設定が可能だが、JBossではMETA-INF配下にcontext.xmlを作成して、Path設定を行うことで、コンテキストパスを変更することができる
 						</p>
 <div class="figure">
-<a name="N15723"></a>
+<a name="N15807"></a>
 <p class="title">
 <b>Figure&nbsp;8.&nbsp;context-xml例
 							</b>
@@ -6864,7 +7179,7 @@ genereted?z????????t?@?C???????????
 						デプロイメント記述子ファイル、WSDLファイル、クラス群及びweb.xmlを含め、warファイルにパッケージングする。
 						</p>
 <div class="figure">
-<a name="N15732"></a>
+<a name="N15816"></a>
 <p class="title">
 <b>Figure&nbsp;9.&nbsp;warファイルにパッケージするXMLについて
 							</b>
@@ -6917,7 +7232,7 @@ genereted?z????????t?@?C???????????
 <li class="listitem">
 <p>WebLogic独自のWLHttpTransportアノテーションの削除</p>
 <div class="figure">
-<a name="N15750"></a>
+<a name="N15834"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;エンドポイントクラスに設定されたWLHttpTransportアノテーションをコメントする
 						</b>
@@ -6946,7 +7261,7 @@ genereted?z????????t?@?C???????????
 							JBossではarg0などの名称が設定されるので、WebLogic同様にメソッド名の型の変数名を利用する場合は、WebParamでname属性を明示的に指定する必要がある。
 						</p>
 <div class="figure">
-<a name="N1575D"></a>
+<a name="N15841"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;@WebParamでname属性を指定なしの実装(WebLogic)</b>
 </p>
@@ -6964,7 +7279,7 @@ genereted?z????????t?@?C???????????
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15767"></a>
+<a name="N1584B"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;WebLogicのjwscコマンドを利用して生成されたWSDL
 							</b>
@@ -6985,7 +7300,7 @@ genereted?z????????t?@?C???????????
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15771"></a>
+<a name="N15855"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;@WebParamでname属性の指定なし、JBossのwsprovideコマンドを利用して生成されたWSDL例
 							</b>
@@ -7004,7 +7319,7 @@ genereted?z????????t?@?C???????????
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N1577B"></a>
+<a name="N1585F"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;@WebParamでname属性の指定した場合あり、JBossのwsprovideコマンドを利用して生成されたWSDL例
 							</b>
@@ -7023,7 +7338,7 @@ genereted?z????????t?@?C???????????
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15785"></a>
+<a name="N15869"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;@WebParamでname属性を指定した場合の実装例
 							</b>
@@ -7050,7 +7365,7 @@ genereted?z????????t?@?C???????????
 <p>wsprovideの実行</p>
 <p>wsprovideを実行することにより、WSDLファイル及びクラス群の生成を行う。</p>
 <div class="figure">
-<a name="N15794"></a>
+<a name="N15878"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;wsprovie実行例(build/gen配下に出力)
 							</b>
@@ -7075,7 +7390,7 @@ wsprovide  --classpath=./target/classes -o build/gen -w examples.webservices.jws
 <p>エンドポイントに関連するメタデータは、JSR-181 アノテーションによって既定される。JSR-181 Javaサービスエンドポイントは、WEBアプリケーションとしてデプロイする必要があるので、web.xmlファイルを作成しservlet及びservlet-mapping設定を行う。本設定で指定するservlet-nameはエンドポイントクラスに設定したWebServiceアノテーションのname属性の値を設定し、servlet-classはサービスエンドポイントとなるクラスを指定する。
                      </p>
 <div class="figure">
-<a name="N157A3"></a>
+<a name="N15887"></a>
 <p class="title">
 <b>Figure&nbsp;8.&nbsp;web.xml例
 							</b>
@@ -7111,7 +7426,7 @@ wsprovide  --classpath=./target/classes -o build/gen -w examples.webservices.jws
 <p>wsprovideで生成されたWSDLファイル、XSDスキーマファイル、クラス群及びweb.xmlを含め、warファイルにパッケージングする。 
                      </p>
 <div class="figure">
-<a name="N157B3"></a>
+<a name="N15897"></a>
 <p class="title">
 <b>Figure&nbsp;9.&nbsp;warファイルにパッケージするXMLについて 							</b>
 </p>
@@ -7173,7 +7488,7 @@ wsprovide  --classpath=./target/classes -o build/gen -w examples.webservices.jws
 			
 </p>
 <div class="figure">
-<a name="N157D8"></a>
+<a name="N158BC"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogic9のEJBのWebサービス実装
 				</b>
@@ -7219,7 +7534,7 @@ public class ExampleBean implements SessionBean {
 <p>JWSアノテーション及びweblogic.ejbgen.Sessionアノテーションを削除し、POJOのサービスエンドポイント用のインタフェースクラスを作成する。
 					</p>
 <div class="figure">
-<a name="N157E7"></a>
+<a name="N158CB"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBossのサービスエンドポイント用のインタフェースクラス
 						</b>
@@ -7239,7 +7554,7 @@ public interface ExampleEndPoint extends Remote{
 <li class="listitem">
 <p>EJBの実装</p>
 <div class="figure">
-<a name="N157F4"></a>
+<a name="N158D8"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JBossのサービスエンドポイント用のインタフェースクラスで定義したメソッドを実装するEJB実装
 						</b>
@@ -7264,7 +7579,7 @@ public class ExampleBean implements SessionBean {
 <li class="listitem">
 <p>ejb-jar.xmlを作成 </p>
 <div class="figure">
-<a name="N15801"></a>
+<a name="N158E5"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;ejb-jar.xml
 						</b>
@@ -7299,7 +7614,7 @@ http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd"&gt;
 <li class="listitem">
 <p>wstoolを実行する上で必要なwstools-config.xmlファイルを作成 </p>
 <div class="figure">
-<a name="N15810"></a>
+<a name="N158F4"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;wstools-config.xml
 						</b>
@@ -7333,7 +7648,7 @@ http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd"&gt;
 						デプロイメント記述子ファイルであるwebservices.xml、jaxrpc-mapping.xml及びWSDLファイルを作成
 					</p>
 <div class="figure">
-<a name="N1581D"></a>
+<a name="N15901"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;JBossEAP5のwstools実行例
 						</b>
@@ -7359,7 +7674,7 @@ genereted?z????????t?@?C???????????
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15827"></a>
+<a name="N1590B"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;wstoolsのant例(build.xml)
 						</b>
@@ -7407,7 +7722,7 @@ genereted?z????????t?@?C???????????
 						デプロイメント記述子ファイル、WSDLファイル、クラス群及びweb.xmlを含め、warファイルにパッケージングする。
 						</p>
 <div class="figure">
-<a name="N15836"></a>
+<a name="N1591A"></a>
 <p class="title">
 <b>Figure&nbsp;8.&nbsp;jarファイルにパッケージするXMLについて
 							</b>
@@ -7472,7 +7787,7 @@ genereted?z????????t?@?C???????????
 			
 </p>
 <div class="figure">
-<a name="N1585B"></a>
+<a name="N1593F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogic9のEJBのWebサービス実装
 				</b>
@@ -7514,7 +7829,7 @@ public class ExampleBean implements SessionBean {
 <li class="listitem">
 <p>WebLogic独自の「weblogic.jws.*」アノテーション及び「weblogic.ejbgen.*」アノテーションの削除	</p>
 <div class="figure">
-<a name="N1586A"></a>
+<a name="N1594E"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;「weblogic.jws.*」実装例アノテーション及び「weblogic.ejbgen.*」アノテーションの削除
 						</b>
@@ -7550,7 +7865,7 @@ public class ExampleBean implements SessionBean {
 <li class="listitem">
 <p>Java標準のjavax.ejb.Statelessアノテーションを設定</p>
 <div class="figure">
-<a name="N15877"></a>
+<a name="N1595B"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;javax.ejb.Statelessアノテーションを設定例
 						</b>
@@ -7592,7 +7907,7 @@ public class ExampleBean implements SessionBean {
 <li class="listitem">
 <p>wsprovideの実行 </p>
 <div class="figure">
-<a name="N15884"></a>
+<a name="N15968"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;wsprovideの実行例
 						</b>
@@ -7617,7 +7932,7 @@ public class ExampleBean implements SessionBean {
 						wsprovideで生成されたWSDLファイル、XSDスキーマファイル、クラス群及びweb.xmlを含め、jarファイルにパッケージングする。
 						</p>
 <div class="figure">
-<a name="N15893"></a>
+<a name="N15977"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;jarファイルにパッケージするXMLについて
 							</b>
@@ -7659,6 +7974,183 @@ javax.jws.WebServiceアノテーションのname属性の値が(SimplePortType)�
 </div>
 <br>
 <br>
+<a name="tubame_1.6.6." id="category_279"></a>
+<h3 class="title">1.6.6.Webサービスのサーバ移行TIPS</h3>
+<br>
+<br>
+<a name="tubame_1.6.6.1." id="category_280"></a>
+<h3 class="title">1.6.6.1.SOAPのprefixの変更</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>Webサービスは、他システム連携として、一般的に外部インタフェース仕様書に従った電文を
+			取り扱う。このため、Webサービス移植にあたり、SOAP電文のprefixの修正が伴う場合がある。
+
+		</p>
+<p>
+			本例では、JavaEE標準のJAX-WS
+			Handler(javax.xml.ws.handler.soap.SOAPHandler)を利用した、prefixの変更例を示す。
+
+			</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>
+					JAX-WS Handler以外に
+					<span class="command"><strong><a class="command" href="http://cxf.apache.org/docs/interceptors.html" target="_top">Apache CFX 独自のインタセプタ</a></strong></span>
+					や、
+					<span class="command"><strong><a class="command" href="http://cxf.apache.org/docs/jax-ws-configuration.html" target="_top">Apache CFX 独自のエンドポイントコンフィグレーション</a></strong></span>
+					を利用する方法もあるが、APサーバの実装に影響しないように、JavaEE標準のJAX-WS
+					Handlerを利用することを推奨する。
+				</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+			
+</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>実装SOAPHandler</p>
+<p>
+						
+</p>
+<div class="figure">
+<a name="N168C0"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;SOAPHandler実装例</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+								
+public class ReplaceXMLSchemaHandler implements SOAPHandler&lt;SOAPMessageContext&gt; {
+
+    @Override
+    public boolean handleMessage(SOAPMessageContext context) {
+        if (isOutBound(context)) {
+            replacePrefix(context.getMessage());
+        }
+        return true;
+    }
+
+　　private void replacePrefix(SOAPMessage message) {
+        try {
+            SOAPEnvelope envelope = message.getSOAPPart().getEnvelope();
+            envelope.setPrefix("soapenv");
+            
+            // SOAPMessage生成時に空のSOAPHeaderが生成されてしまうため、
+            // SOAPHeaderの要素がない場合は、SOAPHeaderごと削除
+            if (isEmptyHeader(envelope.getHeader())) {
+                envelope.getHeader().detachNode();
+            } else {
+                envelope.getHeader().setPrefix("soapenv");
+            }
+
+            // replace prefix soap -&gt; soapenv and add namespace
+            envelope.getBody().setPrefix("soapenv");
+            envelope.removeNamespaceDeclaration("soap");
+        } catch (SOAPException e){
+            // TODO ランタイム例外クラスは要検討
+            throw new RuntimeException("Cannot replace xml prefix of soap message", e);
+        }
+    }
+
+    private boolean isOutBound(SOAPMessageContext context) {
+        boolean outbound = (Boolean) context.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
+        return outbound;
+    }
+    
+    private boolean isEmptyHeader(SOAPHeader soapHeader) {
+        return soapHeader.getChildNodes().getLength() == 0;
+    }
+
+　　&hellip;
+　}
+							</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+					
+</p>
+</li>
+<li class="listitem">
+<p>handler-chain.xmlの作成</p>
+<p>
+						src/main/resources配下にhandler-chain.xmlを作成する。（この例では、src/main/resources/sample/soap/handler配下に作成する。
+
+						</p>
+<div class="figure">
+<a name="N168D0"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;handler-chain.xml</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+								
+&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;jws:handler-chains xmlns:jws="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;jws:handler-chain&gt;
+        &lt;jws:handler&gt;
+            &lt;jws:handler-class&gt;sample.soap.handler.ReplaceXMLSchemaHandler&lt;/jws:handler-class&gt;
+	&lt;/jws:handler&gt;
+    &lt;/jws:handler-chain&gt;
+&lt;/jws:handler-chains&gt;
+							</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+					
+</p>
+</li>
+<li class="listitem">
+<p>HandlerChainアノテーション設定</p>
+<p>
+						WebサービスのクラスのHandlerChainアノテーション設定し、handler-chain.xmlとほ紐づけを行う。
+
+						</p>
+<div class="figure">
+<a name="N168E0"></a>
+<p class="title">
+<b>Figure&nbsp;3.&nbsp;HandlerChainアノテーション設定</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+								
+import javax.jws.HandlerChain;
+import javax.jws.WebService;
+
+@WebService
+@HandlerChain(file = "/sample/soap/handler/handler-chain.xml")
+public class SampleWebService {
+
+...
+}
+							</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+					
+</p>
+</li>
+</ul>
+</div>
+<p>
+		
+</p>
+</div>
+<br>
+<br>
 <a name="tubame_1.7." id="category_166"></a>
 <h3 class="title">1.7.Webサービスのクライアント移行</h3>
 <br>
@@ -7669,7 +8161,7 @@ javax.jws.WebServiceアノテーションのname属性の値が(SimplePortType)�
 
 			</p>
 <div class="figure">
-<a name="N158B2"></a>
+<a name="N15996"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;clientgen Antタスク
 				</b>
@@ -7695,7 +8187,7 @@ javax.jws.WebServiceアノテーションのname属性の値が(SimplePortType)�
 			
 </p>
 <div class="figure">
-<a name="N158BD"></a>
+<a name="N159A1"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;WebLogic9のWebサービスクライアント実装
 				</b>
@@ -7731,7 +8223,7 @@ public static void main(String[] args) throws Exception {
 <p>wsconsumeを実行し、スタブを生成する
 					</p>
 <div class="figure">
-<a name="N158D0"></a>
+<a name="N159B4"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;wsconsumeの実行
 						</b>
@@ -7756,7 +8248,7 @@ wsconsume?????s????????????\????t?@?C???????????B
 <p>wsconsumeで生成されたスタブを利用して、Webサービスクライアントを実装する。WebLogicのWebサービスのクライアント実装とほとんど変わりはなく、サービスクラスをインスタンス化して、サービスクラスよりポートタイプクラスを取得して、メソッドの呼び出しを行う。
 					</p>
 <div class="figure">
-<a name="N158DF"></a>
+<a name="N159C3"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;クライアント実装
 						</b>
@@ -7781,7 +8273,7 @@ public static void main(String[] args) throws Exception {
 <li class="listitem">
 <p>クライアント実行</p>
 <div class="figure">
-<a name="N158EC"></a>
+<a name="N159D0"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;クライアント実行</b>
 </p>
@@ -7842,7 +8334,7 @@ java -jar $JBOSS_HOME/jboss-modules.jar -mp $JBOSS_HOME/boss-eap-6.1/modules -de
 			WebLogicでは、通常のEJBのデプロイメントに対して、wlaapc　Antタスクを発行することで、IIOP通信するためのスタブを生成しIIOP対応のEJBが作成可能である。
 			</p>
 <div class="figure">
-<a name="N15B6C"></a>
+<a name="N15C50"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogic9のwlappc Antタスク
 				</b>
@@ -7867,7 +8359,7 @@ java -jar $JBOSS_HOME/jboss-modules.jar -mp $JBOSS_HOME/boss-eap-6.1/modules -de
 
 			</p>
 <div class="figure">
-<a name="N15B79"></a>
+<a name="N15C5D"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-ejb3.xmlにiiopタグを設定し、ejb-nameを設定する
 				</b>
@@ -7943,7 +8435,7 @@ java -jar $JBOSS_HOME/jboss-modules.jar -mp $JBOSS_HOME/boss-eap-6.1/modules -de
 						Context.URL_PKG_PREFIXESに設定する値をJBoss用に修正する。
 						</p>
 <div class="figure">
-<a name="N15BA0"></a>
+<a name="N15C84"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jndi.properties例
 							</b>
@@ -7970,7 +8462,7 @@ java.naming.factory.url.pkgs=com.sun.jndi.cosnaming
 
 						</p>
 <div class="figure">
-<a name="N15BB0"></a>
+<a name="N15C94"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;ホームクラスルックアップ例
 							</b>
@@ -8004,7 +8496,7 @@ java.naming.factory.url.pkgs=com.sun.jndi.cosnaming
 						CORBA用の設定をシステムプロパティに定義する。
 						</p>
 <div class="figure">
-<a name="N15BC0"></a>
+<a name="N15CA4"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;システムプロパティ定義例
 							</b>
@@ -8030,7 +8522,7 @@ System.setProperty("org.omg.CORBA.ORBSingletonClass", "org.jacorb.orb.ORBSinglet
 						
 </p>
 <div class="figure">
-<a name="N15BD0"></a>
+<a name="N15CB4"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;セキュリティマネージャ設定
 							</b>
@@ -8062,7 +8554,7 @@ System.setProperty("org.omg.CORBA.ORBSingletonClass", "org.jacorb.orb.ORBSinglet
 									セキュリティポリシーを指定する必要があります。
 									</p>
 <div class="figure">
-<a name="N15BE4"></a>
+<a name="N15CC8"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;システムプロパティで Java セキュリティポリシーを指定する
 										</b>
@@ -8083,7 +8575,7 @@ System.setProperty("org.omg.CORBA.ORBSingletonClass", "org.jacorb.orb.ORBSinglet
 <li class="listitem">
 <p>セキュリティポリシーファイルの例</p>
 <div class="figure">
-<a name="N15BF2"></a>
+<a name="N15CD6"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;すべてのアクセス権を付与する例(security.policy)
 									</b>
@@ -8113,7 +8605,7 @@ grant {
 						
 </p>
 <div class="figure">
-<a name="N15C02"></a>
+<a name="N15CE6"></a>
 <p class="title">
 <b>Figure&nbsp;7.&nbsp;クライアントライブラリ実装例
 							</b>
@@ -8199,7 +8691,7 @@ public class RemoteEJBClient {
 						コマンドを実行するとJARファイル取得できるため、クライアント環境に配置して利用する
 						</p>
 <div class="figure">
-<a name="N15C12"></a>
+<a name="N15CF6"></a>
 <p class="title">
 <b>Figure&nbsp;8.&nbsp;mavenのdependencies設定
 							</b>
@@ -8357,7 +8849,7 @@ public class RemoteEJBClient {
 		
 </p>
 <div class="figure">
-<a name="N15912"></a>
+<a name="N159F6"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;ApplicationLifecycleListener実装例
 			</b>
@@ -8408,7 +8900,7 @@ import weblogic.application.ApplicationLifecycleListener;
 <li class="listitem">
 <p>ServletContextListenerを実装したリスナークラスの作成</p>
 <div class="figure">
-<a name="N15926"></a>
+<a name="N15A0A"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;ApplicationLifecycleListener実装例
 									</b>
@@ -8444,7 +8936,7 @@ System.out.println("Web?A?v???P?[?V??????~?????яo??");
 <li class="listitem">
 <p>ServletContextListenerのweb.xmlへの登録</p>
 <div class="figure">
-<a name="N15933"></a>
+<a name="N15A17"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;ServletContextListenerのweb.xmlへの登録
 									</b>
@@ -8475,7 +8967,7 @@ System.out.println("Web?A?v???P?[?V??????~?????яo??");
 <p>JavaEE6より実装可能となったシングルトンBeanにStartupアノテーションを付与し、アプリケーション起動、停止時にPostConstructPreDestroyアノテーションメドッドが呼び出せれる。
 					</p>
 <div class="figure">
-<a name="N15941"></a>
+<a name="N15A25"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;シングルトンBean実装例
 						</b>
@@ -8525,7 +9017,7 @@ public class HelloSingleton {
 <p>WebLogic提供のMBeanを扱うようなプログラミングを行っている場合、JBossではJMXのAPIを利用するように移植する必要がある。
  </p>
 <div class="figure">
-<a name="N1595A"></a>
+<a name="N15A3E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JMX実装例
 			</b>
@@ -8638,7 +9130,7 @@ public class JmxUtil {
 			とよばれるものがあり、このAPIの一部にTimer API(commonj.timer.*が含まれる)。
 			</p>
 <div class="figure">
-<a name="N15971"></a>
+<a name="N15A55"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogic9のタイマー実装(commonj.timer.TimerManager,commonj.timer.TimerListener)
 				</b>
@@ -8683,7 +9175,7 @@ private static class ExampleTimerListener implements TimerListener {
 			TimerAPIより任意のタイミングでタイマーを作成する機能がある。
 			</p>
 <div class="figure">
-<a name="N1597E"></a>
+<a name="N15A62"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;Scheduleアノテーションを利用し、アプリケーション起動後、10秒間隔で処理を行うスケジュール実装
 				</b>
@@ -8722,7 +9214,7 @@ public class HelloSingleton {
 			
 </p>
 <div class="figure">
-<a name="N15989"></a>
+<a name="N15A6D"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;任意のタイミングでタイマーを生成する実装(javax.ejb.TimerServiceのAPIを利用して、タイマーを登録する。サンプルでは、アプリケーション起動後、1時間後にTimeoutアノテーションが設定されたメソッドが起動される。)
 				</b>
@@ -8839,7 +9331,7 @@ public class HelloSingleton {
 
 						</p>
 <div class="figure">
-<a name="N159C2"></a>
+<a name="N15AA6"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;スキーマメタデータファイル生成の実行例
 							</b>
@@ -8875,7 +9367,7 @@ scomp -out aaaBean.jar ./aaa.xsd
 			weblogic.jndi.Environmentは、InitialContextを作成するためのプロパティを内部的に保持するための、WebLogic独自クラスである。
 			</p>
 <div class="figure">
-<a name="N159DA"></a>
+<a name="N15ABE"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic.jndi.Environment利用例</b>
 </p>
@@ -8905,7 +9397,7 @@ Context ctx = env.getInitialContext();
 						コンテナ内からの呼び出しであれば、プロパティの設定は必要ない。
 						</p>
 <div class="figure">
-<a name="N159EB"></a>
+<a name="N15ACF"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;InitialContext利用例</b>
 </p>
@@ -8933,7 +9425,7 @@ InitialContext initialContext = new InitialContext();
 								InitialContextのコンストラクタに明示的にプロパティを設定するする方法
 								</p>
 <div class="figure">
-<a name="N159FD"></a>
+<a name="N15AE1"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;InitialContext利用例</b>
 </p>
@@ -8962,7 +9454,7 @@ InitialContext initialContext = new InitialContext(props)
 							
 							</p>
 <div class="figure">
-<a name="N15A0B"></a>
+<a name="N15AEF"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;jndi.properties</b>
 </p>
@@ -9038,7 +9530,7 @@ WebLogicのWrapperクラスと同じ機能はJBossではない。RDBMSのトレ�
 
 			</p>
 <div class="figure">
-<a name="N15A3F"></a>
+<a name="N15B23"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jboss.logging利用例
 				</b>
@@ -9107,7 +9599,7 @@ public class HelloService {
 
 			</p>
 <div class="figure">
-<a name="N15A5A"></a>
+<a name="N15B3E"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic.jms.ServerSessionPoolの利用例
 				</b>
@@ -9170,7 +9662,7 @@ public class PoolReceive
 <li class="listitem">
 <p>MsgListener実装クラスをメッセージ駆動型 Bean(MDB)に移植する</p>
 <div class="figure">
-<a name="N15A6B"></a>
+<a name="N15B4F"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;WebLogicのプログラムコードの例
 						</b>
@@ -9193,7 +9685,7 @@ public class MsgListener implements MessageListener {
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15A75"></a>
+<a name="N15B59"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JBossのプログラムコードの例
 						</b>
@@ -9239,7 +9731,7 @@ public class MsgListener implements MessageListener, MessageDrivenBean {
 						メッセージ駆動型 Bean(MDB)はEJBになりますので、EJB用のXMLデプロイメント・ディスクリプタであるejb-jar.xmlファイル及びjboss-ejb3.xmlファイルを作成する。各XMLデプロイメント・ディスクリプタの例を以下に示す。
 						</p>
 <div class="figure">
-<a name="N15A84"></a>
+<a name="N15B68"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;ejb-jar.xmlの例
 							</b>
@@ -9281,7 +9773,7 @@ version="2.1"&gt;
 						
 </p>
 <div class="figure">
-<a name="N15A8F"></a>
+<a name="N15B73"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;jboss-ejb3.xmlの例
 							</b>
@@ -9334,7 +9826,7 @@ version="2.1"&gt;
 
 			</p>
 <div class="figure">
-<a name="N15AA9"></a>
+<a name="N15B8D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogicのJDBC接続プールを利用したデータベース接続例
 				</b>
@@ -9361,7 +9853,7 @@ myDriver.connect("jdbc:weblogic:pool", props);
 			JBossでは以下のように、DataSource オブジェクトを用いたデータベースへの接続を取得する
 			</p>
 <div class="figure">
-<a name="N15AB6"></a>
+<a name="N15B9A"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBossのDataSource オブジェクトを用いたデータベース接続例
 				</b>
@@ -9390,7 +9882,7 @@ Connection con = ds.getConnection();
 <p>JBossのデータソースのJNDI名は、「java:jboss/任意の値」で設定可能である。JNDI名は、デプロイメントディスクリプタ定義（jboss-ejb3.xmlやweb.xmlで）のリソースリファレンス設定を行うことで、カスタム可能である。
 				</p>
 <div class="figure">
-<a name="N15AC4"></a>
+<a name="N15BA8"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;EJBのリソースリファレンス設定(jboss-ejb3.xml）
 					</b>
@@ -9420,7 +9912,7 @@ Connection con = ds.getConnection();
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15ACE"></a>
+<a name="N15BB2"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;JNDIルックアップ例
 					</b>
@@ -9439,7 +9931,7 @@ DataSource xads = (DataSource) env.lookup("demoXADataSource");
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15AD8"></a>
+<a name="N15BBC"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;WEBのリソースリファレンス設定(web.xml）
 					</b>
@@ -9461,7 +9953,7 @@ DataSource xads = (DataSource) env.lookup("demoXADataSource");
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N15AE2"></a>
+<a name="N15BC6"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;JNDIルックアップ例
 					</b>
@@ -9535,7 +10027,7 @@ try {
 
 			</p>
 <div class="figure">
-<a name="N15B16"></a>
+<a name="N15BFA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogicのweblogic.jms.extensions.WLSessionを利用したプログラムコードの例
 				</b>
@@ -9571,7 +10063,7 @@ if (qsession instanceof WLSession) {
 
 			</p>
 <div class="figure">
-<a name="N15B23"></a>
+<a name="N15C07"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JMS標準のjavax.jms.Connection#setExecptionListenerを利用したプログラムコードの例
 				</b>
@@ -9690,7 +10182,7 @@ qsession = qcon.createQueueSession(false, Session.AUTO_ACKNOWLEDGE);
 
 			</p>
 <div class="figure">
-<a name="N16474"></a>
+<a name="N16558"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;サンプルEAR構成
 				</b>
@@ -9722,7 +10214,7 @@ hoge-ear.ear
 			
 			</p>
 <div class="figure">
-<a name="N1647F"></a>
+<a name="N16563"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-deployment-structure.xml設定例
 				</b>
@@ -9799,7 +10291,7 @@ hoge-ear.ear
 
 			</p>
 <div class="figure">
-<a name="N16496"></a>
+<a name="N1657A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;サンプルEAR構成
 				</b>
@@ -9827,7 +10319,7 @@ hoge-ear.ear
 
 			</p>
 <div class="figure">
-<a name="N164A1"></a>
+<a name="N16585"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;管理CLIによりアプリケーション用(jp.co.ntt.ossc.webg.as7.migration)のログレベルTRACEで登録する。
 				</b>
@@ -9846,7 +10338,7 @@ hoge-ear.ear
 			
 </p>
 <div class="figure">
-<a name="N164AC"></a>
+<a name="N16590"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;管理CLIにlogger設定後のstandalone-full-ha.xmlの抜粋(参考)</b>
 </p>
@@ -9877,7 +10369,7 @@ hoge-ear.ear
 			すべてのアプリケーションの修正が完了後、パッケージング作業を行う。アプリケーションの構成が移行元の環境と同じ場合は、WebLogicのconfig.xmlのApplication要素に指定されたデプロイメントに対してパッケージングを行う
 			</p>
 <div class="figure">
-<a name="N164C3"></a>
+<a name="N165A7"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xml
 				</b>
@@ -9910,7 +10402,7 @@ hoge-ear.ear
 <ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem">
 <div class="figure">
-<a name="N164D2"></a>
+<a name="N165B6"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;EAR構成
 						</b>
@@ -9933,7 +10425,7 @@ hoge-ear.ear
 </li>
 <li class="listitem">
 <div class="figure">
-<a name="N164DD"></a>
+<a name="N165C1"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;WAR構成
 						</b>
@@ -9965,7 +10457,7 @@ hoge-ear.ear
 </li>
 <li class="listitem">
 <div class="figure">
-<a name="N164E8"></a>
+<a name="N165CC"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;EJB構成(JAR)
 						</b>
@@ -10021,7 +10513,7 @@ hoge-ear.ear
 			Tuxedoサーバ接続方法には以下のように4パターンある。
 		</p>
 <div class="table">
-<a name="N166BD"></a>
+<a name="N167A1"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;Tuxedoサーバへの接続方法
 			</b>
@@ -10136,7 +10628,7 @@ hoge-ear.ear
 <li class="listitem">
 <p>JDBCドライバモジュール定義ファイル(module.xml)を作成する</p>
 <div class="figure">
-<a name="N144D0"></a>
+<a name="N145B4"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;PostgresSQLのJDBCドライバ用module.xml</b>
 </p>
@@ -10181,7 +10673,7 @@ hoge-ear.ear
 <li class="listitem">
 <p>管理CLIよりJDBCドライバモジュールの登録を行う</p>
 <div class="figure">
-<a name="N144EA"></a>
+<a name="N145CE"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBoss EAP6の管理CLIよりJDBCドライバモジュールの登録を行う。ドライバー名は任意で、{driver-name}と表記する。</b>
 </p>
@@ -10239,7 +10731,7 @@ hoge-ear.ear
 			
 </p>
 <div class="figure">
-<a name="N1456F"></a>
+<a name="N14653"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogic9のデータソース定義ファイル
 				</b>
@@ -10288,7 +10780,7 @@ hoge-ear.ear
 					JDBCドライバーのパラメータを中心とした基本情報のみを利用してデータソースを追加する
 					</p>
 <div class="table">
-<a name="N14580"></a>
+<a name="N14664"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;JDBCドライバーのパラメータを中心として基本情報。この例ではPostgresSQLの利用を前提とする
 						</b>
@@ -10344,7 +10836,7 @@ hoge-ear.ear
 					
 </p>
 <div class="figure">
-<a name="N145ED"></a>
+<a name="N146D1"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;上記のJDBCドライバーのパラメータを中心とした基本情報を非XAデータソースとして追加する例を示す。
 						</b>
@@ -10362,7 +10854,7 @@ data-source add --name=sample-ds --jndi-name=java:jboss/resources/jdbc/SampleDS 
 					
 </p>
 <div class="figure">
-<a name="N145F8"></a>
+<a name="N146DC"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;上記のJDBCドライバーのパラメータを中心とした基本情報XAデータソースとして追加する例を示す。XAデータソースの場合、connection-urlで設定する内容は、xa-datasource-propertiesとして、ServerName、PortNumber、DatabaseName、User、Passwordを設定する。
 						</b>
@@ -10393,7 +10885,7 @@ xa-data-source add --name=sample-xa-ds --jndi-name=java:jboss/resources/jdbc/Sam
 					コネクションプールのパラメータ設定を管理CLIで設定する
 					</p>
 <div class="table">
-<a name="N14606"></a>
+<a name="N146EA"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;コネクションプールのパラメータ設定の基本情報。この例ではPostgresSQLの利用を前提とする
 						</b>
@@ -10457,7 +10949,7 @@ xa-data-source add --name=sample-xa-ds --jndi-name=java:jboss/resources/jdbc/Sam
 					
 </p>
 <div class="figure">
-<a name="N1464D"></a>
+<a name="N14731"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;コネクションプールーのパラメータ設定を管理CLIより行う例を示す。
 						</b>
@@ -10480,7 +10972,7 @@ data-source --name=sample-ds --min-pool-size=20 --max-pool-size=256 --validate-o
 					データソースのパラメータ設定
 					</p>
 <div class="table">
-<a name="N1465B"></a>
+<a name="N1473F"></a>
 <p class="title">
 <b>Table&nbsp;3.&nbsp;グローバルトランザクション設定
 						</b>
@@ -10524,7 +11016,7 @@ data-source --name=sample-ds --min-pool-size=20 --max-pool-size=256 --validate-o
 <div class="section">
 <div class="titlepage"></div>
 <div class="table">
-<a name="N14684"></a>
+<a name="N14768"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;JDBCドライバーのパラメータ設定(jdbc-driver-params)で設定可能な属性とdata-source及びxa-data-sourceコマンドで指定するパラメータの対応表
 			</b>
@@ -10594,7 +11086,7 @@ data-source --name=sample-ds --min-pool-size=20 --max-pool-size=256 --validate-o
 <div class="titlepage"></div>
 <p></p>
 <div class="table">
-<a name="N146CD"></a>
+<a name="N147B1"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;コネクションプールのパラメータ設定(jdbc-connection-pool-params)で設定可能な属性とdata-source及びxa-data-sourceコマンドで指定するパラメータの対応表
 			</b>
@@ -10723,7 +11215,7 @@ data-source --name=sample-ds --min-pool-size=20 --max-pool-size=256 --validate-o
 <div class="section">
 <div class="titlepage"></div>
 <div class="table">
-<a name="N1477F"></a>
+<a name="N14863"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;データソースのパラメータ設定(jdbc-data-source-params)で設定可能な属性とdata-source及びxa-data-sourceコマンドで指定するパラメータの対応表
 			</b>
@@ -10810,7 +11302,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 <div class="titlepage"></div>
 <p></p>
 <div class="table">
-<a name="N147DF"></a>
+<a name="N148C3"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;データソースのパラメータ設定(jdbc-data-source-params)で設定可能な属性とdata-source及びxa-data-sourceコマンドで指定するパラメータの対応表
 			</b>
@@ -10871,7 +11363,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 
 			</p>
 <div class="figure">
-<a name="N15C8C"></a>
+<a name="N15D70"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの構成イメージを以下に示す。
 				</b>
@@ -10951,7 +11443,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 
 			</p>
 <div class="figure">
-<a name="N15CBD"></a>
+<a name="N15DA1"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlのセキュリティ設定例。
 				</b>
@@ -11074,7 +11566,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 						JBossの場合は、複数のセキュリティドメインが定義可能で、ひとつのセキュリティドメインに対してひとつの認証機構(ログインモジュール）を設定できる。
 						</p>
 <div class="figure">
-<a name="N15D13"></a>
+<a name="N15DF7"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;セキュリティドメイン設定
 							</b>
@@ -11213,7 +11705,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 <li class="listitem">
 <p>セキュリティドメインをあらたに作成する</p>
 <div class="figure">
-<a name="N15D64"></a>
+<a name="N15E48"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;セキュリティドメインservlet-security-quickstartの作成例(管理CLI)
 						</b>
@@ -11265,7 +11757,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 <li class="listitem">
 <p>web.xmlにBASIC認証設定を行う</p>
 <div class="figure">
-<a name="N15D7E"></a>
+<a name="N15E62"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;web.xmlのBASIC認証設定
 						</b>
@@ -11292,7 +11784,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 <p>jboss-web.xmlにてセキュリティドメインservlet-security-domainを適用することを宣言する。
 					</p>
 <div class="figure">
-<a name="N15D8B"></a>
+<a name="N15E6F"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;jboss-web.xmlのセキュリティドメイン設定
 						</b>
@@ -11326,7 +11818,7 @@ False(デフォルト): 接続リクエストはフェイルオーバしない�
 <p>サンプル実装ではquickstartsロールについてアクセスを許容するようにサンプルが実装されているため、データベースに適宜ユーザを追加して、quickstartsロールを設定する必要があります。
 				</p>
 <div class="figure">
-<a name="N15D99"></a>
+<a name="N15E7D"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;サーブレットセキュリティのサンプル実装
 					</b>
@@ -11382,7 +11874,7 @@ public class SecuredServlet extends HttpServlet {
 <li class="listitem">
 <p>セキュリティドメインotherのlogin-moduleにRealmDirectが設定されていることを確認する</p>
 <div class="figure">
-<a name="N15DB4"></a>
+<a name="N15E98"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;RealmDirectの設定確認例(管理CLI)
 						</b>
@@ -11400,7 +11892,7 @@ public class SecuredServlet extends HttpServlet {
 <li class="listitem">
 <p>web.xmlにBASIC認証設定を行う</p>
 <div class="figure">
-<a name="N15DC1"></a>
+<a name="N15EA5"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;web.xmlのBASIC認証設定
 						</b>
@@ -11426,7 +11918,7 @@ public class SecuredServlet extends HttpServlet {
 <li class="listitem">
 <p>jboss-web.xmlにてセキュリティドメインotherを適用することを宣言する。</p>
 <div class="figure">
-<a name="N15DCE"></a>
+<a name="N15EB2"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;jboss-web.xmlのセキュリティドメイン設定
 						</b>
@@ -11460,7 +11952,7 @@ public class SecuredServlet extends HttpServlet {
 <p>サンプル実装ではguestロールについてアクセスを許容するようにサンプルが実装されているため、JBossEAP6に付属するadd-userコマンドで、ApplicationRealmにユーザを追加して、guestロールを設定する必要がある
 				</p>
 <div class="figure">
-<a name="N15DDC"></a>
+<a name="N15EC0"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;サーブレットセキュリティのサンプル実装
 					</b>
@@ -11536,7 +12028,7 @@ public class SecuredServlet extends HttpServlet {
 <p>パスワードを暗号化する
 					</p>
 <div class="figure">
-<a name="N15E03"></a>
+<a name="N15EE7"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;picketboxのライブラリを利用して、パスワードを暗号化する
 						</b>
@@ -11555,7 +12047,7 @@ Encoded password: xxxxxxxxxxxxxxx
 <li class="listitem">
 <p>セキュリティドメインをあらたに作成する</p>
 <div class="figure">
-<a name="N15E10"></a>
+<a name="N15EF4"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;セキュリティドメインEncryptedDSDomainの作成例(管理CLI)
 						</b>
@@ -11575,7 +12067,7 @@ Encoded password: xxxxxxxxxxxxxxx
 <li class="listitem">
 <p>データソース設定にセキュリティドメインを設定する。</p>
 <div class="figure">
-<a name="N15E1D"></a>
+<a name="N15F01"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;データソースのセキュリティドメイン設定例(管理CLI)
 						</b>
@@ -11593,7 +12085,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 <li class="listitem">
 <p>データソース設定に設置されたUserとPassowrdを削除する。</p>
 <div class="figure">
-<a name="N15E2A"></a>
+<a name="N15F0E"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;データソース設定のUserとPassowrd削除(管理CLI)
 						</b>
@@ -11629,7 +12121,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N15E41"></a>
+<a name="N15F25"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlのサーバログ設定例。
 				</b>
@@ -11701,7 +12193,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			WebLogicで設定している項目を対象に、JBossのサーバログのローテーション設定について示す。
 			</p>
 <div class="table">
-<a name="N1605A"></a>
+<a name="N1613E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;サーバログローテーション設定
 				</b>
@@ -11746,7 +12238,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
             
 </p>
 <div class="figure">
-<a name="N1608B"></a>
+<a name="N1616F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;管理CLIによるサーバログ設定例（デフォルトで日単位によるローテーションからサイズに変更）
 				</b>
@@ -11778,7 +12270,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 			</p>
 <div class="table">
-<a name="N160A2"></a>
+<a name="N16186"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;WEBアクセスログのローテーション設定
 				</b>
@@ -11822,7 +12314,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
             
 </p>
 <div class="figure">
-<a name="N160D3"></a>
+<a name="N161B7"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;管理CLIによるWebアクセスログ出力設定
 				</b>
@@ -11854,7 +12346,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N15E64"></a>
+<a name="N15F48"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの組み込みLDAP設定。
 				</b>
@@ -11886,7 +12378,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			「SNMPマネージャに対してトラップを送出する」機能をサポートしており、SNMPマネジャーとの連携がシームレスに実現できる。
 		</p>
 <div class="figure">
-<a name="N15E7B"></a>
+<a name="N15F5F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlのSNMPエージェント設定.(デフォルトはfalse)
 			</b>
@@ -11915,7 +12407,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			WebLogicでは、JTAに関する設定は主にconfig.xmlで行っている。
 			</p>
 <div class="figure">
-<a name="N15E93"></a>
+<a name="N15F77"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlにおけるJTA設定。
 				</b>
@@ -11937,7 +12429,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="table">
-<a name="N15E9E"></a>
+<a name="N15F82"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;config.xmlのjtaタグで定義されている設定とJBossの対応
 				</b>
@@ -12053,7 +12545,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			WebLogicではデータソース設定をJDBCリソース設定として設定する。JDBCの設定自体はjdbc-system-resourceタグ内でdescriptor-file-nameで指定されたファイルで設定される
 			</p>
 <div class="figure">
-<a name="N15F0B"></a>
+<a name="N15FEF"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlにおけるJDBCリソース設定</b>
 </p>
@@ -12075,7 +12567,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="figure">
-<a name="N15F16"></a>
+<a name="N15FFA"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;descriptor-file-nameで指定されたJDBCリソースの設定を実際に行っているファイル</b>
 </p>
@@ -12134,7 +12626,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 <p>JMSサーバ設定(jms-server）</p>
 <p>JMSサーバ設定としてJMSパーシステンス設定(persistent-store)について定義を行っている。</p>
 <div class="figure">
-<a name="N15F33"></a>
+<a name="N16017"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの構成イメージを以下に示す。
 						</b>
@@ -12165,7 +12657,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 <p>JMSシステムリソースとして、サブデプロイメント（sub-deployment）の定義を行っている。各デプロイメントの設定は、descriptor-file-nameで指定されたファイルで、コネクションファクトリ(connection-factory)、キュー(queue)、トピック(topic)の設定が行われる。
 設定を行っている。</p>
 <div class="figure">
-<a name="N15F42"></a>
+<a name="N16026"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;config.xmlの構成イメージを以下に示す。
 						</b>
@@ -12209,7 +12701,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 <p>WebLogicではconfig.xmlのjms-serverタグ内のpersistent-store設定で、JMSの永続化ストアの設定行っている。WebLogicはファイル(file-store)及びデータベース(jdbc-store)をサポートしている
         </p>
 <div class="figure">
-<a name="N15F59"></a>
+<a name="N1603D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの構成イメージを以下に示す。
 				</b>
@@ -12278,7 +12770,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			紐づけが行われている。
 			</p>
 <div class="figure">
-<a name="N15F75"></a>
+<a name="N16059"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの構成イメージを以下に示す。
 				</b>
@@ -12309,7 +12801,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="figure">
-<a name="N15F80"></a>
+<a name="N16064"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jms/examples-jms.xml
 				</b>
@@ -12363,7 +12855,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="table">
-<a name="N15F97"></a>
+<a name="N1607B"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;XA対応のコネクションファクトリ
 				</b>
@@ -12394,7 +12886,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="table">
-<a name="N15FAD"></a>
+<a name="N16091"></a>
 <p class="title">
 <b>Table&nbsp;2.&nbsp;非XAのコネクションファクトリ
 				</b>
@@ -12427,7 +12919,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N15FC3"></a>
+<a name="N160A7"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;WebLogic上でコネクションファクトリをルックアップ
 				</b>
@@ -12457,7 +12949,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="figure">
-<a name="N15FCE"></a>
+<a name="N160B2"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;WebLogic上でコネクションファクトリをルックアップ
 				</b>
@@ -12518,7 +13010,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 					</p>
 <div class="figure">
-<a name="N15FE8"></a>
+<a name="N160CC"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;WebLogicのロードバランス設定
 						</b>
@@ -12565,7 +13057,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			JBossの場合は、管理CLIよりキューの登録を行う。WebLogicの以下の設定を参考に、キューの登録設定を行う。
 			</p>
 <div class="table">
-<a name="N16000"></a>
+<a name="N160E4"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;WebLogicのキュー設定
 				</b>
@@ -12596,7 +13088,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="figure">
-<a name="N16016"></a>
+<a name="N160FA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;管理CLIによるキューの登録例
 				</b>
@@ -12626,7 +13118,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			JBossの場合は、管理CLIよりトピックの登録を行う。WebLogicの以下の設定を参考に、トピックの登録設定を行う。
 			</p>
 <div class="table">
-<a name="N1602D"></a>
+<a name="N16111"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;WebLogicのキュー設定
 				</b>
@@ -12657,7 +13149,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="figure">
-<a name="N16043"></a>
+<a name="N16127"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;管理CLIによるトピックの登録例
 				</b>
@@ -12688,7 +13180,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N1630F"></a>
+<a name="N163F3"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの構成イメージを以下に示す。
 				</b>
@@ -12760,7 +13252,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 			</p>
 <div class="figure">
-<a name="N1633C"></a>
+<a name="N16420"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;デプロイメントスキャナ無効化手順(サーバ起動時のみデプロイを行いたい場合は、scan-enabledプロパティをfalseに設定する
 				</b>
@@ -12791,7 +13283,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N16353"></a>
+<a name="N16437"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの構成イメージを以下に示す。
 				</b>
@@ -12830,7 +13322,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			EARが依存するearのファイル名を指定することで、デプロイメントの順序制御が可能である。
 			</p>
 <div class="figure">
-<a name="N16360"></a>
+<a name="N16444"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;EARのMETA-INFフォルダにjboss-deployment-dependencies.xmlを作成し、dependencyタグのname属性でEARのファイル名を指定する。
 				</b>
@@ -12902,7 +13394,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
         
         </p>
 <div class="figure">
-<a name="N1638C"></a>
+<a name="N16470"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの構成イメージを以下に示す。
 				</b>
@@ -13042,7 +13534,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N161B9"></a>
+<a name="N1629D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;web.xml
 				</b>
@@ -13081,7 +13573,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
         
         </p>
 <div class="figure">
-<a name="N161D2"></a>
+<a name="N162B6"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;web.xml
 				</b>
@@ -13124,7 +13616,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N161EB"></a>
+<a name="N162CF"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;web.xml
 				</b>
@@ -13170,7 +13662,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N16204"></a>
+<a name="N162E8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;web.xml
 				</b>
@@ -13209,7 +13701,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
         
         			</p>
 <div class="table">
-<a name="N1621D"></a>
+<a name="N16301"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;config.xmlのjtaタグで定義されている設定とJBossの対応
 				</b>
@@ -13252,7 +13744,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
         
         </p>
 <div class="figure">
-<a name="N16241"></a>
+<a name="N16325"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;web.xml
 				</b>
@@ -13295,7 +13787,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N16258"></a>
+<a name="N1633C"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic-application.xml
 				</b>
@@ -13332,7 +13824,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			WebLogicではweblogic.xmlのjsp-descriptorより、JSPに関連する以下の項目のが設定可能である。WebLogicのJSPに関連する設定項目とJBossの対応について示す。
 			</p>
 <div class="figure">
-<a name="N16132"></a>
+<a name="N16216"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic.xml
 				</b>
@@ -13365,7 +13857,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="table">
-<a name="N1613D"></a>
+<a name="N16221"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;WebLogicのJSPに関連する設定項目とJBossの対応について
 				</b>
@@ -13415,7 +13907,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N16171"></a>
+<a name="N16255"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;web.xml
 				</b>
@@ -13476,7 +13968,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 			
 </p>
 <div class="figure">
-<a name="N1618F"></a>
+<a name="N16273"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;config.xmlの構成イメージを以下に示す。
 				</b>
@@ -13513,7 +14005,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
         
         </p>
 <div class="table">
-<a name="N16273"></a>
+<a name="N16357"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;MBean「jboss.web:type=Manager,path=/コンテキストパス,host=default-host」の属性(セッションに関連するものを一部抜粋)
 				</b>
@@ -13621,7 +14113,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N162D1"></a>
+<a name="N163B5"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic.xml
 				</b>
@@ -13660,7 +14152,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N162DE"></a>
+<a name="N163C2"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;管理CLI
 				</b>
@@ -13702,7 +14194,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 							</p>
 <div class="figure">
-<a name="N162F7"></a>
+<a name="N163DB"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;jboss-web.xml
 								</b>
@@ -13757,7 +14249,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
         
         </p>
 <div class="figure">
-<a name="N16438"></a>
+<a name="N1651C"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic.xml
 				</b>
@@ -13793,7 +14285,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N16730"></a>
+<a name="N16814"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;weblogic.xml</b>
 </p>
@@ -13929,7 +14421,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 <p>Getリクエスト</p>
 <p>AJPコネクタの属性URIEncodingに文字エンコードを設定する。管理CLIでシステムプロパティorg.apache.catalina.connector.URI_ENCODINGに文字コードを設定する</p>
 <div class="figure">
-<a name="N163D0"></a>
+<a name="N164B4"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;管理CLI
 						</b>
@@ -13948,7 +14440,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 <p>Postリクエスト</p>
 <p>Postリクエストのエンコーディングを設定する場合、ServletRequest#setCharacterEncoding()メソッドを利用することで、設定することができます。web.xmlで以下のように、filter-class タグに"org.apache.catalina.filters.SetCharacterEncodingFilter" を設定し、encodingに文字コードを設定する。</p>
 <div class="figure">
-<a name="N163DF"></a>
+<a name="N164C3"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;web.xml
 						</b>
@@ -13993,7 +14485,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N163F6"></a>
+<a name="N164DA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;web.xml
 				</b>
@@ -14057,7 +14549,7 @@ xa-data-source --name=postgresDS --security-domain=EncryptedDSDomain
 
 			</p>
 <div class="figure">
-<a name="N16421"></a>
+<a name="N16505"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;web.xml
 				</b>

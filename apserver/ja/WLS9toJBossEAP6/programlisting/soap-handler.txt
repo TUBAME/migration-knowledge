@@ -1,0 +1,44 @@
+
+public class ReplaceXMLSchemaHandler implements SOAPHandler<SOAPMessageContext> {
+
+    @Override
+    public boolean handleMessage(SOAPMessageContext context) {
+        if (isOutBound(context)) {
+            replacePrefix(context.getMessage());
+        }
+        return true;
+    }
+
+　　private void replacePrefix(SOAPMessage message) {
+        try {
+            SOAPEnvelope envelope = message.getSOAPPart().getEnvelope();
+            envelope.setPrefix("soapenv");
+            
+            // SOAPMessage生成時に空のSOAPHeaderが生成されてしまうため、
+            // SOAPHeaderの要素がない場合は、SOAPHeaderごと削除
+            if (isEmptyHeader(envelope.getHeader())) {
+                envelope.getHeader().detachNode();
+            } else {
+                envelope.getHeader().setPrefix("soapenv");
+            }
+
+            // replace prefix soap -> soapenv and add namespace
+            envelope.getBody().setPrefix("soapenv");
+            envelope.removeNamespaceDeclaration("soap");
+        } catch (SOAPException e){
+            // TODO ランタイム例外クラスは要検討
+            throw new RuntimeException("Cannot replace xml prefix of soap message", e);
+        }
+    }
+
+    private boolean isOutBound(SOAPMessageContext context) {
+        boolean outbound = (Boolean) context.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
+        return outbound;
+    }
+    
+    private boolean isEmptyHeader(SOAPHeader soapHeader) {
+        return soapHeader.getChildNodes().getLength() == 0;
+    }
+
+　　…
+　}
