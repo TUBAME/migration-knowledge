@@ -1,0 +1,4 @@
+
+
+//Object con = initialContext.lookup("java:DefaultDS");
+Object con = initialContext.lookup("java:/DefaultDS");

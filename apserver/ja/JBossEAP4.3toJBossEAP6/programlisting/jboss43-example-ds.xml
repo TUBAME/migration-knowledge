@@ -1,0 +1,12 @@
+
+<datasources>
+   <local-tx-datasource>
+
+      <!-- The jndi name of the DataSource, it is prefixed with java:/ -->
+      <!-- Datasources are not available outside the virtual machine -->
+      <jndi-name>DefaultDS</jndi-name>
+      ...
+      
+      </local-tx-datasource>
+</datasources>
+    

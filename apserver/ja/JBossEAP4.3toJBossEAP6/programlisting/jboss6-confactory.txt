@@ -1,0 +1,33 @@
+
+<jms-connection-factories>
+    <connection-factory name="InVmConnectionFactory">
+        <connectors>
+            <connector-ref connector-name="in-vm"/>
+        </connectors>
+        <entries>
+            <entry name="java:/ConnectionFactory"/>
+        </entries>
+    </connection-factory>
+    <connection-factory name="RemoteConnectionFactory">
+        <connectors>
+            <connector-ref connector-name="netty"/>
+        </connectors>
+        <entries>
+            <entry name="java:jboss/exported/jms/RemoteConnectionFactory"/>
+        </entries>
+        <ha>true</ha>
+        <block-on-acknowledge>true</block-on-acknowledge>
+        <retry-interval>1000</retry-interval>
+        <retry-interval-multiplier>1.0</retry-interval-multiplier>
+        <reconnect-attempts>-1</reconnect-attempts>
+    </connection-factory>
+    <pooled-connection-factory name="hornetq-ra">
+        <transaction mode="xa"/>
+        <connectors>
+            <connector-ref connector-name="in-vm"/>
+        </connectors>
+        <entries>
+            <entry name="java:/JmsXA"/>
+        </entries>
+    </pooled-connection-factory>
+</jms-connection-factories>

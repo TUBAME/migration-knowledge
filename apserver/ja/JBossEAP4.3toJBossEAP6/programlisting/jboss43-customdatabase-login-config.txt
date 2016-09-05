@@ -1,0 +1,16 @@
+
+　　　<security-domain name="exampleDatabaseServerLoginModule" cache-type="default">
+                 <authentication>
+                     <login-module code="usercustom.loginmodule.ExampleDatabaseServerLoginModule" flag="required">
+                         <module-option name="dsJndiName" value="java:jboss/datasources/PostgresDS"/>
+                         <module-option name="principalsQuery" value="SELECT PASSWORD FROM USERS WHERE USERNAME = ?"/>
+                         <module-option name="rolesQuery" value="SELECT R.NAME, 'Roles' FROM USERS_ROLES UR INNER JOIN ROLES R ON R.ID = UR.ROLE_ID INNER JOIN USERS U ON U.ID = UR.USER_ID WHERE U.USERNAME = ?"/>
+                         <module-option name="hashAlgorithm" value="MD5"/>
+                         <module-option name="hashEncoding" value="base64"/>
+                         <module-option name="hashUserPassword" value="true"/>
+                         <!-- カスタマイズログインモジュール独自のmodule-option-->
+                         <module-option name="usercustomModuleOptionSample" value="foo"/>
+                     </login-module>
+                 </authentication>
+   </security-domain>
+   

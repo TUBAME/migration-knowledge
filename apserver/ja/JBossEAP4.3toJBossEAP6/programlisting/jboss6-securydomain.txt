@@ -1,0 +1,9 @@
+
+<security-domain name="exampleUsersRolesSecurity" cache-type="default">
+    <authentication>
+        <login-module code="UsersRoles" flag="required">
+            <module-option name="usersProperties" value="${jboss.server.config.dir}/sample-users.properties"/>
+            <module-option name="rolesProperties" value="${jboss.server.config.dir}/sample-roles.properties"/>
+        </login-module>
+    </authentication>
+</security-domain>

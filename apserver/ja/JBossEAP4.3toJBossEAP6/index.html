@@ -1,12 +1,12 @@
 <HTML xmlns:knowhow="http://generated.model.biz.knowhow.tubame/knowhow" xmlns:doc="http://docbook.org/ns/docbook">
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JBossEAP4.3からJBossEAP6へのマイグレーションガイド</title>
+<title>JBossMigration_JBossEAP4.3_To_JBossEAP6</title>
 <link href="css/knowhow.css" type="text/css" rel="stylesheet">
 <meta content="DocBook XSL Stylesheets V1.78.1" name="generator">
 </HEAD>
 <BODY>
-<H1 class="title">JBossEAP4.3からJBossEAP6へのマイグレーションガイド</H1>
+<H1 class="title">JBossMigration_JBossEAP4.3_To_JBossEAP6</H1>
 <div class="toc">
 <p>
 <b>Index</b>
@@ -198,6 +198,34 @@
 </dd>
 </dl>
 </dd>
+<dd>
+<dl>
+<dt>
+<span class="2.3.7."><a href="#tubame_2.3.7.">2.3.7.下位互換パラメータの移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="2.3.7.1."><a href="#tubame_2.3.7.1.">2.3.7.1.JSP下位互換パラメータ</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="2.3.7.2."><a href="#tubame_2.3.7.2.">2.3.7.2.Servlet下位互換パラメータ</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="2.3.7.3."><a href="#tubame_2.3.7.3.">2.3.7.3.Servlet Cookie下位互換パラメータ</a></span>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
 </dl>
 </dd>
 <dd>
@@ -329,13 +357,69 @@
 <dd>
 <dl>
 <dt>
-<span class="2.8."><a href="#tubame_2.8.">2.8.セキュリティ設定移行</a></span>
+<span class="2.8."><a href="#tubame_2.8.">2.8.JMS設定移行</a></span>
 </dt>
 <dd>
 <dl>
 <dt>
-<span class="2.8.1."><a href="#tubame_2.8.1.">2.8.1.セキュリティドメイン移行</a></span>
+<span class="2.8.1."><a href="#tubame_2.8.1.">2.8.1.JMSキュー及びトピック設定の移行</a></span>
 </dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="2.8.2."><a href="#tubame_2.8.2.">2.8.2.JMSコネクションファクトリの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="2.8.3."><a href="#tubame_2.8.3.">2.8.3.JMS永続化設定の移行</a></span>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="2.9."><a href="#tubame_2.9.">2.9.セキュリティ設定移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="2.9.1."><a href="#tubame_2.9.1.">2.9.1.セキュリティドメイン移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="2.9.1.1."><a href="#tubame_2.9.1.1.">2.9.1.1.ConfiguredIdentityログインモジュールを利用したセキュリティドメインの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="2.9.1.2."><a href="#tubame_2.9.1.2.">2.9.1.2.UsersRolesログインモジュールを利用したセキュリティドメインの移行</a></span>
+</dt>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="2.9.1.3."><a href="#tubame_2.9.1.3.">2.9.1.3.Databaseログインモジュールを利用したセキュリティドメインの移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="2.9.1.3.1."><a href="#tubame_2.9.1.3.1.">2.9.1.3.1.Databaseログインモジュールを拡張したセキュリティドメインの移行</a></span>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -352,20 +436,6 @@
 <dl>
 <dt>
 <span class="3.1.1."><a href="#tubame_3.1.1.">3.1.1.Servlet非推奨API</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="3.1.2."><a href="#tubame_3.1.2.">3.1.2.Servlet下位互換パラメータ</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="3.1.3."><a href="#tubame_3.1.3.">3.1.3.Servlet Cookieに関連する下位互換パラメータ</a></span>
 </dt>
 </dl>
 </dd>
@@ -387,13 +457,6 @@
 <dl>
 <dt>
 <span class="3.2.2."><a href="#tubame_3.2.2.">3.2.2.EL非推奨API</a></span>
-</dt>
-</dl>
-</dd>
-<dd>
-<dl>
-<dt>
-<span class="3.2.3."><a href="#tubame_3.2.3.">3.2.3.JSP下位互換パラメータ</a></span>
 </dt>
 </dl>
 </dd>
@@ -474,6 +537,13 @@
 <dt>
 <span class="3.7."><a href="#tubame_3.7.">3.7.JMS移行</a></span>
 </dt>
+<dd>
+<dl>
+<dt>
+<span class="3.7.1."><a href="#tubame_3.7.1.">3.7.1.JMSクライアントの移行</a></span>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 <dd>
@@ -481,6 +551,27 @@
 <dt>
 <span class="3.8."><a href="#tubame_3.8.">3.8.Webサービス移行</a></span>
 </dt>
+<dd>
+<dl>
+<dt>
+<span class="3.8.1."><a href="#tubame_3.8.1.">3.8.1.JAX-WS仕様のWebサービス移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="3.8.1.1."><a href="#tubame_3.8.1.1.">3.8.1.1.JBoss-WS独自設定の移行</a></span>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
+<dd>
+<dl>
+<dt>
+<span class="3.8.2."><a href="#tubame_3.8.2.">3.8.2.JAX-RPC仕様のWebサービス移行</a></span>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 <dd>
@@ -526,6 +617,13 @@
 <dt>
 <span class="3.12.1.2."><a href="#tubame_3.12.1.2.">3.12.1.2.JBossWebのServlet移行</a></span>
 </dt>
+<dd>
+<dl>
+<dt>
+<span class="3.12.1.2.1."><a href="#tubame_3.12.1.2.1.">3.12.1.2.1.StatusServletの移行</a></span>
+</dt>
+</dl>
+</dd>
 </dl>
 </dd>
 <dd>
@@ -672,6 +770,20 @@
 </dd>
 </dl>
 </dd>
+<dd>
+<dl>
+<dt>
+<span class="3.16."><a href="#tubame_3.16.">3.16.JBoss独自のAPI移行</a></span>
+</dt>
+<dd>
+<dl>
+<dt>
+<span class="3.16.1."><a href="#tubame_3.16.1.">3.16.1.JBoss独自org.jboss.security.Utilの移行</a></span>
+</dt>
+</dl>
+</dd>
+</dl>
+</dd>
 </dl>
 </div>
 <HR>
@@ -746,7 +858,7 @@
 								なお、本資料では、利用するプロファイルをmyserverプロファイルとして記載する。
 								</p>
 <div class="figure">
-<a name="N16C92"></a>
+<a name="N1721D"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossEAP4.3のデフォルトプロファイルについて</b>
 </p>
@@ -828,7 +940,7 @@
 
 						</p>
 <div class="figure">
-<a name="N16B2E"></a>
+<a name="N170B9"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossEAP43基盤アーキテクチャ</b>
 </p>
@@ -878,7 +990,7 @@
 
 						</p>
 <div class="figure">
-<a name="N16B4E"></a>
+<a name="N170D9"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBossEAP5基盤アーキテクチャ</b>
 </p>
@@ -928,7 +1040,7 @@
 
 						</p>
 <div class="figure">
-<a name="N16B6E"></a>
+<a name="N170F9"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JBossEAP6基盤アーキテクチャ</b>
 </p>
@@ -981,7 +1093,7 @@
 								JBossEAP6のMSC POJO Service用の定義に変更する必要があり、完全な互換性はない。
 								</p>
 <div class="figure">
-<a name="N16B88"></a>
+<a name="N17113"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;JBossEAP6における従来の基盤アーキテクチャ(マイクロカーネル、マイクロコンテナ)の利用について
 									</b>
@@ -1031,7 +1143,7 @@
 
 			</p>
 <div class="table">
-<a name="N16353"></a>
+<a name="N16861"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;JBossの仕様(一部抜粋)</b>
 </p>
@@ -1123,7 +1235,7 @@
 <li class="listitem">
 <p>JDBCドライバモジュール定義ファイル(module.xml)を作成する</p>
 <div class="figure">
-<a name="N15FCB"></a>
+<a name="N164D9"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;PostgresSQLのJDBCドライバ用module.xml</b>
 </p>
@@ -1166,7 +1278,7 @@
 <li class="listitem">
 <p>管理CLIよりJDBCドライバモジュールの登録を行う</p>
 <div class="figure">
-<a name="N15FE5"></a>
+<a name="N164F3"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBoss EAP6の管理CLIよりJDBCドライバモジュールの登録を行う。ドライバー名は任意で、{driver-name}と表記する。</b>
 </p>
@@ -1295,7 +1407,7 @@
 
 			</p>
 <div class="figure">
-<a name="N1689E"></a>
+<a name="N16E29"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;data-sourceコマンドを利用したデータソース登録例。ドライバ名は{driver-name}として、データソース名は{datasource-name}と表記する
 				</b>
@@ -1326,7 +1438,7 @@ data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdbc/{
 			
 </p>
 <div class="table">
-<a name="N167A7"></a>
+<a name="N16D32"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;JBossEAP4.3のデータソース(no-tx-datasource)とJBossEAP6のデータソースの属性値の対応</b>
 </p>
@@ -1490,7 +1602,7 @@ data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdbc/{
 
 			</p>
 <div class="figure">
-<a name="N16ACF"></a>
+<a name="N1705A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;data-sourceコマンドを利用したデータソース登録例。ドライバ名は{driver-name}として、データソース名は{datasource-name}と表記する
 				</b>
@@ -1525,7 +1637,7 @@ data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdbc/{
 			JBossEAP4.3とJBossEAP6の属性値の対応については以下を参照。
 			</p>
 <div class="table">
-<a name="N168B7"></a>
+<a name="N16E42"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;JBossEAP4.3のデータソース(local-tx-datasource)とJBossEAP6のデータソースの属性値の対応</b>
 </p>
@@ -1552,7 +1664,7 @@ data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdbc/{
 <td>connection-url</td><td>connection-url</td><td>--connection-url</td>
 </tr>
 <tr>
-<td>transaction-isolation</td><td>TODO:</td><td>--transaction-isolation</td>
+<td>transaction-isolation</td><td>transaction-isolation</td><td>--transaction-isolation</td>
 </tr>
 <tr>
 <td>no-tx-separate-pools</td><td>なし</td><td>データソースはno-tx-separate-pool未対応、XAデータソースで対応可能</td>
@@ -1589,7 +1701,7 @@ data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdbc/{
 </tr>
 <tr>
 <td>blocking-timeout-millis
-</td><td>blocking-timeout-millis</td><td>TODO:調査
+</td><td>blocking-timeout-millis</td><td>--blocking-timeout-wait-millis
 							</td>
 </tr>
 <tr>
@@ -1693,7 +1805,7 @@ data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdbc/{
 
 			</p>
 <div class="figure">
-<a name="N16AEF"></a>
+<a name="N1707A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;xa-data-sourceコマンドを利用したXAデータソース登録およびxa-datasource-propertiesの設定例。ドライバ名は{driver-name}として、データソース名は{datasource-name}と表記する
 				</b>
@@ -1739,7 +1851,7 @@ xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdb
 			JBossEAP4.3とJBossEAP6の属性値の対応については以下を参照。
 			</p>
 <div class="table">
-<a name="N169B5"></a>
+<a name="N16F40"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;JBossEAP4.3のデータソース(xa-datasource)とJBossEAP6のデータソースの属性値の対応</b>
 </p>
@@ -1766,7 +1878,7 @@ xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdb
 <td>track-connection-by-tx</td><td>interleaving</td><td>--interleaving</td>
 </tr>
 <tr>
-<td>transaction-isolation</td><td>TODO:</td><td>--transaction-isolation</td>
+<td>transaction-isolation</td><td>transaction-isolation</td><td>--transaction-isolation</td>
 </tr>
 <tr>
 <td>no-tx-separate-pools</td><td>no-tx-separate-pools</td><td>--no-tx-separate-pools</td>
@@ -1812,7 +1924,7 @@ xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdb
 </tr>
 <tr>
 <td>blocking-timeout-millis
-							</td><td>blocking-timeout-millis</td><td>TODO:調査
+							</td><td>blocking-timeout-millis</td><td>--blocking-timeout-wait-millis
 							</td>
 </tr>
 <tr>
@@ -1995,7 +2107,7 @@ xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdb
 
 			</p>
 <div class="figure">
-<a name="N16031"></a>
+<a name="N1653F"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;max-connections設定例
 				</b>
@@ -2012,7 +2124,7 @@ xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdb
 			
 </p>
 <div class="table">
-<a name="N1603C"></a>
+<a name="N1654A"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;JBossEAP4.3とJBossEAP6のコネクタの属性の対応</b>
 </p>
@@ -2501,7 +2613,7 @@ xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdb
 <p>$JBOSS_HOME/myserver/deploy/jboss-web.deployer/server.xml
 					</p>
 <div class="figure">
-<a name="N16554"></a>
+<a name="N16A67"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossEAP4.3のContextタグによるdocBase設定</b>
 </p>
@@ -2552,7 +2664,7 @@ xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdb
 
 						</p>
 <div class="figure">
-<a name="N1656F"></a>
+<a name="N16A82"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBossEAP6のjboss-web.xmlのoverlay設定</b>
 </p>
@@ -2577,7 +2689,7 @@ xa-data-source add --name={datasource-name} --jndi-name=java:jboss/resources/jdb
 <li class="listitem">
 <p>docBaseの値が相対パスの場合の移植方法</p>
 <div class="figure">
-<a name="N1657D"></a>
+<a name="N16A90"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;JBossEAP4.3のContextタグによるdocBase設定</b>
 </p>
@@ -2623,7 +2735,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 <li class="listitem">
 <p>/dataディレクトリをoverlayで公開する。</p>
 <div class="figure">
-<a name="N1659A"></a>
+<a name="N16AAD"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;JBossEAP6のjboss-web.xmlのoverlay設定</b>
 </p>
@@ -2669,6 +2781,180 @@ ln -s JBOSS_HOME/data/txt /data/txt
 <p>
 		
 </p>
+</div>
+<br>
+<br>
+<a name="tubame_2.3.7." id="category_202"></a>
+<h3 class="title">2.3.7.下位互換パラメータの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			JBoss Webの下位互換パラメータについて示す。
+
+			</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>JSP下位互換</p>
+</li>
+<li class="listitem">
+<p>Servlet下位互換</p>
+</li>
+<li class="listitem">
+<p>Servlet Cookie下位互換</p>
+</li>
+</ul>
+</div>
+<p>
+
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_2.3.7.1." id="category_203"></a>
+<h3 class="title">2.3.7.1.JSP下位互換パラメータ</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>JBossEAP6ののJSP実装(jasper)は、JSP仕様への対応で、下位互換がなくなるものをシステムプロパティで対応可能としている。
+		</p>
+<p>
+			
+<span class="command"><strong><a class="command" href="https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Jasper" target="_top">https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Jasper
+			</a></strong></span>
+		
+</p>
+<div class="itemizedlist">
+<p class="title">
+<b>JSP仕様に関連するjasperのシステムプロパティ</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>org.apache.jasper.compiler.Generator.STRICT_GET_PROPERTY</p>
+<p>trueの場合、JSP2.0以降の仕様で規定され、JSPプロセッサに依存導入されたjsp:getPropertyアクションはオブジェクトリファレンスを持たなければならない。オブジェクトリファレンスを持たない場合エラーとなる。</p>
+<p>
+					参考：
+					<span class="command"><strong><a class="command" href="https://bz.apache.org/bugzilla/show_bug.cgi?id=48701" target="_top">https://bz.apache.org/bugzilla/show_bug.cgi?id=48701
+					</a></strong></span>
+				
+</p>
+<p>JBossEAP4.3ではこのシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。デフォルトはfalseとなるため、下位互換対応する場合は、有効にする必要がある。</p>
+</li>
+<li class="listitem">
+<p>org.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING</p>
+<p>falseの場合は、JSP属性に引用符をエスケープするための要件が緩和される。その結果、エスケープされていない引用符は、エラーを発生しなくなる</p>
+<p>
+					JBossEAP6ではスクリプトレット等でダブルクォートがあった場合にエスケープしない場合とエラーになる。
+					参考：
+					<span class="command"><strong><a class="command" href="https://bz.apache.org/bugzilla/show_bug.cgi?id=45015" target="_top">https://bz.apache.org/bugzilla/show_bug.cgi?id=45015
+					</a></strong></span>
+				
+</p>
+<p>JBossEAP4.3ではこのシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。デフォルトでtrueとなる。</p>
+</li>
+<li class="listitem">
+<p>org.apache.jasper.compiler.Parser.STRICT_WHITESPACE</p>
+<p>falseの場合は、属性名の前に空白文字がない記述を許容する。</p>
+<p>JBossEAP4.3及びJBossEAP6ではこのシステムプロパティは存在しない</p>
+</li>
+</ul>
+</div>
+</div>
+<br>
+<br>
+<a name="tubame_2.3.7.2." id="category_204"></a>
+<h3 class="title">2.3.7.2.Servlet下位互換パラメータ</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>JBossEAP4.3(Tomcat)では、Servlet下位互換のためにorg.apache.catalina.
+			STRICT_SERVLET_COMPLIANCEというシステムプロパティがある。このプロパティはJBossEAP4.3及びJBossEAP6でもデフォルトでtrueとなり、移行後のJBossEAP6環境でとくに設定変更は必要ない。</p>
+<p>
+			
+<span class="command"><strong><a class="command" href="https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Specifications" target="_top">https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Specifications
+			</a></strong></span>
+		
+</p>
+<div class="orderedlist">
+<p class="title">
+<b>TomcatのSTRICT_SERVLET_COMPLIANCEで有効になるパラメータと、JBossEAP4.3及びJBossEAP6での実装について</b>
+</p>
+<ol class="orderedlist" type="1">
+<li class="listitem">
+<p>org.apache.catalina.core.ApplicationContext.GET_RESOURCE_REQUIRE_SLASH</p>
+<p>trueの場合、ServletContext.getResource()またはServletContext.getResourceAsStream() に渡されたパスは 、「/」で始まる必要がある。</p>
+<p>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、JBossEAP4.3では、リソースのURLにスラッシュを必須としている。</p>
+</li>
+<li class="listitem">
+<p>org.apache.catalina.core.ApplicationDispatcher.WRAP_SAME_OBJECT</p>
+<p>trueの場合、アプリケーションディスパッチャに渡されるラップされたリクエストまたはレスポンスオブジェクトは、元のリクエストまたはレスポンスをラップしていることを保証するためにチェックされる。</p>
+<p>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</p>
+</li>
+<li class="listitem">
+<p>org.apache.catalina.core.StandardHostValve.ACCESS_SESSION</p>
+<p>trueの場合、セッションに関連付けられているすべてのリクエストは、セッションの最終アクセス時刻を更新させる。これはリクエストが明示的にセッションにアクセスするかどうかに関係ない</p>
+<p>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</p>
+</li>
+<li class="listitem">
+<p>org.apache.catalina.session.StandardSession.ACTIVITY_CHECK</p>
+<p>trueの場合、Tomcatは、各セッションのアクティブなリクエストの数を追跡する。</p>
+<p>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</p>
+</li>
+<li class="listitem">
+<p>org.apache.tomcat.util.http.ServerCookie.ALWAYS_ADD_EXPIRES</p>
+<p>trueの場合、Tomcatはバージョン0 より後のCookie に対して、常にSetCookie ヘッダにexpire パラメータを追加する。これは、IE にSetCookie ヘッダ内のMax-Age パラメータを無視させるという、既知のIE6 とIE7 のバグの回避策である。</p>
+<p>JBossEAP4.3(JBossWeb)にはこのシステムプロパティは存在しないが、JBossEAP6(JBossWeb)でこのパラメータが存在する</p>
+</li>
+</ol>
+</div>
+</div>
+<br>
+<br>
+<a name="tubame_2.3.7.3." id="category_205"></a>
+<h3 class="title">2.3.7.3.Servlet Cookie下位互換パラメータ</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>JBossEAP6(Tomcat)では、クッキーに関連する下位互換パラメータが存在する。業務アプリケーションにおけるクッキーに関連する仕様を確認し、
+			必要に応じてクッキーに関連する下位互換パラメータを有効にする必要がある。
+		</p>
+<div class="itemizedlist">
+<p class="title">
+<b>JBossEAP6(Tomcat)で提供するクッキーに関連する下位互換パラメータ</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>org.apache.tomcat.util.http.
+					ServerCookie.ALLOW_EQUALS_IN_VALUE</p>
+<p>クッキーの値に=(イコール)を許可するかを指定。</p>
+<p>JBossEAP4.3及びJBossEAP6でこのシステムプロパティは存在しない。クッキーの値の特殊文字を利用する場合は、以下のALLOW_HTTP_SEPARATORS_IN_V0を有効にして対応する。</p>
+</li>
+<li class="listitem">
+<p>org.apache.tomcat.util.http.
+					ServerCookie.ALLOW_HTTP_SEPARATORS_IN_V0</p>
+<p>setCookie時に、クッキーのvalueに,: ()&lt;&gt;@:\"[]?={}\tの特殊文字があった場合にエラーとなり、デフォルトは許可しないが
+					このパラメータを有効にすると、,: ()&lt;&gt;@:\"[]?={}\tの特殊文字があった場合にvalue全体をダブルクォートで囲む。</p>
+<p>JBossEAP4.3では、このシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。
+クッキーのvalueに特殊文字が含まれる場合、ALLOW_HTTP_SEPARATORS_IN_V0はfalseがデフォルトで設定され、
+JBossEAP4.3上では許容されていたものが、移行後のJBossEAP6では許容されなくなり、エラーが発生する可能性がある。
+この場合は、ALLOW_HTTP_SEPARATORS_IN_V0システムプロパティを有効にする必要がある。
+					</p>
+</li>
+<li class="listitem">
+<p>org.apache.tomcat.util.http.ServerCookie.FWD_SLASH_IS_SEPARATOR
+				</p>
+<p>クッキーの値の文字列に対して、スラッシュもエスケープする場合は、有効にする必要がある。
+				</p>
+<p>JBossEAP4.3(JBossWeb)は、このパラメータは存在せず、デフォルトでスラッシュをエスケープする。JBossEAP6は、このパラメータが存在し、スラッシュをエスケープしない。</p>
+</li>
+<li class="listitem">
+<p>クッキー名のvalidationにRFC2109Validatorが利用される</p>
+<p>JBossEAP4.3及びJBossEAP6にはこのValidatorは存在しないため、JBossEAP4.3からJBossEAP6への移植にあたっては検討する必要がない。</p>
+</li>
+</ul>
+</div>
 </div>
 <br>
 <br>
@@ -2719,7 +3005,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 			
 </p>
 <div class="table">
-<a name="N16210"></a>
+<a name="N1671E"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;jbossweb.deployer/META-INF/jboss-service.xmlの設定項目</b>
 </p>
@@ -2879,7 +3165,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 			
 </p>
 <div class="figure">
-<a name="N16287"></a>
+<a name="N16795"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossEAP4.3のJGroupsプロトコルスタックの設定($JBoss_HOME/myserver/deploy/jboss-web-cluster.sar/META-INF/jboss-service.xml)
 				</b>
@@ -3018,7 +3304,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 
 </p>
 <div class="figure">
-<a name="N162A1"></a>
+<a name="N167AF"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossEAP4.3のJGroupsのFC設定($JBoss_HOME/myserver/deploy/jboss-web-cluster.sar/META-INF/jboss-service.xml)
 	</b>
@@ -3096,7 +3382,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 
 			</p>
 <div class="figure">
-<a name="N162BA"></a>
+<a name="N167C8"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBoss4.3のレプリケーションモード設定($JBoss_HOME/myserver/deploy/jboss-web-cluster.sar/META-INF/jboss-service.xml)
 				</b>
@@ -3171,7 +3457,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 
 			</p>
 <div class="figure">
-<a name="N162D6"></a>
+<a name="N167E4"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossのレプリケーション同期設定($JBoss_HOME/myserver/deploy/jboss-web-cluster.sar/META-INF/jboss-service.xml)
 				</b>
@@ -3241,7 +3527,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 
 			</p>
 <div class="table">
-<a name="N162F7"></a>
+<a name="N16805"></a>
 <p class="title">
 <b>Table&nbsp;1.&nbsp;JBossEAP4.3アペンダとJBossEAP6ハンドラの対応</b>
 </p>
@@ -3342,7 +3628,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 <p>JBossEAP4では$jboss.home/{profile}/conf/standardjboss.xmlの以下のコンテナ設定にしたがって、インスタンスプールの設定が行われる。standardjboss.xmlで設定を行っていない場合は、インスタンスプールのサイズの最大値に100が設定される。JBoss
 			EAP 6ではデフォルトのインスタンスプールのサイズの最大値が20のため、ここではJBoss EAP 4 のデフォルトで適用される値(100)を設定する方法を示す。</p>
 <div class="figure">
-<a name="N16BB9"></a>
+<a name="N17144"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBoss EAP4のstandardjboss.xmlによるSLSBのデフォルトコンテナ設定例
 			</b>
@@ -3420,7 +3706,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 <br class="figure-break">
 <p>JBoss EAP6のデフォルトのインスタンスプール設定は管理CLIにより設定する。jboss-ejb3.xmlなどで明示的にインスタンスプールの設定をしなかった場合にはこの設定がBeanに適用される。</p>
 <div class="figure">
-<a name="N16BC5"></a>
+<a name="N17150"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;JBoss EAP6の管理CLIにおけるSLSBのデフォルトインスタンスプール設定</b>
 </p>
@@ -3451,7 +3737,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 </ul>
 </div>
 <div class="figure">
-<a name="N16BDF"></a>
+<a name="N1716A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossEAP5におけるインスタンスプール設定例(jboss.xml)</b>
 </p>
@@ -3482,7 +3768,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N16BE9"></a>
+<a name="N17174"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;</b>
 </p>
@@ -3509,7 +3795,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 			6ではデフォルトのインスタンスプールのサイズの最大値が20のため、ここではEAP4のデフォルトで適用される値を設定(100）を設定する方法を示す。
 		</p>
 <div class="figure">
-<a name="N16BFF"></a>
+<a name="N1718A"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBoss EAP4のstandardjboss.xmlによるMDBのデフォルトコンテナ設定例
 			</b>
@@ -3629,7 +3915,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 			4では$jboss.home/{profile}/conf/standardjboss.xmlの以下のコンテナ設定にしたがって、インスタンスプールの設定が行われる。standardjboss.xmlで設定を行っていない場合は、インスタンスプールのサイズの最大値に100が設定される。JBoss
 			EAP 6ではデフォルトのインスタンスプールのサイズの最大値が20のため、ここではEAP4のデフォルトで適用される値を設定(100）を設定する方法を示す。</p>
 <div class="figure">
-<a name="N16C1F"></a>
+<a name="N171AA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBoss EAP4のstandardjboss.xmlによるMDBのデフォルトコンテナ設定例
 			</b>
@@ -3746,7 +4032,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 <p>jboss.xmlのcontainer-configurationタグのextends属性で&rdquo;Standard Message Driven Bean&rdquo;を指定している場合、$jboss.home/{profile}/conf/standardjboss.xmlで設定しているコンテナ設定の&rdquo;Standard Stateful SessionBean&rdquo;を拡張して、Beanインスタンスプールのサイズをカスタマイズしている可能性がある。このようにjboss.xmlでBeanインスタンスプールのサイズをカスタマイズしてい場合、以下の移行作業を行う必要がある。
         </p>
 <div class="figure">
-<a name="N16C3F"></a>
+<a name="N171CA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossEAP5におけるインスタンスプール設定例(jboss.xml)</b>
 </p>
@@ -3826,7 +4112,7 @@ ln -s JBOSS_HOME/data/txt /data/txt
 			JBossEAP6ではこの設定ファイルがJBossモジュールとしてjboss-as-cmp-*.jarに同梱されており、直接、設定ファイルを変更できない。このため、EntityBean用の設定をstandardjbosscmp-jdbc.xmlでチューニングしている場合は、jbosscmp-jdbc.xmlファイルのjbosscmp-jdbc/defaultsタグで設定する必要がある。
 			</p>
 <div class="figure">
-<a name="N165BF"></a>
+<a name="N16AD2"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jboss-as-cmp-*.jarに同梱されいるstandardjbosscmp-jdbc.xmlのdefaults設定</b>
 </p>
@@ -3880,12 +4166,483 @@ ln -s JBOSS_HOME/data/txt /data/txt
 </div>
 <br>
 <br>
-<a name="tubame_2.8." id="category_151"></a>
-<h3 class="title">2.8.セキュリティ設定移行</h3>
+<a name="tubame_2.8." id="category_190"></a>
+<h3 class="title">2.8.JMS設定移行</h3>
 <br>
 <br>
-<a name="tubame_2.8.1." id="category_152"></a>
-<h3 class="title">2.8.1.セキュリティドメイン移行</h3>
+<a name="tubame_2.8.1." id="category_191"></a>
+<h3 class="title">2.8.1.JMSキュー及びトピック設定の移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			JBossEAP4.3では、Queue及びTopicの設定移行は以下のファイルに行う。
+			</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<div class="figure">
+<a name="N17238"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;$JBOSS_HOME/server/$JBOSS_CONFIG/deploy/jboss-messaging.sar/destinations-service.xml
+						</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+							
+&lt;JMSServer&gt;
+  &lt;JMSQueue JNDIName="examples.jms.exampleQueue" Name="○○○"/&gt;    --1
+  &lt;JMSTopic JNDIName="examples.jms.exampleTopic" Name="□□□"/&gt;    --2
+&lt;/JMSServer&gt;
+
+&lt;!-- Queueの例 --&gt;
+&lt;mbean code="org.jboss.jms.server.destination.QueueService"
+ name="jboss.messaging.destination:service=Queue,name=○○○"  --1
+ xmbean-dd="xmdesc/Queue-xmbean.xml"&gt;
+   &lt;depends optional-attribute-name="ServerPeer"&gt;jboss.messaging:service=ServerPeer&lt;/depends&gt;
+   &lt;depends&gt;jboss.messaging:service=PostOffice&lt;/depends&gt;
+&lt;/mbean&gt;
+
+&lt;!-- Topicの例 --&gt;
+&lt;mbean code="org.jboss.jms.server.destination.TopicService"
+  name="jboss.messaging.destination:service=Topic,name=□□□" --2
+  xmbean-dd="xmdesc/Topic-xmbean.xml"&gt;
+   &lt;depends optional-attribute-name="ServerPeer"&gt;jboss.messaging:service=ServerPeer&lt;/depends&gt;
+   &lt;depends&gt;jboss.messaging:service=PostOffice&lt;/depends&gt;
+&lt;/mbean&gt;
+						</pre>
+</div>
+</div>
+<br class="figure-break">
+</li>
+</ul>
+</div>
+<p>
+			上記の場合は、JNDI名は キューの場合、&ldquo;queue/○○○&rdquo;、Topicの場合がJNDI名 &ldquo;topic/□□□&rdquo;にバインドされる。
+		</p>
+<p>
+			EAP6では、管理CLIより、キューやトピックを定義する。以下は、jms-queueやjms-topicコマンドを利用した例である。
+
+			</p>
+<div class="figure">
+<a name="N17245"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;管理CLIによるキュー登録及び削除方法
+				</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					 　
+ #追加
+  jms-queue add --queue-address=任意のキュー名 --entries=JNDI名
+  #削除
+  jms-queue remove --queue-address=キュー名
+  
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			
+</p>
+<div class="figure">
+<a name="N17250"></a>
+<p class="title">
+<b>Figure&nbsp;3.&nbsp;管理CLIによるトピック登録及び削除方法
+				</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+jms-topic add --topic-address=任意のトピック名 --entries=JNDI名
+jms-topic remove --topic-address=JNDI名
+  
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>
+					--entriesオプションはカンマ(,)区切で複数指定が可能。クライアントに向けて、キュー及びトピックを外部に公開する必要がある場合は、以下の命名規則に従い、entriesを登録する。
+
+					</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>外部公開用の命名規則</p>
+<p>
+								java:jboss/exported/任意の文字列
+
+								</p>
+<pre class="programlisting">
+									
+ jms-queue add --queue-address=sampleQueue --entries=queue/sample,java:jboss/exported/queue/sample
+ jms-topic add --topic-address=sampleTopic --entries=topic/sample,java:jboss/exported/topic/sample
+ 
+								</pre>
+<p>
+								
+							
+</p>
+</li>
+</ul>
+</div>
+<p>
+				
+</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_2.8.2." id="category_192"></a>
+<h3 class="title">2.8.2.JMSコネクションファクトリの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			JBossEAP4.3のコネクションファクトリは以下のファイルに定義される。
+
+			</p>
+<div class="orderedlist">
+<ol class="orderedlist" type="1">
+<li class="listitem">
+<p>$JBOSS_HOME/server/$JBOSS_CONFIG/deploy/jboss-messaging.sar/connection-factories-service.xml
+					</p>
+<p>
+						デフォルトで以下3つのMBeanが登録され,MBean毎のJNDIBindings設定により、JNDI名が設定される。
+
+
+						</p>
+<div class="orderedlist">
+<ol class="orderedlist" type="a">
+<li class="listitem">
+<p>jboss.messaging.connectionfactory:service=ConnectionFactory
+									MBean
+								</p>
+<p>
+									
+</p>
+<div class="itemizedlist">
+<p class="title">
+<b>JMS非クラスタ環境で利用するコネクションファクトリのJNDI名</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>/ConnectionFactory</p>
+</li>
+<li class="listitem">
+<p>/XAConnectionFactory</p>
+</li>
+<li class="listitem">
+<p>java:/ConnectionFactory</p>
+</li>
+<li class="listitem">
+<p>java:/XAConnectionFactory</p>
+</li>
+</ul>
+</div>
+<p>
+
+								
+</p>
+</li>
+<li class="listitem">
+<p>jboss.messaging.connectionfactory:service=ClusteredConnectionFactory
+									MBean
+								</p>
+<p>
+									
+</p>
+<div class="itemizedlist">
+<p class="title">
+<b>JMSクラスタ環境で、フェイルオーバや負荷分散に対応しているコネクションファクトリのJNDI名</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>/ClusteredConnectionFactory</p>
+</li>
+<li class="listitem">
+<p>/ClusteredXAConnectionFactory</p>
+</li>
+<li class="listitem">
+<p>java:/ClusteredConnectionFactory</p>
+</li>
+<li class="listitem">
+<p>java:/ClusteredXAConnectionFactory</p>
+</li>
+</ul>
+</div>
+<p>
+								
+</p>
+</li>
+<li class="listitem">
+<p>jboss.messaging.connectionfactory:service=ClusterPullConnectionFactory
+									MBean
+								</p>
+<p>JMSクラスタ環境で、JBoss内部用のため、JNDI名は未設定</p>
+</li>
+</ol>
+</div>
+<p>
+
+					
+</p>
+</li>
+</ol>
+</div>
+<p>
+		
+</p>
+<p>
+			JBossEAP6の場合は、messagingサブシステムのconnection-factory設定で設定される。
+
+
+			</p>
+<div class="orderedlist">
+<ol class="orderedlist" type="1">
+<li class="listitem">
+<p>$JBOSS_HOME/$JBOSS_CONFIG/standalone-full-ha.xml</p>
+<div class="figure">
+<a name="N172B8"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+							
+&lt;jms-connection-factories&gt;
+    &lt;connection-factory name="InVmConnectionFactory"&gt;
+        &lt;connectors&gt;
+            &lt;connector-ref connector-name="in-vm"/&gt;
+        &lt;/connectors&gt;
+        &lt;entries&gt;
+            &lt;entry name="java:/ConnectionFactory"/&gt;
+        &lt;/entries&gt;
+    &lt;/connection-factory&gt;
+    &lt;connection-factory name="RemoteConnectionFactory"&gt;
+        &lt;connectors&gt;
+            &lt;connector-ref connector-name="netty"/&gt;
+        &lt;/connectors&gt;
+        &lt;entries&gt;
+            &lt;entry name="java:jboss/exported/jms/RemoteConnectionFactory"/&gt;
+        &lt;/entries&gt;
+        &lt;ha&gt;true&lt;/ha&gt;
+        &lt;block-on-acknowledge&gt;true&lt;/block-on-acknowledge&gt;
+        &lt;retry-interval&gt;1000&lt;/retry-interval&gt;
+        &lt;retry-interval-multiplier&gt;1.0&lt;/retry-interval-multiplier&gt;
+        &lt;reconnect-attempts&gt;-1&lt;/reconnect-attempts&gt;
+    &lt;/connection-factory&gt;
+    &lt;pooled-connection-factory name="hornetq-ra"&gt;
+        &lt;transaction mode="xa"/&gt;
+        &lt;connectors&gt;
+            &lt;connector-ref connector-name="in-vm"/&gt;
+        &lt;/connectors&gt;
+        &lt;entries&gt;
+            &lt;entry name="java:/JmsXA"/&gt;
+        &lt;/entries&gt;
+    &lt;/pooled-connection-factory&gt;
+&lt;/jms-connection-factories&gt;
+						</pre>
+</div>
+</div>
+<br class="figure-break">
+</li>
+</ol>
+</div>
+<p>
+
+			JBossEAP6でデフォルトで提供されるコネクションファクトリは以下の3つである
+
+			</p>
+<div class="orderedlist">
+<ol class="orderedlist" type="1">
+<li class="listitem">
+<p>java:/ConnectionFactory</p>
+<p>INVM用で、このコネクションファクトリのJNDI名は、JBossEAP4.3と互換がある</p>
+</li>
+<li class="listitem">
+<p>java:jboss/exported/jms/RemoteConnectionFactory</p>
+<p>外部のクライアント用に公開するコネクションファクトリ。このコネクションファクトリのJNDI名はJBossEAP4.3と互換性がない。
+					</p>
+</li>
+<li class="listitem">
+<p>java:/JmsXA</p>
+<p>JMSリソースを2pcとして扱う際に利用するコネクションファクトリ。このコネクションファクトリのJNDI名は、JBossEAP4.3と互換がある
+					</p>
+</li>
+</ol>
+</div>
+<p>
+
+
+			JBossEAP4.3とJBossEAP6.3とのJNDI名の対応表を示す。
+
+			</p>
+<div class="table">
+<a name="N172D2"></a>
+<p class="title">
+<b>Table&nbsp;1.&nbsp;JBossのWebサービス仕様</b>
+</p>
+<div class="table-contents">
+<table summary="JBossのWebサービス仕様" border="1">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th>構成</th><th>JBoss EAP4.3</th><th>JBoss EAP6</th><th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JMS非クラスタ環境</td><td>/ConnectionFactory</td><td>jms/RemoteConnectionFactory</td><td>外部のサーバから接続が発生する場合は、「jms/RemoteConnectionFactory」を利用する。
+							</td>
+</tr>
+<tr>
+<td>JMS非クラスタ環境</td><td>java:/ConnectionFactory</td><td>java:/ConnectionFactory</td><td>JNDI名互換あり</td>
+</tr>
+<tr>
+<td>JMS非クラスタ環境</td><td>/XAConnectionFactory</td><td>-</td><td>INVM上で、JMSリソースを2PCとして扱う場合は、JBossEAP6ではjava:/JmsXAを利用する。
+							</td>
+</tr>
+<tr>
+<td>JMS非クラスタ環境</td><td>java:/XAConnectionFactory</td><td>java:/JmsXA</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td>JMSクラスタ環境</td><td>/ClusteredConnectionFactory</td><td>-</td><td>-</td>
+</tr>
+<tr>
+<td>JMSクラスタ環境</td><td>java:/ClusteredConnectionFactory</td><td>-</td><td>-</td>
+</tr>
+<tr>
+<td>JMSクラスタ環境</td><td>/ClusteredXAConnectionFactory</td><td>-</td><td>-</td>
+</tr>
+<tr>
+<td>JMSクラスタ環境</td><td>java:/ClusteredXAConnectionFactoryy</td><td>-</td><td>-</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+<br class="table-break">
+
+			
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>INVMでなく、外部のサーバから接続が発生する場合は、RemoteConnectionFactoryを利用する。この場合はJNDI名がJBossEAP4.3と互換性がないため、クライアントで利用しているJNDI名を、RemoteConnectionFactoryにバインドされるように、JNDI名を追加する必要がある。
+				</p>
+<p>
+					以下は、RemoteConnectionFactoryにjndi名「java:jboss/exported/jms/sampleRemoteConnectionFactory」を追加した例である。
+					この場合は、クライアントは、JNDI名「jms/sampleRemoteConnectionFactory」でコネクションファクトリをルックアップできる。
+
+
+					</p>
+<div class="figure">
+<a name="N17330"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+							
+/subsystem=messaging/hornetq-server=default/connection-factory=RemoteConnectionFactory:add-jndi(jndi-binding=java:jboss/exported/jms/sampleRemoteConnectionFactory)
+						</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+				
+</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_2.8.3." id="category_200"></a>
+<h3 class="title">2.8.3.JMS永続化設定の移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			JBossEAP4.3のメッセージングシステムであるjboss-messagingは、JMSのメッセージの永続化として、RDBMSをサポートしている。
+
+			</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>JMS永続化設定</p>
+<p>RDBMS製品名に応じた「*-persistence-service.xml」ファイルが$JBOSS_HOME/server/$JBOSS_CONFIG/deploy/jboss-messaging.sarディレクトリに
+						定義されている場合は、メッセージの永続化として、データベースを利用している。なお、null-persistence-service.xmlを利用している場合は、メッセージの永続化はされない。
+					</p>
+</li>
+</ul>
+</div>
+<p>
+		
+</p>
+<p>
+			JBossEAP6のメッセージングシステムであるHornetQはパーシステンス（永続化）のために、リレーショナルデータベースや他のパーシステンスエンジンを使用せずに
+			ローカルトランザクションおよび XA トランザクション対応のメッセージング用に最適化されたジャーナル機能を使用する。
+
+			</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>移行元の環境でJMSの永続化設定としてRDBMSによる永続化を行っている場合、JBossEAP6ではRDBMSを永続化として採用できないので注意すること。</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_2.9." id="category_151"></a>
+<h3 class="title">2.9.セキュリティ設定移行</h3>
+<br>
+<br>
+<a name="tubame_2.9.1." id="category_152"></a>
+<h3 class="title">2.9.1.セキュリティドメイン移行</h3>
 <br>
 <div class="section">
 <div class="titlepage"></div>
@@ -3904,11 +4661,524 @@ ln -s JBOSS_HOME/data/txt /data/txt
 </ul>
 </div>
 <p>
-			セキュリティドメイン設定では、JBossが提供するログインモジュールの設定が行われる。アプリケーションでJBossが提供するログインモジュールを利用している場合は、JBossEAP6でも
-			同等な認証機能が実現可能か、別途検討する必要がある。
-			
-			
+			セキュリティドメイン名は、application-policyタグのname属性で決定され、デフォルトで以下のセキュリティドメインが設定される。
+
+			</p>
+<div class="table">
+<a name="N16B1C"></a>
+<p class="title">
+<b>Table&nbsp;1.&nbsp;JBossのWebサービス仕様</b>
+</p>
+<div class="table-contents">
+<table summary="JBossのWebサービス仕様" border="1">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th>セキュリティドメイン名</th><th>概要 </th><th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>client-login</td><td>MBeanやServletがEJBにアクセス際にApplication Server VM
+								内のクライアントによって利用される。
+							</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td>jmx-console</td><td>jmx-console Webコンソール用</td><td>デフォルトは、コメントされており、jmx-consoleセキュリティドメインは適用されない。</td>
+</tr>
+<tr>
+<td>web-console</td><td>Webコンソール用</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td>JBossWS</td><td>JBossWS用</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td>messaging</td><td>JMS用</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td>HsqlDbRealm</td><td>HsqlDb用に利用される</td><td>&nbsp;</td>
+</tr>
+<tr>
+<td>JmsXARealm</td><td>JmxXA用のレルム</td><td>2.2</td>
+</tr>
+<tr>
+<td>other</td><td>明示的な設定が無かった場合に適用されるセキュリティドメイン</td><td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+<br class="table-break">
+			アプリケーションの認証・認可で、login-config.xmlで設定されたセキュリティドメインを利用している場合は、
+			移行を行う。本例では以下の移植方法について示す。
+
+			</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>UsersRolesログインモジュールを利用したセキュリティドメインの移行</p>
+</li>
+<li class="listitem">
+<p>Databaseログインモジュールを利用したセキュリティドメインの移行</p>
+</li>
+</ul>
+</div>
+<p>
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_2.9.1.1." id="category_209"></a>
+<h3 class="title">2.9.1.1.ConfiguredIdentityログインモジュールを利用したセキュリティドメインの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			ConfiguredIdentityLoginModuleは、module-optionでハードコードされたuserName及び、passwordを利用して認証を行う。
+
+			</p>
+<div class="figure">
+<a name="N17605"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;login-config.xml設定(JBossEAP4.3)</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+    &lt;application-policy name = "HsqlDbRealm"&gt;
+       &lt;authentication&gt;
+          &lt;login-module code = "org.jboss.resource.security.ConfiguredIdentityLoginModule"
+             flag = "required"&gt;
+             &lt;module-option name = "principal"&gt;sa&lt;/module-option&gt;
+             &lt;module-option name = "userName"&gt;sa&lt;/module-option&gt;
+             &lt;module-option name = "password"&gt;&lt;/module-option&gt;
+             &lt;module-option name = "managedConnectionFactoryName"&gt;jboss.jca:service=LocalTxCM,name=DefaultDS&lt;/module-option&gt;
+          &lt;/login-module&gt;
+       &lt;/authentication&gt;
+    &lt;/application-policy&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+		
+</p>
+<p>
+			JBossEAP6では、picketboxよりorg.picketbox.datasource.security.ConfiguredIdentityLoginModuleが提供される。
+
+			login-moduleのcode属性に、ConfiguredIdentityを利用することで、代替可能である。
+
+			</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>login-moduleのcode属性にmanagedConnectionFactoryName属性を利用している場合、データソース経由のDBアクセス用に、ユーザ名(module-optionのname属性のuserName)及びパスワード(module-optionのname属性のuserName)
+					に暗号化した内容を設定している場合がある。
+				</p>
+<p>
+					この場合は、ConfiguredIdentityLoginModuleを利用せず、org.picketbox.datasource.security.SecureIdentityLoginModuleを
+					利用する。Code属性にSecureIdentityを設定する。
+
+					詳細は以下を参照
+					</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>
+								
+<span class="command"><strong><a class="command" href="https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Security_Guide/index.html#topic4732_secureidentity" target="_top">https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Security_Guide/index.html#topic4732_secureidentity
+								</a></strong></span>
+							
+</p>
+</li>
+</ul>
+</div>
+<p>
+
+				
+</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_2.9.1.2." id="category_196"></a>
+<h3 class="title">2.9.1.2.UsersRolesログインモジュールを利用したセキュリティドメインの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>この認証モジュールは、org.jboss.security.auth.spi.UsersRolesLoginModuleが利用され、
+			module-optionオプション(usersProperties,rolesProperties)で指定されたファイルを利用したロールベースの認証・認可が可能である。
+
+
 		</p>
+<p>
+			JBossEAP4.3では、以下のように、login-config.xmlでセキュリティドメイン設定を行い、jboss-web.xmlでWebアプリケーションに対して、
+			login-config.xmlで登録したセキュリティドメインを適用する。
+			</p>
+<div class="figure">
+<a name="N173D9"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;login-config.xml設定</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;application-policy name = "exampleUsersRolesSecurity"&gt;
+   &lt;authentication&gt;
+      &lt;login-module code = "org.jboss.security.auth.spi.UsersRolesLoginModule"
+         flag = "required"&gt;
+         &lt;module-option name="usersProperties"&gt;props/sample-users.properties&lt;/module-option&gt;
+         &lt;module-option name="rolesProperties"&gt;props/sample-roles.properties&lt;/module-option&gt;
+      &lt;/login-module&gt;
+   &lt;/authentication&gt;
+&lt;/application-policy&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			
+</p>
+<div class="figure">
+<a name="N173E4"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;jboss-web.xml設定</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;jboss-web&gt;
+  &lt;security-domain&gt;java:/jaas/exampleUsersRolesSecurity&lt;/security-domain&gt;
+  &lt;security-role&gt;
+    &lt;role-name&gt;guest&lt;/role-name&gt;
+    &lt;principal-name&gt;guest&lt;/principal-name&gt;
+  &lt;/security-role&gt;
+&lt;/jboss-web&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+		
+</p>
+<p>
+			JBossEAP6では、セキュリティドメインの設定は、管理CLIで実施する。
+
+			</p>
+<div class="figure">
+<a name="N173F1"></a>
+<p class="title">
+<b>Figure&nbsp;3.&nbsp;管理CLIによるセキュリティドメイン追加例</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+/subsystem=security/security-domain=exampleUsersRolesSecurity/:add(cache-type=default)
+/subsystem=security/security-domain=exampleUsersRolesSecurity/authentication=classic:add(login-modules=[{"code"=&gt;"UsersRoles", "flag"=&gt;"required", "module-options"=&gt;[("usersProperties"=&gt;"${jboss.server.config.dir}/sample-users.properties"),("rolesProperties"=&gt;"${jboss.server.config.dir}/sample-roles.properties")]}])
+reload
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			
+</p>
+<div class="figure">
+<a name="N173FC"></a>
+<p class="title">
+<b>Figure&nbsp;4.&nbsp;セキュリティドメイン追加のstandalone-full-ha.xml</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;security-domain name="exampleUsersRolesSecurity" cache-type="default"&gt;
+    &lt;authentication&gt;
+        &lt;login-module code="UsersRoles" flag="required"&gt;
+            &lt;module-option name="usersProperties" value="${jboss.server.config.dir}/sample-users.properties"/&gt;
+            &lt;module-option name="rolesProperties" value="${jboss.server.config.dir}/sample-roles.properties"/&gt;
+        &lt;/login-module&gt;
+    &lt;/authentication&gt;
+&lt;/security-domain&gt;
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			add-user.shでユーザを追加する場合はsample-users.properties及びsample-roles.propertiesに
+			認証情報を追加する必要があるので以下のように、オプションを追加して、ユーザを登録してください。
+
+			</p>
+<div class="figure">
+<a name="N17407"></a>
+<p class="title">
+<b>Figure&nbsp;5.&nbsp;add-user.shコマンド</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+add-user.sh --user-properties sample-users.properties --group-properties sample-roles.properties
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>なお、add-user.shでsample-users.propertiesに登録されたパスワードはMD5でハッシュされるが、UsersRolesを利用する場合は、
+					plan textで入力する必要があるので、注意すること。
+				</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_2.9.1.3." id="category_198"></a>
+<h3 class="title">2.9.1.3.Databaseログインモジュールを利用したセキュリティドメインの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			JDatabaseログインモジュールはorg.jboss.security.auth.spi.DatabaseServerLoginModuleを利用し、
+			RDBMSに登録された認証情報をJBossのデータソース経由で扱い、認証を行うことができる。クエリは、module-optionのprincipalsQuery及びrolesQueryで任意のクエリを設定することができる。
+
+			</p>
+<div class="figure">
+<a name="N17422"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;$JBOSS_HOME/server/$JBOSS_CONFIG/conf/login-config.xml(JBossEAP4.3)
+				</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+    &lt;application-policy name="messaging"&gt;
+       &lt;authentication&gt;
+          &lt;login-module code = "org.jboss.security.auth.spi.DatabaseServerLoginModule"
+             flag = "required"&gt;
+             &lt;module-option name = "unauthenticatedIdentity"&gt;guest&lt;/module-option&gt;
+             &lt;module-option name = "dsJndiName"&gt;java:/DefaultDS&lt;/module-option&gt;
+             &lt;module-option name = "principalsQuery"&gt;SELECT PASSWD FROM JBM_USER WHERE USER_ID=?&lt;/module-option&gt;
+             &lt;module-option name = "rolesQuery"&gt;SELECT ROLE_ID, 'Roles' FROM JBM_ROLE WHERE USER_ID=?&lt;/module-option&gt;
+          &lt;/login-module&gt;
+       &lt;/authentication&gt;
+    &lt;/application-policy&gt;
+  
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+		
+</p>
+<p>
+			JBossEAP6でも、 Databaseログインモジュールは利用可能であり、以下の属性が利用可能である。
+
+			</p>
+<div class="itemizedlist">
+<p class="title">
+<b>JBossEAP6で利用可能な利用可能なmodule-options</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>digestCallback</p>
+</li>
+<li class="listitem">
+<p>dsJndiName</p>
+</li>
+<li class="listitem">
+<p>hashAlgorithm</p>
+</li>
+<li class="listitem">
+<p>hashCharset</p>
+</li>
+<li class="listitem">
+<p>hashEncoding</p>
+</li>
+<li class="listitem">
+<p>ignorePasswordCase</p>
+</li>
+<li class="listitem">
+<p>inputValidator</p>
+</li>
+<li class="listitem">
+<p>principalsQuery</p>
+</li>
+<li class="listitem">
+<p>rolesQuery</p>
+</li>
+<li class="listitem">
+<p>storeDigestCallback</p>
+</li>
+<li class="listitem">
+<p>suspendResume</p>
+</li>
+<li class="listitem">
+<p>throwValidatorError</p>
+</li>
+<li class="listitem">
+<p>transactionManagerJndiName</p>
+</li>
+</ul>
+</div>
+<p>
+
+			JBossEAP6で、管理CLIにより、Databaseログインモジュールをセキュリティドメインに追加する方法を示す。
+
+
+			</p>
+<div class="figure">
+<a name="N1745A"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+/subsystem=security/security-domain=postgresSecurity/:add(cache-type=default)
+/subsystem=security/security-domain=postgresSecurity/authentication=classic:add(login-modules=[{"code"=&gt;"Database", "flag"=&gt;"required", "module-options"=&gt;[("dsJndiName"=&gt;"java:jboss/datasources/PostgresDS"),("principalsQuery"=&gt;"SELECT PASSWORD FROM USERS WHERE USERNAME = ?"), ("rolesQuery"=&gt;"SELECT R.NAME, 'Roles' FROM USERS_ROLES UR INNER JOIN ROLES R ON R.ID = UR.ROLE_ID INNER JOIN USERS U ON U.ID = UR.USER_ID WHERE U.USERNAME = ?")]}])
+
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+			
+			なお、このDatabaseログインモジュールの実装クラスorg.jboss.security.auth.spi.DatabaseServerLoginModuleを、ユーザが拡張して利用することも可能である。
+			
+			Databaseログインモジュールを拡張したカスタマイズログインモジュールを利用している場合の移行方法については以下に示す。
+		</p>
+</div>
+<br>
+<br>
+<a name="tubame_2.9.1.3.1." id="category_199"></a>
+<h3 class="title">2.9.1.3.1.Databaseログインモジュールを拡張したセキュリティドメインの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			ここでは、org.jboss.security.auth.spi.DatabaseServerLoginModuleを拡張したクラスをusercustom.loginmodule.ExampleDatabaseServerLoginModuleとして
+			JBossEAP6への移行方法を示す。
+
+			</p>
+<div class="figure">
+<a name="N1746F"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;$JBOSS_HOME/server/$JBOSS_CONFIG/conf/login-config.xml(JBossEAP4.3)
+				</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+　　　&lt;security-domain name="exampleDatabaseServerLoginModule" cache-type="default"&gt;
+                 &lt;authentication&gt;
+                     &lt;login-module code="usercustom.loginmodule.ExampleDatabaseServerLoginModule" flag="required"&gt;
+                         &lt;module-option name="dsJndiName" value="java:jboss/datasources/PostgresDS"/&gt;
+                         &lt;module-option name="principalsQuery" value="SELECT PASSWORD FROM USERS WHERE USERNAME = ?"/&gt;
+                         &lt;module-option name="rolesQuery" value="SELECT R.NAME, 'Roles' FROM USERS_ROLES UR INNER JOIN ROLES R ON R.ID = UR.ROLE_ID INNER JOIN USERS U ON U.ID = UR.USER_ID WHERE U.USERNAME = ?"/&gt;
+                         &lt;module-option name="hashAlgorithm" value="MD5"/&gt;
+                         &lt;module-option name="hashEncoding" value="base64"/&gt;
+                         &lt;module-option name="hashUserPassword" value="true"/&gt;
+                         &lt;!-- カスタマイズログインモジュール独自のmodule-option--&gt;
+                         &lt;module-option name="usercustomModuleOptionSample" value="foo"/&gt;
+                     &lt;/login-module&gt;
+                 &lt;/authentication&gt;
+   &lt;/security-domain&gt;
+   
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			ユーザが実装したカスタマイズログインモジュールをセキュリティドメインに追加する場合は、login-modulesのcode属性にクラス名を設定する。以下にJBossEAP6の管理CLIでの設定を示す。
+
+			</p>
+<div class="figure">
+<a name="N1747A"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;管理CLIによるセキュリティドメインの追加(JBossEAP6)
+				</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+/subsystem=security/security-domain=exampleDatabaseServerLoginModule/:add(cache-type=default)
+/subsystem=security/security-domain=exampleDatabaseServerLoginModule/authentication=classic:add(login-modules=[{"code"=&gt;"usercustom.loginmodule.ExampleDatabaseServerLoginModule", "flag"=&gt;"required", "module-options"=&gt;[("dsJndiName"=&gt;"java:jboss/datasources/PostgresDS"),("principalsQuery"=&gt;"SELECT PASSWORD FROM USERS WHERE USERNAME = ?"), ("rolesQuery"=&gt;"SELECT R.NAME, 'Roles' FROM USERS_ROLES UR INNER JOIN ROLES R ON R.ID = UR.ROLE_ID INNER JOIN USERS U ON U.ID = UR.USER_ID WHERE U.USERNAME = ?"),("usercustomModuleOptionSample"=&gt;"foo")]}])
+
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+			
+</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>org.jboss.security.auth.spi.DatabaseServerLoginModuleについて
+					</p>
+<p>JBossEAP6では、picketboxから提供されるorg.jboss.security.auth.spi.DatabaseServerLoginModuleが利用可能で、JBossEAP4.3と互換性があるため、とくに修正の必要はない。
+					</p>
+<p>
+						ただし、DatabaseServerLoginModuleを拡張したクラスが、org.jboss.security.*のクラスに依存することがあるため、それらのクラスがJBossEAP6で利用可能かは、別途調査を行い、必要に応じて代替クラスを検討する必要がある。
+
+						</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note: org.jboss.security.Util.createPasswordHashメソッドについて">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">org.jboss.security.Util.createPasswordHashメソッドについて</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>JBossEAP6のpicketboxyより提供されるorg.jboss.security.Utilには、createPasswordHashメソッドは存在しないため、picketboxから提供されるorg.jboss.crypto.CryptoUtilクラスに含まれるユーティリティメソッドを利用するこ
+							</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+					
+</p>
+</li>
+</ul>
+</div>
+<p>
+		
+</p>
 </div>
 <br>
 <br>
@@ -3938,100 +5208,6 @@ ln -s JBOSS_HOME/data/txt /data/txt
 <span class="command"><strong><a class="command" href="http://docs.oracle.com/javaee/6/api/deprecated-list.html" target="_top">http://docs.oracle.com/javaee/6/api/deprecated-list.html</a></strong></span>
                     
 </p>
-</div>
-<br>
-<br>
-<a name="tubame_3.1.2." id="category_36"></a>
-<h3 class="title">3.1.2.Servlet下位互換パラメータ</h3>
-<br>
-<div class="section">
-<div class="titlepage"></div>
-<p>JBossEAP4.3(Tomcat)では、Servlet下位互換のためにorg.apache.catalina.
-			STRICT_SERVLET_COMPLIANCEというシステムプロパティがある。このプロパティはJBossEAP4.3及びJBossEAP6でもデフォルトでtrueとなり、移行後のJBossEAP6環境でとくに設定変更は必要ない。</p>
-<p>
-			
-<span class="command"><strong><a class="command" href="https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Specifications" target="_top">https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Specifications
-			</a></strong></span>
-		
-</p>
-<div class="orderedlist">
-<p class="title">
-<b>TomcatのSTRICT_SERVLET_COMPLIANCEで有効になるパラメータと、JBossEAP4.3及びJBossEAP6での実装について</b>
-</p>
-<ol class="orderedlist" type="1">
-<li class="listitem">
-<p>org.apache.catalina.core.ApplicationContext.GET_RESOURCE_REQUIRE_SLASH</p>
-<p>trueの場合、ServletContext.getResource()またはServletContext.getResourceAsStream() に渡されたパスは 、「/」で始まる必要がある。</p>
-<p>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、JBossEAP4.3では、リソースのURLにスラッシュを必須としている。</p>
-</li>
-<li class="listitem">
-<p>org.apache.catalina.core.ApplicationDispatcher.WRAP_SAME_OBJECT</p>
-<p>trueの場合、アプリケーションディスパッチャに渡されるラップされたリクエストまたはレスポンスオブジェクトは、元のリクエストまたはレスポンスをラップしていることを保証するためにチェックされる。</p>
-<p>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</p>
-</li>
-<li class="listitem">
-<p>org.apache.catalina.core.StandardHostValve.ACCESS_SESSION</p>
-<p>trueの場合、セッションに関連付けられているすべてのリクエストは、セッションの最終アクセス時刻を更新させる。これはリクエストが明示的にセッションにアクセスするかどうかに関係ない</p>
-<p>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</p>
-</li>
-<li class="listitem">
-<p>org.apache.catalina.session.StandardSession.ACTIVITY_CHECK</p>
-<p>trueの場合、Tomcatは、各セッションのアクティブなリクエストの数を追跡する。</p>
-<p>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</p>
-</li>
-<li class="listitem">
-<p>org.apache.tomcat.util.http.ServerCookie.ALWAYS_ADD_EXPIRES</p>
-<p>trueの場合、Tomcatはバージョン0 より後のCookie に対して、常にSetCookie ヘッダにexpire パラメータを追加する。これは、IE にSetCookie ヘッダ内のMax-Age パラメータを無視させるという、既知のIE6 とIE7 のバグの回避策である。</p>
-<p>JBossEAP4.3(JBossWeb)にはこのシステムプロパティは存在しないが、JBossEAP6(JBossWeb)でこのパラメータが存在する</p>
-</li>
-</ol>
-</div>
-</div>
-<br>
-<br>
-<a name="tubame_3.1.3." id="category_37"></a>
-<h3 class="title">3.1.3.Servlet Cookieに関連する下位互換パラメータ</h3>
-<br>
-<div class="section">
-<div class="titlepage"></div>
-<p>JBossEAP6(Tomcat)では、クッキーに関連する下位互換パラメータが存在する。業務アプリケーションにおけるクッキーに関連する仕様を確認し、
-			必要に応じてクッキーに関連する下位互換パラメータを有効にする必要がある。
-		</p>
-<div class="itemizedlist">
-<p class="title">
-<b>JBossEAP6(Tomcat)で提供するクッキーに関連する下位互換パラメータ</b>
-</p>
-<ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p>org.apache.tomcat.util.http.
-					ServerCookie.ALLOW_EQUALS_IN_VALUE</p>
-<p>クッキーの値に=(イコール)を許可するかを指定。</p>
-<p>JBossEAP4.3及びJBossEAP6でこのシステムプロパティは存在しない。クッキーの値の特殊文字を利用する場合は、以下のALLOW_HTTP_SEPARATORS_IN_V0を有効にして対応する。</p>
-</li>
-<li class="listitem">
-<p>org.apache.tomcat.util.http.
-					ServerCookie.ALLOW_HTTP_SEPARATORS_IN_V0</p>
-<p>setCookie時に、クッキーのvalueに,: ()&lt;&gt;@:\"[]?={}\tの特殊文字があった場合にエラーとなり、デフォルトは許可しないが
-					このパラメータを有効にすると、,: ()&lt;&gt;@:\"[]?={}\tの特殊文字があった場合にvalue全体をダブルクォートで囲む。</p>
-<p>JBossEAP4.3では、このシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。
-クッキーのvalueに特殊文字が含まれる場合、ALLOW_HTTP_SEPARATORS_IN_V0はfalseがデフォルトで設定され、
-JBossEAP4.3上では許容されていたものが、移行後のJBossEAP6では許容されなくなり、エラーが発生する可能性がある。
-この場合は、ALLOW_HTTP_SEPARATORS_IN_V0システムプロパティを有効にする必要がある。
-					</p>
-</li>
-<li class="listitem">
-<p>org.apache.tomcat.util.http.ServerCookie.FWD_SLASH_IS_SEPARATOR
-				</p>
-<p>クッキーの値の文字列に対して、スラッシュもエスケープする場合は、有効にする必要がある。
-				</p>
-<p>JBossEAP4.3(JBossWeb)は、このパラメータは存在せず、デフォルトでスラッシュをエスケープする。JBossEAP6は、このパラメータが存在し、スラッシュをエスケープしない。</p>
-</li>
-<li class="listitem">
-<p>クッキー名のvalidationにRFC2109Validatorが利用される</p>
-<p>JBossEAP4.3及びJBossEAP6にはこのValidatorは存在しないため、JBossEAP4.3からJBossEAP6への移植にあたっては検討する必要がない。</p>
-</li>
-</ul>
-</div>
 </div>
 <br>
 <br>
@@ -4069,57 +5245,6 @@ JBossEAP4.3上では許容されていたものが、移行後のJBossEAP6では
 <span class="command"><strong><a class="command" href="http://docs.oracle.com/javaee/6/api/deprecated-list.html" target="_top">http://docs.oracle.com/javaee/6/api/deprecated-list.html</a></strong></span>
                     
 </p>
-</div>
-<br>
-<br>
-<a name="tubame_3.2.3." id="category_42"></a>
-<h3 class="title">3.2.3.JSP下位互換パラメータ</h3>
-<br>
-<div class="section">
-<div class="titlepage"></div>
-<p>JBossEAP6ののJSP実装(jasper)は、JSP仕様への対応で、下位互換がなくなるものをシステムプロパティで対応可能としている。
-		</p>
-<p>
-			
-<span class="command"><strong><a class="command" href="https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Jasper" target="_top">https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Jasper
-			</a></strong></span>
-		
-</p>
-<div class="itemizedlist">
-<p class="title">
-<b>JSP仕様に関連するjasperのシステムプロパティ</b>
-</p>
-<ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p>org.apache.jasper.compiler.Generator.STRICT_GET_PROPERTY</p>
-<p>trueの場合、JSP2.0以降の仕様で規定され、JSPプロセッサに依存導入されたjsp:getPropertyアクションはオブジェクトリファレンスを持たなければならない。オブジェクトリファレンスを持たない場合エラーとなる。</p>
-<p>
-					参考：
-					<span class="command"><strong><a class="command" href="https://bz.apache.org/bugzilla/show_bug.cgi?id=48701" target="_top">https://bz.apache.org/bugzilla/show_bug.cgi?id=48701
-					</a></strong></span>
-				
-</p>
-<p>JBossEAP4.3ではこのシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。デフォルトはfalseとなるため、下位互換対応する場合は、有効にする必要がある。</p>
-</li>
-<li class="listitem">
-<p>org.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING</p>
-<p>falseの場合は、JSP属性に引用符をエスケープするための要件が緩和される。その結果、エスケープされていない引用符は、エラーを発生しなくなる</p>
-<p>
-					JBossEAP6ではスクリプトレット等でダブルクォートがあった場合にエスケープしない場合とエラーになる。
-					参考：
-					<span class="command"><strong><a class="command" href="https://bz.apache.org/bugzilla/show_bug.cgi?id=45015" target="_top">https://bz.apache.org/bugzilla/show_bug.cgi?id=45015
-					</a></strong></span>
-				
-</p>
-<p>JBossEAP4.3ではこのシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。デフォルトでtrueとなる。</p>
-</li>
-<li class="listitem">
-<p>org.apache.jasper.compiler.Parser.STRICT_WHITESPACE</p>
-<p>falseの場合は、属性名の前に空白文字がない記述を許容する。</p>
-<p>JBossEAP4.3及びJBossEAP6ではこのシステムプロパティは存在しない</p>
-</li>
-</ul>
-</div>
 </div>
 <br>
 <br>
@@ -4270,7 +5395,7 @@ org.jboss.jms.client.JBossConnectionFactory)
 </div>
 <p>JBossEAP6では管理CLIのjndi-viewコマンドを利用して、JNDIにバインドされている情報を確認できる。移行後の環境でもJBossのJNDIサービスにバインドされたオブジェクトを利用する場合は、JNDI名に変更がないか確認し、変更がある場合は、JNDI名を移植する。</p>
 <div class="figure">
-<a name="N15DD5"></a>
+<a name="N162BA"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;管理CLIのjndi-viewコマンド実行結果(standalone-full-haプロファイル)</b>
 </p>
@@ -4484,7 +5609,7 @@ org.jboss.jms.client.JBossConnectionFactory)
 <p>jboss.xmlで設定されたsession/jndi-nameタグや、entity/jndi-nameタグで設定されたJNDI名を利用して、EJBをルックアップしている場合
 					</p>
 <div class="figure">
-<a name="N16680"></a>
+<a name="N16BDD"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossEAP6のjboss-ejb3.xmlのEJBのJNDI名設定例</b>
 </p>
@@ -4539,8 +5664,112 @@ org.jboss.jms.client.JBossConnectionFactory)
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>JavaEE6でJNDI名が標準化されており、InitailaContextインスタンスを利用してルックアップ際にしているJNDI名を変更する必要がある。
-        </p>
+<p>
+			JavaEE6でJNDI名が標準化されており、InitailaContextインスタンスを利用してルックアップ際にしているJNDI名を変更する必要がある。
+
+
+			</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>
+					JBossEAP4.3でバインドされたリソースをJNDI名「java:JNDI名」でルックアップしている場合、JBossEAP6の環境ではjavax.naming.NameNotFoundExceptionが発生する。
+
+					</p>
+<div class="figure">
+<a name="N16CA1"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;ExampleDS設定(JBossEAP4.3)</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+							
+&lt;datasources&gt;
+   &lt;local-tx-datasource&gt;
+
+      &lt;!-- The jndi name of the DataSource, it is prefixed with java:/ --&gt;
+      &lt;!-- Datasources are not available outside the virtual machine --&gt;
+      &lt;jndi-name&gt;DefaultDS&lt;/jndi-name&gt;
+      ...
+      
+      &lt;/local-tx-datasource&gt;
+&lt;/datasources&gt;
+    
+						</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+
+					JBossEAP6では以下のように、コロン(:)のあとにスラッシュ(/)を付与する必要がある。
+
+					</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>java:/JNDI名</p>
+<p>
+								
+</p>
+<div class="figure">
+<a name="N16CB2"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;JBossEAP6でのデータソースJNDI指定例</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+										
+
+//Object con = initialContext.lookup("java:DefaultDS");
+Object con = initialContext.lookup("java:/DefaultDS");
+									</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+							
+</p>
+<p>
+								
+</p>
+<div class="figure">
+<a name="N16CBF"></a>
+<p class="title">
+<b>Figure&nbsp;3.&nbsp;JBossEAP6でのJMSコネクションファクトリのJNDI指定例</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+										
+//Object con = initialContext.lookup("java:ConnectionFactory");
+Object con = initialContext.lookup("java:/ConnectionFactory");
+									</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+							
+</p>
+</li>
+</ul>
+</div>
+<p>
+
+
+
+				
+</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+		
+</p>
 </div>
 <br>
 <br>
@@ -4563,7 +5792,7 @@ org.jboss.jms.client.JBossConnectionFactory)
 
 						</p>
 <div class="figure">
-<a name="N16751"></a>
+<a name="N16CDC"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jndi.properties</b>
 </p>
@@ -4585,7 +5814,7 @@ java.naming.provider.url=jnp://XXX.XXX.XXX.XXX:1099
 <li class="listitem">
 <p>プログラムコードで指定する方法。</p>
 <div class="figure">
-<a name="N1675F"></a>
+<a name="N16CEA"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;プログラムコード(jnp設定)</b>
 </p>
@@ -4625,7 +5854,7 @@ ctx.lookup("ejb/testBean");
 <p>接続先がJBossEAP6の場合</p>
 <p>接続プロトコルとしてjnpは利用できないため、以下のようにAPIを修正する必要がある。</p>
 <div class="figure">
-<a name="N16777"></a>
+<a name="N16D02"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;プログラムコード</b>
 </p>
@@ -4650,7 +5879,7 @@ InitialContext initialContext = new InitialContext(props);
 <p>jboss-ejb-client.propertiesをクラスパスに通して、以下のように呼び出すことも可能です。
 						</p>
 <div class="figure">
-<a name="N16784"></a>
+<a name="N16D0F"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;プログラムコード</b>
 </p>
@@ -4665,7 +5894,7 @@ InitialContext initialContext = new InitialContext(props);
 </div>
 <br class="figure-break">
 <div class="figure">
-<a name="N1678E"></a>
+<a name="N16D19"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;jboss-ejb-client.properties</b>
 </p>
@@ -4748,7 +5977,7 @@ java.naming.provider.url=server1_ip:1100,server2_ip:1100
 <li class="listitem">
 <p>jboss.xmlでinvoker-proxy-binding-nameにIIOPを設定している</p>
 <div class="figure">
-<a name="N16619"></a>
+<a name="N16B76"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;jboss.xmlによるinvoker-proxy-binding-name設定例</b>
 </p>
@@ -4785,7 +6014,7 @@ java.naming.provider.url=server1_ip:1100,server2_ip:1100
 <p>EJBにIIOP(org.jboss.ejb3.annotation.IIOP)アノテーションを設定する(JBossEAP5)
 					</p>
 <div class="figure">
-<a name="N16629"></a>
+<a name="N16B86"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;IIOP(org.jboss.ejb3.annotation.IIOP)アノテーション設定例</b>
 </p>
@@ -4821,7 +6050,7 @@ public class ExampleIiopBean {
 <p>jboss.xmlが存在する場合はjboss-ejb3.xmlに移植し、jboss.xmlが存在しない場合はjboss-ejb3.xmlを作成し、IIOP対応のEJBにするためにassembly-descriptor設定を行う。
 					</p>
 <div class="figure">
-<a name="N1663D"></a>
+<a name="N16B9A"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;jboss-ejb3.xmlのassembly-descriptor設定例</b>
 </p>
@@ -4907,7 +6136,7 @@ System.setProperty("com.sun.CORBA.ORBUseDynamicStub", "true");
 			
 </p>
 <div class="figure">
-<a name="N166BE"></a>
+<a name="N16C1B"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;JBossのIIOPクライアントのInitialContext作成例</b>
 </p>
@@ -4946,8 +6175,157 @@ System.setProperty("com.sun.CORBA.ORBUseDynamicStub", "true");
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>JBossEAP4.3 はJ2EE1.4に準拠したアプリケーションサーバでJMSコンテナとして動作する。
-JBossEAP6の場合は、TODO:</p>
+<p>
+			JBossEAP4.3 はJ2EE1.4に準拠したアプリケーションサーバでJMSコンテナとして動作する。
+			 
+
+
+		</p>
+</div>
+<br>
+<br>
+<a name="tubame_3.7.1." id="category_195"></a>
+<h3 class="title">3.7.1.JMSクライアントの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>JMSのAPIはとくに変更は必要ない。ただしクライアントがINVMでない場合、InitalContext作成時に、Contextのプロパティ情報を渡す必要があるが、
+			このプロパティ情報は、JBossEAP6と互換性がないため、JBossEAP6用のプロパティ設定を行う。
+		</p>
+<div class="table">
+<a name="N1739A"></a>
+<p class="title">
+<b>Table&nbsp;1.&nbsp;Contextプロパティ</b>
+</p>
+<div class="table-contents">
+<table summary="Contextプロパティ" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th>プロパティ</th><th>JBoss EAP43</th><th>JBoss EAP6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Context.INITIAL_CONTEXT_FACTORY　</td><td>org.jnp.interfaces.NamingContextFactory</td><td>org.jboss.naming.remote.client.InitialContextFactory
+						</td>
+</tr>
+<tr>
+<td>Context.PROVIDER_URL</td><td>接続先のJBossのIPアドレス:1099 </td><td>remote://接続先のJBossのIPアドレス:4447</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br class="table-break">
+<div class="figure">
+<a name="N173B7"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;JBossEAP4.3のJMSクライアント実装</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+				
+public 	send(String factoryJNDI, String queueJNDI)
+    throws JMSException, NamingException {
+
+  Properties properties = new Properties();
+  properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,
+      "org.jnp.interfaces.NamingContextFactory");
+  properties.setProperty(Context.PROVIDER_URL, "localhost:1099");
+  properties.setProperty(Context.URL_PKG_PREFIXES,
+      "org.jboss.naming:org.jnp.interfaces");
+
+  // イニシャルコンテキストを取得します。
+  Context context = new InitialContext(properties);
+
+  // 接続ファクトリを取得します。
+  QueueConnectionFactory queueFactory = (QueueConnectionFactory) context
+      .lookup(factoryJNDI);
+
+  // 接続を作成します。
+  queueConnection = queueFactory.createQueueConnection();
+
+  // セッションを作成します。
+  queueSession = queueConnection.createQueueSession(
+  // トランザクションなし
+      false,
+      // 自動応答確認
+      Session.AUTO_ACKNOWLEDGE);
+
+  // 宛先をルックアップします。
+  queue = (Queue) context.lookup(queueJNDI);
+
+  // パブリッシャを作成します。
+  queueSender = queueSession.createSender(queue);
+
+  ...
+
+}
+			</pre>
+</div>
+</div>
+<br class="figure-break">
+<div class="figure">
+<a name="N173C1"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;JBossEAP6のJMSクライアント実装</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+				
+public send(String factoryJNDI, String queueJNDI)
+    throws JMSException, NamingException {
+
+  Properties properties = new Properties();
+  //properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,"org.jnp.interfaces.NamingContextFactory");
+  properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,"org.jboss.naming.remote.client.InitialContextFactory");
+
+  //properties.setProperty(Context.PROVIDER_URL, "localhost:1099");
+  properties.setProperty(Context.PROVIDER_URL, "remote://localhost:4447");
+
+  //properties.setProperty(Context.URL_PKG_PREFIXES,"org.jboss.naming:org.jnp.interfaces");
+
+  //JMSのユーザ認証情報が必要な場合は、以下のように設定すること
+  //properties.put(Context.SECURITY_PRINCIPAL, "username");
+  //properties.put(Context.SECURITY_CREDENTIALS, "password");
+
+  // イニシャルコンテキストを取得します。
+  Context context = new InitialContext(properties);
+
+  // 接続ファクトリを取得します。
+  QueueConnectionFactory queueFactory = (QueueConnectionFactory) context
+      .lookup(factoryJNDI);
+
+  // 接続を作成します。
+  queueConnection = queueFactory.createQueueConnection();
+  //認証が必要な場合は、引数にユーザ名とパスワードを設定する
+  //queueConnection = queueFactory.createQueueConnection("username","password");
+
+  // セッションを作成します。
+  queueSession = queueConnection.createQueueSession(
+  // トランザクションなし
+      false,
+      // 自動応答確認
+      Session.AUTO_ACKNOWLEDGE);
+
+  // 宛先をルックアップします。
+  queue = (Queue) context.lookup(queueJNDI);
+
+  // パブリッシャを作成します。
+  queueSender = queueSession.createSender(queue);
+
+  ...
+  
+}
+			</pre>
+</div>
+</div>
+<br class="figure-break">
 </div>
 <br>
 <br>
@@ -4956,8 +6334,275 @@ JBossEAP6の場合は、TODO:</p>
 <br>
 <div class="section">
 <div class="titlepage"></div>
-<p>JBossEAP4.3 はJ2EE1.4に準拠したアプリケーションサーバでWebサービス(JAX-RPC)のコンテナとして動作する。</p>
+<p>
+			JBossEAP4.3では、JAX-RPC及びJAX-WSが利用可能であり、JBossEAP6でも同様に利用可能である。
+			ただし、JAX-RPCはレガシーな仕様であるため、JAX-WSの移行を推奨する。
+
+			</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>JavaEE7に対応しているJBossEAP7では、JAX-RPCは利用することができなくなっているので注意すること。
+				</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+			
+</p>
+<div class="table">
+<a name="N16316"></a>
+<p class="title">
+<b>Table&nbsp;1.&nbsp;JBossのWebサービス仕様</b>
+</p>
+<div class="table-contents">
+<table summary="JBossのWebサービス仕様" border="1">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th>JBossバージョン</th><th>JAX-RPC</th><th>JAX-WS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JBossEAP4.3</td><td>1.1</td><td>2.0</td>
+</tr>
+<tr>
+<td>JBossEAP6</td><td>1.1</td><td>2.2</td>
+</tr>
+<tr>
+<td>JBossEAP7</td><td>&times;(利用不可)</td><td>2.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>
+<br class="table-break">
+
+		
+</p>
 <p>JBossEAP6の場合は、TODO:</p>
+</div>
+<br>
+<br>
+<a name="tubame_3.8.1." id="category_193"></a>
+<h3 class="title">3.8.1.JAX-WS仕様のWebサービス移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>JBoss WS独自のパッケージを利用していない場合は、軽微なアプリケーションの修正でデプロイは可能である。
+		</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>ただし、JBossEAP4.3で利用されているWebサービス実装のコンポーネントがJBoss-WSより、Apache
+				CXFベースに変更されており、実装がまったくことなるため、Webサービスクライアントに影響を与えないように移行する必要がある場合は
+				別途、相互接続の検討を行う必要がある。
+			</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+		以下にJAX-WS仕様のWebサービスの移植方法を示す。
+		
+		
+		</p>
+</div>
+<br>
+<br>
+<a name="tubame_3.8.1.1." id="category_194"></a>
+<h3 class="title">3.8.1.1.JBoss-WS独自設定の移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			web.xmlに設定されたJBossEAP4.3のJBoss-WS独自設定を修正する。
+
+
+			</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>org.jboss.wsf.stack.jbws.EndpointServletが定義されたservlet-classタグを削除
+					</p>
+</li>
+<li class="listitem">
+<p>JBossEAP4.3のJBoss-WS独自のServletで必要となるinit-paramタグを削除する。
+					</p>
+</li>
+<li class="listitem">
+<p>Webサービスのエンドポイントなるクラスをservlet-classに定義する。
+					</p>
+</li>
+</ul>
+</div>
+<p>
+
+			
+</p>
+<div class="figure">
+<a name="N17361"></a>
+<p class="title">
+<b>Figure&nbsp;1.&nbsp;JBossEAP4.3のJBoss-WS独自のweb.xml設定</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;servlet&gt;
+  &lt;display-name&gt;ExampleWebService&lt;/display-name&gt;
+  &lt;servlet-name&gt;ExampleWebService&lt;/servlet-name&gt;
+
+
+  &lt;servlet-class&gt;org.jboss.wsf.stack.jbws.EndpointServlet&lt;/servlet-class&gt;
+
+  &lt;init-param&gt;
+    &lt;param-name&gt;jboss.ws.endpoint&lt;/param-name&gt;
+    &lt;param-value&gt;example.WebServiceImpl&lt;/param-value&gt;
+  &lt;/init-param&gt;
+
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+  &lt;servlet-name&gt;ExampleWebService&lt;/servlet-name&gt;
+  &lt;url-pattern&gt;/WebService&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+
+			
+</p>
+<div class="figure">
+<a name="N1736C"></a>
+<p class="title">
+<b>Figure&nbsp;2.&nbsp;JBossEAP6でのweb.xml設定</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+					
+&lt;servlet&gt;
+  &lt;display-name&gt;ExampleWebService&lt;/display-name&gt;
+  &lt;servlet-name&gt;ExampleWebService&lt;/servlet-name&gt;
+
+
+  &lt;!-- JBossEAP4.3のJBossWS独自の定義となるためコメント
+  &lt;servlet-class&gt;org.jboss.wsf.stack.jbws.EndpointServlet&lt;/servlet-class&gt;
+
+  &lt;init-param&gt;
+    &lt;param-name&gt;jboss.ws.endpoint&lt;/param-name&gt;
+    &lt;param-value&gt;example.WebServiceImpl&lt;/param-value&gt;
+  &lt;/init-param&gt;
+   --&gt;
+
+  &lt;!-- Webサービスのエンドポイントなるクラスをservlet-classに定義する。param-valueで指定されたクラスを指定する--&gt;
+  &lt;servlet-class&gt;example.WebServiceImpl&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+  &lt;servlet-name&gt;ExampleWebService&lt;/servlet-name&gt;
+  &lt;url-pattern&gt;/WebService&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+				</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+
+
+			
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note: 不要なエンドポイントクラスについて">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">不要なエンドポイントクラスについて</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>JBossEAP4.3ではweb.xmlに定義された情報を利用して、Webサービスを公開していたが、
+					JBossEAP6では、デプロイされたアーカイブ内にあるクラスより、JWS
+					apiで定義されたアノテーション(@WebService等)を付与されたクラスをパースして、自動的にエンドポイントを追加する。
+					このため、公開しないWebサービスのエンドポイントクラスはwarアーカイブに含めないように注意すること。
+				</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+			
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note: 自動生成コード">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">自動生成コード</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>
+					Webサービスを作成するにあたり、WSDLを入力に、ソースコードを自動生成し、利用する場合があるが、
+					JBossEAP4.3のwsconsumeが自動生成するコードヘッダは以下のとおりである。
+					</p>
+<div class="figure">
+<a name="N17382"></a>
+<p class="title">
+<b>Figure&nbsp;3.&nbsp;wsconsumeで生成したコードのヘッダ</b>
+</p>
+<div class="figure-contents">
+<pre class="programlisting">
+							
+/**
+ * This class was generated by the JAX-WS RI.
+ * JAX-WS RI 2.1.1-11/08/2010 10:07 PM(mockbuild)-
+ * Generated source version: 2.0
+ *
+ */
+ 
+						</pre>
+</div>
+</div>
+<p>
+<br class="figure-break">
+					Webサービスの相互接続の検討などにあたり、既存のWebサービスの開発環境等を調査する際に、
+					どのツールをコード生成して、利用しているかなどを把握するがあるが、コードヘッダ情報ではJBossWSのwsconsumeを
+					利用したことは特定できないので、注意すること。
+				</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_3.8.2." id="category_201"></a>
+<h3 class="title">3.8.2.JAX-RPC仕様のWebサービス移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>TODO:Please enter the text.</p>
 </div>
 <br>
 <br>
@@ -5155,12 +6800,181 @@ JBossEAP6の場合、JBossのRMIAdaptorは利用できないため、Java標準�
 <p>org.jboss.web.php.Handler</p>
 <p>PHP Gatewayを可能とするSerlvet</p>
 </li>
+<li class="listitem">
+<p>org.jboss.web.tomcat.service.StatusServlet</p>
+<p>JBossEAP4.3に登録されるMBean情報より、JBossのステータスを表示する。</p>
+</li>
+</ul>
+</div>
+<p>
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_3.12.1.2.1." id="category_206"></a>
+<h3 class="title">3.12.1.2.1.StatusServletの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			org.jboss.web.tomcat.service.StatusServletをweb.xmlに設定し利用することで、JBossEAP4.3では、JVMのメモリ使用量をはじめ、RequestProcessorや、各コンテキストの状況(セッション情報のモニタ等）を返すことが可能である。
+
+			</p>
+<div class="itemizedlist">
+<p class="title">
+<b>JVM情報の出力例</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Free memory: 727.51 MB、Total memory: 885.56 MB 、Max memory:
+						3626.68 MB
+					</p>
+</li>
 </ul>
 </div>
 <p>
 
-			JBoss独自の機能となるため、移行後の環境でも、上記の機能が必要とする場合は、別途検討が必要である。
-		</p>
+			
+</p>
+<div class="itemizedlist">
+<p class="title">
+<b>各RequestProcessorの情報(ajp-127.0.0.1-8009/http-127.0.0.1-8080)の出力例
+				</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Max threads: 40 、Current thread count: 0、Current thread busy:
+						0、Max processing time: 0 ms、Processing time: 0.0 s、Request count:
+						0、Error count: 0、Bytes received: 0.00 MB、Bytes sent: 0.00 MB
+					</p>
+</li>
+</ul>
+</div>
+<p>
+
+			
+</p>
+<div class="itemizedlist">
+<p class="title">
+<b>Context毎のモニタ情報の出力例</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>Active sessions: 0、Session count: 0、Max active sessions:
+						0、Rejected session creations: 0、Expired sessions: 0、Longest
+						session alive time: 0 s、Average session alive time: 0 s、Processing
+						time: 0 ms、JSPs loaded: 0 JSPs reloaded:
+					</p>
+</li>
+</ul>
+</div>
+<p>
+
+			
+		
+</p>
+<p>
+			JBossEAP6では、StatusServletは存在しないため、アプリケーションのweb.xml設定のServletClassで、org.jboss.web.tomcat.service.StatusServletが有効となっている場合は、
+			この設定を削除する必要がある。
+
+			なお、JBossEAP6で、HTTP経由でJBossの状態を確認する場合は、以下のような方法がある。
+
+			</p>
+<div class="orderedlist">
+<ol class="orderedlist" type="1">
+<li class="listitem">
+<p>
+						JBossEAP6のWeb管理コンソールを利用する
+
+						</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>JVM(ヒープ使用量)</p>
+<p>http://localhost:9990/console/App.html#vm</p>
+</li>
+<li class="listitem">
+<p>web-metrics(コネクタ毎のリクエスト及びエラー数のみ)</p>
+<p>http://localhost:9990/console/App.html#web-metrics</p>
+</li>
+</ul>
+</div>
+<p>
+
+						
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>Web管理コンソールでは、スレッドプール及び、セッション情報の状況の取得はできない。</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+
+					
+</p>
+</li>
+<li class="listitem">
+<p>
+						HTTP Managment APIを利用する。
+
+						</p>
+<div class="itemizedlist">
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>JVM(ヒープ使用量)</p>
+<p>http://localhost:9990/management/core-service/platform-mbean/type/memory?include-runtime=true&amp;json.pretty
+								</p>
+</li>
+<li class="listitem">
+<p>web-metrics</p>
+<p>http://localhost:9990/management/subsystem/web/connector/*?include-runtime=true&amp;json.pretty
+								</p>
+</li>
+<li class="listitem">
+<p>セッション情報</p>
+<p>http://localhost:9990/management/deployment/jsp-counter.war/subsystem/web?include-runtime=true&amp;json.pretty
+								</p>
+</li>
+</ul>
+</div>
+<p>
+
+						
+</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<table border="0" summary="Note">
+<tr>
+<td valign="top" align="center" rowspan="2" width="25"><img alt="[Note]" src="images/note.png"></td><th align="left">Note</th>
+</tr>
+<tr>
+<td valign="top" align="left">
+<p>JMXで取得可能な「jboss.web:type=ThreadPool,name=http--XXX.XXX.XXX.XXX-8080」や「jboss.web:type=ThreadPool,name=ajp--XXX.XXX.XXX.XXX-8009」といった
+								スレッドプールのcurrentThreadCountや、currentThreadsBusyなどの属性情報については、HTTP　Managment APIでは取得できない。これらの情報を取得する必要がある場合は
+								JMXを利用すること。
+							</p>
+</td>
+</tr>
+</table>
+</div>
+<p>
+					
+</p>
+</li>
+</ol>
+</div>
+<p>
+
+
+		
+</p>
 </div>
 <br>
 <br>
@@ -5567,7 +7381,7 @@ com.example:archive=unique-archive-name
 <li class="listitem">
 <p>デプロイメントデスクリプタのdtd宣言を削除し、jbossタグを修正する</p>
 <div class="figure">
-<a name="N1649B"></a>
+<a name="N169AE"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;修正例</b>
 </p>
@@ -5657,7 +7471,7 @@ version="3.1" impl-version="2.0"&gt;
 						 EntityBeanのリソースリファレンス(データソース)設定(//enterprise-beans/entity/resource-ref/jndi-name)例を示す。
 						</p>
 <div class="figure">
-<a name="N164D1"></a>
+<a name="N169E4"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;修正元例(jboss.xml) EntityBeanのリソースリファレンス(データソース)設定
 							</b>
@@ -5685,7 +7499,7 @@ version="3.1" impl-version="2.0"&gt;
 						
 </p>
 <div class="figure">
-<a name="N164DC"></a>
+<a name="N169EF"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;修正先例(jboss-ejb3.xml)　EntityBeanのリソースリファレンス(データソース)設定
 							</b>
@@ -5717,7 +7531,7 @@ xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee
 						EntityBeanのリソースリファレンス(EJB)」設定(//enterprise-beans/entity/ejb-rej/jndi-name)例を示す。
 						</p>
 <div class="figure">
-<a name="N164E7"></a>
+<a name="N169FA"></a>
 <p class="title">
 <b>Figure&nbsp;4.&nbsp;修正元例(jboss.xml) EntityBeanのリソースリファレンス(EJB)設定
 							</b>
@@ -5744,7 +7558,7 @@ xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee
 						
 </p>
 <div class="figure">
-<a name="N164F2"></a>
+<a name="N16A05"></a>
 <p class="title">
 <b>Figure&nbsp;5.&nbsp;修正先例(jboss-ejb3.xml)　EntityBeanのリソースリファレンス(EJB)設定
 							</b>
@@ -5796,7 +7610,7 @@ xsi:schemaLocation="http://www.jboss.com/xml/ns/javaee http://www.jboss.org/j2ee
 						クライアント側でjndiルックアップ時のjndi名を変更する
 					</p>
 <div class="figure">
-<a name="N16504"></a>
+<a name="N16A17"></a>
 <p class="title">
 <b>Figure&nbsp;6.&nbsp;修正先例(jboss-ejb3.xml)　EJBのJNDI名設定
 							</b>
@@ -5883,7 +7697,7 @@ JBossEAP6の場合は、TODO
 <div>
 <div>
 <h2 class="title" style="clear: both">
-<a name="N165D3"></a>1.&nbsp;jbosscmp-jdbc.xml</h2>
+<a name="N16AE6"></a>1.&nbsp;jbosscmp-jdbc.xml</h2>
 </div>
 </div>
 </div>
@@ -5896,7 +7710,7 @@ JBossEAP6の場合は、TODO
 <li class="listitem">
 <p>//jbosscmp-jdbc/defaults/datasourceを設定している場合、JBossEAP6で登録したデータソースのJNDI名に変更する</p>
 <div class="figure">
-<a name="N165DC"></a>
+<a name="N16AEF"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;修正例</b>
 </p>
@@ -5940,7 +7754,7 @@ JBossEAP6の場合は、TODO
                 
                 </p>
 <div class="figure">
-<a name="N165EA"></a>
+<a name="N16AFD"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;jboss-as-cmp-*.jarに存在するstandardjbosscmp-jdbc.xml(抜粋)</b>
 </p>
@@ -6134,7 +7948,7 @@ JBossEAP6ではTODO。</p>
 <li class="listitem">
 <p>module.xmlを作成する。</p>
 <div class="figure">
-<a name="N166E3"></a>
+<a name="N16C40"></a>
 <p class="title">
 <b>Figure&nbsp;1.&nbsp;module.xml</b>
 </p>
@@ -6166,7 +7980,7 @@ JBossEAP6ではTODO。</p>
 <li class="listitem">
 <p>作成したフォルダにモジュールとして登録するjarとmodule.xmlを配置する</p>
 <div class="figure">
-<a name="N166F9"></a>
+<a name="N16C56"></a>
 <p class="title">
 <b>Figure&nbsp;2.&nbsp;モジュールディレクトリ構成</b>
 </p>
@@ -6197,7 +8011,7 @@ $JBOSS_HOME/modules/hoge/hoge/util/
 
 					</p>
 <div class="figure">
-<a name="N16709"></a>
+<a name="N16C66"></a>
 <p class="title">
 <b>Figure&nbsp;3.&nbsp;jboss-deployment-structure.xml設定例</b>
 </p>
@@ -6302,6 +8116,94 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
 
 
 
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_3.16." id="category_207"></a>
+<h3 class="title">3.16.JBoss独自のAPI移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>
+			JBoss独自APIを利用している場合は、該当APIがJBossEAP6で利用可能か調査する必要がある。
+
+			該当APIが存在しない場合は、代替案を検討すること。
+
+			以下では既知ナレッジの範囲内で、互換性がないAPIについてのみ示す。
+
+			</p>
+<div class="itemizedlist">
+<p class="title">
+<b>調査したAPI</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>org.jboss.logging.Logger</p>
+</li>
+<li class="listitem">
+<p>org.jboss.security.SimplePrincipal</p>
+</li>
+<li class="listitem">
+<p>org.jboss.security.SimpleGroup</p>
+</li>
+<li class="listitem">
+<p>org.jboss.security.Base64Encoder</p>
+</li>
+<li class="listitem">
+<p>org.jboss.security.auth.spi.AbstractServerLoginModule</p>
+</li>
+<li class="listitem">
+<p>org.jboss.security.auth.spi.DatabaseServerLoginModule</p>
+</li>
+</ul>
+</div>
+<p>
+
+			
+</p>
+<div class="itemizedlist">
+<p class="title">
+<b>互換性がないAPI</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>org.jboss.security.Util.createPasswordHash</p>
+</li>
+</ul>
+</div>
+<p>
+
+		
+</p>
+</div>
+<br>
+<br>
+<a name="tubame_3.16.1." id="category_208"></a>
+<h3 class="title">3.16.1.JBoss独自org.jboss.security.Utilの移行</h3>
+<br>
+<div class="section">
+<div class="titlepage"></div>
+<p>org.jboss.security.Utilは、JBossEAP6ではpicketboxより提供される。
+
+		</p>
+<p>
+			
+</p>
+<div class="itemizedlist">
+<p class="title">
+<b>org.jboss.security.Utilのメソッド</b>
+</p>
+<ul class="itemizedlist" style="list-style-type: disc; ">
+<li class="listitem">
+<p>createPasswordHash</p>
+<p>代替メソッドはorg.jboss.security.Utilには存在しなたいめ、JBossEAP6のpicketboxから提供されるorg.jboss.crypto.CryptoUtilクラスに含まれるcreatePasswordHashを利用する
+					</p>
+</li>
+</ul>
+</div>
+<p>
 		
 </p>
 </div>

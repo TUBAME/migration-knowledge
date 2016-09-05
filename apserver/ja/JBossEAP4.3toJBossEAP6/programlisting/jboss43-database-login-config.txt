@@ -1,0 +1,13 @@
+
+    <application-policy name="messaging">
+       <authentication>
+          <login-module code = "org.jboss.security.auth.spi.DatabaseServerLoginModule"
+             flag = "required">
+             <module-option name = "unauthenticatedIdentity">guest</module-option>
+             <module-option name = "dsJndiName">java:/DefaultDS</module-option>
+             <module-option name = "principalsQuery">SELECT PASSWD FROM JBM_USER WHERE USER_ID=?</module-option>
+             <module-option name = "rolesQuery">SELECT ROLE_ID, 'Roles' FROM JBM_ROLE WHERE USER_ID=?</module-option>
+          </login-module>
+       </authentication>
+    </application-policy>
+  

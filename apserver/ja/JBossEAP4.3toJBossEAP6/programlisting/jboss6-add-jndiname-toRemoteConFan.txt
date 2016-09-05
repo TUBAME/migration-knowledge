@@ -1,0 +1,2 @@
+
+/subsystem=messaging/hornetq-server=default/connection-factory=RemoteConnectionFactory:add-jndi(jndi-binding=java:jboss/exported/jms/sampleRemoteConnectionFactory)

@@ -1,0 +1,7 @@
+
+<datasources>
+  <no-tx-datasource>
+    ...
+    <connection-property name="prepareThreshold">0</connection-property>
+  </no-tx-datasource>
+</datasources>

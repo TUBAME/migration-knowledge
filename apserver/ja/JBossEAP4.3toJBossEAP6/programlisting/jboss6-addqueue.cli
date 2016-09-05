@@ -1,0 +1,6 @@
+ 　
+ #追加
+  jms-queue add --queue-address=任意のキュー名 --entries=JNDI名
+  #削除
+  jms-queue remove --queue-address=キュー名
+  

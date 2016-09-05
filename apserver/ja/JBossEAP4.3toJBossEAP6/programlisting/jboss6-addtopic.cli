@@ -1,0 +1,4 @@
+
+jms-topic add --topic-address=任意のトピック名 --entries=JNDI名
+jms-topic remove --topic-address=JNDI名
+  
