@@ -1,0 +1,4 @@
+
+/subsystem=security/security-domain=exampleUsersRolesSecurity/:add(cache-type=default)
+/subsystem=security/security-domain=exampleUsersRolesSecurity/authentication=classic:add(login-modules=[{"code"=>"UsersRoles", "flag"=>"required", "module-options"=>[("usersProperties"=>"${jboss.server.config.dir}/sample-users.properties"),("rolesProperties"=>"${jboss.server.config.dir}/sample-roles.properties")]}])
+reload

@@ -1,0 +1,24 @@
+
+<servlet>
+  <display-name>ExampleWebService</display-name>
+  <servlet-name>ExampleWebService</servlet-name>
+
+
+  <!-- JBossEAP4.3のJBossWS独自の定義となるためコメント
+  <servlet-class>org.jboss.wsf.stack.jbws.EndpointServlet</servlet-class>
+
+  <init-param>
+    <param-name>jboss.ws.endpoint</param-name>
+    <param-value>example.WebServiceImpl</param-value>
+  </init-param>
+   -->
+
+  <!-- Webサービスのエンドポイントなるクラスをservlet-classに定義する。param-valueで指定されたクラスを指定する-->
+  <servlet-class>example.WebServiceImpl</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>ExampleWebService</servlet-name>
+  <url-pattern>/WebService</url-pattern>
+</servlet-mapping>
+

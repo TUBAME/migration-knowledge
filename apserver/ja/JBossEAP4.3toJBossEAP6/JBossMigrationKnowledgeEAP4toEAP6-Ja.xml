@@ -48,6 +48,9 @@
                         <EntryCategoryRefKey>category_141</EntryCategoryRefKey>
                     </ChildEntry>
                 </ChildEntry>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_210</EntryCategoryRefKey>
+                </ChildEntry>
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_69</EntryCategoryRefKey>
@@ -82,6 +85,18 @@
                     <EntryCategoryRefKey>category_142</EntryCategoryRefKey>
                     <ChildEntry>
                         <EntryCategoryRefKey>category_143</EntryCategoryRefKey>
+                    </ChildEntry>
+                </ChildEntry>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_202</EntryCategoryRefKey>
+                    <ChildEntry>
+                        <EntryCategoryRefKey>category_203</EntryCategoryRefKey>
+                    </ChildEntry>
+                    <ChildEntry>
+                        <EntryCategoryRefKey>category_204</EntryCategoryRefKey>
+                    </ChildEntry>
+                    <ChildEntry>
+                        <EntryCategoryRefKey>category_205</EntryCategoryRefKey>
                     </ChildEntry>
                 </ChildEntry>
             </ChildEntry>
@@ -146,6 +161,30 @@
                 <EntryCategoryRefKey>category_151</EntryCategoryRefKey>
                 <ChildEntry>
                     <EntryCategoryRefKey>category_152</EntryCategoryRefKey>
+                    <ChildEntry>
+                        <EntryCategoryRefKey>category_196</EntryCategoryRefKey>
+                    </ChildEntry>
+                    <ChildEntry>
+                        <EntryCategoryRefKey>category_198</EntryCategoryRefKey>
+                        <ChildEntry>
+                            <EntryCategoryRefKey>category_199</EntryCategoryRefKey>
+                        </ChildEntry>
+                    </ChildEntry>
+                    <ChildEntry>
+                        <EntryCategoryRefKey>category_209</EntryCategoryRefKey>
+                    </ChildEntry>
+                </ChildEntry>
+            </ChildEntry>
+            <ChildEntry>
+                <EntryCategoryRefKey>category_190</EntryCategoryRefKey>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_191</EntryCategoryRefKey>
+                </ChildEntry>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_192</EntryCategoryRefKey>
+                </ChildEntry>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_200</EntryCategoryRefKey>
                 </ChildEntry>
             </ChildEntry>
         </EntryCategory>
@@ -156,12 +195,6 @@
                 <ChildEntry>
                     <EntryCategoryRefKey>category_35</EntryCategoryRefKey>
                 </ChildEntry>
-                <ChildEntry>
-                    <EntryCategoryRefKey>category_36</EntryCategoryRefKey>
-                </ChildEntry>
-                <ChildEntry>
-                    <EntryCategoryRefKey>category_37</EntryCategoryRefKey>
-                </ChildEntry>
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_39</EntryCategoryRefKey>
@@ -170,9 +203,6 @@
                 </ChildEntry>
                 <ChildEntry>
                     <EntryCategoryRefKey>category_41</EntryCategoryRefKey>
-                </ChildEntry>
-                <ChildEntry>
-                    <EntryCategoryRefKey>category_42</EntryCategoryRefKey>
                 </ChildEntry>
             </ChildEntry>
             <ChildEntry>
@@ -210,9 +240,21 @@
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_47</EntryCategoryRefKey>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_195</EntryCategoryRefKey>
+                </ChildEntry>
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_48</EntryCategoryRefKey>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_193</EntryCategoryRefKey>
+                    <ChildEntry>
+                        <EntryCategoryRefKey>category_194</EntryCategoryRefKey>
+                    </ChildEntry>
+                </ChildEntry>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_201</EntryCategoryRefKey>
+                </ChildEntry>
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_55</EntryCategoryRefKey>
@@ -235,6 +277,9 @@
                     </ChildEntry>
                     <ChildEntry>
                         <EntryCategoryRefKey>category_94</EntryCategoryRefKey>
+                        <ChildEntry>
+                            <EntryCategoryRefKey>category_206</EntryCategoryRefKey>
+                        </ChildEntry>
                     </ChildEntry>
                     <ChildEntry>
                         <EntryCategoryRefKey>category_95</EntryCategoryRefKey>
@@ -300,6 +345,12 @@
             </ChildEntry>
             <ChildEntry>
                 <EntryCategoryRefKey>category_188</EntryCategoryRefKey>
+            </ChildEntry>
+            <ChildEntry>
+                <EntryCategoryRefKey>category_207</EntryCategoryRefKey>
+                <ChildEntry>
+                    <EntryCategoryRefKey>category_208</EntryCategoryRefKey>
+                </ChildEntry>
             </ChildEntry>
         </EntryCategory>
     </EntryViewList>
@@ -414,6 +465,22 @@
                         <ChapterCategoryRefKey>category_143</ChapterCategoryRefKey>
                     </ChildChapter>
                 </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>2.3.7.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_202</ChapterCategoryRefKey>
+                    <ChildChapter>
+                        <ChildCapterNo>2.3.7.1.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_203</ChapterCategoryRefKey>
+                    </ChildChapter>
+                    <ChildChapter>
+                        <ChildCapterNo>2.3.7.2.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_204</ChapterCategoryRefKey>
+                    </ChildChapter>
+                    <ChildChapter>
+                        <ChildCapterNo>2.3.7.3.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_205</ChapterCategoryRefKey>
+                    </ChildChapter>
+                </ChildChapter>
             </ChildChapter>
             <ChildChapter>
                 <ChildCapterNo>2.4.</ChildCapterNo>
@@ -489,10 +556,42 @@
             </ChildChapter>
             <ChildChapter>
                 <ChildCapterNo>2.8.</ChildCapterNo>
-                <ChapterCategoryRefKey>category_151</ChapterCategoryRefKey>
+                <ChapterCategoryRefKey>category_190</ChapterCategoryRefKey>
                 <ChildChapter>
                     <ChildCapterNo>2.8.1.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_191</ChapterCategoryRefKey>
+                </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>2.8.2.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_192</ChapterCategoryRefKey>
+                </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>2.8.3.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_200</ChapterCategoryRefKey>
+                </ChildChapter>
+            </ChildChapter>
+            <ChildChapter>
+                <ChildCapterNo>2.9.</ChildCapterNo>
+                <ChapterCategoryRefKey>category_151</ChapterCategoryRefKey>
+                <ChildChapter>
+                    <ChildCapterNo>2.9.1.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_152</ChapterCategoryRefKey>
+                    <ChildChapter>
+                        <ChildCapterNo>2.9.1.1.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_209</ChapterCategoryRefKey>
+                    </ChildChapter>
+                    <ChildChapter>
+                        <ChildCapterNo>2.9.1.2.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_196</ChapterCategoryRefKey>
+                    </ChildChapter>
+                    <ChildChapter>
+                        <ChildCapterNo>2.9.1.3.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_198</ChapterCategoryRefKey>
+                        <ChildChapter>
+                            <ChildCapterNo>2.9.1.3.1.</ChildCapterNo>
+                            <ChapterCategoryRefKey>category_199</ChapterCategoryRefKey>
+                        </ChildChapter>
+                    </ChildChapter>
                 </ChildChapter>
             </ChildChapter>
         </Chapter>
@@ -506,14 +605,6 @@
                     <ChildCapterNo>3.1.1.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_35</ChapterCategoryRefKey>
                 </ChildChapter>
-                <ChildChapter>
-                    <ChildCapterNo>3.1.2.</ChildCapterNo>
-                    <ChapterCategoryRefKey>category_36</ChapterCategoryRefKey>
-                </ChildChapter>
-                <ChildChapter>
-                    <ChildCapterNo>3.1.3.</ChildCapterNo>
-                    <ChapterCategoryRefKey>category_37</ChapterCategoryRefKey>
-                </ChildChapter>
             </ChildChapter>
             <ChildChapter>
                 <ChildCapterNo>3.2.</ChildCapterNo>
@@ -525,10 +616,6 @@
                 <ChildChapter>
                     <ChildCapterNo>3.2.2.</ChildCapterNo>
                     <ChapterCategoryRefKey>category_41</ChapterCategoryRefKey>
-                </ChildChapter>
-                <ChildChapter>
-                    <ChildCapterNo>3.2.3.</ChildCapterNo>
-                    <ChapterCategoryRefKey>category_42</ChapterCategoryRefKey>
                 </ChildChapter>
             </ChildChapter>
             <ChildChapter>
@@ -574,10 +661,26 @@
             <ChildChapter>
                 <ChildCapterNo>3.7.</ChildCapterNo>
                 <ChapterCategoryRefKey>category_47</ChapterCategoryRefKey>
+                <ChildChapter>
+                    <ChildCapterNo>3.7.1.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_195</ChapterCategoryRefKey>
+                </ChildChapter>
             </ChildChapter>
             <ChildChapter>
                 <ChildCapterNo>3.8.</ChildCapterNo>
                 <ChapterCategoryRefKey>category_48</ChapterCategoryRefKey>
+                <ChildChapter>
+                    <ChildCapterNo>3.8.1.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_193</ChapterCategoryRefKey>
+                    <ChildChapter>
+                        <ChildCapterNo>3.8.1.1.</ChildCapterNo>
+                        <ChapterCategoryRefKey>category_194</ChapterCategoryRefKey>
+                    </ChildChapter>
+                </ChildChapter>
+                <ChildChapter>
+                    <ChildCapterNo>3.8.2.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_201</ChapterCategoryRefKey>
+                </ChildChapter>
             </ChildChapter>
             <ChildChapter>
                 <ChildCapterNo>3.9.</ChildCapterNo>
@@ -604,6 +707,10 @@
                     <ChildChapter>
                         <ChildCapterNo>3.12.1.2.</ChildCapterNo>
                         <ChapterCategoryRefKey>category_94</ChapterCategoryRefKey>
+                        <ChildChapter>
+                            <ChildCapterNo>3.12.1.2.1.</ChildCapterNo>
+                            <ChapterCategoryRefKey>category_206</ChapterCategoryRefKey>
+                        </ChildChapter>
                     </ChildChapter>
                     <ChildChapter>
                         <ChildCapterNo>3.12.1.3.</ChildCapterNo>
@@ -687,6 +794,14 @@
                     <ChapterCategoryRefKey>category_165</ChapterCategoryRefKey>
                 </ChildChapter>
             </ChildChapter>
+            <ChildChapter>
+                <ChildCapterNo>3.16.</ChildCapterNo>
+                <ChapterCategoryRefKey>category_207</ChapterCategoryRefKey>
+                <ChildChapter>
+                    <ChildCapterNo>3.16.1.</ChildCapterNo>
+                    <ChapterCategoryRefKey>category_208</ChapterCategoryRefKey>
+                </ChildChapter>
+            </ChildChapter>
         </Chapter>
     </ChapterList>
     <CategoryList>
@@ -753,6 +868,10 @@
             <CategoryName>HAデータソース(ha-xa-datasource)移行</CategoryName>
             <KnowhowRefKey>knowhow_126</KnowhowRefKey>
         </Category>
+        <Category categoryId="category_210" appropriate="true">
+            <CategoryName>JDBCベンダ固有プロパティの移行</CategoryName>
+            <KnowhowRefKey>knowhow_185</KnowhowRefKey>
+        </Category>
         <Category categoryId="category_69" appropriate="true">
             <CategoryName>JBossWebコンテナ設定移行</CategoryName>
         </Category>
@@ -798,6 +917,22 @@
         <Category categoryId="category_143" appropriate="true">
             <CategoryName>ContextのdocBase移行</CategoryName>
             <KnowhowRefKey>knowhow_127</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_202" appropriate="true">
+            <CategoryName>下位互換パラメータの移行</CategoryName>
+            <KnowhowRefKey>knowhow_177</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_203" appropriate="true">
+            <CategoryName>JSP下位互換パラメータ</CategoryName>
+            <KnowhowRefKey>knowhow_178</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_204" appropriate="true">
+            <CategoryName>Servlet下位互換パラメータ</CategoryName>
+            <KnowhowRefKey>knowhow_179</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_205" appropriate="true">
+            <CategoryName>Servlet Cookie下位互換パラメータ</CategoryName>
+            <KnowhowRefKey>knowhow_180</KnowhowRefKey>
         </Category>
         <Category categoryId="category_77" appropriate="true">
             <CategoryName>JBossWebデプロイヤー設定移行</CategoryName>
@@ -878,6 +1013,37 @@
             <CategoryName>セキュリティドメイン移行</CategoryName>
             <KnowhowRefKey>knowhow_132</KnowhowRefKey>
         </Category>
+        <Category categoryId="category_196" appropriate="true">
+            <CategoryName>UsersRolesログインモジュールを利用したセキュリティドメインの移行</CategoryName>
+            <KnowhowRefKey>knowhow_172</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_198" appropriate="true">
+            <CategoryName>Databaseログインモジュールを利用したセキュリティドメインの移行</CategoryName>
+            <KnowhowRefKey>knowhow_173</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_199" appropriate="true">
+            <CategoryName>Databaseログインモジュールを拡張したセキュリティドメインの移行</CategoryName>
+            <KnowhowRefKey>knowhow_174</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_209" appropriate="true">
+            <CategoryName>ConfiguredIdentityログインモジュールを利用したセキュリティドメインの移行</CategoryName>
+            <KnowhowRefKey>knowhow_184</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_190" appropriate="true">
+            <CategoryName>JMS設定移行</CategoryName>
+        </Category>
+        <Category categoryId="category_191" appropriate="true">
+            <CategoryName>JMSキュー及びトピック設定の移行</CategoryName>
+            <KnowhowRefKey>knowhow_167</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_192" appropriate="true">
+            <CategoryName>JMSコネクションファクトリの移行</CategoryName>
+            <KnowhowRefKey>knowhow_168</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_200" appropriate="true">
+            <CategoryName>JMS永続化設定の移行</CategoryName>
+            <KnowhowRefKey>knowhow_175</KnowhowRefKey>
+        </Category>
         <Category categoryId="category_28" appropriate="true">
             <CategoryName>アプリケーション移行</CategoryName>
         </Category>
@@ -888,14 +1054,6 @@
         <Category categoryId="category_35" appropriate="true">
             <CategoryName>Servlet非推奨API</CategoryName>
             <KnowhowRefKey>knowhow_31</KnowhowRefKey>
-        </Category>
-        <Category categoryId="category_36" appropriate="true">
-            <CategoryName>Servlet下位互換パラメータ</CategoryName>
-            <KnowhowRefKey>knowhow_32</KnowhowRefKey>
-        </Category>
-        <Category categoryId="category_37" appropriate="true">
-            <CategoryName>Servlet Cookieに関連する下位互換パラメータ</CategoryName>
-            <KnowhowRefKey>knowhow_33</KnowhowRefKey>
         </Category>
         <Category categoryId="category_39" appropriate="true">
             <CategoryName>JSP移行</CategoryName>
@@ -908,10 +1066,6 @@
         <Category categoryId="category_41" appropriate="true">
             <CategoryName>EL非推奨API</CategoryName>
             <KnowhowRefKey>knowhow_37</KnowhowRefKey>
-        </Category>
-        <Category categoryId="category_42" appropriate="true">
-            <CategoryName>JSP下位互換パラメータ</CategoryName>
-            <KnowhowRefKey>knowhow_38</KnowhowRefKey>
         </Category>
         <Category categoryId="category_29" appropriate="true">
             <CategoryName>JAVAEE非推奨APIの移行</CategoryName>
@@ -961,9 +1115,25 @@
             <CategoryName>JMS移行</CategoryName>
             <KnowhowRefKey>knowhow_43</KnowhowRefKey>
         </Category>
+        <Category categoryId="category_195" appropriate="true">
+            <CategoryName>JMSクライアントの移行</CategoryName>
+            <KnowhowRefKey>knowhow_171</KnowhowRefKey>
+        </Category>
         <Category categoryId="category_48" appropriate="true">
             <CategoryName>Webサービス移行</CategoryName>
             <KnowhowRefKey>knowhow_44</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_193" appropriate="true">
+            <CategoryName>JAX-WS仕様のWebサービス移行</CategoryName>
+            <KnowhowRefKey>knowhow_169</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_194" appropriate="true">
+            <CategoryName>JBoss-WS独自設定の移行</CategoryName>
+            <KnowhowRefKey>knowhow_170</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_201" appropriate="true">
+            <CategoryName>JAX-RPC仕様のWebサービス移行</CategoryName>
+            <KnowhowRefKey>knowhow_176</KnowhowRefKey>
         </Category>
         <Category categoryId="category_55" appropriate="true">
             <CategoryName>CORBA連携移行</CategoryName>
@@ -996,6 +1166,10 @@
         <Category categoryId="category_94" appropriate="true">
             <CategoryName>JBossWebのServlet移行</CategoryName>
             <KnowhowRefKey>knowhow_86</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_206" appropriate="true">
+            <CategoryName>StatusServletの移行</CategoryName>
+            <KnowhowRefKey>knowhow_181</KnowhowRefKey>
         </Category>
         <Category categoryId="category_95" appropriate="true">
             <CategoryName>JBossWebのServletパラメータ移行</CategoryName>
@@ -1078,6 +1252,14 @@
         <Category categoryId="category_188" appropriate="true">
             <CategoryName>JBossCache移行</CategoryName>
             <KnowhowRefKey>knowhow_165</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_207" appropriate="true">
+            <CategoryName>JBoss独自のAPI移行</CategoryName>
+            <KnowhowRefKey>knowhow_182</KnowhowRefKey>
+        </Category>
+        <Category categoryId="category_208" appropriate="true">
+            <CategoryName>JBoss独自org.jboss.security.Utilの移行</CategoryName>
+            <KnowhowRefKey>knowhow_183</KnowhowRefKey>
         </Category>
     </CategoryList>
     <KnowhowList>
@@ -1629,8 +1811,8 @@
                 <CheckItemName>application-managed-security</CheckItemName>
                 <SearchProcess>hsqldb-ds.xml以外のファイルでlocal-tx-datasourceタグ配下のapplication-managed-securityを検索</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -1652,7 +1834,7 @@
 を検索</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
                 <PortabilityDegree>Unknown</PortabilityDegree>
-                <DegreeDetail>不明2</DegreeDetail>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -1734,8 +1916,8 @@
                 <CheckItemName>no-tx-separate-pools</CheckItemName>
                 <SearchProcess>hsqldb-ds.xml以外のファイルでlocal-tx-datasourceタグ配下のno-tx-separate-poolsを検索</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -1952,8 +2134,8 @@
                 <CheckItemName>application-managed-security</CheckItemName>
                 <SearchProcess>hsqldb-ds.xml以外のファイルでxa-datasourceタグ配下のapplication-managed-securityを検索</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -1974,8 +2156,8 @@
                 <SearchProcess>hsqldb-ds.xml以外のファイルでxa-datasourceタグ配下のsecurity-domain-and-application&#xD;
 を検索</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -2125,6 +2307,20 @@
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_185" knowhowDetailRefKey="knowhowDetail_185">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1356" searchRefKey="searchInfo_1354" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>connection-property</CheckItemName>
+                <SearchProcess>*-ds.xmlを対象にconnection-propertyタグを検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_92" knowhowDetailRefKey="knowhowDetail_92">
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>body</KnowhowName>
@@ -2161,8 +2357,8 @@
                 <CheckItemName>maxSpareThreads</CheckItemName>
                 <SearchProcess>server.xmlのconnectorタグのmaxSpareThreads属性の定義を検索</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -2171,8 +2367,8 @@
                 <CheckItemName>minSpareThreads</CheckItemName>
                 <SearchProcess>server.xmlのconnectorタグminSpareThreads属性の定義を検索</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -2251,8 +2447,8 @@
                 <CheckItemName>tomcatAuthentication</CheckItemName>
                 <SearchProcess>server.xmlよりコネクタのtomcatAuthenticationを検索する</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明2</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -2261,8 +2457,8 @@
                 <CheckItemName>ciphers</CheckItemName>
                 <SearchProcess>server.xmlよりコネクタのciphersを検索する</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>-</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -2311,8 +2507,8 @@
                 <CheckItemName>tcpNoDelay</CheckItemName>
                 <SearchProcess>server.xmlよりコネクタのtcpNoDelayを検索する</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>-</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -2341,8 +2537,8 @@
                 <CheckItemName>acceptCount</CheckItemName>
                 <SearchProcess>server.xmlよりコネクタのacceptCountを検索する</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm>acceptCountを利用している場合は、acceptCount(backlog機能)が移行後環境でも必須となるか確認する。</HearingConfirm>
             </CheckItem>
@@ -2351,8 +2547,8 @@
                 <CheckItemName>backlog</CheckItemName>
                 <SearchProcess>server.xmlよりコネクタのbacklogを検索する</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm>acceptCountを利用している場合は、acceptCount(backlog機能)が移行後環境でも必須となるか確認する。</HearingConfirm>
             </CheckItem>
@@ -2361,7 +2557,7 @@
                 <CheckItemName>emptySessionPath</CheckItemName>
                 <SearchProcess>server.xmlのhttp connectorタグのemptySessionPath属性の定義を検索</SearchProcess>
                 <PortabilityFactor>AP サーバ仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
+                <PortabilityDegree>Middle</PortabilityDegree>
                 <DegreeDetail>低2</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm>emptySessionPathがtrueの場合、JSessionIDが再利用される仕様となり、セキュリティ的なリスクもあるため、業務要件を確認して、移行後の環境でも有効とすべきパラメータか確認する必要がある。</HearingConfirm>
@@ -2371,8 +2567,8 @@
                 <CheckItemName>bufferSize</CheckItemName>
                 <SearchProcess>server.xmlのconnector connectorタグのbufferSize属性の定義を検索</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低2</DegreeDetail>
+                <PortabilityDegree>Unknown</PortabilityDegree>
+                <DegreeDetail>-</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
@@ -2753,6 +2949,52 @@
                 <DegreeDetail>低2</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_177" knowhowDetailRefKey="knowhowDetail_177">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_178" knowhowDetailRefKey="knowhowDetail_178">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1345" searchRefKey="searchInfo_1341" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>JSP_COMPLIANCE</CheckItemName>
+                <SearchProcess>server.xmlを検索対象にServiceタグのname属性が'jboss.webであることを検索する。</SearchProcess>
+                <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_179" knowhowDetailRefKey="knowhowDetail_179">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1346" searchRefKey="searchInfo_1344" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>STRICT_SERVLET_COMPLIANCE</CheckItemName>
+                <SearchProcess>web.xmlを検索する</SearchProcess>
+                <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>検索結果ファイル(web.xml)が業務アプリケーション用の設定ファイルであることを確認する。web.xmlは、JBossの管理Webアプリケーションでも利用されているため、検索結果ファイル(web.xml)がinvoker.war、jboss-web.deployer、ROOT.war、jbossws-context.war、jmx-console.war、juddi.war、web-console.warディレクトリ配下の設定ファイルの場合は移植対象とならない。</VisualConfirm>
+                <HearingConfirm>検知されたweb.xml(Webアプリケーション）について、Servlet下位互換のためにorg.apache.catalina. STRICT_SERVLET_COMPLIANCEというシステムプロパティを有効にするか確認する。なお、このパラメータはWebアプリケーション単位でなく、JBossのインスタンス(jvm)単位で有効となる、注意すること。</HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_180" knowhowDetailRefKey="knowhowDetail_180">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1347" searchRefKey="searchInfo_1345" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>SERVLET_COOKIE_COMPLIANCE</CheckItemName>
+                <SearchProcess>web.xmlを検索する</SearchProcess>
+                <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>検索結果ファイル(web.xml)が業務アプリケーション用の設定ファイルであることを確認する。web.xmlは、JBossの管理Webアプリケーションでも利用されているため、検索結果ファイル(web.xml)がinvoker.war、jboss-web.deployer、ROOT.war、jbossws-context.war、jmx-console.war、juddi.war、web-console.warディレクトリ配下の設定ファイルの場合は移植対象とならない。</VisualConfirm>
+                <HearingConfirm>検知されたweb.xml(Webアプリケーション）について、Servlet Cookieに関連する下位互換パラメータを有効にするか確認する。なお、このパラメータはWebアプリケーション単位でなく、JBossのインスタンス(jvm)単位で有効となる、注意すること。</HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_73" knowhowDetailRefKey="knowhowDetail_73">
@@ -3283,10 +3525,188 @@
                 <CheckItemName>security-domain</CheckItemName>
                 <SearchProcess>loging-config.xmlよりデフォルト設定以外のセキュリティドメイン設定が設定されていないか確認する。</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
-                <PortabilityDegree>Unknown</PortabilityDegree>
-                <DegreeDetail>不明2</DegreeDetail>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>該当するセキュリティドメインは設定のみで、jboss-web.xmlなどにより、セキュリティドメインが適用されていないものは移植不要とする。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_172" knowhowDetailRefKey="knowhowDetail_172">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1353" searchRefKey="searchInfo_1351" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>login-config.xmlより、デフォルト以外のorg.jboss.security.auth.spi.UsersRolesLoginModuleを検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_173" knowhowDetailRefKey="knowhowDetail_173">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1352" searchRefKey="searchInfo_1350" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>login-config.xmlよりorg.jboss.security.auth.spi.DatabaseServerLoginModuleを検索する。なお、messaing用にデフォルトでDatabaseServerLoginModuleが定義されるので、messaing用以外の設定を検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_174" knowhowDetailRefKey="knowhowDetail_174">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1337" searchRefKey="searchInfo_1333" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>login-config.xmlを対象にlogin-moduleタグのcode属性がorg.jboss.security.auth.spi.DatabaseServerLoginModule以外でmodule-optionタグのname属性にdsJndiNameが設定されているか検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_184" knowhowDetailRefKey="knowhowDetail_184">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1354" searchRefKey="searchInfo_1352" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>login-config.xmlを対象にデフォルト以外のorg.jboss.resource.security.ConfiguredIdentityLoginModule設定を検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_167" knowhowDetailRefKey="knowhowDetail_167">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1328" searchRefKey="searchInfo_1324" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>デフォルトで定義されていないJMSキュー、JMSトピックを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>該当ファイルが実際に利用されるプロファイルであることを確認する。該当ファイルが利用されないプロファイルの場合、移植不要項目とする。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_168" knowhowDetailRefKey="knowhowDetail_168">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1329" searchRefKey="searchInfo_1325" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>デフォルトで定義されていないユーザによって明示的に設定されたコネクションファクトリを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>該当ファイルが実際に利用されるプロファイルであることを確認する。該当ファイルが利用されないプロファイルの場合、移植不要項目とする。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1338" searchRefKey="searchInfo_1334" searchExistance="true">
+                <CheckItemNo>2</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>*.propertiesファイルを対象に/ConnectionFactoryを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>該当のpropertiesで指定された値がJMSクライアントでlookupするJNDI名として利用されていることを確認する。なお、JNDI名がjava:/ConnectionFactoryでルックアップされる場合は移植不要とする。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1339" searchRefKey="searchInfo_1335" searchExistance="true">
+                <CheckItemNo>3</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>*.javaファイルを対象に/ConnectionFactoryを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>JMSクライアントがlookupするJNDI名が/ConnectionFactoryであることを確認する。お、JNDI名がjava:/ConnectionFactoryでルックアップされる場合は移植不要とする。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1340" searchRefKey="searchInfo_1336" searchExistance="true">
+                <CheckItemNo>4</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>*.propertiesファイルを対象に/XAConnectionFactoryを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>該当のpropertiesで指定された値がJMSクライアントでlookupするJNDI名として利用されていることを確認する。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1341" searchRefKey="searchInfo_1337" searchExistance="true">
+                <CheckItemNo>5</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>*.javaファイルを対象に/ClusteredConnectionFactoryを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>JMSクライアントがlookupするJNDI名が/ClusteredConnectionFactoryであることを確認する。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1342" searchRefKey="searchInfo_1338" searchExistance="true">
+                <CheckItemNo>6</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>*.propertiesファイルを対象に/ClusteredConnectionFactoryを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>該当のpropertiesで指定された値がJMSクライアントでlookupするJNDI名として利用されていることを確認する。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1343" searchRefKey="searchInfo_1339" searchExistance="true">
+                <CheckItemNo>7</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>*.javaファイルを対象に/ClusteredXAConnectionFactoryを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>JMSクライアントがlookupするJNDI名が/ClusteredXAConnectionFactoryであることを確認する。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1344" searchRefKey="searchInfo_1340" searchExistance="true">
+                <CheckItemNo>8</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>*.propertiesファイルを対象に/ClusteredXAConnectionFactoryを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm>該当のpropertiesで指定された値がJMSクライアントでlookupするJNDI名として利用されていることを確認する。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_175" knowhowDetailRefKey="knowhowDetail_175">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1330" searchRefKey="searchInfo_1326" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>null-persistence-service.xmlファイル以外の*-persistence-service.xmlを検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Middle</PortabilityDegree>
+                <DegreeDetail>中</DegreeDetail>
+                <VisualConfirm>該当ファイルが実際に利用されるプロファイルであることを確認する。該当ファイルが利用されないプロファイルの場合、移植不要項目とする。</VisualConfirm>
+                <HearingConfirm>JBossEAP6では、JMSの永続化はジャーナルとなるため、移行元環境のようにJMSの永続化としてデータベースは採用できない。システム要件として、JMSの永続化先としてデータベースが必須となる場合は、JBossEAP6に移植できないため、JMSの永続化先としてジャーナルで問題となるか、ヒアリングを行う。</HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1331" searchRefKey="searchInfo_1327" searchExistance="true">
+                <CheckItemNo>2</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>null-persistence-service.xmlファイルを検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Middle</PortabilityDegree>
+                <DegreeDetail>中</DegreeDetail>
+                <VisualConfirm>該当ファイルが実際に利用されるプロファイルであることを確認する。該当ファイルが利用されないプロファイルの場合、移植不要項目とする。</VisualConfirm>
+                <HearingConfirm>JBossEAP6では、JMSの永続化はジャーナルとなるため、移行元環境のようにJMSの永続化としてメモリは採用できない。システム要件として、JMSの永続化先としてメモリが必須となる場合は、JBossEAP6に移植できないため、JMSの永続化先としてジャーナルで問題となるか、ヒアリングを行う。</HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_30" knowhowDetailRefKey="knowhowDetail_30">
@@ -4267,34 +4687,6 @@
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
-        <KnowhowInfomation knowhowId="knowhow_32" knowhowDetailRefKey="knowhowDetail_32">
-            <KnowhowNo>1</KnowhowNo>
-            <KnowhowName>body</KnowhowName>
-            <CheckItem checkItemId="checkItem_787" searchRefKey="searchInfo_786" searchExistance="true">
-                <CheckItemNo>1</CheckItemNo>
-                <CheckItemName>STRICT_SERVLET_COMPLIANCE</CheckItemName>
-                <SearchProcess>web.xmlを検索する</SearchProcess>
-                <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
-                <VisualConfirm>検索結果ファイル(web.xml)が業務アプリケーション用の設定ファイルであることを確認する。web.xmlは、JBossの管理Webアプリケーションでも利用されているため、検索結果ファイル(web.xml)がinvoker.war、jboss-web.deployer、ROOT.war、jbossws-context.war、jmx-console.war、juddi.war、web-console.warディレクトリ配下の設定ファイルの場合は移植対象とならない。</VisualConfirm>
-                <HearingConfirm>検知されたweb.xml(Webアプリケーション）について、Servlet下位互換のためにorg.apache.catalina. STRICT_SERVLET_COMPLIANCEというシステムプロパティを有効にするか確認する。なお、このパラメータはWebアプリケーション単位でなく、JBossのインスタンス(jvm)単位で有効となる、注意すること。</HearingConfirm>
-            </CheckItem>
-        </KnowhowInfomation>
-        <KnowhowInfomation knowhowId="knowhow_33" knowhowDetailRefKey="knowhowDetail_33">
-            <KnowhowNo>1</KnowhowNo>
-            <KnowhowName>body</KnowhowName>
-            <CheckItem checkItemId="checkItem_788" searchRefKey="searchInfo_787" searchExistance="true">
-                <CheckItemNo>1</CheckItemNo>
-                <CheckItemName>SERVLET_COOKIE_COMPLIANCE</CheckItemName>
-                <SearchProcess>web.xmlを検索する</SearchProcess>
-                <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
-                <VisualConfirm>検索結果ファイル(web.xml)が業務アプリケーション用の設定ファイルであることを確認する。web.xmlは、JBossの管理Webアプリケーションでも利用されているため、検索結果ファイル(web.xml)がinvoker.war、jboss-web.deployer、ROOT.war、jbossws-context.war、jmx-console.war、juddi.war、web-console.warディレクトリ配下の設定ファイルの場合は移植対象とならない。</VisualConfirm>
-                <HearingConfirm>検知されたweb.xml(Webアプリケーション）について、Servlet Cookieに関連する下位互換パラメータを有効にするか確認する。なお、このパラメータはWebアプリケーション単位でなく、JBossのインスタンス(jvm)単位で有効となる、注意すること。</HearingConfirm>
-            </CheckItem>
-        </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_35" knowhowDetailRefKey="knowhowDetail_35">
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>body</KnowhowName>
@@ -4745,20 +5137,6 @@
                 <DegreeDetail>低1</DegreeDetail>
                 <VisualConfirm>非推奨APIの利用有無を目視で確認する</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
-            </CheckItem>
-        </KnowhowInfomation>
-        <KnowhowInfomation knowhowId="knowhow_38" knowhowDetailRefKey="knowhowDetail_38">
-            <KnowhowNo>1</KnowhowNo>
-            <KnowhowName>body</KnowhowName>
-            <CheckItem checkItemId="checkItem_789" searchRefKey="searchInfo_788" searchExistance="true">
-                <CheckItemNo>1</CheckItemNo>
-                <CheckItemName>JSP_COMPLIANCE</CheckItemName>
-                <SearchProcess>web.xmlを検索する</SearchProcess>
-                <PortabilityFactor>JSP/Servlet 仕様の変更</PortabilityFactor>
-                <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低1</DegreeDetail>
-                <VisualConfirm>検索結果ファイル(web.xml)が業務アプリケーション用の設定ファイルであることを確認する。web.xmlは、JBossの管理Webアプリケーションでも利用されているため、検索結果ファイル(web.xml)がinvoker.war、jboss-web.deployer、ROOT.war、jbossws-context.war、jmx-console.war、juddi.war、web-console.warディレクトリ配下の設定ファイルの場合は移植対象とならない。</VisualConfirm>
-                <HearingConfirm>検知されたweb.xml(Webアプリケーション）について、JSP下位互換のために各種システムプロパティを有効にするか確認する。なお、このパラメータはWebアプリケーション単位でなく、JBossのインスタンス(jvm)単位で有効となる、注意すること。</HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_25" knowhowDetailRefKey="knowhowDetail_25">
@@ -7686,8 +8064,28 @@
                 <SearchProcess>InitialContextインスタンスのlookupを呼び出している箇所を検索する</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
                 <PortabilityDegree>Low</PortabilityDegree>
-                <DegreeDetail>低2</DegreeDetail>
+                <DegreeDetail>低1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1361" searchRefKey="searchInfo_1359" searchExistance="true">
+                <CheckItemNo>2</CheckItemNo>
+                <CheckItemName>lookup</CheckItemName>
+                <SearchProcess>javaファイルを対象にjava:を呼び出している箇所を検索する</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm>該当箇所を確認し、/を付与する必要があるものを移植項目とする。とくに対応が必要ないものは、移植不要とする。</VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1362" searchRefKey="searchInfo_1360" searchExistance="true">
+                <CheckItemNo>3</CheckItemNo>
+                <CheckItemName>lookup</CheckItemName>
+                <SearchProcess>propertiesファイルを対象にjava:を呼び出している箇所を検索する</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm>該当箇所を確認し、/を付与する必要があるものを移植項目とする。とくに対応が必要ないものは、移植不要とする。</VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
@@ -7708,6 +8106,46 @@
                 <CheckItemNo>2</CheckItemNo>
                 <CheckItemName>jnp</CheckItemName>
                 <SearchProcess>javaファイルを対象にキーワードjnp:で検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1357" searchRefKey="searchInfo_1355" searchExistance="true">
+                <CheckItemNo>3</CheckItemNo>
+                <CheckItemName>NamingContextFactory</CheckItemName>
+                <SearchProcess>propertiesファイルを対象にキーワードorg.jnp.interfaces.NamingContextFactoryで検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1358" searchRefKey="searchInfo_1356" searchExistance="true">
+                <CheckItemNo>4</CheckItemNo>
+                <CheckItemName>NamingContextFactory</CheckItemName>
+                <SearchProcess>javaファイルを対象にキーワードorg.jnp.interfaces.NamingContextFactoryで検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1359" searchRefKey="searchInfo_1357" searchExistance="true">
+                <CheckItemNo>5</CheckItemNo>
+                <CheckItemName>jnp.interfaces</CheckItemName>
+                <SearchProcess>javaファイルを対象にキーワードorg.jboss.naming:org.jnp.interfacesで検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1360" searchRefKey="searchInfo_1358" searchExistance="true">
+                <CheckItemNo>6</CheckItemNo>
+                <CheckItemName>jnp.interfaces</CheckItemName>
+                <SearchProcess>propertiesファイルを対象にキーワードorg.jboss.naming:org.jnp.interfacesで検索する。</SearchProcess>
                 <PortabilityFactor>AP サーバ固有</PortabilityFactor>
                 <PortabilityDegree>Low</PortabilityDegree>
                 <DegreeDetail>低1</DegreeDetail>
@@ -7899,10 +8337,56 @@
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_171" knowhowDetailRefKey="knowhowDetail_171">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+        </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_44" knowhowDetailRefKey="knowhowDetail_44">
             <KnowhowNo>1</KnowhowNo>
             <KnowhowName>body</KnowhowName>
-            <CheckItem checkItemId="checkItem_859" searchRefKey="searchInfo_858" searchExistance="true">
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_169" knowhowDetailRefKey="knowhowDetail_169">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1355" searchRefKey="searchInfo_1353" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>javaファイルを対象にjavax.jws.WebServiceアノテーションを検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_170" knowhowDetailRefKey="knowhowDetail_170">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1335" searchRefKey="searchInfo_1331" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>web.xmlファイルを対象にparam-nameタグがjboss.ws.endpointかどうか検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1336" searchRefKey="searchInfo_1332" searchExistance="true">
+                <CheckItemNo>2</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>web.xmlファイルを対象にservlet-classタグがorg.jboss.wsf.stack.jbws.EndpointServletかどうか検索する。</SearchProcess>
+                <PortabilityFactor>Weblogic 固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低2</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_176" knowhowDetailRefKey="knowhowDetail_176">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1333" searchRefKey="searchInfo_1329" searchExistance="true">
                 <CheckItemNo>1</CheckItemNo>
                 <CheckItemName>jax-rpc</CheckItemName>
                 <SearchProcess>webservices.xmlを検索</SearchProcess>
@@ -7912,7 +8396,7 @@
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm></HearingConfirm>
             </CheckItem>
-            <CheckItem checkItemId="checkItem_989" searchRefKey="searchInfo_986" searchExistance="true">
+            <CheckItem checkItemId="checkItem_1334" searchRefKey="searchInfo_1330" searchExistance="true">
                 <CheckItemNo>2</CheckItemNo>
                 <CheckItemName>jaxrpc-mapping</CheckItemName>
                 <SearchProcess>jaxrpc-mapping.xmlを検索する</SearchProcess>
@@ -8103,6 +8587,20 @@
                 <DegreeDetail>不明1</DegreeDetail>
                 <VisualConfirm></VisualConfirm>
                 <HearingConfirm>移行後の環境でもphp用のGatewayが必要かシステム要件を確認する。php用のGatewayが必要ない場合は移植項目としない。</HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_181" knowhowDetailRefKey="knowhowDetail_181">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1348" searchRefKey="searchInfo_1346" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>web.xmlにorg.jboss.web.tomcat.service.StatusServletが定義されていないか検索する</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
         <KnowhowInfomation knowhowId="knowhow_87" knowhowDetailRefKey="knowhowDetail_87">
@@ -8482,6 +8980,34 @@
 移行後の環境では利用できません。またJBossEAP6ではinfinispanを利用した実装に移植する必要がありますが、サポートを受ける場合はJBoss Datagridのサブスクリプションが別途必要となります。</HearingConfirm>
             </CheckItem>
         </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_182" knowhowDetailRefKey="knowhowDetail_182">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+        </KnowhowInfomation>
+        <KnowhowInfomation knowhowId="knowhow_183" knowhowDetailRefKey="knowhowDetail_183">
+            <KnowhowNo>1</KnowhowNo>
+            <KnowhowName>body</KnowhowName>
+            <CheckItem checkItemId="checkItem_1350" searchRefKey="searchInfo_1348" searchExistance="true">
+                <CheckItemNo>1</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>javaファイルを対象にorg.jboss.security.Util.createPasswordHashを検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+            <CheckItem checkItemId="checkItem_1351" searchRefKey="searchInfo_1349" searchExistance="true">
+                <CheckItemNo>2</CheckItemNo>
+                <CheckItemName>checkitem</CheckItemName>
+                <SearchProcess>javaファイルを対象にorg.jboss.security.Util.createPasswordHashを検索する。</SearchProcess>
+                <PortabilityFactor>AP サーバ固有</PortabilityFactor>
+                <PortabilityDegree>Low</PortabilityDegree>
+                <DegreeDetail>低1</DegreeDetail>
+                <VisualConfirm></VisualConfirm>
+                <HearingConfirm></HearingConfirm>
+            </CheckItem>
+        </KnowhowInfomation>
     </KnowhowList>
     <DocBookList>
         <DocBook articleId="knowhowDetail_25">
@@ -8535,92 +9061,6 @@
                 </ns2:section>
             </ns2:article>
         </DocBook>
-        <DocBook articleId="knowhowDetail_32">
-            <ns2:article>
-                <ns2:info>
-                    <ns2:title>body</ns2:title>
-                </ns2:info>
-                <ns2:section>
-                    <ns2:para>JBossEAP4.3(Tomcat)では、Servlet下位互換のためにorg.apache.catalina.
-			STRICT_SERVLET_COMPLIANCEというシステムプロパティがある。このプロパティはJBossEAP4.3及びJBossEAP6でもデフォルトでtrueとなり、移行後のJBossEAP6環境でとくに設定変更は必要ない。</ns2:para>
-                    <ns2:para>
-			<ns2:command ns3:href="https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Specifications">https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Specifications
-			</ns2:command>
-		</ns2:para>
-                    <ns2:orderedlist>
-                        <ns2:title>TomcatのSTRICT_SERVLET_COMPLIANCEで有効になるパラメータと、JBossEAP4.3及びJBossEAP6での実装について</ns2:title>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.catalina.core.ApplicationContext.GET_RESOURCE_REQUIRE_SLASH</ns2:para>
-                            <ns2:para>trueの場合、ServletContext.getResource()またはServletContext.getResourceAsStream() に渡されたパスは 、「/」で始まる必要がある。</ns2:para>
-                            <ns2:para>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、JBossEAP4.3では、リソースのURLにスラッシュを必須としている。</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.catalina.core.ApplicationDispatcher.WRAP_SAME_OBJECT</ns2:para>
-                            <ns2:para>trueの場合、アプリケーションディスパッチャに渡されるラップされたリクエストまたはレスポンスオブジェクトは、元のリクエストまたはレスポンスをラップしていることを保証するためにチェックされる。</ns2:para>
-                            <ns2:para>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.catalina.core.StandardHostValve.ACCESS_SESSION</ns2:para>
-                            <ns2:para>trueの場合、セッションに関連付けられているすべてのリクエストは、セッションの最終アクセス時刻を更新させる。これはリクエストが明示的にセッションにアクセスするかどうかに関係ない</ns2:para>
-                            <ns2:para>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.catalina.session.StandardSession.ACTIVITY_CHECK</ns2:para>
-                            <ns2:para>trueの場合、Tomcatは、各セッションのアクティブなリクエストの数を追跡する。</ns2:para>
-                            <ns2:para>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.tomcat.util.http.ServerCookie.ALWAYS_ADD_EXPIRES</ns2:para>
-                            <ns2:para>trueの場合、Tomcatはバージョン0 より後のCookie に対して、常にSetCookie ヘッダにexpire パラメータを追加する。これは、IE にSetCookie ヘッダ内のMax-Age パラメータを無視させるという、既知のIE6 とIE7 のバグの回避策である。</ns2:para>
-                            <ns2:para>JBossEAP4.3(JBossWeb)にはこのシステムプロパティは存在しないが、JBossEAP6(JBossWeb)でこのパラメータが存在する</ns2:para>
-                        </ns2:listitem>
-                    </ns2:orderedlist>
-                </ns2:section>
-            </ns2:article>
-        </DocBook>
-        <DocBook articleId="knowhowDetail_33">
-            <ns2:article>
-                <ns2:info>
-                    <ns2:title>body</ns2:title>
-                </ns2:info>
-                <ns2:section>
-                    <ns2:para>JBossEAP6(Tomcat)では、クッキーに関連する下位互換パラメータが存在する。業務アプリケーションにおけるクッキーに関連する仕様を確認し、
-			必要に応じてクッキーに関連する下位互換パラメータを有効にする必要がある。
-		</ns2:para>
-                    <ns2:itemizedlist>
-                        <ns2:title>JBossEAP6(Tomcat)で提供するクッキーに関連する下位互換パラメータ</ns2:title>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.tomcat.util.http.
-					ServerCookie.ALLOW_EQUALS_IN_VALUE</ns2:para>
-                            <ns2:para>クッキーの値に=(イコール)を許可するかを指定。</ns2:para>
-                            <ns2:para>JBossEAP4.3及びJBossEAP6でこのシステムプロパティは存在しない。クッキーの値の特殊文字を利用する場合は、以下のALLOW_HTTP_SEPARATORS_IN_V0を有効にして対応する。</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.tomcat.util.http.
-					ServerCookie.ALLOW_HTTP_SEPARATORS_IN_V0</ns2:para>
-                            <ns2:para>setCookie時に、クッキーのvalueに,: ()&lt;&gt;@:\"[]?={}\tの特殊文字があった場合にエラーとなり、デフォルトは許可しないが
-					このパラメータを有効にすると、,: ()&lt;&gt;@:\"[]?={}\tの特殊文字があった場合にvalue全体をダブルクォートで囲む。</ns2:para>
-                            <ns2:para>JBossEAP4.3では、このシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。
-クッキーのvalueに特殊文字が含まれる場合、ALLOW_HTTP_SEPARATORS_IN_V0はfalseがデフォルトで設定され、
-JBossEAP4.3上では許容されていたものが、移行後のJBossEAP6では許容されなくなり、エラーが発生する可能性がある。
-この場合は、ALLOW_HTTP_SEPARATORS_IN_V0システムプロパティを有効にする必要がある。
-					</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.tomcat.util.http.ServerCookie.FWD_SLASH_IS_SEPARATOR
-				</ns2:para>
-                            <ns2:para>クッキーの値の文字列に対して、スラッシュもエスケープする場合は、有効にする必要がある。
-				</ns2:para>
-                            <ns2:para>JBossEAP4.3(JBossWeb)は、このパラメータは存在せず、デフォルトでスラッシュをエスケープする。JBossEAP6は、このパラメータが存在し、スラッシュをエスケープしない。</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>クッキー名のvalidationにRFC2109Validatorが利用される</ns2:para>
-                            <ns2:para>JBossEAP4.3及びJBossEAP6にはこのValidatorは存在しないため、JBossEAP4.3からJBossEAP6への移植にあたっては検討する必要がない。</ns2:para>
-                        </ns2:listitem>
-                    </ns2:itemizedlist>
-                </ns2:section>
-            </ns2:article>
-        </DocBook>
         <DocBook articleId="knowhowDetail_35">
             <ns2:article>
                 <ns2:info>
@@ -8654,50 +9094,6 @@ JBossEAP4.3上では許容されていたものが、移行後のJBossEAP6では
                     <ns2:para>
                         <ns2:command ns3:href="http://docs.oracle.com/javaee/6/api/deprecated-list.html">http://docs.oracle.com/javaee/6/api/deprecated-list.html</ns2:command>
                     </ns2:para>
-                </ns2:section>
-            </ns2:article>
-        </DocBook>
-        <DocBook articleId="knowhowDetail_38">
-            <ns2:article>
-                <ns2:info>
-                    <ns2:title>body</ns2:title>
-                </ns2:info>
-                <ns2:section>
-                    <ns2:para>JBossEAP6ののJSP実装(jasper)は、JSP仕様への対応で、下位互換がなくなるものをシステムプロパティで対応可能としている。
-		</ns2:para>
-                    <ns2:para>
-			<ns2:command ns3:href="https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Jasper">https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Jasper
-			</ns2:command>
-		</ns2:para>
-                    <ns2:itemizedlist>
-                        <ns2:title>JSP仕様に関連するjasperのシステムプロパティ</ns2:title>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.jasper.compiler.Generator.STRICT_GET_PROPERTY</ns2:para>
-                            <ns2:para>trueの場合、JSP2.0以降の仕様で規定され、JSPプロセッサに依存導入されたjsp:getPropertyアクションはオブジェクトリファレンスを持たなければならない。オブジェクトリファレンスを持たない場合エラーとなる。</ns2:para>
-                            <ns2:para>
-					参考：
-					<ns2:command ns3:href="https://bz.apache.org/bugzilla/show_bug.cgi?id=48701">https://bz.apache.org/bugzilla/show_bug.cgi?id=48701
-					</ns2:command>
-				</ns2:para>
-                            <ns2:para>JBossEAP4.3ではこのシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。デフォルトはfalseとなるため、下位互換対応する場合は、有効にする必要がある。</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING</ns2:para>
-                            <ns2:para>falseの場合は、JSP属性に引用符をエスケープするための要件が緩和される。その結果、エスケープされていない引用符は、エラーを発生しなくなる</ns2:para>
-                            <ns2:para>
-					JBossEAP6ではスクリプトレット等でダブルクォートがあった場合にエスケープしない場合とエラーになる。
-					参考：
-					<ns2:command ns3:href="https://bz.apache.org/bugzilla/show_bug.cgi?id=45015">https://bz.apache.org/bugzilla/show_bug.cgi?id=45015
-					</ns2:command>
-				</ns2:para>
-                            <ns2:para>JBossEAP4.3ではこのシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。デフォルトでtrueとなる。</ns2:para>
-                        </ns2:listitem>
-                        <ns2:listitem>
-                            <ns2:para>org.apache.jasper.compiler.Parser.STRICT_WHITESPACE</ns2:para>
-                            <ns2:para>falseの場合は、属性名の前に空白文字がない記述を許容する。</ns2:para>
-                            <ns2:para>JBossEAP4.3及びJBossEAP6ではこのシステムプロパティは存在しない</ns2:para>
-                        </ns2:listitem>
-                    </ns2:itemizedlist>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -8903,8 +9299,12 @@ JTAトランザクションの利用有無を確認する際は、注意が必�
                     <ns2:title>body</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>JBossEAP4.3 はJ2EE1.4に準拠したアプリケーションサーバでJMSコンテナとして動作する。
-JBossEAP6の場合は、TODO:</ns2:para>
+                    <ns2:para>
+			JBossEAP4.3 はJ2EE1.4に準拠したアプリケーションサーバでJMSコンテナとして動作する。
+			 
+
+
+		</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -8914,7 +9314,46 @@ JBossEAP6の場合は、TODO:</ns2:para>
                     <ns2:title>body</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>JBossEAP4.3 はJ2EE1.4に準拠したアプリケーションサーバでWebサービス(JAX-RPC)のコンテナとして動作する。</ns2:para>
+                    <ns2:para>
+			JBossEAP4.3では、JAX-RPC及びJAX-WSが利用可能であり、JBossEAP6でも同様に利用可能である。
+			ただし、JAX-RPCはレガシーな仕様であるため、JAX-WSの移行を推奨する。
+
+			<ns2:note>
+                            <ns2:para>JavaEE7に対応しているJBossEAP7では、JAX-RPCは利用することができなくなっているので注意すること。
+				</ns2:para>
+                        </ns2:note>
+
+			<ns2:table frame="all">
+                            <ns2:title>JBossのWebサービス仕様</ns2:title>
+                            <ns2:tgroup cols="2">
+<ns2:thead>
+    <ns2:row>
+        <ns2:entry>JBossバージョン</ns2:entry>
+        <ns2:entry>JAX-RPC</ns2:entry>
+        <ns2:entry>JAX-WS</ns2:entry>
+    </ns2:row>
+</ns2:thead>
+<ns2:tbody>
+    <ns2:row>
+        <ns2:entry>JBossEAP4.3</ns2:entry>
+        <ns2:entry>1.1</ns2:entry>
+        <ns2:entry>2.0</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JBossEAP6</ns2:entry>
+        <ns2:entry>1.1</ns2:entry>
+        <ns2:entry>2.2</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JBossEAP7</ns2:entry>
+        <ns2:entry>×(利用不可)</ns2:entry>
+        <ns2:entry>2.2</ns2:entry>
+    </ns2:row>
+</ns2:tbody>
+                            </ns2:tgroup>
+                        </ns2:table>
+
+		</ns2:para>
                     <ns2:para>JBossEAP6の場合は、TODO:</ns2:para>
                 </ns2:section>
             </ns2:article>
@@ -10491,9 +10930,11 @@ com.example:archive=unique-archive-name
 <ns2:para>org.jboss.web.php.Handler</ns2:para>
 <ns2:para>PHP Gatewayを可能とするSerlvet</ns2:para>
                             </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>org.jboss.web.tomcat.service.StatusServlet</ns2:para>
+<ns2:para>JBossEAP4.3に登録されるMBean情報より、JBossのステータスを表示する。</ns2:para>
+                            </ns2:listitem>
                         </ns2:itemizedlist>
-
-			JBoss独自の機能となるため、移行後の環境でも、上記の機能が必要とする場合は、別途検討が必要である。
 		</ns2:para>
                 </ns2:section>
             </ns2:article>
@@ -11053,10 +11494,75 @@ ln -s JBOSS_HOME/data/txt /data/txt
 <ns2:para>$JBOSS_HOME/conf/jboss-log4j.xml</ns2:para>
                             </ns2:listitem>
                         </ns2:itemizedlist>
-			セキュリティドメイン設定では、JBossが提供するログインモジュールの設定が行われる。アプリケーションでJBossが提供するログインモジュールを利用している場合は、JBossEAP6でも
-			同等な認証機能が実現可能か、別途検討する必要がある。
-			
-			
+			セキュリティドメイン名は、application-policyタグのname属性で決定され、デフォルトで以下のセキュリティドメインが設定される。
+
+			<ns2:table frame="all">
+                            <ns2:title>JBossのWebサービス仕様</ns2:title>
+                            <ns2:tgroup cols="2">
+<ns2:thead>
+    <ns2:row>
+        <ns2:entry>セキュリティドメイン名</ns2:entry>
+        <ns2:entry>概要 </ns2:entry>
+        <ns2:entry>備考</ns2:entry>
+    </ns2:row>
+</ns2:thead>
+<ns2:tbody>
+    <ns2:row>
+        <ns2:entry>client-login</ns2:entry>
+        <ns2:entry>MBeanやServletがEJBにアクセス際にApplication Server VM
+								内のクライアントによって利用される。
+							</ns2:entry>
+        <ns2:entry/>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>jmx-console</ns2:entry>
+        <ns2:entry>jmx-console Webコンソール用</ns2:entry>
+        <ns2:entry>デフォルトは、コメントされており、jmx-consoleセキュリティドメインは適用されない。</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>web-console</ns2:entry>
+        <ns2:entry>Webコンソール用</ns2:entry>
+        <ns2:entry/>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JBossWS</ns2:entry>
+        <ns2:entry>JBossWS用</ns2:entry>
+        <ns2:entry/>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>messaging</ns2:entry>
+        <ns2:entry>JMS用</ns2:entry>
+        <ns2:entry/>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>HsqlDbRealm</ns2:entry>
+        <ns2:entry>HsqlDb用に利用される</ns2:entry>
+        <ns2:entry/>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JmsXARealm</ns2:entry>
+        <ns2:entry>JmxXA用のレルム</ns2:entry>
+        <ns2:entry>2.2</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>other</ns2:entry>
+        <ns2:entry>明示的な設定が無かった場合に適用されるセキュリティドメイン</ns2:entry>
+        <ns2:entry/>
+    </ns2:row>
+</ns2:tbody>
+                            </ns2:tgroup>
+                        </ns2:table>
+			アプリケーションの認証・認可で、login-config.xmlで設定されたセキュリティドメインを利用している場合は、
+			移行を行う。本例では以下の移植方法について示す。
+
+			<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:para>UsersRolesログインモジュールを利用したセキュリティドメインの移行</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>Databaseログインモジュールを利用したセキュリティドメインの移行</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
 		</ns2:para>
                 </ns2:section>
             </ns2:article>
@@ -11393,8 +11899,57 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
                     <ns2:title>body</ns2:title>
                 </ns2:info>
                 <ns2:section>
-                    <ns2:para>JavaEE6でJNDI名が標準化されており、InitailaContextインスタンスを利用してルックアップ際にしているJNDI名を変更する必要がある。
-        </ns2:para>
+                    <ns2:para>
+			JavaEE6でJNDI名が標準化されており、InitailaContextインスタンスを利用してルックアップ際にしているJNDI名を変更する必要がある。
+
+
+			<ns2:note>
+                            <ns2:para>
+					JBossEAP4.3でバインドされたリソースをJNDI名「java:JNDI名」でルックアップしている場合、JBossEAP6の環境ではjavax.naming.NameNotFoundExceptionが発生する。
+
+					<ns2:figure>
+    <ns2:title>ExampleDS設定(JBossEAP4.3)</ns2:title>
+    <ns2:programlisting language="xml">
+							<ns2:textobject>
+            <ns2:textdata fileref="programlisting/jboss43-example-ds.xml"/>
+        </ns2:textobject>
+						</ns2:programlisting>
+</ns2:figure>
+
+
+					JBossEAP6では以下のように、コロン(:)のあとにスラッシュ(/)を付与する必要がある。
+
+					<ns2:itemizedlist>
+    <ns2:listitem>
+        <ns2:para>java:/JNDI名</ns2:para>
+        <ns2:para>
+								<ns2:figure>
+                <ns2:title>JBossEAP6でのデータソースJNDI指定例</ns2:title>
+                <ns2:programlisting language="txt">
+										<ns2:textobject>
+                        <ns2:textdata fileref="programlisting/jboss6-dslookup.txt"/>
+                    </ns2:textobject>
+									</ns2:programlisting>
+            </ns2:figure>
+							</ns2:para>
+        <ns2:para>
+								<ns2:figure>
+                <ns2:title>JBossEAP6でのJMSコネクションファクトリのJNDI指定例</ns2:title>
+                <ns2:programlisting language="txt">
+										<ns2:textobject>
+                        <ns2:textdata fileref="programlisting/jboss6-jmscon-lookup.txt"/>
+                    </ns2:textobject>
+									</ns2:programlisting>
+            </ns2:figure>
+							</ns2:para>
+    </ns2:listitem>
+</ns2:itemizedlist>
+
+
+
+				</ns2:para>
+                        </ns2:note>
+		</ns2:para>
                 </ns2:section>
             </ns2:article>
         </DocBook>
@@ -11756,7 +12311,7 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
     </ns2:row>
     <ns2:row>
         <ns2:entry>transaction-isolation</ns2:entry>
-        <ns2:entry>TODO:</ns2:entry>
+        <ns2:entry>transaction-isolation</ns2:entry>
         <ns2:entry>--transaction-isolation</ns2:entry>
     </ns2:row>
     <ns2:row>
@@ -11816,7 +12371,7 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
         <ns2:entry>blocking-timeout-millis
 </ns2:entry>
         <ns2:entry>blocking-timeout-millis</ns2:entry>
-        <ns2:entry>TODO:調査
+        <ns2:entry>--blocking-timeout-wait-millis
 							</ns2:entry>
     </ns2:row>
     <ns2:row>
@@ -11967,7 +12522,7 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
     </ns2:row>
     <ns2:row>
         <ns2:entry>transaction-isolation</ns2:entry>
-        <ns2:entry>TODO:</ns2:entry>
+        <ns2:entry>transaction-isolation</ns2:entry>
         <ns2:entry>--transaction-isolation</ns2:entry>
     </ns2:row>
     <ns2:row>
@@ -12042,7 +12597,7 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
         <ns2:entry>blocking-timeout-millis
 							</ns2:entry>
         <ns2:entry>blocking-timeout-millis</ns2:entry>
-        <ns2:entry>TODO:調査
+        <ns2:entry>--blocking-timeout-wait-millis
 							</ns2:entry>
     </ns2:row>
     <ns2:row>
@@ -12647,6 +13202,1103 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
 </ns2:itemizedlist>
 				</ns2:para>
                         </ns2:note>
+
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_167">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			JBossEAP4.3では、Queue及びTopicの設定移行は以下のファイルに行う。
+			<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:figure>
+    <ns2:title>$JBOSS_HOME/server/$JBOSS_CONFIG/deploy/jboss-messaging.sar/destinations-service.xml
+						</ns2:title>
+    <ns2:programlisting language="txt">
+							<ns2:textobject>
+            <ns2:textdata fileref="programlisting/jboss43-destinations-service.xml"/>
+        </ns2:textobject>
+						</ns2:programlisting>
+</ns2:figure>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+			上記の場合は、JNDI名は キューの場合、“queue/○○○”、Topicの場合がJNDI名 “topic/□□□”にバインドされる。
+		</ns2:para>
+                    <ns2:para>
+			EAP6では、管理CLIより、キューやトピックを定義する。以下は、jms-queueやjms-topicコマンドを利用した例である。
+
+			<ns2:figure>
+                            <ns2:title>管理CLIによるキュー登録及び削除方法
+				</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-addqueue.cli"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			<ns2:figure>
+                            <ns2:title>管理CLIによるトピック登録及び削除方法
+				</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-addtopic.cli"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			<ns2:note>
+                            <ns2:para>
+					--entriesオプションはカンマ(,)区切で複数指定が可能。クライアントに向けて、キュー及びトピックを外部に公開する必要がある場合は、以下の命名規則に従い、entriesを登録する。
+
+					<ns2:itemizedlist>
+    <ns2:listitem>
+        <ns2:para>外部公開用の命名規則</ns2:para>
+        <ns2:para>
+								java:jboss/exported/任意の文字列
+
+								<ns2:programlisting language="txt">
+									<ns2:textobject>
+                    <ns2:textdata fileref="programlisting/jboss6-jmsdest-export.cli"/>
+                </ns2:textobject>
+								</ns2:programlisting>
+								
+							</ns2:para>
+    </ns2:listitem>
+</ns2:itemizedlist>
+				</ns2:para>
+                        </ns2:note>
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_168">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			JBossEAP4.3のコネクションファクトリは以下のファイルに定義される。
+
+			<ns2:orderedlist>
+                            <ns2:listitem>
+<ns2:para>$JBOSS_HOME/server/$JBOSS_CONFIG/deploy/jboss-messaging.sar/connection-factories-service.xml
+					</ns2:para>
+<ns2:para>
+						デフォルトで以下3つのMBeanが登録され,MBean毎のJNDIBindings設定により、JNDI名が設定される。
+
+
+						<ns2:orderedlist>
+        <ns2:listitem>
+            <ns2:para>jboss.messaging.connectionfactory:service=ConnectionFactory
+									MBean
+								</ns2:para>
+            <ns2:para>
+									<ns2:itemizedlist>
+                    <ns2:title>JMS非クラスタ環境で利用するコネクションファクトリのJNDI名</ns2:title>
+                    <ns2:listitem>
+                        <ns2:para>/ConnectionFactory</ns2:para>
+                    </ns2:listitem>
+                    <ns2:listitem>
+                        <ns2:para>/XAConnectionFactory</ns2:para>
+                    </ns2:listitem>
+                    <ns2:listitem>
+                        <ns2:para>java:/ConnectionFactory</ns2:para>
+                    </ns2:listitem>
+                    <ns2:listitem>
+                        <ns2:para>java:/XAConnectionFactory</ns2:para>
+                    </ns2:listitem>
+                </ns2:itemizedlist>
+
+								</ns2:para>
+        </ns2:listitem>
+        <ns2:listitem>
+            <ns2:para>jboss.messaging.connectionfactory:service=ClusteredConnectionFactory
+									MBean
+								</ns2:para>
+            <ns2:para>
+									<ns2:itemizedlist>
+                    <ns2:title>JMSクラスタ環境で、フェイルオーバや負荷分散に対応しているコネクションファクトリのJNDI名</ns2:title>
+                    <ns2:listitem>
+                        <ns2:para>/ClusteredConnectionFactory</ns2:para>
+                    </ns2:listitem>
+                    <ns2:listitem>
+                        <ns2:para>/ClusteredXAConnectionFactory</ns2:para>
+                    </ns2:listitem>
+                    <ns2:listitem>
+                        <ns2:para>java:/ClusteredConnectionFactory</ns2:para>
+                    </ns2:listitem>
+                    <ns2:listitem>
+                        <ns2:para>java:/ClusteredXAConnectionFactory</ns2:para>
+                    </ns2:listitem>
+                </ns2:itemizedlist>
+								</ns2:para>
+        </ns2:listitem>
+        <ns2:listitem>
+            <ns2:para>jboss.messaging.connectionfactory:service=ClusterPullConnectionFactory
+									MBean
+								</ns2:para>
+            <ns2:para>JMSクラスタ環境で、JBoss内部用のため、JNDI名は未設定</ns2:para>
+        </ns2:listitem>
+    </ns2:orderedlist>
+
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:orderedlist>
+		</ns2:para>
+                    <ns2:para>
+			JBossEAP6の場合は、messagingサブシステムのconnection-factory設定で設定される。
+
+
+			<ns2:orderedlist>
+                            <ns2:listitem>
+<ns2:para>$JBOSS_HOME/$JBOSS_CONFIG/standalone-full-ha.xml</ns2:para>
+<ns2:figure>
+    <ns2:programlisting language="txt">
+							<ns2:textobject>
+            <ns2:textdata fileref="programlisting/jboss6-confactory.txt"/>
+        </ns2:textobject>
+						</ns2:programlisting>
+</ns2:figure>
+                            </ns2:listitem>
+                        </ns2:orderedlist>
+
+			JBossEAP6でデフォルトで提供されるコネクションファクトリは以下の3つである
+
+			<ns2:orderedlist>
+                            <ns2:listitem>
+<ns2:para>java:/ConnectionFactory</ns2:para>
+<ns2:para>INVM用で、このコネクションファクトリのJNDI名は、JBossEAP4.3と互換がある</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>java:jboss/exported/jms/RemoteConnectionFactory</ns2:para>
+<ns2:para>外部のクライアント用に公開するコネクションファクトリ。このコネクションファクトリのJNDI名はJBossEAP4.3と互換性がない。
+					</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>java:/JmsXA</ns2:para>
+<ns2:para>JMSリソースを2pcとして扱う際に利用するコネクションファクトリ。このコネクションファクトリのJNDI名は、JBossEAP4.3と互換がある
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:orderedlist>
+
+
+			JBossEAP4.3とJBossEAP6.3とのJNDI名の対応表を示す。
+
+			<ns2:table frame="all">
+                            <ns2:title>JBossのWebサービス仕様</ns2:title>
+                            <ns2:tgroup cols="2">
+<ns2:thead>
+    <ns2:row>
+        <ns2:entry>構成</ns2:entry>
+        <ns2:entry>JBoss EAP4.3</ns2:entry>
+        <ns2:entry>JBoss EAP6</ns2:entry>
+        <ns2:entry>備考</ns2:entry>
+    </ns2:row>
+</ns2:thead>
+<ns2:tbody>
+    <ns2:row>
+        <ns2:entry>JMS非クラスタ環境</ns2:entry>
+        <ns2:entry>/ConnectionFactory</ns2:entry>
+        <ns2:entry>jms/RemoteConnectionFactory</ns2:entry>
+        <ns2:entry>外部のサーバから接続が発生する場合は、「jms/RemoteConnectionFactory」を利用する。
+							</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JMS非クラスタ環境</ns2:entry>
+        <ns2:entry>java:/ConnectionFactory</ns2:entry>
+        <ns2:entry>java:/ConnectionFactory</ns2:entry>
+        <ns2:entry>JNDI名互換あり</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JMS非クラスタ環境</ns2:entry>
+        <ns2:entry>/XAConnectionFactory</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+        <ns2:entry>INVM上で、JMSリソースを2PCとして扱う場合は、JBossEAP6ではjava:/JmsXAを利用する。
+							</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JMS非クラスタ環境</ns2:entry>
+        <ns2:entry>java:/XAConnectionFactory</ns2:entry>
+        <ns2:entry>java:/JmsXA</ns2:entry>
+        <ns2:entry/>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JMSクラスタ環境</ns2:entry>
+        <ns2:entry>/ClusteredConnectionFactory</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JMSクラスタ環境</ns2:entry>
+        <ns2:entry>java:/ClusteredConnectionFactory</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JMSクラスタ環境</ns2:entry>
+        <ns2:entry>/ClusteredXAConnectionFactory</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+    </ns2:row>
+    <ns2:row>
+        <ns2:entry>JMSクラスタ環境</ns2:entry>
+        <ns2:entry>java:/ClusteredXAConnectionFactoryy</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+        <ns2:entry>-</ns2:entry>
+    </ns2:row>
+</ns2:tbody>
+                            </ns2:tgroup>
+                        </ns2:table>
+
+			<ns2:note>
+                            <ns2:para>INVMでなく、外部のサーバから接続が発生する場合は、RemoteConnectionFactoryを利用する。この場合はJNDI名がJBossEAP4.3と互換性がないため、クライアントで利用しているJNDI名を、RemoteConnectionFactoryにバインドされるように、JNDI名を追加する必要がある。
+				</ns2:para>
+                            <ns2:para>
+					以下は、RemoteConnectionFactoryにjndi名「java:jboss/exported/jms/sampleRemoteConnectionFactory」を追加した例である。
+					この場合は、クライアントは、JNDI名「jms/sampleRemoteConnectionFactory」でコネクションファクトリをルックアップできる。
+
+
+					<ns2:figure>
+    <ns2:programlisting language="txt">
+							<ns2:textobject>
+            <ns2:textdata fileref="programlisting/jboss6-sampleRemoteConnectionFactory.txt"/>
+        </ns2:textobject>
+						</ns2:programlisting>
+</ns2:figure>
+				</ns2:para>
+                        </ns2:note>
+
+
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_169">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>JBoss WS独自のパッケージを利用していない場合は、軽微なアプリケーションの修正でデプロイは可能である。
+		<ns2:note>
+                            <ns2:para>ただし、JBossEAP4.3で利用されているWebサービス実装のコンポーネントがJBoss-WSより、Apache
+				CXFベースに変更されており、実装がまったくことなるため、Webサービスクライアントに影響を与えないように移行する必要がある場合は
+				別途、相互接続の検討を行う必要がある。
+			</ns2:para>
+                        </ns2:note>
+		以下にJAX-WS仕様のWebサービスの移植方法を示す。
+		
+		
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_170">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			web.xmlに設定されたJBossEAP4.3のJBoss-WS独自設定を修正する。
+
+
+			<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:para>org.jboss.wsf.stack.jbws.EndpointServletが定義されたservlet-classタグを削除
+					</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>JBossEAP4.3のJBoss-WS独自のServletで必要となるinit-paramタグを削除する。
+					</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>Webサービスのエンドポイントなるクラスをservlet-classに定義する。
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+			<ns2:figure>
+                            <ns2:title>JBossEAP4.3のJBoss-WS独自のweb.xml設定</ns2:title>
+                            <ns2:programlisting language="xml">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss43-jbossws-web.xml"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+
+			<ns2:figure>
+                            <ns2:title>JBossEAP6でのweb.xml設定</ns2:title>
+                            <ns2:programlisting language="xml">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-ws-web.xml"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+
+			<ns2:note>
+                            <ns2:title>不要なエンドポイントクラスについて</ns2:title>
+                            <ns2:para>JBossEAP4.3ではweb.xmlに定義された情報を利用して、Webサービスを公開していたが、
+					JBossEAP6では、デプロイされたアーカイブ内にあるクラスより、JWS
+					apiで定義されたアノテーション(@WebService等)を付与されたクラスをパースして、自動的にエンドポイントを追加する。
+					このため、公開しないWebサービスのエンドポイントクラスはwarアーカイブに含めないように注意すること。
+				</ns2:para>
+                        </ns2:note>
+
+			<ns2:note>
+                            <ns2:title>自動生成コード</ns2:title>
+                            <ns2:para>
+					Webサービスを作成するにあたり、WSDLを入力に、ソースコードを自動生成し、利用する場合があるが、
+					JBossEAP4.3のwsconsumeが自動生成するコードヘッダは以下のとおりである。
+					<ns2:figure>
+    <ns2:title>wsconsumeで生成したコードのヘッダ</ns2:title>
+    <ns2:programlisting language="txt">
+							<ns2:textobject>
+            <ns2:textdata fileref="programlisting/jboss43-wsconsume-header.txt"/>
+        </ns2:textobject>
+						</ns2:programlisting>
+</ns2:figure>
+					Webサービスの相互接続の検討などにあたり、既存のWebサービスの開発環境等を調査する際に、
+					どのツールをコード生成して、利用しているかなどを把握するがあるが、コードヘッダ情報ではJBossWSのwsconsumeを
+					利用したことは特定できないので、注意すること。
+				</ns2:para>
+                        </ns2:note>
+
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_171">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>JMSのAPIはとくに変更は必要ない。ただしクライアントがINVMでない場合、InitalContext作成時に、Contextのプロパティ情報を渡す必要があるが、
+			このプロパティ情報は、JBossEAP6と互換性がないため、JBossEAP6用のプロパティ設定を行う。
+		</ns2:para>
+                    <ns2:table frame="all">
+                        <ns2:title>Contextプロパティ</ns2:title>
+                        <ns2:tgroup cols="3">
+                            <ns2:thead>
+<ns2:row>
+    <ns2:entry>プロパティ</ns2:entry>
+    <ns2:entry>JBoss EAP43</ns2:entry>
+    <ns2:entry>JBoss EAP6</ns2:entry>
+</ns2:row>
+                            </ns2:thead>
+                            <ns2:tbody>
+<ns2:row>
+    <ns2:entry>Context.INITIAL_CONTEXT_FACTORY　</ns2:entry>
+    <ns2:entry>org.jnp.interfaces.NamingContextFactory</ns2:entry>
+    <ns2:entry>org.jboss.naming.remote.client.InitialContextFactory
+						</ns2:entry>
+</ns2:row>
+<ns2:row>
+    <ns2:entry>Context.PROVIDER_URL</ns2:entry>
+    <ns2:entry>接続先のJBossのIPアドレス:1099 </ns2:entry>
+    <ns2:entry>remote://接続先のJBossのIPアドレス:4447</ns2:entry>
+</ns2:row>
+                            </ns2:tbody>
+                        </ns2:tgroup>
+                    </ns2:table>
+                    <ns2:figure>
+                        <ns2:title>JBossEAP4.3のJMSクライアント実装</ns2:title>
+                        <ns2:programlisting language="txt">
+				<ns2:textobject>
+<ns2:textdata fileref="programlisting/jboss43-jmssend.txt"/>
+                            </ns2:textobject>
+			</ns2:programlisting>
+                    </ns2:figure>
+                    <ns2:figure>
+                        <ns2:title>JBossEAP6のJMSクライアント実装</ns2:title>
+                        <ns2:programlisting language="txt">
+				<ns2:textobject>
+<ns2:textdata fileref="programlisting/jboss6-jmssend.txt"/>
+                            </ns2:textobject>
+			</ns2:programlisting>
+                    </ns2:figure>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_172">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>この認証モジュールは、org.jboss.security.auth.spi.UsersRolesLoginModuleが利用され、
+			module-optionオプション(usersProperties,rolesProperties)で指定されたファイルを利用したロールベースの認証・認可が可能である。
+
+
+		</ns2:para>
+                    <ns2:para>
+			JBossEAP4.3では、以下のように、login-config.xmlでセキュリティドメイン設定を行い、jboss-web.xmlでWebアプリケーションに対して、
+			login-config.xmlで登録したセキュリティドメインを適用する。
+			<ns2:figure>
+                            <ns2:title>login-config.xml設定</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss4-usersroles-login-config.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			<ns2:figure>
+                            <ns2:title>jboss-web.xml設定</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss4-securydomain-apply.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+		</ns2:para>
+                    <ns2:para>
+			JBossEAP6では、セキュリティドメインの設定は、管理CLIで実施する。
+
+			<ns2:figure>
+                            <ns2:title>管理CLIによるセキュリティドメイン追加例</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-add-securydomain.cli"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			<ns2:figure>
+                            <ns2:title>セキュリティドメイン追加のstandalone-full-ha.xml</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-securydomain.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			add-user.shでユーザを追加する場合はsample-users.properties及びsample-roles.propertiesに
+			認証情報を追加する必要があるので以下のように、オプションを追加して、ユーザを登録してください。
+
+			<ns2:figure>
+                            <ns2:title>add-user.shコマンド</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-adduser.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			<ns2:note>
+                            <ns2:para>なお、add-user.shでsample-users.propertiesに登録されたパスワードはMD5でハッシュされるが、UsersRolesを利用する場合は、
+					plan textで入力する必要があるので、注意すること。
+				</ns2:para>
+                        </ns2:note>
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_173">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			JDatabaseログインモジュールはorg.jboss.security.auth.spi.DatabaseServerLoginModuleを利用し、
+			RDBMSに登録された認証情報をJBossのデータソース経由で扱い、認証を行うことができる。クエリは、module-optionのprincipalsQuery及びrolesQueryで任意のクエリを設定することができる。
+
+			<ns2:figure>
+                            <ns2:title>$JBOSS_HOME/server/$JBOSS_CONFIG/conf/login-config.xml(JBossEAP4.3)
+				</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss43-database-login-config.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+		</ns2:para>
+                    <ns2:para>
+			JBossEAP6でも、 Databaseログインモジュールは利用可能であり、以下の属性が利用可能である。
+
+			<ns2:itemizedlist>
+                            <ns2:title>JBossEAP6で利用可能な利用可能なmodule-options</ns2:title>
+                            <ns2:listitem>
+<ns2:para>digestCallback</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>dsJndiName</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>hashAlgorithm</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>hashCharset</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>hashEncoding</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>ignorePasswordCase</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>inputValidator</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>principalsQuery</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>rolesQuery</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>storeDigestCallback</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>suspendResume</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>throwValidatorError</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>transactionManagerJndiName</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+			JBossEAP6で、管理CLIにより、Databaseログインモジュールをセキュリティドメインに追加する方法を示す。
+
+
+			<ns2:figure>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-securitydomain-apply.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+			
+			なお、このDatabaseログインモジュールの実装クラスorg.jboss.security.auth.spi.DatabaseServerLoginModuleを、ユーザが拡張して利用することも可能である。
+			
+			Databaseログインモジュールを拡張したカスタマイズログインモジュールを利用している場合の移行方法については以下に示す。
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_174">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			ここでは、org.jboss.security.auth.spi.DatabaseServerLoginModuleを拡張したクラスをusercustom.loginmodule.ExampleDatabaseServerLoginModuleとして
+			JBossEAP6への移行方法を示す。
+
+			<ns2:figure>
+                            <ns2:title>$JBOSS_HOME/server/$JBOSS_CONFIG/conf/login-config.xml(JBossEAP4.3)
+				</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss43-customdatabase-login-config.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			ユーザが実装したカスタマイズログインモジュールをセキュリティドメインに追加する場合は、login-modulesのcode属性にクラス名を設定する。以下にJBossEAP6の管理CLIでの設定を示す。
+
+			<ns2:figure>
+                            <ns2:title>管理CLIによるセキュリティドメインの追加(JBossEAP6)
+				</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-customdatabase-securitydomain-apply.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+			<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:para>org.jboss.security.auth.spi.DatabaseServerLoginModuleについて
+					</ns2:para>
+<ns2:para>JBossEAP6では、picketboxから提供されるorg.jboss.security.auth.spi.DatabaseServerLoginModuleが利用可能で、JBossEAP4.3と互換性があるため、とくに修正の必要はない。
+					</ns2:para>
+<ns2:para>
+						ただし、DatabaseServerLoginModuleを拡張したクラスが、org.jboss.security.*のクラスに依存することがあるため、それらのクラスがJBossEAP6で利用可能かは、別途調査を行い、必要に応じて代替クラスを検討する必要がある。
+
+						<ns2:note>
+        <ns2:title>org.jboss.security.Util.createPasswordHashメソッドについて</ns2:title>
+        <ns2:para>JBossEAP6のpicketboxyより提供されるorg.jboss.security.Utilには、createPasswordHashメソッドは存在しないため、picketboxから提供されるorg.jboss.crypto.CryptoUtilクラスに含まれるユーティリティメソッドを利用するこ
+							</ns2:para>
+    </ns2:note>
+
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_175">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			JBossEAP4.3のメッセージングシステムであるjboss-messagingは、JMSのメッセージの永続化として、RDBMSをサポートしている。
+
+			<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:para>JMS永続化設定</ns2:para>
+<ns2:para>RDBMS製品名に応じた「*-persistence-service.xml」ファイルが$JBOSS_HOME/server/$JBOSS_CONFIG/deploy/jboss-messaging.sarディレクトリに
+						定義されている場合は、メッセージの永続化として、データベースを利用している。なお、null-persistence-service.xmlを利用している場合は、メッセージの永続化はされない。
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+		</ns2:para>
+                    <ns2:para>
+			JBossEAP6のメッセージングシステムであるHornetQはパーシステンス（永続化）のために、リレーショナルデータベースや他のパーシステンスエンジンを使用せずに
+			ローカルトランザクションおよび XA トランザクション対応のメッセージング用に最適化されたジャーナル機能を使用する。
+
+			<ns2:note>
+                            <ns2:para>移行元の環境でJMSの永続化設定としてRDBMSによる永続化を行っている場合、JBossEAP6ではRDBMSを永続化として採用できないので注意すること。</ns2:para>
+                        </ns2:note>
+
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_176">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>TODO:Please enter the text.</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_177">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			JBoss Webの下位互換パラメータについて示す。
+
+			<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:para>JSP下位互換</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>Servlet下位互換</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>Servlet Cookie下位互換</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_178">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>JBossEAP6ののJSP実装(jasper)は、JSP仕様への対応で、下位互換がなくなるものをシステムプロパティで対応可能としている。
+		</ns2:para>
+                    <ns2:para>
+			<ns2:command ns3:href="https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Jasper">https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Jasper
+			</ns2:command>
+		</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:title>JSP仕様に関連するjasperのシステムプロパティ</ns2:title>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.jasper.compiler.Generator.STRICT_GET_PROPERTY</ns2:para>
+                            <ns2:para>trueの場合、JSP2.0以降の仕様で規定され、JSPプロセッサに依存導入されたjsp:getPropertyアクションはオブジェクトリファレンスを持たなければならない。オブジェクトリファレンスを持たない場合エラーとなる。</ns2:para>
+                            <ns2:para>
+					参考：
+					<ns2:command ns3:href="https://bz.apache.org/bugzilla/show_bug.cgi?id=48701">https://bz.apache.org/bugzilla/show_bug.cgi?id=48701
+					</ns2:command>
+				</ns2:para>
+                            <ns2:para>JBossEAP4.3ではこのシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。デフォルトはfalseとなるため、下位互換対応する場合は、有効にする必要がある。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING</ns2:para>
+                            <ns2:para>falseの場合は、JSP属性に引用符をエスケープするための要件が緩和される。その結果、エスケープされていない引用符は、エラーを発生しなくなる</ns2:para>
+                            <ns2:para>
+					JBossEAP6ではスクリプトレット等でダブルクォートがあった場合にエスケープしない場合とエラーになる。
+					参考：
+					<ns2:command ns3:href="https://bz.apache.org/bugzilla/show_bug.cgi?id=45015">https://bz.apache.org/bugzilla/show_bug.cgi?id=45015
+					</ns2:command>
+				</ns2:para>
+                            <ns2:para>JBossEAP4.3ではこのシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。デフォルトでtrueとなる。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.jasper.compiler.Parser.STRICT_WHITESPACE</ns2:para>
+                            <ns2:para>falseの場合は、属性名の前に空白文字がない記述を許容する。</ns2:para>
+                            <ns2:para>JBossEAP4.3及びJBossEAP6ではこのシステムプロパティは存在しない</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_179">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>JBossEAP4.3(Tomcat)では、Servlet下位互換のためにorg.apache.catalina.
+			STRICT_SERVLET_COMPLIANCEというシステムプロパティがある。このプロパティはJBossEAP4.3及びJBossEAP6でもデフォルトでtrueとなり、移行後のJBossEAP6環境でとくに設定変更は必要ない。</ns2:para>
+                    <ns2:para>
+			<ns2:command ns3:href="https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Specifications">https://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html#Specifications
+			</ns2:command>
+		</ns2:para>
+                    <ns2:orderedlist>
+                        <ns2:title>TomcatのSTRICT_SERVLET_COMPLIANCEで有効になるパラメータと、JBossEAP4.3及びJBossEAP6での実装について</ns2:title>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.core.ApplicationContext.GET_RESOURCE_REQUIRE_SLASH</ns2:para>
+                            <ns2:para>trueの場合、ServletContext.getResource()またはServletContext.getResourceAsStream() に渡されたパスは 、「/」で始まる必要がある。</ns2:para>
+                            <ns2:para>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、JBossEAP4.3では、リソースのURLにスラッシュを必須としている。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.core.ApplicationDispatcher.WRAP_SAME_OBJECT</ns2:para>
+                            <ns2:para>trueの場合、アプリケーションディスパッチャに渡されるラップされたリクエストまたはレスポンスオブジェクトは、元のリクエストまたはレスポンスをラップしていることを保証するためにチェックされる。</ns2:para>
+                            <ns2:para>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.core.StandardHostValve.ACCESS_SESSION</ns2:para>
+                            <ns2:para>trueの場合、セッションに関連付けられているすべてのリクエストは、セッションの最終アクセス時刻を更新させる。これはリクエストが明示的にセッションにアクセスするかどうかに関係ない</ns2:para>
+                            <ns2:para>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.catalina.session.StandardSession.ACTIVITY_CHECK</ns2:para>
+                            <ns2:para>trueの場合、Tomcatは、各セッションのアクティブなリクエストの数を追跡する。</ns2:para>
+                            <ns2:para>JBossEAP4.3及びJBossEAP6(JBossWeb)にはこのシステムプロパティは存在しないが、STRICT_SERVLET_COMPLIANCEがtrueの場合は有効になる</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.tomcat.util.http.ServerCookie.ALWAYS_ADD_EXPIRES</ns2:para>
+                            <ns2:para>trueの場合、Tomcatはバージョン0 より後のCookie に対して、常にSetCookie ヘッダにexpire パラメータを追加する。これは、IE にSetCookie ヘッダ内のMax-Age パラメータを無視させるという、既知のIE6 とIE7 のバグの回避策である。</ns2:para>
+                            <ns2:para>JBossEAP4.3(JBossWeb)にはこのシステムプロパティは存在しないが、JBossEAP6(JBossWeb)でこのパラメータが存在する</ns2:para>
+                        </ns2:listitem>
+                    </ns2:orderedlist>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_180">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>JBossEAP6(Tomcat)では、クッキーに関連する下位互換パラメータが存在する。業務アプリケーションにおけるクッキーに関連する仕様を確認し、
+			必要に応じてクッキーに関連する下位互換パラメータを有効にする必要がある。
+		</ns2:para>
+                    <ns2:itemizedlist>
+                        <ns2:title>JBossEAP6(Tomcat)で提供するクッキーに関連する下位互換パラメータ</ns2:title>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.tomcat.util.http.
+					ServerCookie.ALLOW_EQUALS_IN_VALUE</ns2:para>
+                            <ns2:para>クッキーの値に=(イコール)を許可するかを指定。</ns2:para>
+                            <ns2:para>JBossEAP4.3及びJBossEAP6でこのシステムプロパティは存在しない。クッキーの値の特殊文字を利用する場合は、以下のALLOW_HTTP_SEPARATORS_IN_V0を有効にして対応する。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.tomcat.util.http.
+					ServerCookie.ALLOW_HTTP_SEPARATORS_IN_V0</ns2:para>
+                            <ns2:para>setCookie時に、クッキーのvalueに,: ()&lt;&gt;@:\"[]?={}\tの特殊文字があった場合にエラーとなり、デフォルトは許可しないが
+					このパラメータを有効にすると、,: ()&lt;&gt;@:\"[]?={}\tの特殊文字があった場合にvalue全体をダブルクォートで囲む。</ns2:para>
+                            <ns2:para>JBossEAP4.3では、このシステムプロパティは存在せず、JBossEAP6でこのシステムプロパティが存在する。
+クッキーのvalueに特殊文字が含まれる場合、ALLOW_HTTP_SEPARATORS_IN_V0はfalseがデフォルトで設定され、
+JBossEAP4.3上では許容されていたものが、移行後のJBossEAP6では許容されなくなり、エラーが発生する可能性がある。
+この場合は、ALLOW_HTTP_SEPARATORS_IN_V0システムプロパティを有効にする必要がある。
+					</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>org.apache.tomcat.util.http.ServerCookie.FWD_SLASH_IS_SEPARATOR
+				</ns2:para>
+                            <ns2:para>クッキーの値の文字列に対して、スラッシュもエスケープする場合は、有効にする必要がある。
+				</ns2:para>
+                            <ns2:para>JBossEAP4.3(JBossWeb)は、このパラメータは存在せず、デフォルトでスラッシュをエスケープする。JBossEAP6は、このパラメータが存在し、スラッシュをエスケープしない。</ns2:para>
+                        </ns2:listitem>
+                        <ns2:listitem>
+                            <ns2:para>クッキー名のvalidationにRFC2109Validatorが利用される</ns2:para>
+                            <ns2:para>JBossEAP4.3及びJBossEAP6にはこのValidatorは存在しないため、JBossEAP4.3からJBossEAP6への移植にあたっては検討する必要がない。</ns2:para>
+                        </ns2:listitem>
+                    </ns2:itemizedlist>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_181">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			org.jboss.web.tomcat.service.StatusServletをweb.xmlに設定し利用することで、JBossEAP4.3では、JVMのメモリ使用量をはじめ、RequestProcessorや、各コンテキストの状況(セッション情報のモニタ等）を返すことが可能である。
+
+			<ns2:itemizedlist>
+                            <ns2:title>JVM情報の出力例</ns2:title>
+                            <ns2:listitem>
+<ns2:para>Free memory: 727.51 MB、Total memory: 885.56 MB 、Max memory:
+						3626.68 MB
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+			<ns2:itemizedlist>
+                            <ns2:title>各RequestProcessorの情報(ajp-127.0.0.1-8009/http-127.0.0.1-8080)の出力例
+				</ns2:title>
+                            <ns2:listitem>
+<ns2:para>Max threads: 40 、Current thread count: 0、Current thread busy:
+						0、Max processing time: 0 ms、Processing time: 0.0 s、Request count:
+						0、Error count: 0、Bytes received: 0.00 MB、Bytes sent: 0.00 MB
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+			<ns2:itemizedlist>
+                            <ns2:title>Context毎のモニタ情報の出力例</ns2:title>
+                            <ns2:listitem>
+<ns2:para>Active sessions: 0、Session count: 0、Max active sessions:
+						0、Rejected session creations: 0、Expired sessions: 0、Longest
+						session alive time: 0 s、Average session alive time: 0 s、Processing
+						time: 0 ms、JSPs loaded: 0 JSPs reloaded:
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+			<ns2:info/>
+		</ns2:para>
+                    <ns2:para>
+			JBossEAP6では、StatusServletは存在しないため、アプリケーションのweb.xml設定のServletClassで、org.jboss.web.tomcat.service.StatusServletが有効となっている場合は、
+			この設定を削除する必要がある。
+
+			なお、JBossEAP6で、HTTP経由でJBossの状態を確認する場合は、以下のような方法がある。
+
+			<ns2:orderedlist>
+                            <ns2:listitem>
+<ns2:para>
+						JBossEAP6のWeb管理コンソールを利用する
+
+						<ns2:itemizedlist>
+        <ns2:listitem>
+            <ns2:para>JVM(ヒープ使用量)</ns2:para>
+            <ns2:para>http://localhost:9990/console/App.html#vm</ns2:para>
+        </ns2:listitem>
+        <ns2:listitem>
+            <ns2:para>web-metrics(コネクタ毎のリクエスト及びエラー数のみ)</ns2:para>
+            <ns2:para>http://localhost:9990/console/App.html#web-metrics</ns2:para>
+        </ns2:listitem>
+    </ns2:itemizedlist>
+
+						<ns2:note>
+        <ns2:para>Web管理コンソールでは、スレッドプール及び、セッション情報の状況の取得はできない。</ns2:para>
+    </ns2:note>
+
+					</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>
+						HTTP Managment APIを利用する。
+
+						<ns2:itemizedlist>
+        <ns2:listitem>
+            <ns2:para>JVM(ヒープ使用量)</ns2:para>
+            <ns2:para>http://localhost:9990/management/core-service/platform-mbean/type/memory?include-runtime=true&amp;json.pretty
+								</ns2:para>
+        </ns2:listitem>
+        <ns2:listitem>
+            <ns2:para>web-metrics</ns2:para>
+            <ns2:para>http://localhost:9990/management/subsystem/web/connector/*?include-runtime=true&amp;json.pretty
+								</ns2:para>
+        </ns2:listitem>
+        <ns2:listitem>
+            <ns2:para>セッション情報</ns2:para>
+            <ns2:para>http://localhost:9990/management/deployment/jsp-counter.war/subsystem/web?include-runtime=true&amp;json.pretty
+								</ns2:para>
+        </ns2:listitem>
+    </ns2:itemizedlist>
+
+						<ns2:note>
+        <ns2:para>JMXで取得可能な「jboss.web:type=ThreadPool,name=http--XXX.XXX.XXX.XXX-8080」や「jboss.web:type=ThreadPool,name=ajp--XXX.XXX.XXX.XXX-8009」といった
+								スレッドプールのcurrentThreadCountや、currentThreadsBusyなどの属性情報については、HTTP　Managment APIでは取得できない。これらの情報を取得する必要がある場合は
+								JMXを利用すること。
+							</ns2:para>
+    </ns2:note>
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:orderedlist>
+
+
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_182">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			JBoss独自APIを利用している場合は、該当APIがJBossEAP6で利用可能か調査する必要がある。
+
+			該当APIが存在しない場合は、代替案を検討すること。
+
+			以下では既知ナレッジの範囲内で、互換性がないAPIについてのみ示す。
+
+			<ns2:itemizedlist>
+                            <ns2:title>調査したAPI</ns2:title>
+                            <ns2:listitem>
+<ns2:para>org.jboss.logging.Logger</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>org.jboss.security.SimplePrincipal</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>org.jboss.security.SimpleGroup</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>org.jboss.security.Base64Encoder</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>org.jboss.security.auth.spi.AbstractServerLoginModule</ns2:para>
+                            </ns2:listitem>
+                            <ns2:listitem>
+<ns2:para>org.jboss.security.auth.spi.DatabaseServerLoginModule</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+			<ns2:itemizedlist>
+                            <ns2:title>互換性がないAPI</ns2:title>
+                            <ns2:listitem>
+<ns2:para>org.jboss.security.Util.createPasswordHash</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_183">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>org.jboss.security.Utilは、JBossEAP6ではpicketboxより提供される。
+
+		</ns2:para>
+                    <ns2:para>
+			<ns2:itemizedlist>
+                            <ns2:title>org.jboss.security.Utilのメソッド</ns2:title>
+                            <ns2:listitem>
+<ns2:para>createPasswordHash</ns2:para>
+<ns2:para>代替メソッドはorg.jboss.security.Utilには存在しなたいめ、JBossEAP6のpicketboxから提供されるorg.jboss.crypto.CryptoUtilクラスに含まれるcreatePasswordHashを利用する
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_184">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			ConfiguredIdentityLoginModuleは、module-optionでハードコードされたuserName及び、passwordを利用して認証を行う。
+
+			<ns2:figure>
+                            <ns2:title>login-config.xml設定(JBossEAP4.3)</ns2:title>
+                            <ns2:programlisting language="txt">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss43-ConfiguredIdentityLoginModule.txt"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+
+		</ns2:para>
+                    <ns2:para>
+			JBossEAP6では、picketboxよりorg.picketbox.datasource.security.ConfiguredIdentityLoginModuleが提供される。
+
+			login-moduleのcode属性に、ConfiguredIdentityを利用することで、代替可能である。
+
+			<ns2:note>
+                            <ns2:para>login-moduleのcode属性にmanagedConnectionFactoryName属性を利用している場合、データソース経由のDBアクセス用に、ユーザ名(module-optionのname属性のuserName)及びパスワード(module-optionのname属性のuserName)
+					に暗号化した内容を設定している場合がある。
+				</ns2:para>
+                            <ns2:para>
+					この場合は、ConfiguredIdentityLoginModuleを利用せず、org.picketbox.datasource.security.SecureIdentityLoginModuleを
+					利用する。Code属性にSecureIdentityを設定する。
+
+					詳細は以下を参照
+					<ns2:itemizedlist>
+    <ns2:listitem>
+        <ns2:para>
+								<ns2:command ns3:href="https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Security_Guide/index.html#topic4732_secureidentity">https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html-single/Security_Guide/index.html#topic4732_secureidentity
+								</ns2:command>
+							</ns2:para>
+    </ns2:listitem>
+</ns2:itemizedlist>
+
+				</ns2:para>
+                        </ns2:note>
+		</ns2:para>
+                </ns2:section>
+            </ns2:article>
+        </DocBook>
+        <DocBook articleId="knowhowDetail_185">
+            <ns2:article>
+                <ns2:info>
+                    <ns2:title>body</ns2:title>
+                </ns2:info>
+                <ns2:section>
+                    <ns2:para>
+			JBoss
+			EAP4.3では、connection-propertyタグのname属性を利用して、JDBCベンダ固有のプロパティを設定する。
+
+			<ns2:figure>
+                            <ns2:title>*-ds.xml(JBoss EAP5)</ns2:title>
+                            <ns2:programlisting language="xml">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss43-jdbcspec-ds.xml"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
+		</ns2:para>
+                    <ns2:para>
+
+			JBossEAP6では、管理CLIを利用して、JDBCベンダ固有のプロパティを設定する。
+
+			<ns2:itemizedlist>
+                            <ns2:listitem>
+<ns2:para>/subsystem=datasources/data-source=ExampleDS/connection-properties=vendorProperty:add(value=someValue)
+					</ns2:para>
+                            </ns2:listitem>
+                        </ns2:itemizedlist>
+
+			<ns2:figure>
+                            <ns2:title>管理CLIを利用したconnection-propertyの追加例(JBoss EAP6)</ns2:title>
+                            <ns2:programlisting language="cli">
+					<ns2:textobject>
+    <ns2:textdata fileref="programlisting/jboss6-jdbcspec.cli"/>
+</ns2:textobject>
+				</ns2:programlisting>
+                        </ns2:figure>
 
 		</ns2:para>
                 </ns2:section>
@@ -14012,6 +15664,20 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
                 <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1354">
+            <FileType>((?!hsqldb).)*-ds.xml</FileType>
+            <SearchKey1>//connection-property</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_969">
             <FileType>server.xml</FileType>
             <SearchKey1>//Connector[@protocol='HTTP/1.1']</SearchKey1>
@@ -14838,6 +16504,48 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
                 <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1341">
+            <FileType>server.xml</FileType>
+            <SearchKey1>//Server/Service[@name='jboss.web']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1344">
+            <FileType>server.xml</FileType>
+            <SearchKey1>//Server/Service[@name='jboss.web']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1345">
+            <FileType>server.xml</FileType>
+            <SearchKey1>//Server/Service[@name='jboss.web']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_754">
             <FileType>jboss-service.xml</FileType>
             <SearchKey1>//mbean[@code='org.jboss.web.tomcat.service.JBossWeb']/attribute[@name='DefaultSecurityDomain'][text()!='java:/jaas/other']</SearchKey1>
@@ -15487,6 +17195,216 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
             <SearchKey1>//application-policy[not(contains(@name,'client-login'))][not(contains(@name,'HsqlDbRealm'))][not(contains(@name,'JmsXARealm'))][not(contains(@name,'jmx-console'))][not(contains(@name,'JBossWS'))][not(contains(@name,'messaging'))][not(contains(@name,'other'))][not(contains(@name,'web-console'))]</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1351">
+            <FileType>login-config.xml</FileType>
+            <SearchKey1>//application-policy[@name!='jmx-console'][@name!='web-console'][@name!='JBossWS'][@name!='other']/authentication/login-module[@code='org.jboss.security.auth.spi.UsersRolesLoginModule']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1350">
+            <FileType>login-config.xml</FileType>
+            <SearchKey1>//application-policy[@name!='messaging']/authentication/login-module[@code='org.jboss.security.auth.spi.DatabaseServerLoginModule']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1333">
+            <FileType>login-config.xml</FileType>
+            <SearchKey1>//authentication/login-module[@code!='org.jboss.security.auth.spi.DatabaseServerLoginModule']/module-option[@name='dsJndiName']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1352">
+            <FileType>login-config.xml</FileType>
+            <SearchKey1>//application-policy[@name!='HsqlDbRealm'][@name!='JmsXARealm']/authentication/login-module[@code='org.jboss.resource.security.ConfiguredIdentityLoginModule']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1324">
+            <FileType>destinations-service.xml</FileType>
+            <SearchKey1>//server/mbean[@name!='jboss.messaging.destination:service=Queue,name=DLQ'][@name!='jboss.messaging.destination:service=Queue,name=ExpiryQueue'][@name!='jboss.messaging.destination:service=Queue,name=testTopic'][@name!='jboss.messaging.destination:service=Topic,name=securedTopic'][@name!='jboss.messaging.destination:service=Topic,name=testDurableTopic'][@name!='jboss.messaging.destination:service=Queue,name=testQueue'][@name!='jboss.messaging.destination:service=Queue,name=A'][@name!='jboss.messaging.destination:service=Queue,name=B'][@name!='jboss.messaging.destination:service=Queue,name=C'][@name!='jboss.messaging.destination:service=Queue,name=D'][@name!='jboss.messaging.destination:service=Queue,name=ex'][@name!='jboss.messaging.destination:service=Queue,name=PrivateDLQ'][@name!='jboss.messaging.destination:service=Queue,name=PrivateExpiryQueue'][@name!='jboss.messaging.destination:service=Queue,name=QueueWithOwnDLQAndExpiryQueue'][@name!='jboss.messaging.destination:service=Topic,name=TopicWithOwnDLQAndExpiryQueue'][@name!='jboss.messaging.destination:service=Queue,name=testDistributedQueue'][@name!='jboss.messaging.destination:service=Topic,name=testDistributedTopic'][@name!='jboss.messaging.destination:service=Queue,name=QueueWithOwnRedeliveryDelay'][@name!='jboss.messaging.destination:service=Topic,name=TopicWithOwnRedeliveryDelay']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1325">
+            <FileType>connection-factories-service.xml</FileType>
+            <SearchKey1>//server/mbean[@name!='jboss.messaging.connectionfactory:service=ConnectionFactory'][@name!='jboss.messaging.connectionfactory:service=ClusteredConnectionFactory'][@name!='jboss.messaging.connectionfactory:service=ClusterPullConnectionFactory']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1334">
+            <FileType>*.properties</FileType>
+            <SearchKey1>/ConnectionFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1335">
+            <FileType>*.java</FileType>
+            <SearchKey1>/ConnectionFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1336">
+            <FileType>*.properties</FileType>
+            <SearchKey1>/XAConnectionFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1337">
+            <FileType>*.java</FileType>
+            <SearchKey1>/ClusteredConnectionFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1338">
+            <FileType>*.properties</FileType>
+            <SearchKey1>/ClusteredConnectionFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1339">
+            <FileType>*.java</FileType>
+            <SearchKey1>/ClusteredXAConnectionFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1340">
+            <FileType>*.properties</FileType>
+            <SearchKey1>/ClusteredXAConnectionFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1326">
+            <FileType>((?!null).)*-persistence-service.xml</FileType>
+            <SearchKey1></SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>不明</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1327">
+            <FileType>null-persistence-service.xml</FileType>
+            <SearchKey1></SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
             <LineNumberInfomation>
                 <LineNumber>不明</LineNumber>
                 <LineNumberContents></LineNumberContents>
@@ -16854,34 +18772,6 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
                 <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_786">
-            <FileType>web.xml</FileType>
-            <SearchKey1></SearchKey1>
-            <SearchKey2></SearchKey2>
-            <PythonModule></PythonModule>
-            <LineNumberInfomation>
-                <LineNumber>1</LineNumber>
-                <LineNumberContents></LineNumberContents>
-                <Investigation></Investigation>
-            </LineNumberInfomation>
-            <Appropriate lineNumberAppropriate="true">
-                <AppropriateContents></AppropriateContents>
-            </Appropriate>
-        </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_787">
-            <FileType>web.xml</FileType>
-            <SearchKey1></SearchKey1>
-            <SearchKey2></SearchKey2>
-            <PythonModule></PythonModule>
-            <LineNumberInfomation>
-                <LineNumber>1</LineNumber>
-                <LineNumberContents></LineNumberContents>
-                <Investigation></Investigation>
-            </LineNumberInfomation>
-            <Appropriate lineNumberAppropriate="true">
-                <AppropriateContents></AppropriateContents>
-            </Appropriate>
-        </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_678">
             <FileType>*.java</FileType>
             <SearchKey1>javax\.servlet\.jsp\.el\.FunctionMapper</SearchKey1>
@@ -17488,20 +19378,6 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
             <FileType>*.jsp</FileType>
             <SearchKey1>javax\.el\.\*</SearchKey1>
             <SearchKey2>isParmetersProvided\(</SearchKey2>
-            <PythonModule></PythonModule>
-            <LineNumberInfomation>
-                <LineNumber>1</LineNumber>
-                <LineNumberContents></LineNumberContents>
-                <Investigation></Investigation>
-            </LineNumberInfomation>
-            <Appropriate lineNumberAppropriate="true">
-                <AppropriateContents></AppropriateContents>
-            </Appropriate>
-        </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_788">
-            <FileType>web.xml</FileType>
-            <SearchKey1></SearchKey1>
-            <SearchKey2></SearchKey2>
             <PythonModule></PythonModule>
             <LineNumberInfomation>
                 <LineNumber>1</LineNumber>
@@ -21586,6 +23462,34 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
                 <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1359">
+            <FileType>*.java</FileType>
+            <SearchKey1>java:(?!/)</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1360">
+            <FileType>*.properties</FileType>
+            <SearchKey1>java:(?!/)</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
         <SearchInfomation searchInfoId="searchInfo_1228">
             <FileType>*.properties</FileType>
             <SearchKey1>jnp:</SearchKey1>
@@ -21603,6 +23507,62 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
         <SearchInfomation searchInfoId="searchInfo_1229">
             <FileType>*.java</FileType>
             <SearchKey1>jnp:</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1355">
+            <FileType>*.properties</FileType>
+            <SearchKey1>org\.jnp\.interfaces\.NamingContextFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1356">
+            <FileType>*.java</FileType>
+            <SearchKey1>org\.jnp\.interfaces\.NamingContextFactory</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1357">
+            <FileType>*.java</FileType>
+            <SearchKey1>org\.jboss\.naming:org\.jnp\.interfaces</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1358">
+            <FileType>*.properties</FileType>
+            <SearchKey1>org\.jboss\.naming:org\.jnp\.interfaces</SearchKey1>
             <SearchKey2></SearchKey2>
             <PythonModule></PythonModule>
             <LineNumberInfomation>
@@ -21838,7 +23798,49 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
                 <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_858">
+        <SearchInfomation searchInfoId="searchInfo_1353">
+            <FileType>*.java</FileType>
+            <SearchKey1>import javax\.jws</SearchKey1>
+            <SearchKey2>@WebService</SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1331">
+            <FileType>web.xml</FileType>
+            <SearchKey1>//param-name[text()='jboss.ws.endpoint']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1332">
+            <FileType>web.xml</FileType>
+            <SearchKey1>//servlet-class[text()='org.jboss.wsf.stack.jbws.EndpointServlet']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>10</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1329">
             <FileType>webservices.xml</FileType>
             <SearchKey1></SearchKey1>
             <SearchKey2></SearchKey2>
@@ -21852,7 +23854,7 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
                 <AppropriateContents></AppropriateContents>
             </Appropriate>
         </SearchInfomation>
-        <SearchInfomation searchInfoId="searchInfo_986">
+        <SearchInfomation searchInfoId="searchInfo_1330">
             <FileType>jaxrpc-mapping.xml</FileType>
             <SearchKey1></SearchKey1>
             <SearchKey2></SearchKey2>
@@ -22069,6 +24071,20 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
             <PythonModule>ext_search_xml_xpath.py</PythonModule>
             <LineNumberInfomation>
                 <LineNumber>不明</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1346">
+            <FileType>web.xml</FileType>
+            <SearchKey1>//servlet/servlet-class[text()='org.jboss.web.tomcat.service.StatusServlet']</SearchKey1>
+            <SearchKey2></SearchKey2>
+            <PythonModule>ext_search_xml_xpath.py</PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>1</LineNumber>
                 <LineNumberContents></LineNumberContents>
                 <Investigation></Investigation>
             </LineNumberInfomation>
@@ -22489,6 +24505,34 @@ EARアプリケーションがlog4jのライブラリを保持せず、EAR内に
             <PythonModule></PythonModule>
             <LineNumberInfomation>
                 <LineNumber>不明</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1348">
+            <FileType>*.java</FileType>
+            <SearchKey1>org\.jboss\.security\.Util</SearchKey1>
+            <SearchKey2>createPasswordHash</SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>0</LineNumber>
+                <LineNumberContents></LineNumberContents>
+                <Investigation></Investigation>
+            </LineNumberInfomation>
+            <Appropriate lineNumberAppropriate="true">
+                <AppropriateContents></AppropriateContents>
+            </Appropriate>
+        </SearchInfomation>
+        <SearchInfomation searchInfoId="searchInfo_1349">
+            <FileType>*.java</FileType>
+            <SearchKey1>org\.jboss\.security\.\*</SearchKey1>
+            <SearchKey2>createPasswordHash</SearchKey2>
+            <PythonModule></PythonModule>
+            <LineNumberInfomation>
+                <LineNumber>0</LineNumber>
                 <LineNumberContents></LineNumberContents>
                 <Investigation></Investigation>
             </LineNumberInfomation>

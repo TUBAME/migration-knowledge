@@ -1,0 +1,4 @@
+
+/subsystem=security/security-domain=exampleDatabaseServerLoginModule/:add(cache-type=default)
+/subsystem=security/security-domain=exampleDatabaseServerLoginModule/authentication=classic:add(login-modules=[{"code"=>"usercustom.loginmodule.ExampleDatabaseServerLoginModule", "flag"=>"required", "module-options"=>[("dsJndiName"=>"java:jboss/datasources/PostgresDS"),("principalsQuery"=>"SELECT PASSWORD FROM USERS WHERE USERNAME = ?"), ("rolesQuery"=>"SELECT R.NAME, 'Roles' FROM USERS_ROLES UR INNER JOIN ROLES R ON R.ID = UR.ROLE_ID INNER JOIN USERS U ON U.ID = UR.USER_ID WHERE U.USERNAME = ?"),("usercustomModuleOptionSample"=>"foo")]}])
+

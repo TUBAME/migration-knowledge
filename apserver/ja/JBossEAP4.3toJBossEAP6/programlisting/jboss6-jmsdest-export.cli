@@ -1,0 +1,4 @@
+
+ jms-queue add --queue-address=sampleQueue --entries=queue/sample,java:jboss/exported/queue/sample
+ jms-topic add --topic-address=sampleTopic --entries=topic/sample,java:jboss/exported/topic/sample
+ 

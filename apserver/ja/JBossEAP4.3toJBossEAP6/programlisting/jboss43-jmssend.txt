@@ -1,0 +1,37 @@
+
+public 	send(String factoryJNDI, String queueJNDI)
+    throws JMSException, NamingException {
+
+  Properties properties = new Properties();
+  properties.setProperty(Context.INITIAL_CONTEXT_FACTORY,
+      "org.jnp.interfaces.NamingContextFactory");
+  properties.setProperty(Context.PROVIDER_URL, "localhost:1099");
+  properties.setProperty(Context.URL_PKG_PREFIXES,
+      "org.jboss.naming:org.jnp.interfaces");
+
+  // イニシャルコンテキストを取得します。
+  Context context = new InitialContext(properties);
+
+  // 接続ファクトリを取得します。
+  QueueConnectionFactory queueFactory = (QueueConnectionFactory) context
+      .lookup(factoryJNDI);
+
+  // 接続を作成します。
+  queueConnection = queueFactory.createQueueConnection();
+
+  // セッションを作成します。
+  queueSession = queueConnection.createQueueSession(
+  // トランザクションなし
+      false,
+      // 自動応答確認
+      Session.AUTO_ACKNOWLEDGE);
+
+  // 宛先をルックアップします。
+  queue = (Queue) context.lookup(queueJNDI);
+
+  // パブリッシャを作成します。
+  queueSender = queueSession.createSender(queue);
+
+  ...
+
+}

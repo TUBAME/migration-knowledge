@@ -1,0 +1,20 @@
+
+<servlet>
+  <display-name>ExampleWebService</display-name>
+  <servlet-name>ExampleWebService</servlet-name>
+
+
+  <servlet-class>org.jboss.wsf.stack.jbws.EndpointServlet</servlet-class>
+
+  <init-param>
+    <param-name>jboss.ws.endpoint</param-name>
+    <param-value>example.WebServiceImpl</param-value>
+  </init-param>
+
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>ExampleWebService</servlet-name>
+  <url-pattern>/WebService</url-pattern>
+</servlet-mapping>
+
